@@ -3,7 +3,7 @@ title: "Semesterplan"
 toc: true
 ---
 
-[Der Plan nennt die ersten beiden Wochen im Detail. Die weiteren Phasen sind als Rahmen beschrieben; ihre Termine vereinbaren wir im Semester, abhängig davon, wann die Interviews stattfinden.{.lead}
+[Der Plan nennt die ersten beiden Wochen im Detail. Die weiteren Phasen sind als Rahmen beschrieben; ihre Termine vereinbaren wir im Semester, abhängig davon, wann die Interviews stattfinden.]{.lead}
 
 
 ![](images/semester-ablauf.svg){.abbildung fig-alt="Zeitstrahl: Woche 1 am 12.10. und Woche 2 am 19.10. als feste Punkte, danach Interviews, Modellierung, Prototyp, Review und Abschluss ohne Termine."}
