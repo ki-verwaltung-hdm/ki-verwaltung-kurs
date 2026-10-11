@@ -2,7 +2,7 @@
 <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#88F297"/></marker><marker id="arrs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#aab4c8"/></marker><marker id="arro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffa65c"/></marker></defs>
 <rect width="1600" height="520" fill="#11161d"/>
 <text x="800" y="60" font-size="15" fill="#88F297" font-weight="600" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">SEMESTERPLAN</text>
-<text x="800" y="110" font-size="30" fill="#f2f5ff" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Zwei feste Wochen, danach Phasen im Takt der Interviews</text>
+<text x="800" y="110" font-size="30" fill="#f2f5ff" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Drei feste Wochen, danach Phasen im Takt der Interviews</text>
 <line x1="80" y1="300" x2="1520" y2="300" stroke="#2f3647" stroke-width="6"/>
 <circle cx="150" cy="300" r="14" fill="#88F297" stroke="#88F297" stroke-width="4"/>
 <text x="150" y="250" font-size="22" fill="#88F297" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Woche 1</text>
@@ -10,29 +10,34 @@
 <text x="150" y="345.0" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Kontext, BPMN,</text>
 <text x="150" y="367.1" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Recherche-Auftrag,</text>
 <text x="150" y="389.2" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Gruppen</text>
-<circle cx="390" cy="300" r="14" fill="#88F297" stroke="#88F297" stroke-width="4"/>
-<text x="390" y="250" font-size="22" fill="#88F297" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Woche 2</text>
-<text x="390" y="222" font-size="14" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">Mo 19.10.</text>
-<text x="390" y="345.0" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Coding-Agent, n8n,</text>
-<text x="390" y="367.1" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Modell mit dem</text>
-<text x="390" y="389.2" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Agenten</text>
-<circle cx="640" cy="300" r="14" fill="#11161d" stroke="#6fb6f0" stroke-width="4"/>
-<text x="640" y="250" font-size="22" fill="#6fb6f0" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Interviews</text>
-<text x="640" y="222" font-size="14" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">Termine folgen</text>
-<text x="640" y="345.0" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Erstgespräche,</text>
-<text x="640" y="367.1" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Protokolle</text>
-<circle cx="860" cy="300" r="14" fill="#11161d" stroke="#6fb6f0" stroke-width="4"/>
-<text x="860" y="250" font-size="22" fill="#6fb6f0" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Modellierung</text>
-<text x="860" y="345.0" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Ist, Soll,</text>
-<text x="860" y="367.1" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">zweites Gespräch</text>
-<circle cx="1080" cy="300" r="14" fill="#11161d" stroke="#6fb6f0" stroke-width="4"/>
-<text x="1080" y="250" font-size="22" fill="#6fb6f0" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Prototyp</text>
-<text x="1080" y="345.0" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">n8n, Mocks,</text>
-<text x="1080" y="367.1" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Freigabe</text>
-<circle cx="1280" cy="300" r="14" fill="#11161d" stroke="#6fb6f0" stroke-width="4"/>
-<text x="1280" y="250" font-size="22" fill="#6fb6f0" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Review</text>
-<text x="1280" y="345.0" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Testfälle,</text>
-<text x="1280" y="367.1" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Grenzen</text>
+<circle cx="360" cy="300" r="14" fill="#88F297" stroke="#88F297" stroke-width="4"/>
+<text x="360" y="250" font-size="22" fill="#88F297" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Woche 2</text>
+<text x="360" y="222" font-size="14" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">Mo 19.10.</text>
+<text x="360" y="345.0" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Coding-Agent, n8n,</text>
+<text x="360" y="367.1" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Modell mit dem</text>
+<text x="360" y="389.2" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Agenten</text>
+<circle cx="570" cy="300" r="14" fill="#88F297" stroke="#88F297" stroke-width="4"/>
+<text x="570" y="250" font-size="22" fill="#88F297" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Woche 3</text>
+<text x="570" y="222" font-size="14" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">Mo 26.10.</text>
+<text x="570" y="345.0" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Recherche,</text>
+<text x="570" y="367.1" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Leitfragen</text>
+<circle cx="770" cy="300" r="14" fill="#11161d" stroke="#6fb6f0" stroke-width="4"/>
+<text x="770" y="250" font-size="22" fill="#6fb6f0" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Interviews</text>
+<text x="770" y="222" font-size="14" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">Termine folgen</text>
+<text x="770" y="345.0" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Erstgespräche,</text>
+<text x="770" y="367.1" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Protokolle</text>
+<circle cx="960" cy="300" r="14" fill="#11161d" stroke="#6fb6f0" stroke-width="4"/>
+<text x="960" y="250" font-size="22" fill="#6fb6f0" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Modellierung</text>
+<text x="960" y="345.0" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Ist, Soll,</text>
+<text x="960" y="367.1" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">zweites Gespräch</text>
+<circle cx="1150" cy="300" r="14" fill="#11161d" stroke="#6fb6f0" stroke-width="4"/>
+<text x="1150" y="250" font-size="22" fill="#6fb6f0" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Prototyp</text>
+<text x="1150" y="345.0" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">n8n, Mocks,</text>
+<text x="1150" y="367.1" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Freigabe</text>
+<circle cx="1320" cy="300" r="14" fill="#11161d" stroke="#6fb6f0" stroke-width="4"/>
+<text x="1320" y="250" font-size="22" fill="#6fb6f0" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Review</text>
+<text x="1320" y="345.0" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Testfälle,</text>
+<text x="1320" y="367.1" font-size="17" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Grenzen</text>
 <circle cx="1470" cy="300" r="14" fill="#11161d" stroke="#ffa65c" stroke-width="4"/>
 <text x="1470" y="250" font-size="22" fill="#ffa65c" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Abschluss</text>
 <text x="1470" y="222" font-size="14" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">Semesterende</text>

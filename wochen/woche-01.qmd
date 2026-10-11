@@ -8,7 +8,7 @@ toc: true
 ::: {.lead}
 - Worum es geht: KI-Agenten in der Verwaltung, der Auftrag der HdM, das Vorgehen im Semester
 - Grundlagen der Prozessmodellierung mit BPMN
-- Der Recherche-Auftrag bis Woche 2
+- Der Recherche-Auftrag: erster Prozesskandidat bis Woche 2, Ergebnisse bis Woche 3
 - Umfrage und Gruppenbildung
 :::
 
@@ -56,22 +56,38 @@ Ein kurzer Input mit dem [Werkzeugkasten Prozessmodellierung](../werkzeuge/proze
 
 **Gemeinsam am Beispiel:** Welche Schritte im Soll-Modell sind feste Regeln, welche brauchen Sprachverständnis, und wo bleibt der Mensch? Warum liegt die feste Regel vor dem Modellschritt?
 
-## Recherche-Auftrag bis Woche 2 {#recherche}
+## Recherche-Auftrag {#recherche}
+
+Die Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews. Sie hat zwei Etappen: Bis Woche 2 reicht ein erster Prozesskandidat, damit die Werkzeuge daran ausprobiert werden können. Die Ergebnisse der Recherche sind bis Woche 3 fällig.
 
 ::: {.uebung}
-### Bis Montag, 19.10. · in den Gruppen
+### Etappe 1 bis Montag, 19.10. · in den Gruppen
+
+**Worum es geht:** In Woche 2 lernen wir die Werkzeuge kennen. Dafür braucht jede Gruppe einen Prozess, an dem sie den Coding-Agenten ausprobieren kann. Er muss noch nicht der endgültige sein.
+
+1. Einen Verwaltungsprozess auswählen, der zu den [möglichen Bereichen](../projekt.qmd#ausgangslage) passt, und ihn als ersten Entwurf in Prosa beschreiben: Rollen, Schritte, Entscheidungen, Rückschleifen. Zwei bis zehn Sätze genügen; was unklar ist, als Frage markieren.
+2. „Agentische KI im Hochschulsystem“ aus der [Literaturliste](../materialien.qmd#literatur) zumindest überfliegen und die Seiten mit den Verwaltungsszenarien lesen.
+3. Die [Teamablage](../start.qmd#ablage) als ZIP herunterladen, entpacken, in den gemeinsamen Ordner legen und die Prozessbeschreibung unter `01_Recherche` ablegen.
+
+**Prüfung:** Die Beschreibung nennt mindestens zwei Rollen und eine Entscheidung.
+
+**Ergebnis:** Eine Datei `prozess-beschreibung.md`. In Woche 2 stellt jede Gruppe ihren Kandidaten in zwei Minuten vor; daraus entsteht in der Übung ein erstes BPMN-Modell.
+:::
+
+::: {.uebung}
+### Etappe 2 bis Montag, 26.10. · in den Gruppen
 
 **Worum es geht:** Bevor wir mit Verwaltungsmitarbeitenden sprechen, brauchen wir Vokabular, Vergleichsfälle und eine erste Hypothese, wie ein unterstützter Ablauf aussehen könnte.
 
 1. Zwei bis drei Quellen aus der [Literaturliste](../materialien.qmd#literatur) lesen, mindestens „Agentische KI im Hochschulsystem“ und „Building Effective Agents“.
 2. Recherchieren: Wer setzt in Hochschulverwaltung oder Behörden bereits KI für Übersichten, Zusammenfassungen oder Prüfungen ein? Einstieg: [Praxis und Rahmen](../materialien.qmd#praxis), darunter F13 und KI4BW in Baden-Württemberg, LLMoin, MUCGPT und der Marktplatz der KI-Möglichkeiten des Bundes. Welche Muster wiederholen sich? Was ist gescheitert, und warum?
-3. Einen Verwaltungsprozess auswählen, der zu den [möglichen Bereichen](../projekt.qmd#ausgangslage) passt, und ihn als Referenzprozess in Prosa beschreiben: Rollen, Schritte, Entscheidungen, Rückschleifen. Zwei bis zehn Sätze genügen. In Woche 2 wird daraus mit dem Coding-Agenten ein BPMN-Modell.
+3. Die Prozessbeschreibung aus Etappe 1 mit dem Gelernten überarbeiten, bei Bedarf den Prozess wechseln. Daraus wird der Referenzprozess, eine Hypothese für das Interview.
 4. Fünf bis acht Leitfragen für das Interview entwerfen. Orientierung: [Interviews führen](../werkzeuge/interviews.qmd).
-5. Die [Teamablage](../start.qmd#ablage) als ZIP herunterladen, entpacken, in den gemeinsamen Ordner legen und alles unter `01_Recherche` ablegen: Quellen mit Link, Erkenntnisse in Stichworten, Prozessbeschreibung, Leitfragen.
+5. Alles unter `01_Recherche` ablegen: Quellen mit Link, Erkenntnisse in Stichworten, Prozessbeschreibung, Leitfragen.
 
 **Prüfung:** Jede Erkenntnis hat eine Quelle. Die Prozessbeschreibung nennt mindestens zwei Rollen und eine Entscheidung. Die Leitfragen fragen nach Tätigkeiten und Informationen, nicht nach Wunsch-Automatisierungen.
 
-**Ergebnis:** Ein Ordner `01_Recherche` mit Quellen, Referenzprozess und Leitfragen. In Woche 2 stellt jede Gruppe ihren Referenzprozess in drei Minuten vor.
+**Ergebnis:** Ein Ordner `01_Recherche` mit Quellen, Erkenntnissen, Referenzprozess und Leitfragen. In Woche 3 besprechen wir die Ergebnisse und stimmen die Leitfragen ab. Die Recherche endet damit nicht: Sie läuft bis zum ersten Interview weiter und wird nach dem Gespräch gezielt vertieft.
 :::
 
 Ein Hinweis zur Recherche mit KI: Gemini und andere Chat-Werkzeuge dürfen zur Recherche verwendet werden. Jede Aussage, die in die Ablage kommt, prüfen wir gegen die Originalquelle. Eine KI-Antwort ohne Quelle ist eine Vermutung.
@@ -80,6 +96,6 @@ Ein Hinweis zur Recherche mit KI: Gemini und andere Chat-Werkzeuge dürfen zur R
 
 1. [HdM-VPN](../start.qmd#vpn) einrichten und die Verbindung zur Projektumgebung testen.
 2. Google-Konto bereithalten; wer möchte, das [Studierendenangebot](../start.qmd#google) einlösen. Pro Gruppe reicht ein Zugang zu Antigravity.
-3. Den Recherche-Auftrag erledigen.
+3. Etappe 1 des Recherche-Auftrags erledigen: Prozesskandidat beschreiben.
 
 [**Weiter zu Woche 2: Werkzeuge**](woche-02.qmd)

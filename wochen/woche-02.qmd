@@ -6,7 +6,7 @@ toc: true
 [Montag, 19. Oktober 2026 · 11:45 bis 13:15 Uhr · Raum I110 · Notebook mitbringen, VPN eingerichtet]{.kicker}
 
 ::: {.lead}
-- Referenzprozesse aus der Recherche in drei Minuten je Gruppe
+- Prozesskandidaten in zwei Minuten je Gruppe
 - Coding-Agent einrichten: Antigravity und die Projektbeschreibung für den Agenten
 - n8n auf dem HdM-Server: Login, erster Workflow, Modellverbindung
 - Aus der Prozessbeschreibung ein BPMN-Modell erzeugen lassen und prüfen
@@ -20,17 +20,17 @@ Am Ende hat jede Gruppe Antigravity mit einem Projektordner eingerichtet, sich i
 
 | Baustein | Dauer etwa | Arbeitsform |
 |---|---|---|
-| Referenzprozesse vorstellen | 20 Minuten | Gruppen, je 3 Minuten |
-| Antigravity einrichten, AGENTS.md anlegen | 20 Minuten | Angeleitet, in den Gruppen |
+| Prozesskandidaten vorstellen | 15 Minuten | Gruppen, je 2 Minuten |
+| Antigravity einrichten, AGENTS.md anlegen | 25 Minuten | Angeleitet, in den Gruppen |
 | n8n: Login, erster Workflow, Modellverbindung | 25 Minuten | Angeleitet, in den Gruppen |
 | Prozessmodell mit dem Agenten erzeugen | 20 Minuten | In den Gruppen |
 | Nächste Schritte: Interviews | 5 Minuten | Gemeinsam |
 
 :::
 
-## Referenzprozesse vorstellen {#vorstellen}
+## Prozesskandidaten vorstellen {#vorstellen}
 
-Jede Gruppe zeigt in drei Minuten: den gewählten Prozess, die beteiligten Rollen, die Stelle, an der unstrukturierte Information strukturiert werden muss, und eine Leitfrage für das Interview. Keine Folien. Rückfragen sind erwünscht; sie landen in der Liste offener Fragen.
+Jede Gruppe nennt in zwei Minuten: den gewählten Prozess, die beteiligten Rollen und die Stelle, an der unstrukturierte Information strukturiert werden muss. Keine Folien. Der Kandidat ist ein Arbeitsstand für die heutigen Übungen; die Recherche läuft bis Woche 3 weiter.
 
 ## Übung 2.1: Coding-Agent einrichten {#uebung-2-1}
 
@@ -68,7 +68,7 @@ Jede Gruppe zeigt in drei Minuten: den gewählten Prozess, die beteiligten Rolle
 ::: {.uebung}
 ### Etwa 20 Minuten · in den Gruppen
 
-**Material:** [Prozessmodellierung](../werkzeuge/prozessmodell.qmd), [Auftrag: Ist-Prozess aus einer Beschreibung](../material/prompts/ist-aus-prosa.md), die eigene Prozessbeschreibung aus der Recherche.
+**Material:** [Prozessmodellierung](../werkzeuge/prozessmodell.qmd), [Auftrag: Ist-Prozess aus einer Beschreibung](../material/prompts/ist-aus-prosa.md), die eigene Prozessbeschreibung aus Etappe 1 der Recherche.
 
 1. Die Prozessbeschreibung als `prozess-beschreibung.md` in den Projektordner legen.
 2. Den Auftrag aus `ist-aus-prosa.md` in den Chat von Antigravity einfügen. Der Agent schreibt eine Datei `referenzprozess-ist.bpmn`.
@@ -83,6 +83,6 @@ Jede Gruppe zeigt in drei Minuten: den gewählten Prozess, die beteiligten Rolle
 
 ## Nächste Schritte {#naechste}
 
-Die Interviewtermine vereinbaren wir mit den Verwaltungsbereichen. Sobald ein Termin steht, bereiten sich die beiden zugeordneten Gruppen gemeinsam nach [Interviews führen](../werkzeuge/interviews.qmd) vor. Bis dahin: Referenzmodell verfeinern, Leitfragen abstimmen, erste Mock-Daten für den eigenen Prozess entwerfen.
+Bis Woche 3 (Montag, 26.10.) ist Etappe 2 des [Recherche-Auftrags](woche-01.qmd#recherche) fällig: Quellen, Erkenntnisse, überarbeiteter Referenzprozess, Leitfragen. In Woche 3 besprechen wir die Ergebnisse und stimmen die Leitfragen ab. Die Interviewtermine vereinbaren wir mit den Verwaltungsbereichen; sobald ein Termin steht, bereiten sich die beiden zugeordneten Gruppen gemeinsam nach [Interviews führen](../werkzeuge/interviews.qmd) vor.
 
 [**Zurück zu Woche 1**](woche-01.qmd) · [**Semesterplan**](../semester.qmd)

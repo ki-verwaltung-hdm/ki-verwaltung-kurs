@@ -1,6 +1,6 @@
 # 01_Recherche
 
-Phase 1. Ergebnis bis Woche 2: Quellen, Erkenntnisse, ein Referenzprozess und Leitfragen für das Interview.
+Phase 1. Bis Woche 2 ein erster Prozesskandidat als Prosa, bis Woche 3 Quellen, Erkenntnisse, der überarbeitete Referenzprozess und Leitfragen für das Interview. Die Recherche läuft bis zum ersten Interview weiter.
 
 ## Was hierher gehört
 

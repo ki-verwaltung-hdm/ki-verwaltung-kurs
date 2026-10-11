@@ -3,7 +3,7 @@ title: "Semesterplan"
 toc: true
 ---
 
-[Der Plan nennt die ersten beiden Wochen im Detail. Die weiteren Phasen sind als Rahmen beschrieben; ihre Termine vereinbaren wir im Semester, abhängig davon, wann die Interviews stattfinden.]{.lead}
+[Der Plan nennt die ersten drei Wochen im Detail. Die weiteren Phasen sind als Rahmen beschrieben; ihre Termine vereinbaren wir im Semester, abhängig davon, wann die Interviews stattfinden.]{.lead}
 
 
 ![](images/semester-ablauf.svg){.abbildung fig-alt="Zeitstrahl: Woche 1 am 12.10. und Woche 2 am 19.10. als feste Punkte, danach Interviews, Modellierung, Prototyp, Review und Abschluss ohne Termine."}
@@ -16,12 +16,13 @@ Zwei feste Wochen, danach Phasen im Takt der Interviews. Leere Punkte werden im 
 
 Montags, 11:45 bis 13:15 Uhr, Raum I110. Ein typischer Termin: 15 Minuten gemeinsamer Input oder Befund, danach Rückmeldung zu den Zwischenständen, am Ende Entscheidungen für die nächste Woche. Zwischen den Terminen arbeiten wir eigenständig weiter.
 
-## Die ersten beiden Wochen
+## Die ersten drei Wochen
 
 | Woche | Termin | Inhalt |
 |---|---|---|
 | [1](wochen/woche-01.qmd) | Montag, 12.10.2026 | Kontext: Verwaltung und KI-Agenten · Grundlagen der Prozessmodellierung (BPMN) · Recherche-Auftrag · Umfrage und Gruppenbildung |
-| [2](wochen/woche-02.qmd) | Montag, 19.10.2026 | Ergebnisse der Recherche · Coding-Agent einrichten (Antigravity) · n8n-Einstieg auf dem HdM-Server · Prozessmodell mit dem Agenten erzeugen |
+| [2](wochen/woche-02.qmd) | Montag, 19.10.2026 | Prozesskandidaten · Coding-Agent einrichten (Antigravity) · n8n-Einstieg auf dem HdM-Server · Prozessmodell mit dem Agenten erzeugen |
+| 3 | Montag, 26.10.2026 | Ergebnisse der Recherche · Leitfragen abstimmen · Vorbereitung der Interviews |
 
 ## Die weiteren Phasen
 

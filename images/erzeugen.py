@@ -356,14 +356,15 @@ def agent():
 def semester():
     s = Svg(1600, 520)
     s.label(800, 60, "Semesterplan")
-    s.text(800, 110, "Zwei feste Wochen, danach Phasen im Takt der Interviews", 30, TXT, 700)
+    s.text(800, 110, "Drei feste Wochen, danach Phasen im Takt der Interviews", 30, TXT, 700)
     s.parts.append(f'<line x1="80" y1="300" x2="1520" y2="300" stroke="{EDGE}" stroke-width="6"/>')
     marks = [(150, "Woche 1", "Mo 12.10.", ["Kontext, BPMN,", "Recherche-Auftrag,", "Gruppen"], GREEN, True),
-             (390, "Woche 2", "Mo 19.10.", ["Coding-Agent, n8n,", "Modell mit dem", "Agenten"], GREEN, True),
-             (640, "Interviews", "Termine folgen", ["Erstgespräche,", "Protokolle"], BLUE, False),
-             (860, "Modellierung", "", ["Ist, Soll,", "zweites Gespräch"], BLUE, False),
-             (1080, "Prototyp", "", ["n8n, Mocks,", "Freigabe"], BLUE, False),
-             (1280, "Review", "", ["Testfälle,", "Grenzen"], BLUE, False),
+             (360, "Woche 2", "Mo 19.10.", ["Coding-Agent, n8n,", "Modell mit dem", "Agenten"], GREEN, True),
+             (570, "Woche 3", "Mo 26.10.", ["Recherche,", "Leitfragen"], GREEN, True),
+             (770, "Interviews", "Termine folgen", ["Erstgespräche,", "Protokolle"], BLUE, False),
+             (960, "Modellierung", "", ["Ist, Soll,", "zweites Gespräch"], BLUE, False),
+             (1150, "Prototyp", "", ["n8n, Mocks,", "Freigabe"], BLUE, False),
+             (1320, "Review", "", ["Testfälle,", "Grenzen"], BLUE, False),
              (1470, "Abschluss", "Semesterende", ["Bewertung,", "Präsentation"], ORANGE, False)]
     for x, t, d, lines, c, fixed in marks:
         s.parts.append(f'<circle cx="{x}" cy="300" r="14" fill="{c if fixed else BG}" stroke="{c}" stroke-width="4"/>')

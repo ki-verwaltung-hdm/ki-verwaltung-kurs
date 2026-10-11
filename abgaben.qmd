@@ -9,7 +9,7 @@ toc: true
 
 | Nr. | Ergebnis | Art | Termin | Wo |
 |---|---|---|---|---|
-| 1 | [Recherche, Referenzprozess, Leitfragen](#recherche) | Gruppe, Rückmeldung | Montag, 19.10.2026 | Teamablage `01_Recherche` |
+| 1 | [Recherche, Referenzprozess, Leitfragen](#recherche) | Gruppe, Rückmeldung | Prozesskandidat Montag, 19.10.2026; Ergebnisse Montag, 26.10.2026 | Teamablage `01_Recherche` |
 | 2 | [Interviewprotokoll und offene Fragen](#interview) | zwei Gruppen gemeinsam | nach dem Interview | `02_Interviews` |
 | 3 | [Ist- und Soll-Modell mit Begründung](#modelle) | Gruppe, Rückmeldung | wird vereinbart | `03_Prozessmodelle` |
 | 4 | [Prototyp mit Testfällen](#prototyp) | Gruppe, Review | wird vereinbart | `04_Prototyp` |
@@ -29,12 +29,12 @@ Die Form der Prüfungsleistung, ihre Bestandteile und die Bewertungskriterien we
 ::: {.uebung #recherche}
 ### 1 · Recherche, Referenzprozess und Leitfragen
 
-[Gruppe · Rückmeldung in Woche 2 · Teamablage]{.uebung-meta}
+[Gruppe · Prozesskandidat bis Woche 2, Ergebnisse bis Woche 3 · Teamablage]{.uebung-meta}
 
 Die Aufgabe steht in [Woche 1](wochen/woche-01.qmd#recherche).
 
-1. Quellen mit Link und je zwei Sätzen Erkenntnis.
-2. Referenzprozess als Prosa (zwei bis zehn Sätze) und ab Woche 2 als BPMN-Datei.
+1. Bis Woche 2: ein Prozesskandidat als Prosa (zwei bis zehn Sätze).
+2. Bis Woche 3: Quellen mit Link und je zwei Sätzen Erkenntnis, der überarbeitete Referenzprozess als Prosa und als BPMN-Datei.
 3. Fünf bis acht Leitfragen für das Interview.
 
 ::: {.ergebnis}

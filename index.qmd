@@ -24,7 +24,8 @@ anchor-sections: false
 |---|---|
 | Montag, 12.10.2026 | Projektstart: Kontext, Prozessmodellierung, Recherche-Auftrag, Gruppenbildung |
 | Montag, 19.10.2026 | Werkzeuge: Coding-Agent, n8n, Prozessmodell mit dem Agenten |
-| ab 26.10.2026 | wöchentlich montags, 11:45 bis 13:15 Uhr: Interviews, Modellierung, Prototyp, Reviews |
+| Montag, 26.10.2026 | Ergebnisse der Recherche, Leitfragen, Vorbereitung der Interviews |
+| ab 02.11.2026 | wöchentlich montags, 11:45 bis 13:15 Uhr: Interviews, Modellierung, Prototyp, Reviews |
 | Semesterende | Abschlusspräsentation und Abgabe, Termine werden in der Vorlesung bekannt gegeben |
 
 Der Wochentermin ist der gemeinsame Abstimmungstermin. Interviews, Modellierung und Prototyp entstehen in der eigenständigen Projektarbeit zwischen den Terminen.
