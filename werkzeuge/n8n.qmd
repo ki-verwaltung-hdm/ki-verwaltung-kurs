@@ -118,7 +118,7 @@ Die Datenbank der Gruppe ist nur für die Gruppe sichtbar. Auch hier gilt: keine
 | Seite lädt nicht, Zeitüberschreitung | VPN verbunden? Adresse mit `/n8n-<n>/` am Ende? |
 | Zertifikatswarnung erneut | Anderer Browser oder Ausnahme gelöscht; einmal neu bestätigen |
 | Verbindung im Modellknoten fehlt | „Gemini g<n>“ aus der Liste wählen; keinen eigenen Schlüssel eintragen |
-| Modell antwortet mit Fehler oder Kontingent | Fehlermeldung ohne Zugangsdaten notieren und die Lehrperson informieren |
+| Modell antwortet mit Fehler oder Kontingent | Fehlermeldung ohne Zugangsdaten notieren und im Wochentermin melden |
 | Leeres Feld im Prompt | Schreibweise des Feldes und Zuordnung im Antrag-Knoten prüfen |
 | Webhook antwortet nicht | Pfad mit Gruppenpräfix prüfen; Test-Adresse nur, solange „Listen for test event“ aktiv ist |
 | Postgres-Fehler „permission denied“ | Die Gruppe sieht nur die eigene Datenbank; Tabellenname und Schema prüfen |

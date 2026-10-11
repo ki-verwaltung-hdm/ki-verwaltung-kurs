@@ -3,7 +3,7 @@ title: "Vorbereitung und Zugänge"
 toc: true
 ---
 
-[Für den Einstieg genügen ein Notebook, der HdM-VPN-Zugang und ein Google-Konto. Programmierkenntnisse sind keine Voraussetzung. Den Zugang zur n8n-Umgebung stellt die Lehrperson pro Gruppe bereit.]{.lead}
+[Für den Einstieg genügen ein Notebook, der HdM-VPN-Zugang und ein Google-Konto. Programmierkenntnisse sind keine Voraussetzung. Der Zugang zur n8n-Umgebung wird pro Gruppe bereitgestellt.]{.lead}
 
 ## HdM-VPN {#vpn}
 
@@ -49,7 +49,7 @@ Für die Modellaufrufe in n8n wird **nicht** das eigene Google-Konto verwendet. 
 
 ## n8n-Zugang der Gruppe {#n8n}
 
-Jede Gruppe hat eine eigene n8n-Instanz mit eigener Datenbank auf dem HdM-Server. Die Gruppe teilt sich ein Konto. Login und Passwort gibt die Lehrperson nach der Gruppeneinteilung aus. Das Passwort wird nicht per Mail, Chat oder in Dokumenten weitergegeben und nicht in Screenshots gezeigt.
+Jede Gruppe hat eine eigene n8n-Instanz mit eigener Datenbank auf dem HdM-Server. Die Gruppe teilt sich ein Konto. Login und Passwort werden nach der Gruppeneinteilung bereitgestellt. Das Passwort wird nicht per Mail, Chat oder in Dokumenten weitergegeben und nicht in Screenshots gezeigt.
 
 | Gruppe | Adresse |
 |---|---|
