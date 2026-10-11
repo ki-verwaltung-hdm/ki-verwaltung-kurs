@@ -3,7 +3,7 @@ title: "Das Projekt"
 toc: true
 ---
 
-[Wo kann KI Verwaltungsarbeit an der HdM sinnvoll unterstützen? Wir beantworten diese Frage nicht am Schreibtisch, sondern im Gespräch mit Verwaltungsmitarbeitenden, mit einem Prozessmodell und mit einem Prototyp, den wir an Beispielfällen prüfen.]{.lead}
+[Wo kann KI Verwaltungsarbeit an der HdM sinnvoll unterstützen? Wir beantworten diese Frage in drei Schritten: im Gespräch mit Verwaltungsmitarbeitenden, mit einem Prozessmodell des Ablaufs und mit einem Prototyp, den wir an Beispielfällen prüfen.]{.lead}
 
 ## Rahmen {#rahmen}
 
