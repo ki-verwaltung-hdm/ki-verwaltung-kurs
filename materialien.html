@@ -260,6 +260,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#literatur" id="toc-literatur" class="nav-link active" data-scroll-target="#literatur">Literatur für die Recherche</a></li>
   <li><a href="#gruppen" id="toc-gruppen" class="nav-link" data-scroll-target="#gruppen">Projekt und Gruppen</a></li>
   <li><a href="#praxis" id="toc-praxis" class="nav-link" data-scroll-target="#praxis">KI in der Verwaltung: Praxis und Rahmen</a></li>
+  <li><a href="#entscheidungsmodelle" id="toc-entscheidungsmodelle" class="nav-link" data-scroll-target="#entscheidungsmodelle">Entscheidungsmodelle: Ausblick</a></li>
   <li><a href="#prozess" id="toc-prozess" class="nav-link" data-scroll-target="#prozess">Prozessmodellierung</a></li>
   <li><a href="#prompts" id="toc-prompts" class="nav-link" data-scroll-target="#prompts">Aufträge für den Coding-Agenten</a></li>
   <li><a href="#werkzeuge" id="toc-werkzeuge" class="nav-link" data-scroll-target="#werkzeuge">Werkzeuge und Dokumentation</a></li>
@@ -480,6 +481,36 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Pressemitteilungen beschreiben Systeme aus Sicht der Betreiber. Unabhängige Belege zur Wirkung fehlen meist; genau das ist eine Frage für die eigene Bewertung.</p>
 </section>
+</section>
+<section id="entscheidungsmodelle" class="level2">
+<h2 class="anchored" data-anchor-id="entscheidungsmodelle">Entscheidungsmodelle: Ausblick</h2>
+<p>Seit Oktober 2026 gibt es eine neue Klasse von Modellen, die keinen Text erzeugen, sondern typisierte Fragen beantworten (Ja/Nein, Auswahl, Bewertung) und dazu kalibrierte Wahrscheinlichkeiten liefern, in Millisekunden und sehr günstig. Das passt zum Muster <a href="./werkzeuge/n8n.html#einordnen">Einordnen mit Konfidenz</a>. Alle drei laufen in fremden Clouds, also nur mit Mock-Daten; die Leistungsangaben stammen von den Herstellern.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Quelle</th>
+<th>Wofür</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>OpenAI: <a href="https://developers.openai.com/api/docs/guides/decisions">Decisions-API</a></td>
+<td>Fragetypen predicate, choice, score; Hinweise zur Festlegung von Schwellen an gelabelten Beispielen</td>
+</tr>
+<tr class="even">
+<td>Microsoft: <a href="https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-microsoft-decision-1-in-microsoft-foundry-for-decision-and-classific/4562742">Microsoft-Decision-1</a></td>
+<td>Kleines Entscheidungsmodell in Foundry, unterstützt „kann ich nicht beurteilen“ und Konfidenzschwellen mit Weitergabe an Menschen</td>
+</tr>
+<tr class="odd">
+<td>TypeSafe: <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev">System-One-Modelle und Jev</a></td>
+<td>Erstes Modell dieser Klasse, Early Access; erklärt die Idee der kalibrierten Entscheidungen am besten</td>
+</tr>
+<tr class="even">
+<td>Aleph Alpha: <a href="https://aleph-alpha.com/kolibri/">Kolibri</a></td>
+<td>Kein Entscheidungsmodell, sondern ein offenes deutsch-englisches Sprachmodell (Apache 2.0) für Verwaltung und Industrie; relevant, wenn sensible Daten ein lokal betriebenes Modell erfordern, braucht aber Rechenzentrums-Hardware</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="prozess" class="level2">
 <h2 class="anchored" data-anchor-id="prozess">Prozessmodellierung</h2>

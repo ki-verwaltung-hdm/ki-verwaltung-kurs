@@ -296,6 +296,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#login" id="toc-login" class="nav-link" data-scroll-target="#login">Login</a></li>
   <li><a href="#erster-workflow" id="toc-erster-workflow" class="nav-link" data-scroll-target="#erster-workflow">Der erste Workflow</a></li>
   <li><a href="#freigabe" id="toc-freigabe" class="nav-link" data-scroll-target="#freigabe">Freigabe durch einen Menschen</a></li>
+  <li><a href="#einordnen" id="toc-einordnen" class="nav-link" data-scroll-target="#einordnen">Einordnen mit Konfidenz</a></li>
   <li><a href="#webhook" id="toc-webhook" class="nav-link" data-scroll-target="#webhook">Mock-Schnittstellen mit Webhooks</a></li>
   <li><a href="#postgres" id="toc-postgres" class="nav-link" data-scroll-target="#postgres">Datenbank und Vektorsuche</a></li>
   <li><a href="#fehler" id="toc-fehler" class="nav-link" data-scroll-target="#fehler">Wenn ein Lauf nicht funktioniert</a></li>
@@ -451,6 +452,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Eigene Web-Oberfläche:</strong> Der Coding-Agent baut eine einfache Seite, die den Webhook des Workflows aufruft. Nur sinnvoll, wenn das Formular nicht reicht.</li>
 </ol>
 <p>Kein Weg schreibt in ein Verwaltungssystem. Was nach der Freigabe passieren würde (Eintrag im System, Mail an Antragstellende), wird im Prototyp nur als Ausgabe dargestellt und in der Dokumentation beschrieben.</p>
+</section>
+<section id="einordnen" class="level2">
+<h2 class="anchored" data-anchor-id="einordnen">Einordnen mit Konfidenz</h2>
+<p>Viele Schritte im Soll-Modell sind keine Texte, sondern Entscheidungen mit wenigen Antworten: Liegt der Nachweis vor, ja oder nein? Zu welcher Antragsart gehört die Mail? Für solche Schritte lohnt ein eigenes Muster:</p>
+<ol type="1">
+<li>Das Modell bekommt eine Frage mit festen Antwortmöglichkeiten und gibt nur eine davon zurück, dazu eine Einschätzung, wie sicher es ist. In n8n: Basic LLM Chain mit Structured Output Parser, Schema mit einem Feld <code>antwort</code> (Aufzählung der erlaubten Werte) und einem Feld <code>sicherheit</code> (0 bis 1). Eine Antwortmöglichkeit „nicht beurteilbar“ gehört immer dazu.</li>
+<li>Ein If-Knoten prüft die Sicherheit gegen eine Schwelle. Darüber geht der Fall als Vorlage zur Freigabe, darunter wird er markiert und bekommt eine Rückfrage.</li>
+<li>Die Schwelle wird an den Testfällen festgelegt: Wie oft lag das Modell bei hoher Sicherheit daneben, wie oft bei niedriger? Welcher Fehler ist teurer, ein falsch zugelassener oder ein falsch zurückgegebener Fall?</li>
+</ol>
+<p>Die Sicherheitsangabe eines generativen Modells ist eine Selbsteinschätzung, keine gemessene Wahrscheinlichkeit. Für den Prototyp reicht das, solange die Testfälle zeigen, wie verlässlich sie ist. Seit Oktober 2026 gibt es dafür eigene Entscheidungsmodelle, die nur solche typisierten Antworten mit kalibrierten Wahrscheinlichkeiten liefern (OpenAI Decisions-API, Microsoft Decision-1, TypeSafe Jev); Hinweise dazu unter <a href="../materialien.html#entscheidungsmodelle">Materialien</a>. Für das Projekt sind sie eine mögliche Erweiterung, keine Voraussetzung.</p>
 </section>
 <section id="webhook" class="level2">
 <h2 class="anchored" data-anchor-id="webhook">Mock-Schnittstellen mit Webhooks</h2>
