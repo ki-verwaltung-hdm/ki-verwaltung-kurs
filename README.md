@@ -9,13 +9,13 @@ Stand: 11.10.2026. Kurswebsite für das HdM-Projekt „KI in der Verwaltung“ (
 quarto preview --no-browser
 ```
 
-Veröffentlichen, sobald ein GitHub-Remote existiert:
+Online: <https://kirenz.github.io/ki-verwaltung-kurs/> (Repo `kirenz/ki-verwaltung-kurs`, Branch `gh-pages`). Veröffentlichen:
 
 ```sh
 ./veroeffentlichen.sh
 ```
 
-Das Skript rendert und ruft `quarto publish gh-pages --no-prompt --no-render` auf. Das Repository ist noch nicht auf GitHub; Remote und Pages-Branch müssen einmalig angelegt werden. Die Adresse am Ende von `veroeffentlichen.sh` geht vom Repo-Namen `ki-verwaltung-kurs` aus.
+Das Skript rendert und ruft `quarto publish gh-pages --no-prompt --no-render` auf. Remote und Branch `gh-pages` wurden am 11.10.2026 angelegt. Falls die Vorschau mit „BadResource: Bad resource ID“ abbricht, vorher `rm -rf .quarto` (SASS-Cache von Quarto).
 
 ## Seiten
 
@@ -44,7 +44,6 @@ Lokale Styles (`book-theme.scss`, `website-extras.scss`), keine externe Schrift.
 
 Auf den Seiten stehen keine sichtbaren Platzhalter-Markierungen. Die folgenden Punkte sind bewusst vage formuliert („wird in der Vorlesung bekannt gegeben“) oder beruhen auf Annahmen:
 
-1. **Repo-Name und Remote.** Ordner heißt `ki-verwaltung-kurs`; die Adresse in `veroeffentlichen.sh` und im Abschnitt oben entsprechend anpassen, wenn der GitHub-Name anders lautet.
 2. **Kurspasswort.** `verwaltung-hdm-26` (Liste `KENNWOERTER` in `passwortschutz.html`, Speicherschlüssel `kv26_zugang`). Auf `localhost` wird nicht gefragt. Schutz vor Gelegenheitszugriffen, keine echte Zugangskontrolle: Das Repository wird öffentlich sein.
 3. **Raum.** Überall „Raum I110“ (aus der HdM-Mail laut Briefing). Schreibweise und Raum prüfen.
 4. **Umfrage zur Gruppeneinteilung.** Google-Formular „HdM KI in der Verwaltung – Umfrage zur Gruppeneinteilung“ in „Kirenz Ops“ (Form-ID `1d7sRuKJsQ0G7U6ebT8GLw5KcB0hPfYjjTc6Yegr5pog`), verlinkt in Woche 1 und auf der Materialseite. Fragen vor dem Versand einmal im Editor durchsehen; Antworten-Tabelle (Sheet) noch nicht verknüpft.
