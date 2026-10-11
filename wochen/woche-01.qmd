@@ -43,7 +43,9 @@ Das Projekt wird in Dreiergruppen bearbeitet. Die Teilnehmenden kommen aus mehre
 ::: {.todo}
 [Aufgabe · etwa 6 bis 8 Minuten]{.todo-label}
 
-Die Umfrage zur Gruppeneinteilung ausfüllen. Der Link wird in der Vorlesung gezeigt. Die Angaben dienen nur der Einteilung und werden danach gelöscht.
+Die Umfrage zur Gruppeneinteilung ausfüllen. Sie fragt nach Studiengang, Stärken, Lernzielen, Erfahrungen mit Verwaltung, KI und Daten sowie nach gemeinsamen Arbeitszeiten. Angaben zu Programmierung sind freiwillig. Die Angaben dienen nur der Einteilung und werden danach gelöscht.
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdLsp_8heWx2s6YLvpmuUhsHeuRjsOiBDAbdSGK41yqwPxWHg/viewform" class="btn btn-primary" target="_blank" rel="noopener">Umfrage öffnen</a>
 :::
 
 Die Einteilung wird nach dem Termin bekannt gegeben. Dann erhält jede Gruppe ihre Nummer und den Zugang zur [n8n-Instanz](../start.qmd#n8n).

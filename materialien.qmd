@@ -27,6 +27,13 @@ Die ersten vier Quellen sind der Einstieg für Woche 1. Die weiteren vertiefen e
 
 Berichte von KI-Anbietern (Anthropic, OpenAI) sind Selbstauskünfte, keine unabhängigen Studien. Behördliche Leitfäden und Studien sind als Quellen belastbarer.
 
+## Projekt und Gruppen {#gruppen}
+
+| Material | Wofür |
+|---|---|
+| [Projektbeschreibung](https://kirenz.github.io/hdm-projekte/projekte/ws-2026/ki-hochschulverwaltung.html) | Idee, Themenfelder, Betreuung |
+| [Umfrage zur Gruppeneinteilung](https://docs.google.com/forms/d/e/1FAIpQLSdLsp_8heWx2s6YLvpmuUhsHeuRjsOiBDAbdSGK41yqwPxWHg/viewform) | Woche 1, etwa 6 bis 8 Minuten |
+
 ## Prozessmodellierung {#prozess}
 
 | Material | Verwendung |
