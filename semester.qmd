@@ -3,7 +3,7 @@ title: "Semesterplan"
 toc: true
 ---
 
-[Der Plan nennt die ersten beiden Wochen im Detail. Die weiteren Phasen sind als Rahmen beschrieben; ihre Termine werden im Semester vereinbart, abhängig davon, wann die Interviews stattfinden.]{.lead}
+[Der Plan nennt die ersten beiden Wochen im Detail. Die weiteren Phasen sind als Rahmen beschrieben; ihre Termine vereinbaren wir im Semester, abhängig davon, wann die Interviews stattfinden.{.lead}
 
 
 ![](images/semester-ablauf.svg){.abbildung fig-alt="Zeitstrahl: Woche 1 am 12.10. und Woche 2 am 19.10. als feste Punkte, danach Interviews, Modellierung, Prototyp, Review und Abschluss ohne Termine."}
@@ -14,7 +14,7 @@ Zwei feste Wochen, danach Phasen im Takt der Interviews. Leere Punkte werden im 
 
 ## Wöchentlicher Termin
 
-Montags, 11:45 bis 13:15 Uhr, Raum I110. Ein typischer Termin: 15 Minuten gemeinsamer Input oder Befund, danach Rückmeldung zu den Zwischenständen der Gruppen, am Ende Entscheidungen für die nächste Woche. Die Gruppen arbeiten zwischen den Terminen eigenständig weiter.
+Montags, 11:45 bis 13:15 Uhr, Raum I110. Ein typischer Termin: 15 Minuten gemeinsamer Input oder Befund, danach Rückmeldung zu den Zwischenständen, am Ende Entscheidungen für die nächste Woche. Zwischen den Terminen arbeiten wir eigenständig weiter.
 
 ## Die ersten beiden Wochen
 
@@ -33,10 +33,10 @@ Montags, 11:45 bis 13:15 Uhr, Raum I110. Ein typischer Termin: 15 Minuten gemein
 | Review | Prototypen gegenseitig prüfen, Testfälle ergänzen, Grenzen dokumentieren | Testprotokoll, Liste der Grenzen |
 | Bewertung und Abschluss | Bewertung, Empfehlungen, Abschlusspräsentation vor den beteiligten Bereichen | Präsentation und Abgabe |
 
-Die Reihenfolge der Interviews hängt von der Verfügbarkeit der Verwaltungsbereiche ab. Gruppen, die noch auf ihr Interview warten, arbeiten an Recherche, Referenzmodell und Mock-Daten weiter.
+Die Reihenfolge der Interviews hängt von der Verfügbarkeit der Verwaltungsbereiche ab. Wer noch auf sein Interview wartet, arbeitet an Recherche, Referenzmodell und Mock-Daten weiter.
 
 ## Was jede Woche gilt
 
 1. Vor dem Termin den Stand in der Teamablage aktualisieren: Was ist fertig, was ist offen, wo hakt es?
-2. Eine Person pro Gruppe stellt den Stand in zwei Minuten vor, ohne Folien.
+2. Eine Person je Gruppe stellt den Stand in zwei Minuten vor, ohne Folien.
 3. Entscheidungen aus dem Termin mit Datum in der Ablage festhalten.

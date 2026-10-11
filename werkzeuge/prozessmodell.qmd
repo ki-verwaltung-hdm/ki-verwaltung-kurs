@@ -7,7 +7,7 @@ toc: true
 
 ## Warum zuerst modellieren
 
-Ein Agent unterstützt einen Ablauf. Wer den Ablauf nicht kennt, baut am Problem vorbei. Das Modell macht drei Dinge sichtbar: welche Schritte **feste Regeln** sind und ohne Modell funktionieren (ist die Zahl der Leistungspunkte erreicht?), wo **Sprachverständnis** nötig ist (was steht in diesem Nachweis, und passt er zur Anforderung?) und wo ein **Mensch prüfen und freigeben** muss. Außerdem wird aus dem Soll-Modell die Vorlage für den Prototyp: Der Coding-Agent kann aus einem klaren Modell einen ersten n8n-Workflow erzeugen, die Gruppe prüft ihn gegen das Modell.
+Ein Agent unterstützt einen Ablauf. Wer den Ablauf nicht kennt, baut am Problem vorbei. Das Modell macht drei Dinge sichtbar: welche Schritte **feste Regeln** sind und ohne Modell funktionieren (ist die Zahl der Leistungspunkte erreicht?), wo **Sprachverständnis** nötig ist (was steht in diesem Nachweis, und passt er zur Anforderung?) und wo ein **Mensch prüfen und freigeben** muss. Außerdem wird aus dem Soll-Modell die Vorlage für den Prototyp: Der Coding-Agent kann aus einem klaren Modell einen ersten n8n-Workflow erzeugen, wir prüfen ihn gegen das Modell.
 
 ## Swimlane-Diagramm in BPMN 2.0
 
@@ -69,7 +69,7 @@ Die Aufträge für den Coding-Agenten stehen fertig in den Materialien: [Ist-Pro
 
 - [demo.bpmn.io](https://demo.bpmn.io/): öffnet, zeigt und bearbeitet `.bpmn`-Dateien direkt im Browser, exportiert als SVG
 - [draw.io](https://app.diagrams.net/): kostenlos im Browser, Formenbibliothek „BPMN 2.0“ über „Weitere Formen“ aktivieren; für Skizzen von Hand
-- Der Coding-Agent schreibt die `.bpmn`-Datei; die Gruppe sieht sie in demo.bpmn.io an und formuliert Korrekturen als neuen Auftrag
+- Der Coding-Agent schreibt die `.bpmn`-Datei; wir sehen sie in demo.bpmn.io an und formulieren Korrekturen als neuen Auftrag
 
 Für die Teamablage die bearbeitbare Datei und einen Export als SVG oder PNG speichern, im Ordner `03_Prozessmodelle`.
 

@@ -3,7 +3,7 @@ title: "Abgaben"
 toc: true
 ---
 
-[Was im Semester entsteht, in welcher Reihenfolge und wo es abgelegt wird. Jedes Ergebnis ist die Grundlage für das nächste. Die Termine der späteren Schritte werden im Semester vereinbart und hier ergänzt.]{.lead}
+[Was im Semester entsteht, in welcher Reihenfolge und wo es abgelegt wird. Jedes Ergebnis ist die Grundlage für das nächste. Die Termine der späteren Schritte vereinbaren wir im Semester und ergänzen sie hier.]{.lead}
 
 ## Überblick {#ueberblick}
 

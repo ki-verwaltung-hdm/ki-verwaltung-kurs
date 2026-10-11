@@ -7,7 +7,7 @@ toc: true
 
 ## Was n8n im Projekt leistet {#rolle}
 
-[n8n](https://n8n.io/) ist ein Workflow-System: Ein **Trigger** startet den Ablauf, **Knoten** verarbeiten Daten Schritt für Schritt, Verzweigungen bilden Entscheidungen ab. Im Projekt übernimmt n8n das Gerüst des Soll-Prozesses: feste Regeln als If-Knoten, Modellschritte als Aufruf des Sprachmodells, Mock-Schnittstellen als Webhook oder Datenbankabfrage, und die Freigabe durch einen Menschen als eigener Schritt. Programmiert wird dabei nicht; die Knoten werden in der Oberfläche verbunden, oder der Coding-Agent schreibt den Export als Datei.
+[n8n](https://n8n.io/) ist ein Workflow-System: Ein **Trigger** startet den Ablauf, **Knoten** verarbeiten Daten Schritt für Schritt, Verzweigungen bilden Entscheidungen ab. Im Projekt übernimmt n8n das Gerüst des Soll-Prozesses: feste Regeln als If-Knoten, Modellschritte als Aufruf des Sprachmodells, Mock-Schnittstellen als Webhook oder Datenbankabfrage, und die Freigabe durch einen Menschen als eigener Schritt. Programmieren müssen wir dabei nicht; die Knoten werden in der Oberfläche verbunden, oder der Coding-Agent schreibt den Export als Datei.
 
 | Begriff | Bedeutung |
 |---|---|
@@ -112,7 +112,7 @@ Zum Testen in n8n „Listen for test event“ wählen und die Adresse im Browser
 
 Jede Gruppe hat eine eigene Postgres-Datenbank mit der Erweiterung pgvector. Die Verbindung **Postgres g<n>** ist im Konto hinterlegt. Zwei Einsatzzwecke:
 
-- **Mock-Daten:** Eine Tabelle mit erfundenen Anträgen oder Studierenden, die der Prototyp mit dem **Postgres**-Knoten liest. Der Coding-Agent erzeugt die SQL-Anweisungen zum Anlegen und Befüllen; die Gruppe führt sie in einem Postgres-Knoten aus.
+- **Mock-Daten:** Eine Tabelle mit erfundenen Anträgen oder Studierenden, die der Prototyp mit dem **Postgres**-Knoten liest. Der Coding-Agent erzeugt die SQL-Anweisungen zum Anlegen und Befüllen; ausgeführt werden sie in einem Postgres-Knoten.
 - **Wissenssuche über Dokumente:** Ordnungen, Merkblätter und Formulare (öffentliche oder erfundene) werden mit dem Knoten **PGVector Vector Store** abgelegt und per Ähnlichkeitssuche gefunden, damit das Modell mit der passenden Textstelle antwortet. Der Knoten legt die Tabelle `n8n_vectors` selbst an. Für Einbettungen den Knoten **Embeddings Google Gemini** mit der Gemini-Verbindung der Gruppe verwenden.
 
 Die Datenbank der Gruppe ist nur für die Gruppe sichtbar. Auch hier gilt: keine Realdaten.

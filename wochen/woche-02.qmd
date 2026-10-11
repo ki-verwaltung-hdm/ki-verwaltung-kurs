@@ -30,7 +30,7 @@ Am Ende hat jede Gruppe Antigravity mit einem Projektordner eingerichtet, sich i
 
 ## Referenzprozesse vorstellen {#vorstellen}
 
-Jede Gruppe zeigt in drei Minuten: den gewählten Prozess, die beteiligten Rollen, die Stelle, an der unstrukturierte Information strukturiert werden muss, und eine Leitfrage für das Interview. Keine Folien. Rückfragen aus den anderen Gruppen sind erwünscht; sie landen in der Liste offener Fragen.
+Jede Gruppe zeigt in drei Minuten: den gewählten Prozess, die beteiligten Rollen, die Stelle, an der unstrukturierte Information strukturiert werden muss, und eine Leitfrage für das Interview. Keine Folien. Rückfragen sind erwünscht; sie landen in der Liste offener Fragen.
 
 ## Übung 2.1: Coding-Agent einrichten {#uebung-2-1}
 
@@ -44,7 +44,7 @@ Jede Gruppe zeigt in drei Minuten: den gewählten Prozess, die beteiligten Rolle
 3. Eine Datei `AGENTS.md` anlegen: Projektziel in drei Sätzen, der gewählte Prozess, die Regeln (keine Realdaten, Freigabe beim Menschen, Deutsch). Vorlage im [Werkzeugkasten](../werkzeuge/einrichtung.qmd#agents-md).
 4. Einen ersten Auftrag im Chat stellen, zum Beispiel: „Lies AGENTS.md und fasse in fünf Sätzen zusammen, was dieses Projekt will.“
 
-**Prüfung:** Die Zusammenfassung des Agenten stimmt mit dem überein, was die Gruppe meint. Wenn nicht, AGENTS.md präzisieren.
+**Prüfung:** Die Zusammenfassung des Agenten stimmt mit dem überein, was wir meinen. Wenn nicht, AGENTS.md präzisieren.
 :::
 
 ## Übung 2.2: n8n auf dem HdM-Server {#uebung-2-2}
@@ -83,6 +83,6 @@ Jede Gruppe zeigt in drei Minuten: den gewählten Prozess, die beteiligten Rolle
 
 ## Nächste Schritte {#naechste}
 
-Die Betreuer vereinbaren die Interviewtermine mit den Verwaltungsbereichen. Sobald ein Termin steht, bereiten sich die beiden zugeordneten Gruppen gemeinsam nach [Interviews führen](../werkzeuge/interviews.qmd) vor. Bis dahin: Referenzmodell verfeinern, Leitfragen abstimmen, erste Mock-Daten für den eigenen Prozess entwerfen.
+Die Interviewtermine vereinbaren wir mit den Verwaltungsbereichen. Sobald ein Termin steht, bereiten sich die beiden zugeordneten Gruppen gemeinsam nach [Interviews führen](../werkzeuge/interviews.qmd) vor. Bis dahin: Referenzmodell verfeinern, Leitfragen abstimmen, erste Mock-Daten für den eigenen Prozess entwerfen.
 
 [**Zurück zu Woche 1**](woche-01.qmd) · [**Semesterplan**](../semester.qmd)

@@ -3,7 +3,7 @@ title: "Coding-Agent einrichten"
 toc: true
 ---
 
-[Ein Coding-Agent schreibt Dateien: Prozessmodelle, Mock-Daten, Workflow-Exporte, kleine Web-Oberflächen. Die Gruppe gibt Richtung und Kontext, prüft jedes Ergebnis und entscheidet. Diese Seite beschreibt die Einrichtung von Antigravity und den Prompt-Standard für Aufträge.]{.lead}
+[Ein Coding-Agent schreibt Dateien: Prozessmodelle, Mock-Daten, Workflow-Exporte, kleine Web-Oberflächen. Wir geben Richtung und Kontext, prüfen jedes Ergebnis und entscheiden. Diese Seite beschreibt die Einrichtung von Antigravity und den Prompt-Standard für Aufträge.]{.lead}
 
 ## Google Antigravity {#antigravity}
 
@@ -18,10 +18,10 @@ toc: true
 
 **Wenn die Installation nicht klappt:** Den Auftrag in den Gemini-Chat im Browser einfügen, zusammen mit dem Inhalt der betroffenen Dateien als Text. Die Ausgabe als Datei speichern. Das ist umständlicher, führt aber zum selben Ergebnis.
 
-![](../images/agent-schleife.svg){.abbildung fig-alt="Kette aus Auftrag, Agent schreibt, Gruppe prüft und Ablage; eine Rückschleife führt von der Prüfung als neuer Auftrag zurück."}
+![](../images/agent-schleife.svg){.abbildung fig-alt="Kette aus Auftrag, Agent schreibt, wir prüfen und Ablage; eine Rückschleife führt von der Prüfung als neuer Auftrag zurück."}
 
 ::: {.abb-cap}
-Der Agent erzeugt, die Gruppe prüft. Korrekturen werden als neuer Auftrag formuliert, nicht von Hand in der Datei.
+Der Agent erzeugt, wir prüfen. Korrekturen formulieren wir als neuen Auftrag, nicht von Hand in der Datei.
 :::
 
 ## AGENTS.md: Kontext für den Agenten {#agents-md}
@@ -53,7 +53,7 @@ eine Entscheidung vorbereiten. Die Entscheidung trifft ein Mensch.
 
 ## Aufträge formulieren: der Prompt-Standard {#prompt}
 
-Ein guter Auftrag hat vier Teile, in dieser Reihenfolge: **Kontext, Aufgabe, Format, Prüfung.** Das Modell kennt das Handwerk. Was es nicht kennen kann, liegt nur bei der Gruppe, deshalb bewegen Kontext und Prüfung das Ergebnis am meisten.
+Ein guter Auftrag hat vier Teile, in dieser Reihenfolge: **Kontext, Aufgabe, Format, Prüfung.** Das Modell kennt das Handwerk. Was es nicht kennen kann, liegt nur bei uns, deshalb bewegen Kontext und Prüfung das Ergebnis am meisten.
 
 | Teil | Was hinein gehört | Beispiel |
 |---|---|---|
@@ -97,6 +97,6 @@ und nenne, welche weiteren Schritte von dieser Rolle abhängen.
 
 ## Was der Agent nicht entscheidet
 
-Der Agent erzeugt Entwürfe. Ob ein Modell den Ablauf richtig wiedergibt, weiß nur, wer das Interview geführt hat. Ob ein Workflow sinnvoll ist, zeigt der Test an Beispielfällen. Jede Datei, die der Agent schreibt, wird vor der Ablage von einer Person gelesen. Was die Gruppe nicht versteht, wird nicht übernommen, sondern nachgefragt.
+Der Agent erzeugt Entwürfe. Ob ein Modell den Ablauf richtig wiedergibt, weiß nur, wer das Interview geführt hat. Ob ein Workflow sinnvoll ist, zeigt der Test an Beispielfällen. Jede Datei, die der Agent schreibt, liest eine Person, bevor sie in die Ablage kommt. Was wir nicht verstehen, übernehmen wir nicht, sondern fragen nach.
 
 [**Weiter: Prozessmodellierung**](prozessmodell.qmd)

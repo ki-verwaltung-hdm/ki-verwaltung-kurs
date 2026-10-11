@@ -10,7 +10,7 @@ anchor-sections: false
 
 # KI in der Verwaltung
 
-[Die Gruppen untersuchen gemeinsam mit Bereichen der HdM-Verwaltung, wo KI-Agenten Verwaltungsarbeit unterstützen können: vom Interview über das Prozessmodell bis zum Prototyp in n8n. Jeder Prototyp bereitet Entscheidungen vor, die Entscheidung bleibt beim Menschen.]{.hero-lead}
+[In diesem Projekt untersuchen wir gemeinsam mit Bereichen der HdM-Verwaltung, wo KI-Agenten Verwaltungsarbeit unterstützen können: vom Interview über das Prozessmodell bis zum Prototyp in n8n. Jeder Prototyp bereitet Entscheidungen vor, die Entscheidung bleibt beim Menschen.]{.hero-lead}
 
 ::: {.hero-actions}
 <a href="projekt.html" class="btn btn-primary">Zum Projekt</a>
@@ -27,14 +27,14 @@ anchor-sections: false
 | ab 26.10.2026 | wöchentlich montags, 11:45 bis 13:15 Uhr: Interviews, Modellierung, Prototyp, Reviews |
 | Semesterende | Abschlusspräsentation und Abgabe, Termine werden in der Vorlesung bekannt gegeben |
 
-Der Wochentermin ist der gemeinsame Abstimmungstermin. Interviews, Modellierung und Prototyp entstehen in der eigenständigen Arbeit der Gruppen zwischen den Terminen.
+Der Wochentermin ist der gemeinsame Abstimmungstermin. Interviews, Modellierung und Prototyp entstehen in der eigenständigen Projektarbeit zwischen den Terminen.
 
 ## So läuft das Projekt
 
 ![](images/projekt-phasen.svg){.abbildung fig-alt="Fünf Phasen als Kette: Recherche, Interviews, Modellierung, Prototyp, Bewertung."}
 
 ::: {.abb-cap}
-Fünf Phasen, jede baut auf der vorherigen auf. Details auf der Seite [Projekt](projekt.qmd#vorgehen).
+So gehen wir vor: fünf Phasen, jede baut auf der vorherigen auf. Details auf der Seite [Projekt](projekt.qmd#vorgehen).
 :::
 
 ## Nachschlagen

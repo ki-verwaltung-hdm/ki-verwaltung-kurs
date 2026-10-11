@@ -91,7 +91,7 @@ def phasen():
         s.text(x + w / 2 + 20, y0 + 52, t, 26, TXT, 700)
         s.lines(x + w / 2, y0 + 120, d, 20, SOFT)
         if i < 4: s.arrow(x + w + 6, y0 + 150, x + w + gap - 6, y0 + 150)
-    s.text(800, 530, "Der Montagstermin dient der Abstimmung. Die Arbeit in den Phasen passiert zwischen den Terminen in den Gruppen.", 19, SOFT)
+    s.text(800, 530, "Der Montagstermin dient der Abstimmung. Die Arbeit in den Phasen passiert zwischen den Terminen.", 19, SOFT)
     s.save("projekt-phasen.svg")
 
 # 2 Unstrukturiert → strukturiert → Entscheidung ------------------------------
@@ -121,7 +121,7 @@ def unstrukturiert():
     s.table(1240, 285, GREEN, 1.1)
     s.person(1400, 250, BLUE, 1.1)
     s.lines(1320, 370, ["Übersicht mit Status je", "Voraussetzung und Grundlage.", "Die Entscheidung trifft", "die zuständige Person."], 20, TXT)
-    s.text(800, 580, "Gesucht sind Tätigkeiten dieser Art, nicht die vollautomatische Abwicklung eines Workflows.", 19, SOFT)
+    s.text(800, 580, "Wir suchen Tätigkeiten dieser Art, nicht die vollautomatische Abwicklung eines Workflows.", 19, SOFT)
     s.save("unstrukturiert-strukturiert.svg")
 
 # 3 Human in the Loop ---------------------------------------------------------
@@ -268,7 +268,7 @@ def interviews():
         if i < 4: s.arrow(x + w + 6, y0 + 115, x + w + gap - 6, y0 + 115)
     s.path(f"M{x0+2*(w+gap)+w/2},{y0+232} L{x0+2*(w+gap)+w/2},{y0+270} L{x0+(w+gap)+w/2},{y0+270} L{x0+(w+gap)+w/2},{y0+236}", ORANGE, "arro", 3, "8 6")
     s.text(x0 + 1.5 * (w + gap) + w / 2, y0 + 295, "offene Fragen zurück ins Gespräch", 16, ORANGE, mono=True)
-    s.text(800, 560, "Blau: mit Verwaltungsmitarbeitenden. Grün: in der Gruppe, mit dem Coding-Agenten. Namen werden durch Rollen ersetzt.", 19, SOFT)
+    s.text(800, 560, "Blau: Gespräche mit Verwaltungsmitarbeitenden. Grün: unsere Arbeit mit dem Coding-Agenten. Namen ersetzen wir durch Rollen.", 19, SOFT)
     s.save("interview-zyklus.svg")
 
 # 8 Erster n8n-Workflow -------------------------------------------------------
@@ -331,10 +331,10 @@ def prompt():
 def agent():
     s = Svg(1600, 560)
     s.label(800, 60, "Arbeiten mit dem Coding-Agenten")
-    s.text(800, 110, "Der Agent erzeugt, die Gruppe prüft und entscheidet", 30, TXT, 700)
+    s.text(800, 110, "Der Agent erzeugt, wir prüfen und entscheiden", 30, TXT, 700)
     steps = [("Auftrag", ["Kontext, Aufgabe,", "Format, Prüfung"], BLUE, "person"),
              ("Agent schreibt", ["BPMN-Datei, Mock-Daten,", "Workflow-Export"], GREEN, "bot"),
-             ("Gruppe prüft", ["gegen Protokoll,", "Modell, Testfall"], BLUE, "person"),
+             ("Wir prüfen", ["gegen Protokoll,", "Modell, Testfall"], BLUE, "person"),
              ("Ablage", ["erst nach Prüfung", "in die Teamablage"], GREEN, "doc")]
     w, gap, x0, y0 = 290, 60, 90, 180
     for i, (t, d, c, ic) in enumerate(steps):
@@ -350,7 +350,7 @@ def agent():
     px = x0 + 2 * (w + gap) + w / 2; ax = x0 + w / 2
     s.path(f"M{px},{y0+212} L{px},{y0+260} L{ax},{y0+260} L{ax},{y0+214}", ORANGE, "arro", 3, "8 6")
     s.text((px + ax) / 2, y0 + 285, "Korrektur als neuer Auftrag, nicht von Hand in der Datei", 16, ORANGE, mono=True)
-    s.text(800, 520, "Was die Gruppe nicht versteht, wird nicht übernommen, sondern nachgefragt.", 19, SOFT)
+    s.text(800, 520, "Was wir nicht verstehen, übernehmen wir nicht, sondern fragen nach.", 19, SOFT)
     s.save("agent-schleife.svg")
 
 # 11 Semesterablauf -----------------------------------------------------------

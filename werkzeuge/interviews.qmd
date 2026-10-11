@@ -7,9 +7,9 @@ toc: true
 
 ## Worauf das Interview zielt {#fokus}
 
-Gesucht sind Tätigkeiten, bei denen Mitarbeitende unstrukturierte Informationen in strukturierte überführen und Entscheidungen vorbereiten: Übersichten erstellen, Unterlagen zusammenfassen, Angaben gegen Voraussetzungen prüfen, Rückfragen formulieren. Das sind die Stellen, an denen ein Agent eine Vorlage liefern kann, ohne in Systeme schreiben zu müssen.
+Wir suchen Tätigkeiten, bei denen Mitarbeitende unstrukturierte Informationen in strukturierte überführen und Entscheidungen vorbereiten: Übersichten erstellen, Unterlagen zusammenfassen, Angaben gegen Voraussetzungen prüfen, Rückfragen formulieren. Das sind die Stellen, an denen ein Agent eine Vorlage liefern kann, ohne in Systeme schreiben zu müssen.
 
-Die Frage „Welchen Workflow würden Sie gern automatisieren?“ führt selten weiter. Besser sind Fragen nach konkreten Vorgängen der letzten Wochen.
+Die Frage „Welchen Workflow würden Sie gern automatisieren?“ führt selten weiter. Besser fragen wir nach konkreten Vorgängen der letzten Wochen.
 
 ![](../images/interview-zyklus.svg){.abbildung fig-alt="Kette aus Recherche, Interview 1, Ist-Modell, Interview 2 und Vorstellung; offene Fragen laufen vom Modell zurück ins Gespräch."}
 
@@ -94,6 +94,6 @@ Nach der Modellierung bleiben Lücken: Rollen, Ausnahmen, Rückschleifen. Das zw
 
 ## Umgang mit den Gesprächspartnerinnen und Gesprächspartnern {#haltung}
 
-Die Verwaltungsmitarbeitenden nehmen sich Zeit für das Projekt. Dafür gilt: pünktlich sein, vorbereitet kommen, zuhören, nichts versprechen. Das Projekt liefert Vorschläge und Prototypen mit erfundenen Daten. Ob etwas eingeführt wird, entscheidet die Hochschule. Diese Grenze wird im Gespräch benannt.
+Die Verwaltungsmitarbeitenden nehmen sich Zeit für das Projekt. Dafür gilt: pünktlich sein, vorbereitet kommen, zuhören, nichts versprechen. Wir liefern Vorschläge und Prototypen mit erfundenen Daten. Ob etwas eingeführt wird, entscheidet die Hochschule. Diese Grenze benennen wir im Gespräch.
 
 [**Weiter: n8n auf dem HdM-Server**](n8n.qmd)

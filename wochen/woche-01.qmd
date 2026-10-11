@@ -30,15 +30,15 @@ Am Ende des Termins kennen alle den Auftrag, das Vorgehen in fünf Phasen und di
 
 ## Projektidee und Vorgehen {#projektidee}
 
-Die Hochschulverwaltung hat die Fakultät gebeten, versuchsweise KI in Bereichen der Verwaltung zu erproben. Das Projekt tut das in fünf Phasen: Recherche, Interviews, Modellierung, Prototyp, Bewertung. Alles Wesentliche steht auf der Seite [Projekt](../projekt.qmd). Drei Punkte sind am ersten Tag wichtig:
+Die Hochschulverwaltung hat die Fakultät gebeten, versuchsweise KI in Bereichen der Verwaltung zu erproben. Wir tun das in fünf Phasen: Recherche, Interviews, Modellierung, Prototyp, Bewertung. Alles Wesentliche steht auf der Seite [Projekt](../projekt.qmd). Drei Punkte sind am ersten Tag wichtig:
 
-- Gesucht sind Tätigkeiten, die **unstrukturierte Informationen in strukturierte überführen** und **Entscheidungen vorbereiten**, nicht die Automatisierung ganzer Workflows.
+- Wir suchen Tätigkeiten, die **unstrukturierte Informationen in strukturierte überführen** und **Entscheidungen vorbereiten**, nicht die Automatisierung ganzer Workflows.
 - Der Mensch entscheidet. Jeder Prototyp endet mit einer Freigabe durch eine Person.
-- Keine Realdaten. Daten und Schnittstellen werden nachgebaut.
+- Keine Realdaten. Daten und Schnittstellen bauen wir nach.
 
 ## Umfrage zur Gruppeneinteilung {#gruppen}
 
-Das Projekt wird in Dreiergruppen bearbeitet. Die Teilnehmenden kommen aus mehreren Studiengängen und kennen sich meist nicht. Deshalb erfolgt die Einteilung über eine kurze Umfrage: Erfahrungen, Lerninteressen, gemeinsame Arbeitszeiten und Präferenzen für die Zusammenarbeit. Vorkenntnisse werden nicht vorausgesetzt.
+Wir arbeiten in Dreiergruppen. Die Teilnehmenden kommen aus mehreren Studiengängen und kennen sich meist noch nicht. Deshalb erfolgt die Einteilung über eine kurze Umfrage: Erfahrungen, Lerninteressen, gemeinsame Arbeitszeiten und Präferenzen für die Zusammenarbeit. Vorkenntnisse werden nicht vorausgesetzt.
 
 ::: {.todo}
 [Aufgabe · etwa 6 bis 8 Minuten]{.todo-label}
@@ -61,7 +61,7 @@ Ein kurzer Input mit dem [Werkzeugkasten Prozessmodellierung](../werkzeuge/proze
 ::: {.uebung}
 ### Bis Montag, 19.10. · in den Gruppen
 
-**Worum es geht:** Bevor die Gruppen mit Verwaltungsmitarbeitenden sprechen, brauchen sie Vokabular, Vergleichsfälle und eine erste Hypothese, wie ein unterstützter Ablauf aussehen könnte.
+**Worum es geht:** Bevor wir mit Verwaltungsmitarbeitenden sprechen, brauchen wir Vokabular, Vergleichsfälle und eine erste Hypothese, wie ein unterstützter Ablauf aussehen könnte.
 
 1. Zwei bis drei Quellen aus der [Literaturliste](../materialien.qmd#literatur) lesen, mindestens „Agentische KI im Hochschulsystem“ und „Building Effective Agents“.
 2. Recherchieren: Wer setzt in Hochschulverwaltung oder Behörden bereits KI für Übersichten, Zusammenfassungen oder Prüfungen ein? Welche Muster wiederholen sich? Was ist gescheitert, und warum?
@@ -74,7 +74,7 @@ Ein kurzer Input mit dem [Werkzeugkasten Prozessmodellierung](../werkzeuge/proze
 **Ergebnis:** Ein Ordner `01_Recherche` mit Quellen, Referenzprozess und Leitfragen. In Woche 2 stellt jede Gruppe ihren Referenzprozess in drei Minuten vor.
 :::
 
-Ein Hinweis zur Recherche mit KI: Gemini und andere Chat-Werkzeuge dürfen zur Recherche verwendet werden. Jede Aussage, die in die Ablage kommt, wird gegen die Originalquelle geprüft. Eine KI-Antwort ohne Quelle ist eine Vermutung.
+Ein Hinweis zur Recherche mit KI: Gemini und andere Chat-Werkzeuge dürfen zur Recherche verwendet werden. Jede Aussage, die in die Ablage kommt, prüfen wir gegen die Originalquelle. Eine KI-Antwort ohne Quelle ist eine Vermutung.
 
 ## Bis Woche 2 vorbereiten {#vorbereitung}
 
