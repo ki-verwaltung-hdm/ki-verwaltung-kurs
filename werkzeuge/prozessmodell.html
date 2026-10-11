@@ -291,7 +291,7 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="lead">Ein Prozessmodell zeigt, wer welchen Schritt ausführt, wo entschieden wird und wo ein Agent sinnvoll ist. Es ist die Grundlage für das Interview, für das zweite Gespräch und für den Prototyp in n8n.</span></p>
 <section id="warum-zuerst-modellieren" class="level2">
 <h2 class="anchored" data-anchor-id="warum-zuerst-modellieren">Warum zuerst modellieren</h2>
-<p>Ein Agent unterstützt einen Ablauf. Wer den Ablauf nicht kennt, baut am Problem vorbei. Das Modell macht drei Dinge sichtbar: welche Schritte <strong>feste Regeln</strong> sind und ohne Modell funktionieren (ist die Zahl der Leistungspunkte erreicht?), wo <strong>Sprachverständnis</strong> nötig ist (was steht in diesem Nachweis, und passt er zur Anforderung?) und wo ein <strong>Mensch prüfen und freigeben</strong> muss. Außerdem wird aus dem Soll-Modell die Vorlage für den Prototyp: Der Coding-Agent kann aus einem klaren Modell einen ersten n8n-Workflow erzeugen, wir prüfen ihn gegen das Modell.</p>
+<p>Ein Agent unterstützt einen Ablauf. Je besser wir den Ablauf kennen, desto eher trifft der Agent später das, was den Mitarbeitenden wirklich hilft. Das Modell macht drei Dinge sichtbar: welche Schritte <strong>feste Regeln</strong> sind und ohne Modell funktionieren (ist die Zahl der Leistungspunkte erreicht?), wo <strong>Sprachverständnis</strong> nötig ist (was steht in diesem Nachweis, und passt er zur Anforderung?) und wo ein <strong>Mensch prüfen und freigeben</strong> muss. Außerdem wird aus dem Soll-Modell die Vorlage für den Prototyp: Der Coding-Agent kann aus einem klaren Modell einen ersten n8n-Workflow erzeugen, wir prüfen ihn gegen das Modell.</p>
 </section>
 <section id="swimlane-diagramm-in-bpmn-2.0" class="level2">
 <h2 class="anchored" data-anchor-id="swimlane-diagramm-in-bpmn-2.0">Swimlane-Diagramm in BPMN 2.0</h2>
@@ -354,7 +354,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="übertragen-auf-einen-verwaltungsprozess">Übertragen auf einen Verwaltungsprozess</h2>
 <p>Beispiel Anmeldung einer Abschlussarbeit, nach der Beschreibung aus dem Projektvorfeld. Vier Fragen helfen beim Übertragen:</p>
 <ul>
-<li><strong>Feste Regel oder Modellschritt?</strong> Leistungspunkte, abgeschlossenes Praxissemester, Fristen stehen in einer Ordnung. Sie lassen sich als Regel prüfen und sollten nicht vom Modell erraten werden.</li>
+<li><strong>Feste Regel oder Modellschritt?</strong> Leistungspunkte, abgeschlossenes Praxissemester, Fristen stehen in einer Ordnung. Sie lassen sich als Regel prüfen; das ist zuverlässiger, als wenn ein Modell sie einschätzt.</li>
 <li><strong>Wo braucht es Sprachverständnis?</strong> Ein Nachweis als PDF lesen und einordnen, eine Übersicht über mehrere Anträge erstellen, eine Rückfrage an die antragstellende Person formulieren. Einordnungen mit wenigen Antworten bekommen eine Sicherheitsangabe und eine Schwelle, siehe <a href="../werkzeuge/n8n.html#einordnen">Einordnen mit Konfidenz</a>.</li>
 <li><strong>Woher stammt jede Information?</strong> Jede Angabe im Ergebnis nennt ihre Quelle: Formularfeld, Systemauszug, Nachweisdokument. Im Prototyp sind diese Quellen Mocks.</li>
 <li><strong>Wer prüft?</strong> Der Agent erstellt die Prüfübersicht, die zuständige Person entscheidet und dokumentiert.</li>
@@ -368,7 +368,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Soll-Modell</strong> mit KI-Agent: dieselben Ziele, zusätzlich die Bahnen „KI-Agent“ und „Workflow-System“. Feste Regeln stehen vor jedem Modellschritt. Freigabe und Entscheidungen mit Außenwirkung bleiben beim Menschen.</li>
 <li><strong>Begründung</strong> als Tabelle mit drei Spalten: „Entfällt“, „Bleibt beim Menschen“, „Neu“. Dazu drei Sätze: Was ändert sich an der Durchlaufzeit, welche Übergaben fallen weg, was müsste ein Pilot messen?</li>
 </ol>
-<p>Die Aufträge für den Coding-Agenten stehen fertig in den Materialien: <a href="../material/prompts/ist-aus-prosa.md">Ist-Prozess aus einer Beschreibung</a> und <a href="../material/prompts/redesign-mit-ki.md">Prozess mit KI neu denken</a>. Ein Soll-Modell ist eine Gestaltungshypothese, kein Beweis.</p>
+<p>Die Aufträge für den Coding-Agenten stehen fertig in den Materialien: <a href="../material/prompts/ist-aus-prosa.md">Ist-Prozess aus einer Beschreibung</a> und <a href="../material/prompts/redesign-mit-ki.md">Prozess mit KI neu denken</a>. Ein Soll-Modell ist eine Gestaltungshypothese; ob sie trägt, zeigt sich im Gespräch und im Prototyp.</p>
 </section>
 <section id="werkzeuge" class="level2">
 <h2 class="anchored" data-anchor-id="werkzeuge">Werkzeuge</h2>

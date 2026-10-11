@@ -33,5 +33,5 @@
 <rect x="810" y="340" width="260" height="80" rx="16" fill="#1a2030" stroke="#ffa65c" stroke-width="2"/>
 <text x="940" y="372" font-size="19" fill="#ffa65c" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Edit Fields</text>
 <text x="940" y="400" font-size="15" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Nicht zulässig, ohne Modellaufruf</text>
-<text x="800" y="500" font-size="19" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Was eine Zahl entscheidet, rät kein Modell. Die Entscheidung über den Antrag trifft die zuständige Person.</text>
+<text x="800" y="500" font-size="19" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Was eine Zahl entscheidet, prüft die feste Regel. Die Entscheidung über den Antrag trifft die zuständige Person.</text>
 </svg>

@@ -414,7 +414,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="feste-regel" class="level3">
 <h3 class="anchored" data-anchor-id="feste-regel">2. Feste Regel</h3>
-<p>Einen <strong>If</strong>-Knoten einfügen, „Mindestens 210 LP?“ nennen. Bedingung: <code>{ $json.leistungspunkte }</code> als Zahl größer oder gleich 210. Der Zweig <code>true</code> führt weiter zum Modell, der Zweig <code>false</code> zu einem Edit-Fields-Knoten „Nicht zulaessig“ mit <code>ergebnis = Voraussetzung Leistungspunkte nicht erfüllt</code>. Die feste Regel liegt vor dem Modell: Was eine Zahl entscheidet, soll kein Modell raten.</p>
+<p>Einen <strong>If</strong>-Knoten einfügen, „Mindestens 210 LP?“ nennen. Bedingung: <code>{ $json.leistungspunkte }</code> als Zahl größer oder gleich 210. Der Zweig <code>true</code> führt weiter zum Modell, der Zweig <code>false</code> zu einem Edit-Fields-Knoten „Nicht zulaessig“ mit <code>ergebnis = Voraussetzung Leistungspunkte nicht erfüllt</code>. Die feste Regel liegt vor dem Modell: Was eine Zahl entscheidet, prüft die Regel zuverlässiger als ein Modell.</p>
 </section>
 <section id="gemini" class="level3">
 <h3 class="anchored" data-anchor-id="gemini">3. Modellschritt</h3>
