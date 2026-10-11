@@ -15,6 +15,7 @@ toc: true
 | Gruppen | Dreiergruppen, Einteilung in Woche 1 über eine kurze Umfrage |
 | Sprache | Deutsch |
 | Programmierung | keine Voraussetzung; Prototypen entstehen in n8n, Dateien schreibt der Coding-Agent |
+| Prüfung | Vorprüfungsleistung (zwei Online-Kurse) und Modulprüfung aus vier Teilen, siehe [Bewertung](bewertung.qmd) |
 
 Der Wochentermin ist nach den ersten drei Wochen ein Coaching-Angebot: Fragen, Rückmeldung zu Zwischenständen, bei Bedarf Input. Recherche, Interviews, Modellierung und Prototyp entstehen in der eigenständigen Arbeit der Gruppen. Die öffentliche [Projektbeschreibung](https://kirenz.github.io/hdm-projekte/projekte/ws-2026/ki-hochschulverwaltung.html) fasst Idee und Themenfelder zusammen.
 

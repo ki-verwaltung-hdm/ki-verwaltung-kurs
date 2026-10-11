@@ -16,6 +16,7 @@ project:
     - werkzeuge/interviews.qmd
     - werkzeuge/n8n.qmd
     - abgaben.qmd
+    - bewertung.qmd
     - materialien.qmd
 
 lang: de
@@ -64,6 +65,8 @@ website:
             text: n8n auf dem HdM-Server
       - href: abgaben.qmd
         text: Abgaben
+      - href: bewertung.qmd
+        text: Bewertung
       - href: materialien.qmd
         text: Materialien
   page-footer:

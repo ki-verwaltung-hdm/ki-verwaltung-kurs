@@ -1,0 +1,105 @@
+---
+title: "Bewertung"
+toc: true
+---
+
+[Eine Vorprüfungsleistung mit zwei Online-Kursen und eine Modulprüfung aus vier Teilen. Bewertet wird die Qualität von Analyse, Modell, Tests und Schlussfolgerung, nicht der Umfang des Prototyps. Eine gut begründete Empfehlung gegen den KI-Einsatz ist ein vollwertiges Ergebnis.]{.lead}
+
+## Überblick {#ueberblick}
+
+| Komponente | Gewicht | Art | Termin |
+|---|---|---|---|
+| [Vorprüfungsleistung: zwei Online-Kurse](#vorpruefung) | unbenotet | individuell | Mo, 30.11.2026 |
+| [1 · Prozessanalyse](#prozessanalyse) | 30 % | Gruppe | Fr, 12.02.2027 |
+| [2 · Prototyp mit Testfällen](#prototyp) | 30 % | Gruppe | Fr, 12.02.2027 |
+| [3 · Bewertung und Empfehlung](#bericht) | 25 % | Gruppe | Fr, 12.02.2027 |
+| [4 · Abschlusspräsentation](#praesentation) | 15 % | Gruppe, jede Person präsentiert | Woche vom 25.01. oder 01.02.2027 |
+| Zwischenstand-Review im Coaching | unbenotet | Gruppe | Mo, 14.12.2026 |
+
+Die vier benoteten Teile ergeben zusammen 100 Punkte und werden im Team erbracht. Was wann wo abgelegt wird, steht auf der Seite [Abgaben](abgaben.qmd). Es gibt keine benotete Zwischenpräsentation; das Review Mitte Dezember ist eine Rückmeldung zu Modell und Prototyp-Plan.
+
+## Vorprüfungsleistung: Online-Kurse {#vorpruefung}
+
+Zweck: gemeinsames Grundwissen zu KI in der Verwaltung und zu n8n, ohne dafür Vorlesungszeit zu verbrauchen.
+
+| Kurs | Umfang | Nachweis |
+|---|---|---|
+| [KIÖV: KI in öffentlichen Verwaltungen](https://ki-campus.org/kurse/ki-oev) (KI-Campus, kostenlos) | ca. 5 Stunden | Zertifikat des KI-Campus als PDF |
+| [n8n Course Level 1](https://docs.n8n.io/courses/level-one) (kostenlos) | Textkurs, zwei Workflows | Screenshot des Abschlussquiz mit mindestens 80 % oder Badge; das Quiz kann beliebig oft wiederholt werden |
+
+1. Beide Kurse vollständig durcharbeiten.
+2. Die Nachweise bis Montag, 30.11.2026, in der Teamablage unter `00_Nachweise/<Nachname>/` ablegen.
+
+**Prüfen:** Je Person zwei Nachweise, Kurstitel und eigener Name sind lesbar.
+
+::: {.callout-warning title="Achtung"}
+Ohne bestandene Vorprüfungsleistung wird die Modulprüfung nicht bewertet.
+:::
+
+## 1 · Prozessanalyse (30 Punkte) {#prozessanalyse}
+
+Grundlage sind die Ordner `02_Interviews` und `03_Prozessmodelle` der Teamablage.
+
+| Kriterium | Punkte |
+|---|---|
+| 1.1 Interviewprotokolle: vollständig im Raster, Rollen statt Namen, offene Fragen gesammelt, zweites Gespräch dokumentiert | 6 |
+| 1.2 Ist-Modell: BPMN korrekt (eine Bahn je Rolle, Entscheidungen mit beschrifteten Ausgängen, Rückschleifen), deckt das Protokoll ab, von der interviewten Person bestätigt | 8 |
+| 1.3 Soll-Modell: feste Regeln vor Modellschritten, Freigabe in menschlicher Bahn, Zugriffsrechte realistisch berücksichtigt, kein Schreibzugriff auf Verwaltungssysteme | 8 |
+| 1.4 Begründung: Tabelle „Entfällt, Bleibt beim Menschen, Neu“, nachvollziehbar aus Protokoll und Recherche, was ein Pilot messen müsste | 5 |
+| 1.5 Recherche: Quellen belegt, Bezug zu Praxisbeispielen aus Land, Bund und Kommunen, Muster erkannt | 3 |
+
+## 2 · Prototyp mit Testfällen (30 Punkte) {#prototyp}
+
+Grundlage ist der Ordner `04_Prototyp`: n8n-Exporte, Prompts im Wortlaut, Mocks mit Beschreibung, Testfälle, Einrichtungsanleitung.
+
+| Kriterium | Punkte |
+|---|---|
+| 2.1 Umsetzung des Soll-Modells: Knoten entsprechen den Schritten des Modells, feste Regeln als If-Knoten vor dem Modellschritt | 7 |
+| 2.2 Freigabe durch einen Menschen ist im Workflow sichtbar und funktioniert | 5 |
+| 2.3 Mocks: Daten und Schnittstellen nachgebaut, als erfunden gekennzeichnet, dokumentiert, was sie nachbilden und was nicht | 5 |
+| 2.4 Testfälle: mindestens fünf, darunter Normalfall, fehlende Angabe und ein Fall, den eine feste Regel abfängt; erwartetes und tatsächliches Ergebnis, mehrere Läufe; bei Einordnungen mit Konfidenz die Schwelle begründet | 7 |
+| 2.5 Reproduzierbarkeit: eine andere Gruppe kann importieren, Verbindungen auswählen und einen Testfall ausführen; keine Zugangsdaten in Dateien | 4 |
+| 2.6 Prompts nach dem Standard (Kontext, Aufgabe, Format, Prüfung), versioniert | 2 |
+
+## 3 · Bewertung und Empfehlung (25 Punkte) {#bericht}
+
+Bericht im Ordner `05_Bewertung`, etwa sechs bis acht Seiten, Deutsch, als PDF.
+
+| Kriterium | Punkte |
+|---|---|
+| 3.1 Was der Prototyp leistet und was nicht, belegt mit den Testfällen | 8 |
+| 3.2 Grenzen: Daten, Schnittstellen, Rechte, Modellqualität, Datenschutz (unter anderem § 35a VwVfG, Art. 22 DSGVO, sensible Daten nicht in öffentliche Clouds) | 7 |
+| 3.3 Empfehlung an den Verwaltungsbereich: weiterverfolgen, anpassen oder nicht weiterverfolgen, mit Begründung und nächsten Schritten | 6 |
+| 3.4 Offenlegung der KI-Nutzung in der Projektarbeit und kurze Reflexion: Was hat der Coding-Agent gut gemacht, wo musste korrigiert werden | 4 |
+
+## 4 · Abschlusspräsentation (15 Punkte) {#praesentation}
+
+Vor den beteiligten Verwaltungsbereichen, etwa 15 Minuten je Gruppe plus Rückfragen. Jede Person präsentiert einen Teil.
+
+| Kriterium | Punkte |
+|---|---|
+| 4.1 Ausgangslage und Ablauf heute, verständlich für das Verwaltungspublikum | 3 |
+| 4.2 Soll-Modell und Live-Demo an einem Testfall einschließlich Freigabeschritt; zu Beginn der Hinweis, dass Daten und Schnittstellen erfunden sind | 6 |
+| 4.3 Grenzen und Empfehlung, klar und ehrlich | 4 |
+| 4.4 Umgang mit Rückfragen | 2 |
+
+## Teamarbeit {#team}
+
+Alle Mitglieder tragen gleichwertig bei. Grundlage für den relativen Beitrag sind eine Peer-Einschätzung am Semesterende, die Aktivität in der Teamablage sowie die Beteiligung an Interviews und Präsentation. Bei deutlich geringerem Beitrag sinkt die Einzelnote um bis zu 0,7 gegenüber der Teamnote.
+
+## Notenumrechnung {#noten}
+
+| Note | Punkte |
+|---|---|
+| 1,0 | 96 bis 100 |
+| 1,3 | 91 bis 95 |
+| 1,7 | 85 bis 90 |
+| 2,0 | 80 bis 84 |
+| 2,3 | 75 bis 79 |
+| 2,7 | 70 bis 74 |
+| 3,0 | 65 bis 69 |
+| 3,3 | 60 bis 64 |
+| 3,7 | 55 bis 59 |
+| 4,0 | 50 bis 54 |
+| 4,7 | 15 bis 49 |
+| 5,0 | 0 bis 14 |

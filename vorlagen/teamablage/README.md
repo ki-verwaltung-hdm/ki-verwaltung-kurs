@@ -4,6 +4,7 @@ Gemeinsamer Ordner der Gruppe für das HdM-Projekt „KI in der Verwaltung“ (W
 
 | Ordner | Phase | Inhalt |
 |---|---|---|
+| `00_Nachweise` | Vorprüfung | Nachweise der Online-Kurse, je Person ein Unterordner |
 | `01_Recherche` | Recherche | Quellen, Erkenntnisse, Referenzprozess, Leitfragen |
 | `02_Interviews` | Interviews | Leitfaden, Protokolle, offene Fragen |
 | `03_Prozessmodelle` | Modellierung | Ist- und Soll-Modell als `.bpmn` und als Bild, Begründung |

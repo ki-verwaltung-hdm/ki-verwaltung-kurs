@@ -11,12 +11,12 @@ toc: true
 |---|---|---|---|---|
 | 1 | [Recherche, Referenzprozess, Leitfragen](#recherche) | Gruppe, Rückmeldung | Prozesskandidat Montag, 19.10.2026; Ergebnisse Montag, 26.10.2026 | Teamablage `01_Recherche` |
 | 2 | [Interviewprotokoll und offene Fragen](#interview) | zwei Gruppen gemeinsam | nach dem Interview | `02_Interviews` |
-| 3 | [Ist- und Soll-Modell mit Begründung](#modelle) | Gruppe, Rückmeldung | wird vereinbart | `03_Prozessmodelle` |
-| 4 | [Prototyp mit Testfällen](#prototyp) | Gruppe, Review | wird vereinbart | `04_Prototyp` |
-| 5 | [Bewertung und Empfehlungen](#bewertung) | Gruppe | wird vereinbart | `05_Bewertung` |
-| 6 | [Abschlusspräsentation](#abschluss) | Gruppe | Semesterende, wird vereinbart | Präsentation vor den beteiligten Bereichen |
+| 3 | [Ist- und Soll-Modell mit Begründung](#modelle) | Gruppe, 30 % mit Protokollen | Review 14.12.2026, Abgabe Fr, 12.02.2027 | `03_Prozessmodelle` |
+| 4 | [Prototyp mit Testfällen](#prototyp) | Gruppe, 30 % | Review 14.12.2026, Abgabe Fr, 12.02.2027 | `04_Prototyp` |
+| 5 | [Bewertung und Empfehlungen](#bewertung) | Gruppe, 25 % | Fr, 12.02.2027 | `05_Bewertung` |
+| 6 | [Abschlusspräsentation](#abschluss) | Gruppe, 15 % | Woche vom 25.01. oder 01.02.2027 | Präsentation vor den beteiligten Bereichen |
 
-Die Form der Prüfungsleistung, ihre Bestandteile und die Bewertungskriterien werden in der Vorlesung bekannt gegeben. Die Schritte auf dieser Seite beschreiben die Arbeitsergebnisse, auf denen die Bewertung aufbaut.
+Gewichte, Kriterien und die Vorprüfungsleistung stehen auf der Seite [Bewertung](bewertung.qmd). Die Schritte auf dieser Seite beschreiben die Arbeitsergebnisse, auf denen die Bewertung aufbaut.
 
 ## Laufend {#laufend}
 
