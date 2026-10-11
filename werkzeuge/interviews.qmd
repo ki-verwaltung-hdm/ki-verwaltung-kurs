@@ -11,6 +11,12 @@ Gesucht sind Tätigkeiten, bei denen Mitarbeitende unstrukturierte Informationen
 
 Die Frage „Welchen Workflow würden Sie gern automatisieren?“ führt selten weiter. Besser sind Fragen nach konkreten Vorgängen der letzten Wochen.
 
+![](../images/interview-zyklus.svg){.abbildung fig-alt="Kette aus Recherche, Interview 1, Ist-Modell, Interview 2 und Vorstellung; offene Fragen laufen vom Modell zurück ins Gespräch."}
+
+::: {.abb-cap}
+Zwei Gespräche, dazwischen das Modell. Was beim Modellieren unklar bleibt, wird im zweiten Gespräch geklärt.
+:::
+
 ## Vorbereitung {#vorbereitung}
 
 **Voraussetzungen:** Recherche abgeschlossen, Referenzprozess als Hypothese vorhanden, Leitfragen abgestimmt, Rollen im Gespräch verteilt.

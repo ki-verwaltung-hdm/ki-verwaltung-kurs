@@ -30,6 +30,12 @@ Genau an dieser Stelle setzt das Projekt an. Gesucht sind Tätigkeiten, bei dene
 
 Nicht gesucht ist die vollautomatische Abwicklung eines Workflows. Die Verwaltung gibt einem Agenten keinen Schreibzugriff auf ihre Systeme, und auch Lesezugriffe sind nicht selbstverständlich. Der Agent liefert eine Vorlage, der Mensch entscheidet.
 
+![](images/unstrukturiert-strukturiert.svg){.abbildung fig-alt="Links verstreute Eingänge wie Formular, Mail, PDF und Systemauszug, in der Mitte der KI-Agent, der sammelt, prüft und zusammenfasst, rechts eine Übersicht und die Person, die entscheidet."}
+
+::: {.abb-cap}
+Der Agent überführt verstreute Angaben in eine Übersicht mit Status je Voraussetzung. Die Entscheidung bleibt bei der zuständigen Person.
+:::
+
 ### Mögliche Bereiche
 
 Welche Verwaltungsbereiche Interviews anbieten, wird zum Projektstart geklärt. Beispiele für Prozesse, die im Vorfeld genannt wurden:
@@ -55,6 +61,12 @@ Interviewpartnerinnen und Interviewpartner werden auf dieser Website nicht namen
 
 Die Phasen bauen aufeinander auf. Wochen 1 und 2 stehen im [Semesterplan](semester.qmd) im Detail, die übrigen Phasen als Rahmen; ihre Termine werden im Semester vereinbart.
 
+![](images/projekt-phasen.svg){.abbildung fig-alt="Fünf Phasen als Kette: Recherche, Interviews, Modellierung, Prototyp, Bewertung."}
+
+::: {.abb-cap}
+Die fünf Phasen des Projekts. Der Montagstermin dient der Abstimmung, die Arbeit passiert dazwischen in den Gruppen.
+:::
+
 ### Warum zuerst recherchieren
 
 Wer ohne Vorbereitung ins Interview geht, fragt nach dem, was er schon kennt. Die Recherche liefert Vokabular und Vergleichsfälle: Wie lösen andere Hochschulen und Behörden ähnliche Aufgaben, welche Muster wiederholen sich, was ging schief? Daraus entsteht ein Referenzprozess als Hypothese. Im Interview wird diese Hypothese geprüft, nicht bestätigt. Die wichtigsten Quellen stehen bei den [Materialien](materialien.qmd#literatur).
@@ -73,7 +85,19 @@ Nach dem ersten Interview fehlen erfahrungsgemäß Rollen, Ausnahmen und Rücksc
 Jeder Prototyp endet mit einer Prüfung durch einen Menschen. Der Agent sammelt, prüft, fasst zusammen und schlägt vor. Die Freigabe erfolgt durch die zuständige Person, zum Beispiel per Antwort auf eine Nachricht, in einem Chat oder über eine einfache Web-Oberfläche. Erst danach geht der Prozess weiter. Kein Prototyp schreibt in ein Verwaltungssystem.
 :::
 
+![](images/human-in-the-loop.svg){.abbildung fig-alt="Kette aus Eingang, Agent sammelt, Agent prüft, Agent fasst zusammen und Freigabe durch eine Person; darunter der Hinweis, dass kein Agent in ein Verwaltungssystem schreibt."}
+
+::: {.abb-cap}
+Der Agent bereitet vor, die Person gibt frei oder gibt zurück. Schreibzugriffe auf Verwaltungssysteme gibt es im Projekt nicht.
+:::
+
 **Keine Realdaten.** Schnittstellen und Daten werden nachgebaut (gemockt): eine synthetische Tabelle mit erfundenen Studierenden, eine kleine Web-Schnittstelle, die so antwortet, wie es das echte System täte, ein Ordner mit erfundenen Anträgen. Der Prototyp zeigt dann: „So würde der Agent auf das System zugreifen, und das würde er zurückbekommen.“ Welche Daten und Schnittstellen nicht real sind, steht in der Dokumentation.
+
+![](images/mock-system.svg){.abbildung fig-alt="Prototyp in n8n fragt eine Mock-Schnittstelle mit erfundenen Daten; der Weg zum echten System ist durchgestrichen."}
+
+::: {.abb-cap}
+Der Prototyp spricht nur mit nachgebauten Systemen. Das Mock macht sichtbar, welche Daten und Rechte ein realer Einsatz bräuchte.
+:::
 
 **Sensible Inhalte bleiben lokal.** Bewerbungsunterlagen, Personalakten und ähnliche Inhalte dürfen nicht in öffentliche Cloud-Dienste gelangen. Für solche Fälle kommen nur lokal oder in Europa betriebene Modelle in Frage. Ob und welche lokalen Modelle im Semester bereitstehen, wird geklärt. Die Gemini-Verbindung in n8n ist für synthetische Daten vorgesehen.
 

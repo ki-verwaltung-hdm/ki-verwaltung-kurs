@@ -29,6 +29,14 @@ anchor-sections: false
 
 Der Wochentermin ist der gemeinsame Abstimmungstermin. Interviews, Modellierung und Prototyp entstehen in der eigenständigen Arbeit der Gruppen zwischen den Terminen.
 
+## So läuft das Projekt
+
+![](images/projekt-phasen.svg){.abbildung fig-alt="Fünf Phasen als Kette: Recherche, Interviews, Modellierung, Prototyp, Bewertung."}
+
+::: {.abb-cap}
+Fünf Phasen, jede baut auf der vorherigen auf. Details auf der Seite [Projekt](projekt.qmd#vorgehen).
+:::
+
 ## Nachschlagen
 
 | Seite | Inhalt |

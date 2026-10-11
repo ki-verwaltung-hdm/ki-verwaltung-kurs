@@ -18,6 +18,12 @@ toc: true
 
 **Wenn die Installation nicht klappt:** Den Auftrag in den Gemini-Chat im Browser einfügen, zusammen mit dem Inhalt der betroffenen Dateien als Text. Die Ausgabe als Datei speichern. Das ist umständlicher, führt aber zum selben Ergebnis.
 
+![](../images/agent-schleife.svg){.abbildung fig-alt="Kette aus Auftrag, Agent schreibt, Gruppe prüft und Ablage; eine Rückschleife führt von der Prüfung als neuer Auftrag zurück."}
+
+::: {.abb-cap}
+Der Agent erzeugt, die Gruppe prüft. Korrekturen werden als neuer Auftrag formuliert, nicht von Hand in der Datei.
+:::
+
 ## AGENTS.md: Kontext für den Agenten {#agents-md}
 
 Eine Datei `AGENTS.md` im Projektordner gibt dem Agenten den Kontext: worum es geht, wo was liegt, welche Regeln gelten. Der Agent liest sie zu Beginn jedes Auftrags. Nur Regeln eintragen, die wirklich gelten; die Datei wächst mit dem Projekt. Beispiele auf [agents.md](https://agents.md/).
@@ -72,6 +78,12 @@ stellen sollten.
 ```
 
 Der Kontext steht oben, die Anweisungen danach. Bei langem Material antworten Modelle so besser, als wenn die Aufgabe vor dem Material steht. Derselbe Standard gilt für Aufträge im Gemini-Chat und in n8n.
+
+![](../images/prompt-standard.svg){.abbildung fig-alt="Vier Blöcke untereinander: Kontext, Aufgabe, Format, Prüfung, jeweils mit Erklärung und Beispiel."}
+
+::: {.abb-cap}
+Die vier Teile eines Auftrags in fester Reihenfolge. Kontext und Prüfung bewegen das Ergebnis am meisten.
+:::
 
 ## Eine Änderung gezielt prüfen
 

@@ -5,6 +5,13 @@ toc: true
 
 [Der Plan nennt die ersten beiden Wochen im Detail. Die weiteren Phasen sind als Rahmen beschrieben; ihre Termine werden im Semester vereinbart, abhängig davon, wann die Interviews stattfinden.]{.lead}
 
+
+![](images/semester-ablauf.svg){.abbildung fig-alt="Zeitstrahl: Woche 1 am 12.10. und Woche 2 am 19.10. als feste Punkte, danach Interviews, Modellierung, Prototyp, Review und Abschluss ohne Termine."}
+
+::: {.abb-cap}
+Zwei feste Wochen, danach Phasen im Takt der Interviews. Leere Punkte werden im Semester vereinbart.
+:::
+
 ## Wöchentlicher Termin
 
 Montags, 11:45 bis 13:15 Uhr, Raum I110. Ein typischer Termin: 15 Minuten gemeinsamer Input oder Befund, danach Rückmeldung zu den Zwischenständen der Gruppen, am Ende Entscheidungen für die nächste Woche. Die Gruppen arbeiten zwischen den Terminen eigenständig weiter.

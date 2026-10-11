@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif'>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#88F297"/></marker><marker id="arrs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#aab4c8"/></marker><marker id="arro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffa65c"/></marker></defs>
+<rect width="1600" height="600" fill="#11161d"/>
+<text x="800" y="60" font-size="15" fill="#88F297" font-weight="600" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">HUMAN IN THE LOOP</text>
+<text x="800" y="110" font-size="30" fill="#f2f5ff" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Der Agent bereitet vor, die Person gibt frei</text>
+<rect x="60" y="180" width="250" height="150" rx="16" fill="#1a2030" stroke="#2f3647" stroke-width="2"/>
+<text x="185.0" y="228" font-size="21" fill="#f2f5ff" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Eingang</text>
+<text x="185.0" y="268.0" font-size="18" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Antrag, Mail oder</text>
+<text x="185.0" y="291.4" font-size="18" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Unterlagen (Mock)</text>
+<line x1="314" y1="255" x2="340" y2="255" stroke="#88F297" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="344" y="180" width="250" height="150" rx="16" fill="#1a2030" stroke="#88F297" stroke-width="2"/>
+<text x="469.0" y="228" font-size="21" fill="#88F297" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Agent sammelt</text>
+<text x="469.0" y="268.0" font-size="18" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Angaben und Nachweise</text>
+<text x="469.0" y="291.4" font-size="18" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">aus den Quellen holen</text>
+<line x1="598" y1="255" x2="624" y2="255" stroke="#88F297" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="628" y="180" width="250" height="150" rx="16" fill="#1a2030" stroke="#88F297" stroke-width="2"/>
+<text x="753.0" y="228" font-size="21" fill="#88F297" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Agent prüft</text>
+<text x="753.0" y="268.0" font-size="18" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">feste Regeln zuerst,</text>
+<text x="753.0" y="291.4" font-size="18" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">dann Einordnung</text>
+<line x1="882" y1="255" x2="908" y2="255" stroke="#88F297" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="912" y="180" width="250" height="150" rx="16" fill="#1a2030" stroke="#88F297" stroke-width="2"/>
+<text x="1037.0" y="228" font-size="21" fill="#88F297" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Agent fasst zusammen</text>
+<text x="1037.0" y="268.0" font-size="18" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Übersicht, Status,</text>
+<text x="1037.0" y="291.4" font-size="18" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">offene Punkte</text>
+<rect x="1196" y="160" width="240" height="190" rx="16" fill="#1a2030" stroke="#6fb6f0" stroke-width="3"/>
+<g transform="translate(1316,182) scale(0.9)"><circle cx="0" cy="12" r="11" fill="#6fb6f0"/><path d="M-20,62 C-20,36 -10,28 0,28 C10,28 20,36 20,62 Z" fill="#6fb6f0"/></g>
+<text x="1316" y="280" font-size="24" fill="#6fb6f0" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Freigabe</text>
+<text x="1316" y="310.0" font-size="18" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Person prüft</text>
+<text x="1316" y="333.4" font-size="18" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">und entscheidet</text>
+<line x1="1166" y1="255" x2="1192" y2="255" stroke="#88F297" stroke-width="3" marker-end="url(#arr)"/>
+<g transform="translate(1120,445) scale(0.9)"><circle cx="0" cy="0" r="18" fill="#88F297"/><path d="M-8,0 L-2,7 L9,-7" fill="none" stroke="#11161d" stroke-width="4" stroke-linecap="round"/></g>
+<text x="1152" y="452" font-size="19" fill="#f2f5ff" font-weight="400" text-anchor="start" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">freigegeben: Prozess läuft weiter</text>
+<g transform="translate(1120,500) scale(0.9)"><circle cx="0" cy="0" r="18" fill="#ffa65c"/><path d="M-7,-7 L7,7 M7,-7 L-7,7" stroke="#11161d" stroke-width="4" stroke-linecap="round"/></g>
+<text x="1152" y="507" font-size="19" fill="#f2f5ff" font-weight="400" text-anchor="start" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">zurück: Rückfrage oder Korrektur</text>
+<path d="M1316,352 L1316,395 L1120,395 L1120,425" fill="none" stroke="#88F297" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="60" y="400" width="1000" height="130" rx="16" fill="#1a2030" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="8 6"/>
+<g transform="translate(110,465) scale(0.9)"><circle cx="0" cy="0" r="18" fill="#ff6b6b"/><path d="M-7,-7 L7,7 M7,-7 L-7,7" stroke="#11161d" stroke-width="4" stroke-linecap="round"/></g>
+<text x="150" y="450.0" font-size="19" fill="#f2f5ff" font-weight="400" text-anchor="start" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Kein Agent schreibt in ein Verwaltungssystem und versendet nichts an Dritte.</text>
+<text x="150" y="474.7" font-size="19" fill="#f2f5ff" font-weight="400" text-anchor="start" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Auch Lesezugriffe auf echte Systeme gibt es im Projekt nicht: Schnittstellen und Daten sind Mocks.</text>
+</svg>

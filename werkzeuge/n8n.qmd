@@ -33,6 +33,12 @@ Beim ersten Start bietet n8n eine kostenlose Registrierung an, die zusätzliche 
 
 Ein Workflow, der einen erfundenen Antrag entgegennimmt und eine Prüfübersicht erstellt. Vier Knoten.
 
+![](../images/n8n-erster-workflow.svg){.abbildung fig-alt="Workflow aus Manual Trigger, Edit Fields Antrag, If-Knoten mindestens 210 Leistungspunkte, Basic LLM Chain und Edit Fields zur Freigabe; der Nein-Zweig endet ohne Modellaufruf."}
+
+::: {.abb-cap}
+Der erste Workflow: Die feste Regel liegt vor dem Modellschritt, das Ergebnis geht zur Freigabe an eine Person.
+:::
+
 ### 1. Start und Antrag
 
 Einen neuen Workflow anlegen und „Antrag pruefen“ nennen. Einen **Manual Trigger** einfügen. Dahinter einen **Edit Fields (Set)**-Knoten, „Antrag“ nennen, Modus Manual Mapping, diese Felder als String:

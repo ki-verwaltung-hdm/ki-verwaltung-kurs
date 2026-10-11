@@ -63,6 +63,12 @@ Jede Gruppe hat eine eigene n8n-Instanz mit eigener Datenbank auf dem HdM-Server
 
 Im Konto liegen bereits zwei Verbindungen: eine zur Gruppen-Datenbank (Postgres mit pgvector) und eine zum Sprachmodell (Gemini). Beide werden in Workflows ausgewählt, nicht neu angelegt. Erste Schritte: [n8n auf dem HdM-Server](werkzeuge/n8n.qmd).
 
+![](images/projektumgebung.svg){.abbildung fig-alt="Notebook der Gruppe über HdM-Netz oder VPN zum HdM-Server mit sieben n8n-Instanzen und einer Postgres-Datenbank mit pgvector."}
+
+::: {.abb-cap}
+Die Projektumgebung: sieben n8n-Instanzen und eine Datenbank je Gruppe auf einem Server der HdM, erreichbar nur aus dem HdM-Netz und über VPN.
+:::
+
 ## Teamablage {#ablage}
 
 Jede Gruppe legt einen gemeinsamen Ordner an, zum Beispiel in Google Drive oder als privates GitHub-Repository. Vorschlag für die Struktur:

@@ -36,6 +36,7 @@ Das Skript rendert und ruft `quarto publish gh-pages --no-prompt --no-render` au
 | `materialien.qmd` | Literatur aus `ws2627-ki-verwaltung-literatur.md`, Prozessbeispiele, Prompts, Dokumentation |
 | `material/prozess/` | Aurenta-Beispiel (BPMN und SVG) aus `~/code/process-lab`, Kopie wie im Mercedes-Repo |
 | `material/prompts/` | Aufträge für den Coding-Agenten, aus `~/code/process-lab/prompts` für Antigravity ohne Pipeline umgeschrieben |
+| `images/` | Elf SVG-Abbildungen im dunklen Stil der Growth-Grafiken (Phasen, Ausgangslage, Human in the Loop, Mocks, Projektumgebung, Schritttypen, Interviewzyklus, erster Workflow, Prompt-Standard, Agentenschleife, Semesterplan). Erzeugt von `images/erzeugen.py`; Texte dort ändern und neu laufen lassen, nicht die SVGs von Hand bearbeiten |
 
 Lokale Styles (`book-theme.scss`, `website-extras.scss`), keine externe Schrift.
 

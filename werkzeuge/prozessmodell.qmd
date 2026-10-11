@@ -24,6 +24,12 @@ Die Notation ist BPMN 2.0 (Business Process Model and Notation), dieselbe, die P
 
 **Lesen:** von links nach rechts entlang der Pfeile. Jeder Schritt liegt in genau einer Bahn. Ein Modellschritt liegt in der Bahn „KI-Agent“, eine feste Regel im „Workflow-System“, die Freigabe bleibt beim Menschen.
 
+![](../images/drei-schritttypen.svg){.abbildung fig-alt="Drei Bahnen Mensch, KI-Agent und Workflow-System mit je einem Symbol, einer Beschreibung und einem Beispiel aus der Anmeldung einer Abschlussarbeit."}
+
+::: {.abb-cap}
+Drei Arten von Schritten, drei Bahnen. Feste Regeln stehen vor dem Modellschritt, die Freigabe bleibt beim Menschen.
+:::
+
 Wer ereignisgesteuerte Prozessketten (EPK) kennt: Funktionen entsprechen den Rechtecken, Konnektoren den Rauten, Organisationseinheiten den Bahnen.
 
 ## Beispiel: Ablauf heute und mit Agent
