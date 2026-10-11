@@ -30,7 +30,7 @@ Am Ende hat jede Gruppe Antigravity mit einem Projektordner eingerichtet, sich i
 
 ## Prozesskandidaten vorstellen {#vorstellen}
 
-Jede Gruppe nennt in zwei Minuten: den gewählten Prozess, die beteiligten Rollen und die Stelle, an der unstrukturierte Information strukturiert werden muss. Folien sind nicht nötig. Der Kandidat ist ein Arbeitsstand für die heutigen Übungen; die Recherche läuft bis Woche 3 weiter.
+Jede Gruppe nennt in zwei Minuten: den gewählten Prozess, die beteiligten Rollen und die Stelle, an der unstrukturierte Information strukturiert werden muss. Folien sind nicht nötig. Der Kandidat ist ein Arbeitsstand für die heutigen Übungen; die Recherche läuft danach weiter.
 
 ## Übung 2.1: Coding-Agent einrichten {#uebung-2-1}
 
