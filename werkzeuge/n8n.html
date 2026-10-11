@@ -329,7 +329,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><span class="lead">Jede Gruppe hat eine eigene n8n-Instanz mit eigener Datenbank auf einem Server der HdM. Diese Seite beschreibt Login, den ersten Workflow, die vorbereiteten Verbindungen zu Modell und Datenbank, Webhooks und die häufigsten Fehler.</span></p>
 <section id="rolle" class="level2">
 <h2 class="anchored" data-anchor-id="rolle">Was n8n im Projekt leistet</h2>
-<p><a href="https://n8n.io/">n8n</a> ist ein Workflow-System: Ein <strong>Trigger</strong> startet den Ablauf, <strong>Knoten</strong> verarbeiten Daten Schritt für Schritt, Verzweigungen bilden Entscheidungen ab. Im Projekt übernimmt n8n das Gerüst des Soll-Prozesses: feste Regeln als If-Knoten, Modellschritte als Aufruf des Sprachmodells, Mock-Schnittstellen als Webhook oder Datenbankabfrage, und die Freigabe durch einen Menschen als eigener Schritt. Programmiert wird dabei nicht; die Knoten werden in der Oberfläche verbunden, oder der Coding-Agent schreibt den Export als Datei.</p>
+<p><a href="https://n8n.io/">n8n</a> ist ein Workflow-System: Ein <strong>Trigger</strong> startet den Ablauf, <strong>Knoten</strong> verarbeiten Daten Schritt für Schritt, Verzweigungen bilden Entscheidungen ab. Im Projekt übernimmt n8n das Gerüst des Soll-Prozesses: feste Regeln als If-Knoten, Modellschritte als Aufruf des Sprachmodells, Mock-Schnittstellen als Webhook oder Datenbankabfrage, und die Freigabe durch einen Menschen als eigener Schritt. Programmieren müssen wir dabei nicht; die Knoten werden in der Oberfläche verbunden, oder der Coding-Agent schreibt den Export als Datei.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -463,7 +463,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="postgres">Datenbank und Vektorsuche</h2>
 <p>Jede Gruppe hat eine eigene Postgres-Datenbank mit der Erweiterung pgvector. Die Verbindung <strong>Postgres g<n></n></strong> ist im Konto hinterlegt. Zwei Einsatzzwecke:</p>
 <ul>
-<li><strong>Mock-Daten:</strong> Eine Tabelle mit erfundenen Anträgen oder Studierenden, die der Prototyp mit dem <strong>Postgres</strong>-Knoten liest. Der Coding-Agent erzeugt die SQL-Anweisungen zum Anlegen und Befüllen; die Gruppe führt sie in einem Postgres-Knoten aus.</li>
+<li><strong>Mock-Daten:</strong> Eine Tabelle mit erfundenen Anträgen oder Studierenden, die der Prototyp mit dem <strong>Postgres</strong>-Knoten liest. Der Coding-Agent erzeugt die SQL-Anweisungen zum Anlegen und Befüllen; ausgeführt werden sie in einem Postgres-Knoten.</li>
 <li><strong>Wissenssuche über Dokumente:</strong> Ordnungen, Merkblätter und Formulare (öffentliche oder erfundene) werden mit dem Knoten <strong>PGVector Vector Store</strong> abgelegt und per Ähnlichkeitssuche gefunden, damit das Modell mit der passenden Textstelle antwortet. Der Knoten legt die Tabelle <code>n8n_vectors</code> selbst an. Für Einbettungen den Knoten <strong>Embeddings Google Gemini</strong> mit der Gemini-Verbindung der Gruppe verwenden.</li>
 </ul>
 <p>Die Datenbank der Gruppe ist nur für die Gruppe sichtbar. Auch hier gilt: keine Realdaten.</p>

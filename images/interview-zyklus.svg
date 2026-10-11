@@ -42,5 +42,5 @@
 <text x="1443.0" y="371.8" font-size="18" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">verstanden“</text>
 <path d="M819.0,412 L819.0,450 L507.0,450 L507.0,416" fill="none" stroke="#ffa65c" stroke-width="3" marker-end="url(#arro)" stroke-dasharray="8 6"/>
 <text x="663.0" y="475" font-size="16" fill="#ffa65c" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">offene Fragen zurück ins Gespräch</text>
-<text x="800" y="560" font-size="19" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Blau: mit Verwaltungsmitarbeitenden. Grün: in der Gruppe, mit dem Coding-Agenten. Namen werden durch Rollen ersetzt.</text>
+<text x="800" y="560" font-size="19" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Blau: Gespräche mit Verwaltungsmitarbeitenden. Grün: unsere Arbeit mit dem Coding-Agenten. Namen ersetzen wir durch Rollen.</text>
 </svg>
