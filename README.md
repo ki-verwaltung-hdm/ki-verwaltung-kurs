@@ -9,7 +9,7 @@ Stand: 11.10.2026. Kurswebsite für das HdM-Projekt „KI in der Verwaltung“ (
 quarto preview --no-browser
 ```
 
-Online: <https://kirenz.github.io/ki-verwaltung-kurs/> (Repo `kirenz/ki-verwaltung-kurs`, Branch `gh-pages`). Veröffentlichen:
+Online: <https://ki-verwaltung-hdm.github.io/ki-verwaltung-kurs/> (Repo `ki-verwaltung-hdm/ki-verwaltung-kurs`, Branch `gh-pages`). Veröffentlichen:
 
 ```sh
 ./veroeffentlichen.sh

@@ -11,4 +11,4 @@ cd "$(dirname "$0")"
 quarto publish gh-pages --no-prompt --no-render
 
 echo
-echo "Online: https://kirenz.github.io/ki-verwaltung-kurs/"
+echo "Online: https://ki-verwaltung-hdm.github.io/ki-verwaltung-kurs/"

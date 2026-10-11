@@ -29,4 +29,4 @@ Gemeinsamer Ordner der Gruppe für das HdM-Projekt „KI in der Verwaltung“ (W
 
 Montags gibt es Coaching. Wer Fragen oder einen Zwischenstand mitbringt, hält ihn am besten kurz in `STAND.md` fest.
 
-Kurswebsite: https://kirenz.github.io/ki-verwaltung-kurs/
+Kurswebsite: https://ki-verwaltung-hdm.github.io/ki-verwaltung-kurs/
