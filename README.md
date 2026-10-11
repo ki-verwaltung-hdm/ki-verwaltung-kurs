@@ -51,15 +51,17 @@ Auf den Seiten stehen keine sichtbaren Platzhalter-Markierungen. Die folgenden P
 6. **Prüfungsleistung, Gewichte, ECTS.** Nicht auf der Website, weil in den Notizen nichts belegt ist. `abgaben.qmd` verweist auf „wird in der Vorlesung bekannt gegeben“. Die öffentliche Projektseite nennt „3 SWS / 5 ECTS (neu: 6 ECTS)“ und „Fachspezifisches Projekt“; wenn das feststeht, in `projekt.qmd#rahmen` ergänzen. Keine Vorprüfungsleistung angelegt.
 7. **Termine ab Woche 3.** `index.qmd`, `semester.qmd` und `abgaben.qmd` nennen nur „ab 26.10. wöchentlich“ und „wird vereinbart“. Interviewtermine, Reviews, Abschlusspräsentation und Abgabe ergänzen, sobald bekannt. Keine Blocktage im Plan.
 8. **Gemini-Modell in n8n.** `werkzeuge/n8n.qmd` sagt „ein Flash-Modell, welches wird in der Vorlesung genannt“. Modellnamen eintragen, sobald festgelegt (Growth-Kurs nutzt `gemini-3.1-flash-lite`).
-9. **Adresse der Projektumgebung.** Überall `https://141.62.116.2/n8n-<n>/` mit Hinweis auf die Zertifikatswarnung und den späteren Namen `ki-in-der-verwaltung.iuk.hdm-stuttgart.de`. Nach DNS und Zertifikat der IT: Adressen in `start.qmd`, `werkzeuge/n8n.qmd`, `materialien.qmd` tauschen und den Abschnitt „Zertifikatswarnung“ kürzen.
+9. **Adresse der Projektumgebung.** Überall `https://141.62.116.2/n8n-<n>/` plus Abschnitt „Zertifikatswarnung“ in `start.qmd`. Die Seiten nennen bewusst nicht, dass DNS und Zertifikat bei der IT angefragt sind. Nach DNS und Zertifikat: Adressen in `start.qmd`, `werkzeuge/n8n.qmd`, `materialien.qmd` und `images/erzeugen.py` tauschen, Abschnitt „Zertifikatswarnung“ entfernen.
 10. **VPN-Anleitung.** `start.qmd#vpn` nennt FortiClient ohne Link auf die HdM-IT-Anleitung. Link ergänzen.
-11. **Lokale Modelle.** `projekt.qmd#regeln` sagt „wird geklärt“. Wenn Mac Minis oder KI-Institut feststehen, ergänzen.
-12. **Aufnahme von Interviews.** Website sagt: Protokoll, keine Aufnahme, Ausnahmen klären die Betreuer vorab. Falls lokale Whisper-Transkription mit Einwilligung erlaubt wird, `werkzeuge/interviews.qmd#protokoll` anpassen.
-13. **Hinweis zur n8n-Registrierung.** `werkzeuge/n8n.qmd#login` nennt die kostenlose Community-Registrierung als optional. Laut Infrastruktur-Log ist sie je Instanz noch nicht erledigt; entweder Jan macht sie als Owner oder der Hinweis bleibt.
+11. **Lokale Modelle.** Nicht auf der Website. Wenn Mac Minis oder KI-Institut feststehen, in `projekt.qmd#regeln` ergänzen.
+12. **Aufnahme von Interviews.** Website sagt: Protokoll, keine Aufnahme ohne Zustimmung. Falls lokale Whisper-Transkription mit Einwilligung erlaubt wird, `werkzeuge/interviews.qmd#protokoll` anpassen.
+13. **n8n-Registrierung.** Nicht auf der Website. Laut Infrastruktur-Log je Instanz noch nicht erledigt; als Owner in der UI nachholen.
 14. **Formular-Trigger und Wait-Knoten** für die Freigabe (`werkzeuge/n8n.qmd#freigabe`) sind auf der HdM-Instanz noch nicht getestet. Vor Woche 2 einmal durchspielen.
 15. **Erster Workflow** (`werkzeuge/n8n.qmd#erster-workflow`): Beispiel „Antrag prüfen“ mit If-Knoten und Basic LLM Chain, noch nicht auf einer der sieben Instanzen ausgeführt. Vor Woche 2 mit dem Gruppenkonto g1 durchspielen und bei Bedarf Knotennamen anpassen.
 
 ## Vertraulichkeit
+
+Keine internen Betriebs- und Abstimmungsnotizen auf den Seiten (offene IT-Anfragen, Zertifikate, Server-Interna, was noch zu klären ist). Solche Punkte gehören in diese README oder in die Notizen.
 
 Keine Namen von Verwaltungsmitarbeitenden, Interviewpartnerinnen oder Studierenden auf der Website; Bereiche nur als Rollen. Keine Passwörter oder Schlüssel; die Gruppen bekommen Logins separat (Übersicht lokal in `~/code/hdm/hdm-orga/projekte/WS2627/exporte/verwaltung-zugaenge.md`, gitignored). Interne Notizen bleiben in `~/code/notes/02_Areas/HdM_Projekte/ws2627-ki-verwaltung-notizen.md`.
 

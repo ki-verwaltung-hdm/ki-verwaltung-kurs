@@ -25,9 +25,7 @@ Eine Basic LLM Chain mit festem Prompt ist noch kein Agent. Für die meisten Ver
 3. Mit dem Gruppenkonto anmelden (`verwaltung-g<n>@hdm-stuttgart.de` und das Passwort der Gruppe).
 4. Prüfen: Die Workflow-Übersicht erscheint. Unter „Credentials“ stehen „Postgres g<n>“ und „Gemini g<n>“.
 
-Das Konto wird von der Gruppe gemeinsam genutzt. Die Adresse ist nur der Login-Name, es werden keine Mails dorthin verschickt. Sobald die HdM-IT den Namen `ki-in-der-verwaltung.iuk.hdm-stuttgart.de` eingerichtet hat, gilt dieselbe Adresse mit dem Namen statt der IP; der Wechsel wird bekannt gegeben.
-
-Beim ersten Start bietet n8n eine kostenlose Registrierung an, die zusätzliche Funktionen freischaltet (Ordner, Debug-Ansicht, Suche in Ausführungen). Sie ist optional.
+Das Konto wird von der Gruppe gemeinsam genutzt. Die Adresse ist nur der Login-Name, es werden keine Mails dorthin verschickt.
 
 ## Der erste Workflow {#erster-workflow}
 

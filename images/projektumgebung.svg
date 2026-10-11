@@ -13,8 +13,7 @@
 <text x="560" y="370" font-size="16" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Pflicht von zu Hause</text>
 <line x1="680" y1="330" x2="780" y2="330" stroke="#88F297" stroke-width="3" marker-end="url(#arr)"/>
 <rect x="790" y="160" width="740" height="400" rx="16" fill="#1a2030" stroke="#88F297" stroke-width="2"/>
-<text x="1160" y="200" font-size="22" fill="#88F297" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">HdM-Server  141.62.116.2</text>
-<text x="1160" y="228" font-size="16" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">später: ki-in-der-verwaltung.iuk.hdm-stuttgart.de</text>
+<text x="1160" y="210" font-size="22" fill="#88F297" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">HdM-Server  141.62.116.2</text>
 <rect x="830" y="260" width="86" height="110" rx="10" fill="#11161d" stroke="#2f3647" stroke-width="2"/>
 <text x="873" y="300" font-size="18" fill="#f2f5ff" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">n8n-1</text>
 <text x="873" y="330" font-size="14" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Gruppe 1</text>

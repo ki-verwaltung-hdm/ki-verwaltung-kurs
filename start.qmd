@@ -9,7 +9,7 @@ toc: true
 
 Die Projektumgebung (n8n und Datenbanken) läuft auf einem Server der HdM. Sie ist nur aus dem HdM-Netz und über das HdM-VPN erreichbar. Von zu Hause ist das VPN deshalb Voraussetzung für jede Arbeit in n8n.
 
-1. Den VPN-Client nach der Anleitung der HdM-IT installieren (FortiClient, Zugang mit der HdM-Kennung).
+1. Den VPN-Client der HdM installieren (FortiClient, Zugang mit der HdM-Kennung).
 2. Die VPN-Verbindung aufbauen.
 3. Prüfen: Die [Übersichtsseite der Projektumgebung](https://141.62.116.2/) lädt im Browser. Ohne VPN erscheint eine Zeitüberschreitung.
 
@@ -17,13 +17,13 @@ Im Hochschulnetz vor Ort (WLAN eduroam oder Kabel) ist kein VPN nötig.
 
 ## Zertifikatswarnung {#zertifikat}
 
-Die Projektumgebung ist bis auf Weiteres über die IP-Adresse `141.62.116.2` erreichbar. Der Server nutzt ein selbst ausgestelltes Zertifikat, bis die HdM-IT den Namen `ki-in-der-verwaltung.iuk.hdm-stuttgart.de` und ein offizielles Zertifikat eingerichtet hat. Der Browser warnt deshalb beim ersten Aufruf vor einer unsicheren Verbindung.
+Die Projektumgebung ist über die Adresse `141.62.116.2` erreichbar. Der Browser warnt beim ersten Aufruf vor einer unsicheren Verbindung, weil er den Aussteller des Zertifikats nicht kennt.
 
 1. In der Warnung auf „Erweitert“ oder „Details“ klicken.
 2. Die Ausnahme für diese Adresse bestätigen („Weiter zu 141.62.116.2“ oder „Risiko akzeptieren“).
 3. Prüfen: Die Übersichtsseite mit den Links zu den n8n-Instanzen erscheint.
 
-Die Ausnahme gilt pro Browser und muss nach einem Browserwechsel erneut bestätigt werden. Die Verbindung ist verschlüsselt. Die Warnung bedeutet nur, dass der Browser den Aussteller des Zertifikats nicht kennt. Sobald der offizielle Name eingerichtet ist, wird die neue Adresse hier bekannt gegeben.
+Die Ausnahme gilt pro Browser und muss nach einem Browserwechsel erneut bestätigt werden. Die Verbindung ist verschlüsselt.
 
 ::: {.callout-warning title="Achtung"}
 Diese Ausnahme gilt nur für die Projektumgebung an der HdM. Auf anderen Websites bleibt eine Zertifikatswarnung ein Warnsignal.

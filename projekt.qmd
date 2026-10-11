@@ -38,7 +38,7 @@ Der Agent überführt verstreute Angaben in eine Übersicht mit Status je Voraus
 
 ### Mögliche Bereiche
 
-Welche Verwaltungsbereiche Interviews anbieten, klären wir zum Projektstart. Beispiele für Prozesse, die im Vorfeld genannt wurden:
+Beispiele für Prozesse, um die es gehen kann:
 
 | Bereich | Tätigkeit, um die es gehen könnte |
 |---|---|
@@ -99,9 +99,9 @@ Der Agent bereitet vor, die Person gibt frei oder gibt zurück. Schreibzugriffe 
 Der Prototyp spricht nur mit nachgebauten Systemen. Das Mock macht sichtbar, welche Daten und Rechte ein realer Einsatz bräuchte.
 :::
 
-**Sensible Inhalte bleiben lokal.** Bewerbungsunterlagen, Personalakten und ähnliche Inhalte dürfen nicht in öffentliche Cloud-Dienste gelangen. Für solche Fälle kommen nur lokal oder in Europa betriebene Modelle in Frage. Ob und welche lokalen Modelle im Semester bereitstehen, klären wir. Die Gemini-Verbindung in n8n ist für synthetische Daten vorgesehen.
+**Sensible Inhalte bleiben lokal.** Bewerbungsunterlagen, Personalakten und ähnliche Inhalte dürfen nicht in öffentliche Cloud-Dienste gelangen. Für solche Fälle kommen nur lokal oder in Europa betriebene Modelle in Frage. Die Gemini-Verbindung in n8n ist für synthetische Daten vorgesehen.
 
-**Interviews werden nicht aufgezeichnet.** Zwei Gruppen führen ein Gespräch gemeinsam, eine Person protokolliert. Ob eine Aufnahme mit lokaler Transkription in Einzelfällen möglich ist, klären wir vorab mit den Interviewpartnerinnen und Interviewpartnern. Ohne ausdrückliche Zustimmung nehmen wir nicht auf.
+**Interviews werden nicht aufgezeichnet.** Zwei Gruppen führen ein Gespräch gemeinsam, eine Person protokolliert. Ohne ausdrückliche Zustimmung der Gesprächspartnerinnen und Gesprächspartner nehmen wir nicht auf.
 
 ## Experimenteller Charakter {#experiment}
 

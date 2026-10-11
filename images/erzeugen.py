@@ -206,8 +206,7 @@ def umgebung():
     s.arrow(680, 330, 780, 330)
     # Server
     s.card(790, 160, 740, 400, stroke=GREEN)
-    s.text(1160, 200, "HdM-Server  141.62.116.2", 22, GREEN, 700)
-    s.text(1160, 228, "später: ki-in-der-verwaltung.iuk.hdm-stuttgart.de", 16, SOFT, mono=True)
+    s.text(1160, 210, "HdM-Server  141.62.116.2", 22, GREEN, 700)
     for i in range(7):
         x = 830 + i * 98
         s.card(x, 260, 86, 110, stroke=EDGE, fill=BG, r=10)
