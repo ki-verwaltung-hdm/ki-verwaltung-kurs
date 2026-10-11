@@ -301,7 +301,7 @@ def workflow():
     s.text(660, y + 110, "nein", 15, ORANGE, mono=True, anchor="start")
     s.card(810, y + 90, 260, 80, stroke=ORANGE)
     s.text(940, y + 122, "Edit Fields", 19, ORANGE, 700); s.text(940, y + 150, "Nicht zulässig, ohne Modellaufruf", 15, SOFT)
-    s.text(800, 500, "Was eine Zahl entscheidet, rät kein Modell. Die Entscheidung über den Antrag trifft die zuständige Person.", 19, SOFT)
+    s.text(800, 500, "Was eine Zahl entscheidet, prüft die feste Regel. Die Entscheidung über den Antrag trifft die zuständige Person.", 19, SOFT)
     s.save("n8n-erster-workflow.svg")
 
 # 9 Prompt-Standard -----------------------------------------------------------
@@ -349,7 +349,7 @@ def agent():
     px = x0 + 2 * (w + gap) + w / 2; ax = x0 + w / 2
     s.path(f"M{px},{y0+212} L{px},{y0+260} L{ax},{y0+260} L{ax},{y0+214}", ORANGE, "arro", 3, "8 6")
     s.text((px + ax) / 2, y0 + 285, "Korrektur als neuer Auftrag, nicht von Hand in der Datei", 16, ORANGE, mono=True)
-    s.text(800, 520, "Was wir nicht verstehen, übernehmen wir nicht, sondern fragen nach.", 19, SOFT)
+    s.text(800, 520, "Was wir noch nicht verstehen, klären wir, bevor wir es übernehmen.", 19, SOFT)
     s.save("agent-schleife.svg")
 
 # 11 Semesterablauf -----------------------------------------------------------

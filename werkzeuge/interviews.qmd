@@ -9,7 +9,7 @@ toc: true
 
 Wir suchen Tätigkeiten, bei denen Mitarbeitende unstrukturierte Informationen in strukturierte überführen und Entscheidungen vorbereiten: Übersichten erstellen, Unterlagen zusammenfassen, Angaben gegen Voraussetzungen prüfen, Rückfragen formulieren. Das sind die Stellen, an denen ein Agent eine Vorlage liefern kann, ohne in Systeme schreiben zu müssen.
 
-Die Frage „Welchen Workflow würden Sie gern automatisieren?“ führt selten weiter. Besser fragen wir nach konkreten Vorgängen der letzten Wochen.
+Die Frage „Welchen Workflow würden Sie gern automatisieren?“ ist für die meisten schwer zu beantworten. Leichter fällt es, von konkreten Vorgängen der letzten Wochen zu erzählen; danach fragen wir.
 
 ![](../images/interview-zyklus.svg){.abbildung fig-alt="Kette aus Recherche, Interview 1, Ist-Modell, Interview 2 und Vorstellung; offene Fragen laufen vom Modell zurück ins Gespräch."}
 
@@ -96,7 +96,7 @@ Eine Aufnahme macht das Protokoll vollständiger und das Prozessmodell genauer, 
 **Prüfung:** Im Protokoll steht die Zustimmung. Das bereinigte Transkript enthält keine Namen. Die Aufnahme ist gelöscht.
 
 ::: {.callout-warning title="Achtung"}
-Eine Aufnahme ohne Zustimmung ist nicht erlaubt. Aufnahmen und Transkripte gehören nicht in die Teamablage, wenn diese in einem Cloud-Dienst liegt; dort liegt nur das bereinigte Transkript ohne Namen.
+Ohne Zustimmung bleibt es beim Protokoll. Aufnahmen und Transkripte gehören nicht in die Teamablage, wenn diese in einem Cloud-Dienst liegt; dort liegt nur das bereinigte Transkript ohne Namen.
 :::
 
 ## Das zweite Gespräch {#zweites}
@@ -112,6 +112,6 @@ Nach der Modellierung bleiben Lücken: Rollen, Ausnahmen, Rückschleifen. Das zw
 
 ## Umgang mit den Gesprächspartnerinnen und Gesprächspartnern {#haltung}
 
-Die Verwaltungsmitarbeitenden nehmen sich Zeit für das Projekt. Dafür gilt: pünktlich sein, vorbereitet kommen, zuhören, nichts versprechen. Wir liefern Vorschläge und Prototypen mit erfundenen Daten. Ob etwas eingeführt wird, entscheidet die Hochschule. Diese Grenze benennen wir im Gespräch.
+Die Verwaltungsmitarbeitenden nehmen sich Zeit für das Projekt. Dafür lohnt es sich, pünktlich und vorbereitet zu kommen, gut zuzuhören und nichts zu versprechen, was das Projekt nicht halten kann. Wir liefern Vorschläge und Prototypen mit erfundenen Daten. Ob etwas eingeführt wird, entscheidet die Hochschule. Diese Grenze benennen wir im Gespräch.
 
 [**Weiter: n8n auf dem HdM-Server**](n8n.qmd)

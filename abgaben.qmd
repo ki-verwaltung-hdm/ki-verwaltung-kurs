@@ -101,7 +101,7 @@ Vorgehen: [n8n auf dem HdM-Server](werkzeuge/n8n.qmd).
 4. Offenlegung, wofür KI-Werkzeuge in der Projektarbeit genutzt wurden.
 
 ::: {.ergebnis}
-**Prüfen:** Die Empfehlung folgt aus den Testfällen, nicht aus dem Eindruck einer Demo. Eine begründete Empfehlung gegen den Einsatz ist ein vollwertiges Ergebnis.
+**Prüfen:** Die Empfehlung stützt sich auf die Testfälle, nicht nur auf den Eindruck einer Demo. Eine begründete Empfehlung gegen den Einsatz ist ein vollwertiges Ergebnis.
 :::
 :::
 

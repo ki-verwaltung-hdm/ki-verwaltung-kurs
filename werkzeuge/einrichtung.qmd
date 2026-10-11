@@ -98,6 +98,6 @@ und nenne, welche weiteren Schritte von dieser Rolle abhängen.
 
 ## Was der Agent nicht entscheidet
 
-Der Agent erzeugt Entwürfe. Ob ein Modell den Ablauf richtig wiedergibt, weiß nur, wer das Interview geführt hat. Ob ein Workflow sinnvoll ist, zeigt der Test an Beispielfällen. Jede Datei, die der Agent schreibt, liest eine Person, bevor sie in die Ablage kommt. Was wir nicht verstehen, übernehmen wir nicht, sondern fragen nach.
+Der Agent erzeugt Entwürfe. Ob ein Modell den Ablauf richtig wiedergibt, weiß nur, wer das Interview geführt hat. Ob ein Workflow sinnvoll ist, zeigt der Test an Beispielfällen. Jede Datei, die der Agent schreibt, liest eine Person, bevor sie in die Ablage kommt. Was wir noch nicht verstehen, klären wir, bevor wir es übernehmen; der Agent erklärt auf Nachfrage gern, was er gemacht hat.
 
 [**Weiter: Prozessmodellierung**](prozessmodell.qmd)

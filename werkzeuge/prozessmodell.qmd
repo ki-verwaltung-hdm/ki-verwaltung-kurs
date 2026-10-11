@@ -7,7 +7,7 @@ toc: true
 
 ## Warum zuerst modellieren
 
-Ein Agent unterstützt einen Ablauf. Wer den Ablauf nicht kennt, baut am Problem vorbei. Das Modell macht drei Dinge sichtbar: welche Schritte **feste Regeln** sind und ohne Modell funktionieren (ist die Zahl der Leistungspunkte erreicht?), wo **Sprachverständnis** nötig ist (was steht in diesem Nachweis, und passt er zur Anforderung?) und wo ein **Mensch prüfen und freigeben** muss. Außerdem wird aus dem Soll-Modell die Vorlage für den Prototyp: Der Coding-Agent kann aus einem klaren Modell einen ersten n8n-Workflow erzeugen, wir prüfen ihn gegen das Modell.
+Ein Agent unterstützt einen Ablauf. Je besser wir den Ablauf kennen, desto eher trifft der Agent später das, was den Mitarbeitenden wirklich hilft. Das Modell macht drei Dinge sichtbar: welche Schritte **feste Regeln** sind und ohne Modell funktionieren (ist die Zahl der Leistungspunkte erreicht?), wo **Sprachverständnis** nötig ist (was steht in diesem Nachweis, und passt er zur Anforderung?) und wo ein **Mensch prüfen und freigeben** muss. Außerdem wird aus dem Soll-Modell die Vorlage für den Prototyp: Der Coding-Agent kann aus einem klaren Modell einen ersten n8n-Workflow erzeugen, wir prüfen ihn gegen das Modell.
 
 ## Swimlane-Diagramm in BPMN 2.0
 
@@ -50,7 +50,7 @@ BPMN-Dateien zum Öffnen und Verändern in [demo.bpmn.io](https://demo.bpmn.io/)
 
 Beispiel Anmeldung einer Abschlussarbeit, nach der Beschreibung aus dem Projektvorfeld. Vier Fragen helfen beim Übertragen:
 
-- **Feste Regel oder Modellschritt?** Leistungspunkte, abgeschlossenes Praxissemester, Fristen stehen in einer Ordnung. Sie lassen sich als Regel prüfen und sollten nicht vom Modell erraten werden.
+- **Feste Regel oder Modellschritt?** Leistungspunkte, abgeschlossenes Praxissemester, Fristen stehen in einer Ordnung. Sie lassen sich als Regel prüfen; das ist zuverlässiger, als wenn ein Modell sie einschätzt.
 - **Wo braucht es Sprachverständnis?** Ein Nachweis als PDF lesen und einordnen, eine Übersicht über mehrere Anträge erstellen, eine Rückfrage an die antragstellende Person formulieren. Einordnungen mit wenigen Antworten bekommen eine Sicherheitsangabe und eine Schwelle, siehe [Einordnen mit Konfidenz](n8n.qmd#einordnen).
 - **Woher stammt jede Information?** Jede Angabe im Ergebnis nennt ihre Quelle: Formularfeld, Systemauszug, Nachweisdokument. Im Prototyp sind diese Quellen Mocks.
 - **Wer prüft?** Der Agent erstellt die Prüfübersicht, die zuständige Person entscheidet und dokumentiert.
@@ -63,7 +63,7 @@ Rückschleifen gehören ins Modell: Was passiert bei einem fehlenden Nachweis? W
 2. **Soll-Modell** mit KI-Agent: dieselben Ziele, zusätzlich die Bahnen „KI-Agent“ und „Workflow-System“. Feste Regeln stehen vor jedem Modellschritt. Freigabe und Entscheidungen mit Außenwirkung bleiben beim Menschen.
 3. **Begründung** als Tabelle mit drei Spalten: „Entfällt“, „Bleibt beim Menschen“, „Neu“. Dazu drei Sätze: Was ändert sich an der Durchlaufzeit, welche Übergaben fallen weg, was müsste ein Pilot messen?
 
-Die Aufträge für den Coding-Agenten stehen fertig in den Materialien: [Ist-Prozess aus einer Beschreibung](../material/prompts/ist-aus-prosa.md) und [Prozess mit KI neu denken](../material/prompts/redesign-mit-ki.md). Ein Soll-Modell ist eine Gestaltungshypothese, kein Beweis.
+Die Aufträge für den Coding-Agenten stehen fertig in den Materialien: [Ist-Prozess aus einer Beschreibung](../material/prompts/ist-aus-prosa.md) und [Prozess mit KI neu denken](../material/prompts/redesign-mit-ki.md). Ein Soll-Modell ist eine Gestaltungshypothese; ob sie trägt, zeigt sich im Gespräch und im Prototyp.
 
 ## Werkzeuge
 

@@ -53,7 +53,7 @@ Alle Werte sind erfunden. Beide Knoten verbinden, ausführen, Ausgabe prüfen: A
 
 ### 2. Feste Regel
 
-Einen **If**-Knoten einfügen, „Mindestens 210 LP?“ nennen. Bedingung: `{{ $json.leistungspunkte }}` als Zahl größer oder gleich 210. Der Zweig `true` führt weiter zum Modell, der Zweig `false` zu einem Edit-Fields-Knoten „Nicht zulaessig“ mit `ergebnis = Voraussetzung Leistungspunkte nicht erfüllt`. Die feste Regel liegt vor dem Modell: Was eine Zahl entscheidet, soll kein Modell raten.
+Einen **If**-Knoten einfügen, „Mindestens 210 LP?“ nennen. Bedingung: `{{ $json.leistungspunkte }}` als Zahl größer oder gleich 210. Der Zweig `true` führt weiter zum Modell, der Zweig `false` zu einem Edit-Fields-Knoten „Nicht zulaessig“ mit `ergebnis = Voraussetzung Leistungspunkte nicht erfüllt`. Die feste Regel liegt vor dem Modell: Was eine Zahl entscheidet, prüft die Regel zuverlässiger als ein Modell.
 
 ### 3. Modellschritt {#gemini}
 

@@ -90,7 +90,7 @@ Die Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews.
 **Ergebnis:** Ein Ordner `01_Recherche` mit Quellen, Erkenntnissen, Referenzprozess und Leitfragen. In Woche 3 besprechen wir die Ergebnisse und stimmen die Leitfragen ab. Die Recherche endet damit nicht: Sie läuft bis zum ersten Interview weiter und wird nach dem Gespräch gezielt vertieft.
 :::
 
-Ein Hinweis zur Recherche mit KI: Gemini und andere Chat-Werkzeuge dürfen zur Recherche verwendet werden. Jede Aussage, die in die Ablage kommt, prüfen wir gegen die Originalquelle. Eine KI-Antwort ohne Quelle ist eine Vermutung.
+Ein Hinweis zur Recherche mit KI: Gemini und andere Chat-Werkzeuge dürfen zur Recherche verwendet werden. Jede Aussage, die in die Ablage kommt, prüfen wir gegen die Originalquelle. Eine KI-Antwort ohne Quelle ist ein guter Hinweis, aber noch kein Beleg.
 
 ## Bis Woche 2 vorbereiten {#vorbereitung}
 

@@ -28,5 +28,5 @@
 <text x="1285.0" y="348.4" font-size="18" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">in die Teamablage</text>
 <path d="M935.0,392 L935.0,440 L235.0,440 L235.0,394" fill="none" stroke="#ffa65c" stroke-width="3" marker-end="url(#arro)" stroke-dasharray="8 6"/>
 <text x="585.0" y="465" font-size="16" fill="#ffa65c" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">Korrektur als neuer Auftrag, nicht von Hand in der Datei</text>
-<text x="800" y="520" font-size="19" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Was wir nicht verstehen, übernehmen wir nicht, sondern fragen nach.</text>
+<text x="800" y="520" font-size="19" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Was wir noch nicht verstehen, klären wir, bevor wir es übernehmen.</text>
 </svg>
