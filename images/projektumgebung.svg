@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif'>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#88F297"/></marker><marker id="arrs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#aab4c8"/></marker><marker id="arro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffa65c"/></marker></defs>
+<rect width="1600" height="620" fill="#11161d"/>
+<text x="800" y="60" font-size="15" fill="#88F297" font-weight="600" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">PROJEKTUMGEBUNG</text>
+<text x="800" y="110" font-size="30" fill="#f2f5ff" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Sieben n8n-Instanzen auf einem Server der HdM, nur aus dem HdM-Netz erreichbar</text>
+<rect x="70" y="230" width="260" height="200" rx="16" fill="#1a2030" stroke="#2f3647" stroke-width="2"/>
+<rect x="140" y="275" width="120" height="76" rx="8" fill="none" stroke="#6fb6f0" stroke-width="4"/><rect x="125" y="355" width="150" height="10" rx="4" fill="#6fb6f0"/>
+<text x="200" y="400" font-size="19" fill="#f2f5ff" font-weight="600" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Notebook der Gruppe</text>
+<line x1="340" y1="330" x2="440" y2="330" stroke="#88F297" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="450" y="255" width="220" height="150" rx="16" fill="#1a2030" stroke="#ffa65c" stroke-width="2"/>
+<text x="560" y="300" font-size="22" fill="#ffa65c" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">HdM-Netz</text>
+<text x="560" y="330" font-size="22" fill="#ffa65c" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">oder HdM-VPN</text>
+<text x="560" y="370" font-size="16" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Pflicht von zu Hause</text>
+<line x1="680" y1="330" x2="780" y2="330" stroke="#88F297" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="790" y="160" width="740" height="400" rx="16" fill="#1a2030" stroke="#88F297" stroke-width="2"/>
+<text x="1160" y="200" font-size="22" fill="#88F297" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">HdM-Server  141.62.116.2</text>
+<text x="1160" y="228" font-size="16" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">später: ki-in-der-verwaltung.iuk.hdm-stuttgart.de</text>
+<rect x="830" y="260" width="86" height="110" rx="10" fill="#11161d" stroke="#2f3647" stroke-width="2"/>
+<text x="873" y="300" font-size="18" fill="#f2f5ff" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">n8n-1</text>
+<text x="873" y="330" font-size="14" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Gruppe 1</text>
+<text x="873" y="352" font-size="13" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">Gemini</text>
+<line x1="873" y1="372" x2="873" y2="418" stroke="#aab4c8" stroke-width="2" marker-end="url(#arrs)"/>
+<rect x="928" y="260" width="86" height="110" rx="10" fill="#11161d" stroke="#2f3647" stroke-width="2"/>
+<text x="971" y="300" font-size="18" fill="#f2f5ff" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">n8n-2</text>
+<text x="971" y="330" font-size="14" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Gruppe 2</text>
+<text x="971" y="352" font-size="13" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">Gemini</text>
+<line x1="971" y1="372" x2="971" y2="418" stroke="#aab4c8" stroke-width="2" marker-end="url(#arrs)"/>
+<rect x="1026" y="260" width="86" height="110" rx="10" fill="#11161d" stroke="#2f3647" stroke-width="2"/>
+<text x="1069" y="300" font-size="18" fill="#f2f5ff" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">n8n-3</text>
+<text x="1069" y="330" font-size="14" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Gruppe 3</text>
+<text x="1069" y="352" font-size="13" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">Gemini</text>
+<line x1="1069" y1="372" x2="1069" y2="418" stroke="#aab4c8" stroke-width="2" marker-end="url(#arrs)"/>
+<rect x="1124" y="260" width="86" height="110" rx="10" fill="#11161d" stroke="#2f3647" stroke-width="2"/>
+<text x="1167" y="300" font-size="18" fill="#f2f5ff" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">n8n-4</text>
+<text x="1167" y="330" font-size="14" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Gruppe 4</text>
+<text x="1167" y="352" font-size="13" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">Gemini</text>
+<line x1="1167" y1="372" x2="1167" y2="418" stroke="#aab4c8" stroke-width="2" marker-end="url(#arrs)"/>
+<rect x="1222" y="260" width="86" height="110" rx="10" fill="#11161d" stroke="#2f3647" stroke-width="2"/>
+<text x="1265" y="300" font-size="18" fill="#f2f5ff" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">n8n-5</text>
+<text x="1265" y="330" font-size="14" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Gruppe 5</text>
+<text x="1265" y="352" font-size="13" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">Gemini</text>
+<line x1="1265" y1="372" x2="1265" y2="418" stroke="#aab4c8" stroke-width="2" marker-end="url(#arrs)"/>
+<rect x="1320" y="260" width="86" height="110" rx="10" fill="#11161d" stroke="#2f3647" stroke-width="2"/>
+<text x="1363" y="300" font-size="18" fill="#f2f5ff" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">n8n-6</text>
+<text x="1363" y="330" font-size="14" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Gruppe 6</text>
+<text x="1363" y="352" font-size="13" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">Gemini</text>
+<line x1="1363" y1="372" x2="1363" y2="418" stroke="#aab4c8" stroke-width="2" marker-end="url(#arrs)"/>
+<rect x="1418" y="260" width="86" height="110" rx="10" fill="#11161d" stroke="#2f3647" stroke-width="2"/>
+<text x="1461" y="300" font-size="18" fill="#f2f5ff" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">n8n-7</text>
+<text x="1461" y="330" font-size="14" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Gruppe 7</text>
+<text x="1461" y="352" font-size="13" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace' opacity="1">Gemini</text>
+<line x1="1461" y1="372" x2="1461" y2="418" stroke="#aab4c8" stroke-width="2" marker-end="url(#arrs)"/>
+<rect x="830" y="425" width="674" height="100" rx="10" fill="#11161d" stroke="#6fb6f0" stroke-width="2"/>
+<text x="1167" y="462" font-size="22" fill="#6fb6f0" font-weight="700" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Postgres mit pgvector</text>
+<text x="1167" y="492" font-size="16" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">je Gruppe eine eigene Datenbank g1 bis g7, nur für die eigene Gruppe sichtbar</text>
+<text x="800" y="590" font-size="19" fill="#aab4c8" font-weight="400" text-anchor="middle" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Jede Gruppe teilt sich ein Konto. Verbindungen zu Modell und Datenbank sind im Konto hinterlegt und werden nur ausgewählt.</text>
+</svg>
