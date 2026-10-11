@@ -9,4 +9,4 @@ Aufgabe: Erstelle zwei Dateien.
 
 Format: Deutsch, keine langen Gedankenstriche, IDs ASCII, Namen wie im Ist-Modell.
 
-Prüfung: Keine Zahlen erfinden. Keine Quelldateien ändern. Der Entwurf ist eine Gestaltungshypothese, kein Beweis. Gib am Ende aus: beide Dateipfade, die Begründungstabelle, und welche Annahmen im nächsten Gespräch mit der Verwaltung geprüft werden müssen.
+Prüfung: Keine Zahlen erfinden. Keine Quelldateien ändern. Der Entwurf ist eine Gestaltungshypothese, kein Beweis. Gib am Ende aus: beide Dateipfade, die Begründungstabelle, und welche Annahmen noch zu prüfen sind.
