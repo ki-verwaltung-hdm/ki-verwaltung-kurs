@@ -11,7 +11,7 @@ toc: true
 
 **Voraussetzungen:** ein Google-Konto; der Zugang zu Antigravity ist im [Studierendenangebot](../start.qmd#google) enthalten. Pro Gruppe reicht eine Installation.
 
-1. Antigravity von der [Produktseite](https://antigravity.google/) herunterladen und installieren.
+1. Die [Antigravity IDE](https://antigravity.google/product/antigravity-ide/) herunterladen und installieren.
 2. Mit dem Google-Konto anmelden.
 3. Einen leeren Projektordner anlegen und in Antigravity öffnen („Open Folder“).
 4. Prüfen: Links erscheint der Ordner, rechts der Chat mit dem Agenten.

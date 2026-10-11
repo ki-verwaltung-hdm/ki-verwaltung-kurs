@@ -69,7 +69,7 @@ Die fünf Phasen des Projekts. Der Montagstermin dient der Abstimmung, die Arbei
 
 ### Warum zuerst recherchieren
 
-Wer ohne Vorbereitung ins Interview geht, fragt nach dem, was er schon kennt. Die Recherche liefert Vokabular und Vergleichsfälle: Wie lösen andere Hochschulen und Behörden ähnliche Aufgaben, welche Muster wiederholen sich, was ging schief? Daraus entsteht ein Referenzprozess als Hypothese. Im Interview prüfen wir diese Hypothese, statt sie bestätigen zu lassen. Die wichtigsten Quellen stehen bei den [Materialien](materialien.qmd#literatur).
+Wer ohne Vorbereitung ins Interview geht, fragt nach dem, was er schon kennt. Die Recherche liefert Vokabular und Vergleichsfälle: Wie lösen andere Hochschulen und Behörden ähnliche Aufgaben, welche Muster wiederholen sich, was ging schief? Daraus entsteht ein Referenzprozess als Hypothese. Im Interview prüfen wir diese Hypothese, statt sie bestätigen zu lassen. Die wichtigsten Quellen stehen bei den [Materialien](materialien.qmd#literatur), Praxisbeispiele aus Land, Bund und Kommunen unter [Praxis und Rahmen](materialien.qmd#praxis).
 
 ### Warum ein Prozessmodell
 
