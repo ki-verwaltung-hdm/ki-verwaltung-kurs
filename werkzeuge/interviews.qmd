@@ -1,0 +1,93 @@
+---
+title: "Interviews führen"
+toc: true
+---
+
+[Das Interview soll zeigen, wie eine Tätigkeit heute wirklich abläuft: welche Informationen hereinkommen, was damit geschieht, welche Entscheidung am Ende steht. Es fragt nicht nach Wunsch-Automatisierungen. Zwei Gruppen führen ein Gespräch gemeinsam, eine Person protokolliert, aufgenommen wird nicht.]{.lead}
+
+## Worauf das Interview zielt {#fokus}
+
+Gesucht sind Tätigkeiten, bei denen Mitarbeitende unstrukturierte Informationen in strukturierte überführen und Entscheidungen vorbereiten: Übersichten erstellen, Unterlagen zusammenfassen, Angaben gegen Voraussetzungen prüfen, Rückfragen formulieren. Das sind die Stellen, an denen ein Agent eine Vorlage liefern kann, ohne in Systeme schreiben zu müssen.
+
+Die Frage „Welchen Workflow würden Sie gern automatisieren?“ führt selten weiter. Besser sind Fragen nach konkreten Vorgängen der letzten Wochen.
+
+## Vorbereitung {#vorbereitung}
+
+**Voraussetzungen:** Recherche abgeschlossen, Referenzprozess als Hypothese vorhanden, Leitfragen abgestimmt, Rollen im Gespräch verteilt.
+
+1. Die beiden Gruppen legen ihre Leitfragen zusammen und einigen sich auf eine Reihenfolge: zuerst der Ablauf, dann die Informationen, dann die Entscheidungen, zuletzt die Schmerzpunkte.
+2. Rollen verteilen: eine Person führt das Gespräch, eine protokolliert, eine achtet auf die Zeit und offene Punkte. Die zweite Gruppe ergänzt mit Nachfragen.
+3. Den Referenzprozess als Bild mitnehmen, aber erst am Ende zeigen. Vorher soll die interviewte Person den eigenen Ablauf frei beschreiben.
+4. Das Protokollraster vorbereiten (siehe unten).
+
+**Prüfung:** Jede Leitfrage lässt sich mit einer Beschreibung beantworten, nicht mit ja oder nein.
+
+## Leitfragen {#leitfragen}
+
+Zum Ablauf:
+
+- Beschreiben Sie bitte einen typischen Vorgang vom Eingang bis zum Abschluss. Was passiert zuerst, was danach?
+- Wer ist beteiligt, und an welcher Stelle? Wer gibt etwas weiter, wer prüft, wer entscheidet, wer unterschreibt?
+- Was passiert, wenn etwas fehlt oder nicht stimmt? An wen geht der Vorgang zurück?
+
+Zu den Informationen:
+
+- Welche Unterlagen und Angaben kommen herein, und in welcher Form (Formular, PDF, Mail, Systemauszug)?
+- In welchen Systemen schauen Sie nach, und was suchen Sie dort?
+- Wo dokumentieren Sie Ihre Prüfung und Ihre Entscheidung?
+
+Zu Prüfung und Entscheidung:
+
+- Welche Voraussetzungen prüfen Sie, und woher stammen die Regeln dafür (Ordnung, Richtlinie, Erfahrung)?
+- Welche Fälle sind eindeutig, welche brauchen Ermessen?
+- Was müsste eine Übersicht enthalten, damit Sie schneller und sicherer entscheiden könnten?
+
+Zum Aufwand:
+
+- Wie oft kommt der Vorgang vor, und wie lange dauert ein Fall ungefähr?
+- Welcher Teil kostet am meisten Zeit? Welcher Teil ist am fehleranfälligsten?
+- Welche Informationen sind vertraulich, und wer darf sie sehen?
+
+## Protokoll statt Aufnahme {#protokoll}
+
+Gespräche werden nicht aufgezeichnet. Eine Person schreibt mit, direkt in ein Raster:
+
+| Spalte | Inhalt |
+|---|---|
+| Schritt | Was passiert, in der Reihenfolge des Gesprächs |
+| Rolle | Wer den Schritt ausführt, als Rolle, nicht als Name |
+| Eingang | Welche Information oder Unterlage hereinkommt, in welcher Form |
+| System | Welches System dabei genutzt wird, lesend oder schreibend |
+| Regel oder Ermessen | Feste Regel mit Quelle, oder Ermessensentscheidung |
+| Rückschleife | Was bei Fehlern oder fehlenden Angaben passiert |
+| Offene Frage | Was unklar geblieben ist |
+
+Direkt nach dem Gespräch, am besten noch am selben Tag:
+
+1. Das Protokoll gemeinsam ergänzen, solange die Erinnerung frisch ist.
+2. Zitate nur sinngemäß festhalten, keine Namen von Personen, keine Namen von Studierenden oder Bewerbenden aus Beispielen.
+3. Offene Fragen in eine eigene Liste für das zweite Gespräch übertragen.
+4. Protokoll unter `02_Interviews` ablegen.
+
+**Prüfung:** Aus dem Protokoll lässt sich der Ablauf als Prozessmodell zeichnen, ohne nachzufragen. Wo das nicht geht, steht eine offene Frage.
+
+::: {.callout-warning title="Achtung"}
+Wenn im Gespräch Beispielfälle mit echten Personen genannt werden, bleiben diese Angaben im Raum. Ins Protokoll kommt der Fall ohne Namen und ohne Merkmale, die eine Person erkennbar machen.
+:::
+
+## Das zweite Gespräch {#zweites}
+
+Nach der Modellierung bleiben Lücken: Rollen, Ausnahmen, Rückschleifen. Das zweite Gespräch ist kürzer und arbeitet am Modell.
+
+1. Das Ist-Modell ausdrucken oder auf dem Bildschirm zeigen.
+2. Schritt für Schritt durchgehen: „Haben wir das richtig verstanden?“
+3. Die offenen Fragen aus der Liste stellen.
+4. Am Ende das Soll-Modell als Idee vorstellen und fragen, welche Schritte die Person einem Agenten überlassen würde und welche nicht.
+
+**Ergebnis:** Ein bestätigtes Ist-Modell und eine erste Rückmeldung zum Soll-Modell.
+
+## Umgang mit den Gesprächspartnerinnen und Gesprächspartnern {#haltung}
+
+Die Verwaltungsmitarbeitenden nehmen sich Zeit für das Projekt. Dafür gilt: pünktlich sein, vorbereitet kommen, zuhören, nichts versprechen. Das Projekt liefert Vorschläge und Prototypen mit erfundenen Daten. Ob etwas eingeführt wird, entscheidet die Hochschule. Diese Grenze wird im Gespräch benannt.
+
+[**Weiter: n8n auf dem HdM-Server**](n8n.qmd)

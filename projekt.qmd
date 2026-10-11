@@ -1,0 +1,88 @@
+---
+title: "Das Projekt"
+toc: true
+---
+
+[Wo kann KI Verwaltungsarbeit an der HdM sinnvoll unterstützen? Die Gruppen beantworten diese Frage nicht am Schreibtisch, sondern im Gespräch mit Verwaltungsmitarbeitenden, mit einem Prozessmodell und mit einem Prototyp, der an Beispielfällen geprüft wird.]{.lead}
+
+## Rahmen {#rahmen}
+
+| Merkmal | Festlegung |
+|---|---|
+| Projektpartner | Bereiche der Hochschulverwaltung der HdM |
+| Betreuung | [Prof. Dr. Stephan Wilczek](https://hdm-stuttgart.de/person/wilczek/) und [Prof. Dr. Jan Kirenz](https://hdm-stuttgart.de/person/kirenz/) |
+| Termin | montags, 11:45 bis 13:15 Uhr, Raum I110, ab 12.10.2026 |
+| Gruppen | Dreiergruppen, Einteilung in Woche 1 über eine kurze Umfrage |
+| Sprache | Deutsch |
+| Programmierung | keine Voraussetzung; Prototypen entstehen in n8n, Dateien schreibt der Coding-Agent |
+
+Der Wochentermin dient der Abstimmung: Input, Rückmeldung zu Zwischenständen, Entscheidungen. Recherche, Interviews, Modellierung und Prototyp entstehen in der eigenständigen Arbeit der Gruppen. Die öffentliche [Projektbeschreibung](https://kirenz.github.io/hdm-projekte/projekte/ws-2026/ki-hochschulverwaltung.html) fasst Idee und Themenfelder zusammen.
+
+## Ausgangslage {#ausgangslage}
+
+Viele Abläufe in der Hochschulverwaltung sind formularbasiert: Ein Antrag wird eingereicht, formal vorgeprüft, inhaltlich geprüft, bei Fehlern zurückgegeben, am Ende unterschrieben. Die inhaltliche Prüfung bedeutet oft, Informationen aus mehreren Systemen zusammenzutragen und gegen Voraussetzungen abzugleichen. Dokumentiert wird das häufig in persönlichen Ordnern, nicht im System. Das kostet Zeit, und die Prüflogik steckt im Kopf der prüfenden Person.
+
+Genau an dieser Stelle setzt das Projekt an. Gesucht sind Tätigkeiten, bei denen Mitarbeitende
+
+- **unstrukturierte Informationen in strukturierte überführen:** aus Formularen, Mails, Unterlagen und Systemauszügen eine Übersicht, Tabelle oder Zusammenfassung erstellen,
+- **Voraussetzungen prüfen:** Angaben gegen Regeln und Nachweise abgleichen, Lücken finden, Rückfragen formulieren,
+- **Entscheidungen vorbereiten:** das Ergebnis so aufbereiten, dass eine Person schnell und begründet entscheiden kann.
+
+Nicht gesucht ist die vollautomatische Abwicklung eines Workflows. Die Verwaltung gibt einem Agenten keinen Schreibzugriff auf ihre Systeme, und auch Lesezugriffe sind nicht selbstverständlich. Der Agent liefert eine Vorlage, der Mensch entscheidet.
+
+### Mögliche Bereiche
+
+Welche Verwaltungsbereiche Interviews anbieten, wird zum Projektstart geklärt. Beispiele für Prozesse, die im Vorfeld genannt wurden:
+
+| Bereich | Tätigkeit, um die es gehen könnte |
+|---|---|
+| Prüfungsausschuss | Anmeldung einer Abschlussarbeit: Prüfen, ob alle Voraussetzungen erfüllt sind (Leistungspunkte, Praxissemester, weitere Nachweise), Informationen aus mehreren Systemen, Dokumentation der Entscheidung |
+| Berufungskommissionen | Übersicht über eingegangene Bewerbungsunterlagen für einen Erstüberblick, ausschließlich als Hinweis, ohne Entscheidung, ausschließlich lokal verarbeitet |
+| Digitalisierung und Dokumentenmanagement | Hochschulweites Dokumentenmanagementsystem, Überlegungen zu Workflows; möglicher Adressat der Projektergebnisse |
+| Finanzen, Personal | Wiederkehrende Prüf- und Übersichtsaufgaben, Details im Interview |
+
+Interviewpartnerinnen und Interviewpartner werden auf dieser Website nicht namentlich genannt. In Protokollen und Modellen werden Rollen verwendet, keine Namen.
+
+## Vorgehen in fünf Phasen {#vorgehen}
+
+| Phase | Was die Gruppe tut | Ergebnis |
+|---|---|---|
+| 1 · Recherche | Best Practices für KI in der Verwaltung recherchieren, einen Referenzprozess mit dem Coding-Agenten skizzieren, Leitfragen für das Interview ableiten | Recherche-Skizze, Referenzmodell, Interviewleitfaden |
+| 2 · Interviews | Ein Erstgespräch mit Verwaltungsmitarbeitenden führen, jeweils zwei Gruppen gemeinsam, Protokoll statt Aufnahme | Protokoll, Liste offener Fragen |
+| 3 · Modellierung | Den Ablauf heute als BPMN-Modell abbilden (Ist), dann den Ablauf mit KI-Agent entwerfen (Soll); ein zweites Gespräch zum Nachschärfen; das Ergebnis der interviewten Person vorstellen | Ist- und Soll-Modell, bestätigt oder mit Korrekturen |
+| 4 · Prototyp | Den Soll-Prozess als n8n-Workflow umsetzen: mit Mock-Daten, mit Freigabe durch einen Menschen, ohne Zugriff auf echte Systeme | Lauffähiger Prototyp mit Testfällen |
+| 5 · Bewertung | Den Prototyp an Testfällen prüfen, Grenzen dokumentieren, Empfehlungen formulieren | Bewertung, Empfehlungen, Abschlusspräsentation |
+
+Die Phasen bauen aufeinander auf. Wochen 1 und 2 stehen im [Semesterplan](semester.qmd) im Detail, die übrigen Phasen als Rahmen; ihre Termine werden im Semester vereinbart.
+
+### Warum zuerst recherchieren
+
+Wer ohne Vorbereitung ins Interview geht, fragt nach dem, was er schon kennt. Die Recherche liefert Vokabular und Vergleichsfälle: Wie lösen andere Hochschulen und Behörden ähnliche Aufgaben, welche Muster wiederholen sich, was ging schief? Daraus entsteht ein Referenzprozess als Hypothese. Im Interview wird diese Hypothese geprüft, nicht bestätigt. Die wichtigsten Quellen stehen bei den [Materialien](materialien.qmd#literatur).
+
+### Warum ein Prozessmodell
+
+Ein Modell macht sichtbar, wer welchen Schritt ausführt, wo entschieden wird, wo Informationen herkommen und wo heute Zeit verloren geht. Es trennt drei Arten von Schritten: feste Regeln (ohne KI prüfbar), Modellschritte (Sprachverständnis nötig) und menschliche Entscheidungen. Erst mit dieser Trennung lässt sich sagen, wo ein Agent hilft und wo nicht. Der Coding-Agent kann aus einem klaren Modell einen ersten Workflow erzeugen; die Gruppe prüft ihn gegen das Modell. Grundlagen: [Prozessmodellierung](werkzeuge/prozessmodell.qmd).
+
+### Warum zwei Gespräche
+
+Nach dem ersten Interview fehlen erfahrungsgemäß Rollen, Ausnahmen und Rückschleifen: Was passiert, wenn ein Nachweis fehlt? Wer wird informiert? Das fällt beim Modellieren auf. Das zweite Gespräch klärt diese Lücken. Danach stellt die Gruppe ihr Modell der interviewten Person vor: „So haben wir Ihren Ablauf verstanden. Stimmt das?“
+
+## Daten und Freigaben {#regeln}
+
+::: {.callout-important title="Human in the Loop ist Pflicht"}
+Jeder Prototyp endet mit einer Prüfung durch einen Menschen. Der Agent sammelt, prüft, fasst zusammen und schlägt vor. Die Freigabe erfolgt durch die zuständige Person, zum Beispiel per Antwort auf eine Nachricht, in einem Chat oder über eine einfache Web-Oberfläche. Erst danach geht der Prozess weiter. Kein Prototyp schreibt in ein Verwaltungssystem.
+:::
+
+**Keine Realdaten.** Schnittstellen und Daten werden nachgebaut (gemockt): eine synthetische Tabelle mit erfundenen Studierenden, eine kleine Web-Schnittstelle, die so antwortet, wie es das echte System täte, ein Ordner mit erfundenen Anträgen. Der Prototyp zeigt dann: „So würde der Agent auf das System zugreifen, und das würde er zurückbekommen.“ Welche Daten und Schnittstellen nicht real sind, steht in der Dokumentation.
+
+**Sensible Inhalte bleiben lokal.** Bewerbungsunterlagen, Personalakten und ähnliche Inhalte dürfen nicht in öffentliche Cloud-Dienste gelangen. Für solche Fälle kommen nur lokal oder in Europa betriebene Modelle in Frage. Ob und welche lokalen Modelle im Semester bereitstehen, wird geklärt. Die Gemini-Verbindung in n8n ist für synthetische Daten vorgesehen.
+
+**Interviews werden nicht aufgezeichnet.** Zwei Gruppen führen ein Gespräch gemeinsam, eine Person protokolliert. Ob eine Aufnahme mit lokaler Transkription in Einzelfällen möglich ist, klären die Betreuer vorab mit den Interviewpartnerinnen und Interviewpartnern. Ohne ausdrückliche Zustimmung wird nicht aufgenommen.
+
+## Experimenteller Charakter {#experiment}
+
+Das Projekt ist ausdrücklich ein Experiment. Es muss am Ende nicht in jeder Gruppe ein Prototyp stehen, der sofort einsetzbar wäre. Eine gut begründete Erkenntnis, dass ein Prozess sich mit den heutigen Mitteln nicht sinnvoll unterstützen lässt, ist ein vollwertiges Ergebnis. Die Grenzen der Systeme sind Teil des Auftrags: Was geht, was geht nicht, was fehlt dafür (Daten, Schnittstellen, Rechte, Modellqualität)?
+
+Die Ergebnisse werden am Semesterende den beteiligten Verwaltungsbereichen vorgestellt. Was daraus wird, entscheidet die Hochschule.
+
+[**Weiter zum Semesterplan**](semester.qmd)

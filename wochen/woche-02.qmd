@@ -1,0 +1,88 @@
+---
+title: "Woche 2: Werkzeuge"
+toc: true
+---
+
+[Montag, 19. Oktober 2026 · 11:45 bis 13:15 Uhr · Raum I110 · Notebook mitbringen, VPN eingerichtet]{.kicker}
+
+::: {.lead}
+- Referenzprozesse aus der Recherche in drei Minuten je Gruppe
+- Coding-Agent einrichten: Antigravity und die Projektbeschreibung für den Agenten
+- n8n auf dem HdM-Server: Login, erster Workflow, Modellverbindung
+- Aus der Prozessbeschreibung ein BPMN-Modell erzeugen lassen und prüfen
+:::
+
+## Ziel des Termins
+
+Am Ende hat jede Gruppe Antigravity mit einem Projektordner eingerichtet, sich in ihrer n8n-Instanz angemeldet, einen ersten Workflow ausgeführt und aus ihrer Prozessbeschreibung ein BPMN-Modell erzeugt und im Browser angesehen.
+
+::: {#bausteine .callout-note collapse="true" title="Bausteine des Termins"}
+
+| Baustein | Dauer etwa | Arbeitsform |
+|---|---|---|
+| Referenzprozesse vorstellen | 20 Minuten | Gruppen, je 3 Minuten |
+| Antigravity einrichten, AGENTS.md anlegen | 20 Minuten | Angeleitet, in den Gruppen |
+| n8n: Login, erster Workflow, Modellverbindung | 25 Minuten | Angeleitet, in den Gruppen |
+| Prozessmodell mit dem Agenten erzeugen | 20 Minuten | In den Gruppen |
+| Nächste Schritte: Interviews | 5 Minuten | Gemeinsam |
+
+:::
+
+## Referenzprozesse vorstellen {#vorstellen}
+
+Jede Gruppe zeigt in drei Minuten: den gewählten Prozess, die beteiligten Rollen, die Stelle, an der unstrukturierte Information strukturiert werden muss, und eine Leitfrage für das Interview. Keine Folien. Rückfragen aus den anderen Gruppen sind erwünscht; sie landen in der Liste offener Fragen.
+
+## Übung 2.1: Coding-Agent einrichten {#uebung-2-1}
+
+::: {.uebung}
+### Etwa 20 Minuten · eine Person pro Gruppe am Rechner, die anderen prüfen
+
+**Material:** [Coding-Agent einrichten](../werkzeuge/einrichtung.qmd).
+
+1. [Antigravity](https://antigravity.google/) installieren und mit dem Google-Konto anmelden.
+2. Einen leeren Projektordner anlegen, zum Beispiel `ki-verwaltung-gruppe-3`, und in Antigravity öffnen.
+3. Eine Datei `AGENTS.md` anlegen: Projektziel in drei Sätzen, der gewählte Prozess, die Regeln (keine Realdaten, Freigabe beim Menschen, Deutsch). Vorlage im [Werkzeugkasten](../werkzeuge/einrichtung.qmd#agents-md).
+4. Einen ersten Auftrag im Chat stellen, zum Beispiel: „Lies AGENTS.md und fasse in fünf Sätzen zusammen, was dieses Projekt will.“
+
+**Prüfung:** Die Zusammenfassung des Agenten stimmt mit dem überein, was die Gruppe meint. Wenn nicht, AGENTS.md präzisieren.
+:::
+
+## Übung 2.2: n8n auf dem HdM-Server {#uebung-2-2}
+
+::: {.uebung}
+### Etwa 25 Minuten · in den Gruppen
+
+**Material:** [n8n auf dem HdM-Server](../werkzeuge/n8n.qmd), Zugangsdaten der Gruppe.
+
+1. VPN verbinden, die n8n-Adresse der Gruppe öffnen, Zertifikatswarnung bestätigen, anmelden.
+2. Unter Credentials prüfen, dass die beiden Verbindungen der Gruppe vorhanden sind (Datenbank und Modell).
+3. Einen neuen Workflow anlegen: Manual Trigger, dann ein Edit-Fields-Knoten mit drei Feldern eines erfundenen Antrags (zum Beispiel `antrag_id`, `art`, `nachweise`). Ausführen und die Ausgabe ansehen.
+4. Eine Basic LLM Chain anhängen, als Modell die vorbereitete Gemini-Verbindung wählen und einen Auftrag nach dem [Prompt-Standard](../werkzeuge/einrichtung.qmd#prompt) formulieren: Kontext, Aufgabe, Format, Prüfung. Ausführen.
+5. Den Workflow speichern und als JSON exportieren, Export in die Teamablage unter `04_Prototyp`.
+
+**Prüfung:** Die Felder des Antrags kommen beim Modell an. Die Ausgabe nennt, was fehlt oder unsicher ist, statt es zu erfinden. Der Export enthält keine Zugangsdaten.
+:::
+
+## Übung 2.3: Prozessmodell mit dem Agenten {#uebung-2-3}
+
+::: {.uebung}
+### Etwa 20 Minuten · in den Gruppen
+
+**Material:** [Prozessmodellierung](../werkzeuge/prozessmodell.qmd), [Auftrag: Ist-Prozess aus einer Beschreibung](../material/prompts/ist-aus-prosa.md), die eigene Prozessbeschreibung aus der Recherche.
+
+1. Die Prozessbeschreibung als `prozess-beschreibung.md` in den Projektordner legen.
+2. Den Auftrag aus `ist-aus-prosa.md` in den Chat von Antigravity einfügen. Der Agent schreibt eine Datei `referenzprozess-ist.bpmn`.
+3. Die Datei in [demo.bpmn.io](https://demo.bpmn.io/) öffnen und ansehen.
+4. Prüfen, bevor etwas übernommen wird: Hat jeder Schritt der Beschreibung genau einen Schritt im Modell? Liegt jeder Schritt in der richtigen Bahn? Sind Entscheidungen als Raute mit beschrifteten Ausgängen dargestellt? Hat der Agent Schritte erfunden?
+5. Korrekturen als Auftrag an den Agenten formulieren („Der Schritt X gehört in die Bahn Y“), nicht von Hand im Modell. Datei und Bild in die Ablage unter `03_Prozessmodelle`.
+
+**Prüfung:** Eine Person aus einer anderen Gruppe versteht den Ablauf anhand des Bildes ohne Erklärung.
+
+**Ergebnis:** Ein erstes BPMN-Modell des Referenzprozesses. Es ist eine Hypothese, die im Interview geprüft wird.
+:::
+
+## Nächste Schritte {#naechste}
+
+Die Betreuer vereinbaren die Interviewtermine mit den Verwaltungsbereichen. Sobald ein Termin steht, bereiten sich die beiden zugeordneten Gruppen gemeinsam nach [Interviews führen](../werkzeuge/interviews.qmd) vor. Bis dahin: Referenzmodell verfeinern, Leitfragen abstimmen, erste Mock-Daten für den eigenen Prozess entwerfen.
+
+[**Zurück zu Woche 1**](woche-01.qmd) · [**Semesterplan**](../semester.qmd)

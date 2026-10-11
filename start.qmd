@@ -1,0 +1,86 @@
+---
+title: "Vorbereitung und Zugänge"
+toc: true
+---
+
+[Für den Einstieg genügen ein Notebook, der HdM-VPN-Zugang und ein Google-Konto. Programmierkenntnisse sind keine Voraussetzung. Den Zugang zur n8n-Umgebung stellt die Lehrperson pro Gruppe bereit.]{.lead}
+
+## HdM-VPN {#vpn}
+
+Die Projektumgebung (n8n und Datenbanken) läuft auf einem Server der HdM. Sie ist nur aus dem HdM-Netz und über das HdM-VPN erreichbar. Von zu Hause ist das VPN deshalb Voraussetzung für jede Arbeit in n8n.
+
+1. Den VPN-Client nach der Anleitung der HdM-IT installieren (FortiClient, Zugang mit der HdM-Kennung).
+2. Die VPN-Verbindung aufbauen.
+3. Prüfen: Die [Übersichtsseite der Projektumgebung](https://141.62.116.2/) lädt im Browser. Ohne VPN erscheint eine Zeitüberschreitung.
+
+Im Hochschulnetz vor Ort (WLAN eduroam oder Kabel) ist kein VPN nötig.
+
+## Zertifikatswarnung {#zertifikat}
+
+Die Projektumgebung ist bis auf Weiteres über die IP-Adresse `141.62.116.2` erreichbar. Der Server nutzt ein selbst ausgestelltes Zertifikat, bis die HdM-IT den Namen `ki-in-der-verwaltung.iuk.hdm-stuttgart.de` und ein offizielles Zertifikat eingerichtet hat. Der Browser warnt deshalb beim ersten Aufruf vor einer unsicheren Verbindung.
+
+1. In der Warnung auf „Erweitert“ oder „Details“ klicken.
+2. Die Ausnahme für diese Adresse bestätigen („Weiter zu 141.62.116.2“ oder „Risiko akzeptieren“).
+3. Prüfen: Die Übersichtsseite mit den Links zu den n8n-Instanzen erscheint.
+
+Die Ausnahme gilt pro Browser und muss nach einem Browserwechsel erneut bestätigt werden. Die Verbindung ist verschlüsselt. Die Warnung bedeutet nur, dass der Browser den Aussteller des Zertifikats nicht kennt. Sobald der offizielle Name eingerichtet ist, wird die neue Adresse hier bekannt gegeben.
+
+::: {.callout-warning title="Achtung"}
+Diese Ausnahme gilt nur für die Projektumgebung an der HdM. Auf anderen Websites bleibt eine Zertifikatswarnung ein Warnsignal.
+:::
+
+## Google-Konto und Coding-Agent {#google}
+
+Die Gruppen arbeiten mit einem Coding-Agenten: Der Agent recherchiert, schreibt Prozessmodelle und Workflow-Dateien, die Gruppe prüft und entscheidet. Wir verwenden [Google Antigravity](https://antigravity.google/), eine Entwicklungsumgebung mit eingebautem Agenten. Die Einrichtung erfolgt gemeinsam in [Woche 2](wochen/woche-02.qmd).
+
+::: {.callout-tip title="Google AI Plus für Studierende"}
+Google stellt Studierenden ein Jahr lang [Google AI Plus](https://gemini.google/de/students/?hl=de) kostenlos bereit. Darin enthalten sind Gemini mit höheren Nutzungslimits und der Zugang zu Antigravity. Das Angebot gilt ab 18 Jahren und ist bis 31.12.2026 einlösbar.
+
+Vor der Registrierung drei Punkte kennen:
+
+- Die Berechtigung als Studierende oder Studierender wird nachgewiesen und jährlich erneuert.
+- Bei der Registrierung ist eine gültige Zahlungsmethode erforderlich.
+- Ohne rechtzeitige Kündigung verlängert sich das Abo nach Ablauf automatisch kostenpflichtig. Die aktuellen Bedingungen stehen auf der Angebotsseite.
+
+Wer das Abo nicht möchte, arbeitet mit dem kostenlosen Google-Konto. Pro Gruppe reicht ein Zugang zu Antigravity; die Gruppe entscheidet, wer ihn einrichtet.
+:::
+
+Für die Modellaufrufe in n8n wird **nicht** das eigene Google-Konto verwendet. Dort ist pro Gruppe eine vorbereitete Verbindung hinterlegt, siehe [n8n auf dem HdM-Server](werkzeuge/n8n.qmd#gemini).
+
+## n8n-Zugang der Gruppe {#n8n}
+
+Jede Gruppe hat eine eigene n8n-Instanz mit eigener Datenbank auf dem HdM-Server. Die Gruppe teilt sich ein Konto. Login und Passwort gibt die Lehrperson nach der Gruppeneinteilung aus. Das Passwort wird nicht per Mail, Chat oder in Dokumenten weitergegeben und nicht in Screenshots gezeigt.
+
+| Gruppe | Adresse |
+|---|---|
+| Gruppe 1 | `https://141.62.116.2/n8n-1/` |
+| Gruppe 2 | `https://141.62.116.2/n8n-2/` |
+| Gruppe 3 | `https://141.62.116.2/n8n-3/` |
+| Gruppe 4 | `https://141.62.116.2/n8n-4/` |
+| Gruppe 5 | `https://141.62.116.2/n8n-5/` |
+| Gruppe 6 | `https://141.62.116.2/n8n-6/` |
+| Gruppe 7 | `https://141.62.116.2/n8n-7/` |
+
+Im Konto liegen bereits zwei Verbindungen: eine zur Gruppen-Datenbank (Postgres mit pgvector) und eine zum Sprachmodell (Gemini). Beide werden in Workflows ausgewählt, nicht neu angelegt. Erste Schritte: [n8n auf dem HdM-Server](werkzeuge/n8n.qmd).
+
+## Teamablage {#ablage}
+
+Jede Gruppe legt einen gemeinsamen Ordner an, zum Beispiel in Google Drive oder als privates GitHub-Repository. Vorschlag für die Struktur:
+
+| Ordner | Inhalt |
+|---|---|
+| `01_Recherche` | Best Practices, Referenzprozesse, Quellen |
+| `02_Interviews` | Leitfaden, Protokolle, offene Fragen |
+| `03_Prozessmodelle` | Ist- und Soll-Modelle als `.bpmn` und als Bild |
+| `04_Prototyp` | n8n-Exporte, Prompts im Wortlaut, Testfälle, Mock-Daten |
+| `05_Bewertung` | Testbelege, Vergleich, Empfehlungen, Präsentation |
+
+Zugangsdaten, Passwörter und Schlüssel gehören nicht in die Ablage, auch nicht in n8n-Exporte oder Screenshots.
+
+## Arbeitsregeln {#regeln}
+
+- **Keine Realdaten.** In n8n, Gemini und Antigravity werden ausschließlich synthetische oder anonymisierte Daten verarbeitet. Namen, Matrikelnummern, Bewerbungsunterlagen oder interne Dokumente der Verwaltung gehören nicht hinein. Die Gründe stehen unter [Daten und Freigaben](projekt.qmd#regeln).
+- **Interviews werden protokolliert, nicht aufgezeichnet.** Siehe [Interviews führen](werkzeuge/interviews.qmd).
+- **Der Mensch entscheidet.** Jeder Prototyp endet mit einer Prüfung und Freigabe durch eine Person. Kein Workflow schreibt in ein Verwaltungssystem oder versendet etwas an Dritte.
+
+[**Weiter zum Projekt**](projekt.qmd)

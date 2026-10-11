@@ -1,0 +1,58 @@
+---
+title: "Materialien"
+toc: true
+---
+
+[Literatur für die Recherche, Beispielprozesse, Aufträge für den Coding-Agenten und technische Dokumentation. Alle Beispieldaten sind erfunden.]{.lead}
+
+## Literatur für die Recherche {#literatur}
+
+Die ersten vier Quellen sind der Einstieg für Woche 1. Die weiteren vertiefen einzelne Phasen.
+
+| Quelle | Wofür |
+|---|---|
+| Göllner, S. et al. (2026): [Agentische KI im Hochschulsystem. Einsatzszenarien, Kompetenzverschiebungen und Steuerungsmöglichkeiten](https://hochschulforumdigitalisierung.de/wp-content/uploads/2026/04/Agentische-KI-im-Hochschulsystem.pdf). Hochschulforum Digitalisierung und KI-Campus, CC BY 4.0 | Die passendste Quelle zum Projekt: agentische KI in Verwaltung, Forschung und Lehre der Hochschule. Für alle |
+| Anthropic (2024): [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) | Workflow oder Agent? Die meisten Fälle brauchen einen Workflow. Für alle |
+| Gilch, H., Stratmann, F., Wannemacher, K. (2024): [Analyse der Potenziale von KI in Anerkennungs- und Anrechnungsprozessen](https://www.hrk-modus.de/media/redaktion/Downloads/Publikationen/MODUS/Studie_KI.pdf). HIS-HE für HRK-MODUS | Ein Hochschulverwaltungsprozess, vollständig auf KI-Potenzial untersucht. Methodische Vorlage für die eigene Analyse |
+| OpenAI (2025): [A Practical Guide to Building Agents](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf) | Wann lohnt sich ein Agent: komplexe Entscheidungen, unstrukturierte Daten, schwer wartbare Regelwerke |
+| OECD (2025): [Governing with Artificial Intelligence](https://www.oecd.org/en/publications/governing-with-artificial-intelligence_795de142-en.html) | Rund 200 reale Anwendungsfälle in Verwaltungen, nach Funktionen geordnet |
+| ÖFIT / IT-Planungsrat (2026): [Nachnutzung generativer KI-Systeme. Vorstudie](https://www.it-planungsrat.de/fileadmin/it-planungsrat/der-it-planungsrat/schwerpunktthemen/arbeitsergebnisse_spt_datennutzung/Vorstudie_Nachnutzung_Generativer_KI-Systeme.pdf) | Sieben produktive KI-Systeme deutscher Verwaltungen im Vergleich |
+| Bayerisches Staatsministerium der Finanzen und für Heimat (2025): [KI-Leitfaden für Behörden](https://www.stmfh.bayern.de/digitalisierung/ki/KI-Leitfaden_Behoerden_2025.pdf) | Wie eine Behörde den KI-Einsatz formal regelt |
+| KI-Campus: [KIÖV. KI in öffentlichen Verwaltungen](https://ki-campus.org/kurse/ki-oev) | Kostenloser Online-Kurs, etwa 5 Stunden, zum Angleichen von Vorwissen |
+| Honroth, T., Siebert, J. (2024): [Retrieval Augmented Generation (RAG). Chatten mit eigenen Daten](https://www.iese.fraunhofer.de/blog/retrieval-augmented-generation-rag/). Fraunhofer IESE | Deutschsprachige Einführung in Wissenssuche über eigene Dokumente, für die Phase Prototyp |
+| Anthropic (2026): [Demystifying Evals for AI Agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) | Wie man Prototypen mit Testfällen bewertet, für die Phase Bewertung |
+| BfDI (2025): [KI in Behörden. Datenschutz von Anfang an mitdenken](https://www.bfdi.bund.de/SharedDocs/Downloads/DE/DokumenteBfDI/Dokumente-allg/2025/Handreichung-KI.pdf) | Datenschutz-Handreichung für Behörden; vor jedem Gedanken an echte Daten lesen |
+| Datenschutzkonferenz (2025): [Datenschutzrechtliche Besonderheiten generativer KI-Systeme mit RAG-Methode](https://www.datenschutzkonferenz-online.de/media/oh/DSK_OH_RAG.pdf) | Rechtliche Referenz, wenn Dokumente durchsuchbar gemacht werden |
+| KPMG Law: [AI Act. Das gilt für KI in Hochschulen und Forschung](https://kpmg-law.de/ai-act-das-gilt-fuer-ki-in-hochschulen-und-forschung/) | Welche Risikoklasse ein Prototyp im Verwaltungskontext berührt |
+
+Berichte von KI-Anbietern (Anthropic, OpenAI) sind Selbstauskünfte, keine unabhängigen Studien. Behördliche Leitfäden und Studien sind als Quellen belastbarer.
+
+## Prozessmodellierung {#prozess}
+
+| Material | Verwendung |
+|---|---|
+| [Werkzeugkasten Prozessmodellierung](werkzeuge/prozessmodell.qmd) | Symbole, Beispiel, Übertragung auf einen Verwaltungsprozess |
+| Beispiel [heute](material/prozess/aurenta-webinar-ist.svg) und [mit Agent](material/prozess/aurenta-webinar-soll.svg); BPMN: [heute](material/prozess/aurenta-webinar-ist.bpmn), [mit Agent](material/prozess/aurenta-webinar-soll.bpmn) | Erfundener Fall aus einem anderen Projekt, zeigt die Form; zum Öffnen in demo.bpmn.io |
+| [demo.bpmn.io](https://demo.bpmn.io/) · [draw.io](https://app.diagrams.net/) | BPMN-Dateien ansehen, bearbeiten, exportieren |
+
+## Aufträge für den Coding-Agenten {#prompts}
+
+| Auftrag | Verwendung |
+|---|---|
+| [Ist-Prozess aus einer Beschreibung](material/prompts/ist-aus-prosa.md) | Aus Prosa oder Protokoll ein BPMN-Modell des heutigen Ablaufs erzeugen |
+| [Prozess mit KI neu denken](material/prompts/redesign-mit-ki.md) | Aus dem Ist-Modell ein Soll-Modell mit KI-Agent und eine Begründung erzeugen |
+| [Vorlage AGENTS.md](werkzeuge/einrichtung.qmd#agents-md) | Kontext und Regeln für den Agenten im Projektordner |
+| [Prompt-Standard](werkzeuge/einrichtung.qmd#prompt) | Kontext, Aufgabe, Format, Prüfung |
+
+Die Aufträge als Text in den Chat von Antigravity einfügen und die Platzhalter ersetzen. Jede erzeugte Datei wird vor der Ablage geprüft.
+
+## Werkzeuge und Dokumentation {#werkzeuge}
+
+| Material | Wofür |
+|---|---|
+| [Google AI Plus für Studierende](https://gemini.google/de/students/?hl=de) | Freiwillig, enthält Antigravity; Bedingungen in der [Vorbereitung](start.qmd#google) |
+| [Google Antigravity](https://antigravity.google/) | Entwicklungsumgebung mit Coding-Agent |
+| [agents.md](https://agents.md/) | Format und Beispiele für AGENTS.md |
+| [n8n-Dokumentation](https://docs.n8n.io/) · [KI in n8n](https://docs.n8n.io/build/integrate-ai) | Knoten, Trigger, Modelle, Vektorsuche |
+| [n8n Course Level 1](https://docs.n8n.io/courses/level-one) | Textkurs für den Einstieg in n8n, freiwillig |
+| [Übersichtsseite der Projektumgebung](https://141.62.116.2/) | Links zu den sieben n8n-Instanzen, nur HdM-Netz und VPN |

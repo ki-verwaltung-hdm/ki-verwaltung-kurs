@@ -1,0 +1,127 @@
+---
+title: "Abgaben"
+toc: true
+---
+
+[Was im Semester entsteht, in welcher Reihenfolge und wo es abgelegt wird. Jedes Ergebnis ist die Grundlage für das nächste. Die Termine der späteren Schritte werden im Semester vereinbart und hier ergänzt.]{.lead}
+
+## Überblick {#ueberblick}
+
+| Nr. | Ergebnis | Art | Termin | Wo |
+|---|---|---|---|---|
+| 1 | [Recherche, Referenzprozess, Leitfragen](#recherche) | Gruppe, Rückmeldung | Montag, 19.10.2026 | Teamablage `01_Recherche` |
+| 2 | [Interviewprotokoll und offene Fragen](#interview) | zwei Gruppen gemeinsam | nach dem Interview | `02_Interviews` |
+| 3 | [Ist- und Soll-Modell mit Begründung](#modelle) | Gruppe, Rückmeldung | wird vereinbart | `03_Prozessmodelle` |
+| 4 | [Prototyp mit Testfällen](#prototyp) | Gruppe, Review | wird vereinbart | `04_Prototyp` |
+| 5 | [Bewertung und Empfehlungen](#bewertung) | Gruppe | wird vereinbart | `05_Bewertung` |
+| 6 | [Abschlusspräsentation](#abschluss) | Gruppe | Semesterende, wird vereinbart | Präsentation vor den beteiligten Bereichen |
+
+Die Form der Prüfungsleistung, ihre Bestandteile und die Bewertungskriterien werden in der Vorlesung bekannt gegeben. Die Schritte auf dieser Seite beschreiben die Arbeitsergebnisse, auf denen die Bewertung aufbaut.
+
+## Laufend: jede Woche {#laufend}
+
+1. Vor dem Montagstermin den Stand in der Teamablage aktualisieren: fertig, offen, blockiert.
+2. Entscheidungen aus dem Termin mit Datum festhalten.
+3. Dateien, die der Coding-Agent erzeugt hat, erst nach Prüfung durch eine Person ablegen.
+
+## Schritt für Schritt {#schritte}
+
+::: {.uebung #recherche}
+### 1 · Recherche, Referenzprozess und Leitfragen
+
+[Gruppe · Rückmeldung in Woche 2 · Teamablage]{.uebung-meta}
+
+Die Aufgabe steht in [Woche 1](wochen/woche-01.qmd#recherche).
+
+1. Quellen mit Link und je zwei Sätzen Erkenntnis.
+2. Referenzprozess als Prosa (zwei bis zehn Sätze) und ab Woche 2 als BPMN-Datei.
+3. Fünf bis acht Leitfragen für das Interview.
+
+::: {.ergebnis}
+**Prüfen:** Jede Erkenntnis hat eine Quelle. Die Leitfragen fragen nach Tätigkeiten und Informationen, nicht nach Wunsch-Automatisierungen.
+:::
+:::
+
+::: {.uebung #interview}
+### 2 · Interviewprotokoll und offene Fragen
+
+[Zwei Gruppen gemeinsam · nach dem Erstgespräch · Teamablage]{.uebung-meta}
+
+Vorgehen und Protokollraster: [Interviews führen](werkzeuge/interviews.qmd).
+
+1. Protokoll im Raster, am Tag des Gesprächs vervollständigt.
+2. Liste offener Fragen für das zweite Gespräch.
+3. Beide Gruppen legen dasselbe Protokoll ab.
+
+::: {.ergebnis}
+**Prüfen:** Keine Namen von Personen, keine erkennbaren Einzelfälle. Aus dem Protokoll lässt sich der Ablauf modellieren.
+:::
+:::
+
+::: {.uebung #modelle}
+### 3 · Ist- und Soll-Modell mit Begründung
+
+[Gruppe · Rückmeldung im Wochentermin · Teamablage]{.uebung-meta}
+
+Vorgehen: [Prozessmodellierung](werkzeuge/prozessmodell.qmd#vom-ist-zum-soll).
+
+1. Ist-Modell als `.bpmn` und als Bild, aus dem Protokoll, im zweiten Gespräch bestätigt.
+2. Soll-Modell mit den Bahnen „KI-Agent“ und „Workflow-System“.
+3. Begründung als Tabelle: Entfällt, Bleibt beim Menschen, Neu. Dazu, was ein Pilot messen müsste.
+4. Rückmeldung der interviewten Person in Stichworten.
+
+::: {.ergebnis}
+**Prüfen:** Jede feste Regel steht vor dem Modellschritt, der sich auf sie verlässt. Die Freigabe liegt in einer menschlichen Bahn. Kein Schritt schreibt in ein Verwaltungssystem.
+:::
+:::
+
+::: {.uebung #prototyp}
+### 4 · Prototyp mit Testfällen
+
+[Gruppe · Review im Wochentermin · Teamablage]{.uebung-meta}
+
+Vorgehen: [n8n auf dem HdM-Server](werkzeuge/n8n.qmd).
+
+1. n8n-Export als JSON, Prompts im Wortlaut als eigene Dateien.
+2. Mock-Daten und Mock-Schnittstellen mit Beschreibung, was sie nachbilden.
+3. Mindestens fünf Testfälle: Eingabe, erwartetes Ergebnis, tatsächliches Ergebnis, Datum. Darunter ein Normalfall, ein Fall mit fehlender Angabe und ein Fall, den eine feste Regel abfängt.
+4. Der Freigabeschritt ist im Workflow sichtbar und in den Testfällen dokumentiert.
+
+::: {.ergebnis}
+**Prüfen:** Der Export enthält keine Zugangsdaten. Eine Person aus einer anderen Gruppe kann den Workflow importieren, die Verbindungen auswählen und einen Testfall ausführen.
+:::
+:::
+
+::: {.uebung #bewertung}
+### 5 · Bewertung und Empfehlungen
+
+[Gruppe · Teamablage]{.uebung-meta}
+
+1. Was der Prototyp leistet und was nicht, belegt mit den Testfällen.
+2. Grenzen: Daten, Schnittstellen, Rechte, Modellqualität, Datenschutz. Welche Voraussetzungen müssten erfüllt sein, damit der Ablauf real eingesetzt werden könnte?
+3. Empfehlung an den Verwaltungsbereich: weiterverfolgen, anpassen oder nicht weiterverfolgen, mit Begründung.
+4. Offenlegung, wofür KI-Werkzeuge in der Projektarbeit genutzt wurden.
+
+::: {.ergebnis}
+**Prüfen:** Die Empfehlung folgt aus den Testfällen, nicht aus dem Eindruck einer Demo. Eine begründete Empfehlung gegen den Einsatz ist ein vollwertiges Ergebnis.
+:::
+:::
+
+::: {.uebung #abschluss}
+### 6 · Abschlusspräsentation
+
+[Gruppe · Semesterende · vor den beteiligten Verwaltungsbereichen]{.uebung-meta}
+
+1. Ausgangslage und Ablauf heute in zwei Minuten.
+2. Soll-Modell und Prototyp an einem Testfall live zeigen, einschließlich Freigabeschritt.
+3. Grenzen und Empfehlungen.
+4. Jede Person der Gruppe präsentiert einen Teil.
+
+::: {.callout-warning title="Achtung"}
+Die Demo läuft mit erfundenen Daten und nachgebauten Schnittstellen. Das wird zu Beginn der Präsentation gesagt.
+:::
+:::
+
+::: {.callout-warning title="Achtung"}
+Keine Passwörter, Schlüssel oder Zugangsdaten in Ablagen, Exporten, Screenshots oder Präsentationen. Benötigte Zugänge nur nach ihrem Zweck beschreiben (zum Beispiel „Verbindung zum Modell für den Prüfschritt“).
+:::

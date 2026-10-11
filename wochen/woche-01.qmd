@@ -1,0 +1,83 @@
+---
+title: "Woche 1: Projektstart"
+toc: true
+---
+
+[Montag, 12. Oktober 2026 · 11:45 bis 13:15 Uhr · Raum I110]{.kicker}
+
+::: {.lead}
+- Worum es geht: KI-Agenten in der Verwaltung, der Auftrag der HdM, das Vorgehen im Semester
+- Grundlagen der Prozessmodellierung mit BPMN
+- Der Recherche-Auftrag bis Woche 2
+- Umfrage und Gruppenbildung
+:::
+
+## Ziel des Termins
+
+Am Ende des Termins kennen alle den Auftrag, das Vorgehen in fünf Phasen und die Grundform eines Prozessmodells. Die Umfrage zur Gruppeneinteilung ist ausgefüllt, der Recherche-Auftrag ist verteilt.
+
+::: {#bausteine .callout-note collapse="true" title="Bausteine des Termins"}
+
+| Baustein | Dauer etwa | Arbeitsform |
+|---|---|---|
+| Projektidee, Rollen, Vorgehen im Semester | 20 Minuten | Gemeinsam |
+| Umfrage zur Gruppeneinteilung | 10 Minuten | Einzeln |
+| Prozessmodellierung: Grundlagen und Beispiel | 25 Minuten | Input mit Rückfragen |
+| Recherche-Auftrag und Leitfragen für Interviews | 20 Minuten | Gemeinsam |
+| Gruppen, Teamablage, offene Fragen | 15 Minuten | Gemeinsam |
+
+:::
+
+## Projektidee und Vorgehen {#projektidee}
+
+Die Hochschulverwaltung hat die Fakultät gebeten, versuchsweise KI in Bereichen der Verwaltung zu erproben. Das Projekt tut das in fünf Phasen: Recherche, Interviews, Modellierung, Prototyp, Bewertung. Alles Wesentliche steht auf der Seite [Projekt](../projekt.qmd). Drei Punkte sind am ersten Tag wichtig:
+
+- Gesucht sind Tätigkeiten, die **unstrukturierte Informationen in strukturierte überführen** und **Entscheidungen vorbereiten**, nicht die Automatisierung ganzer Workflows.
+- Der Mensch entscheidet. Jeder Prototyp endet mit einer Freigabe durch eine Person.
+- Keine Realdaten. Daten und Schnittstellen werden nachgebaut.
+
+## Umfrage zur Gruppeneinteilung {#gruppen}
+
+Das Projekt wird in Dreiergruppen bearbeitet. Die Teilnehmenden kommen aus mehreren Studiengängen und kennen sich meist nicht. Deshalb erfolgt die Einteilung über eine kurze Umfrage: Erfahrungen, Lerninteressen, gemeinsame Arbeitszeiten und Präferenzen für die Zusammenarbeit. Vorkenntnisse werden nicht vorausgesetzt.
+
+::: {.todo}
+[Aufgabe · etwa 6 bis 8 Minuten]{.todo-label}
+
+Die Umfrage zur Gruppeneinteilung ausfüllen. Der Link wird in der Vorlesung gezeigt. Die Angaben dienen nur der Einteilung und werden danach gelöscht.
+:::
+
+Die Einteilung wird nach dem Termin bekannt gegeben. Dann erhält jede Gruppe ihre Nummer und den Zugang zur [n8n-Instanz](../start.qmd#n8n).
+
+## Prozessmodellierung: Grundlagen {#bpmn}
+
+Ein kurzer Input mit dem [Werkzeugkasten Prozessmodellierung](../werkzeuge/prozessmodell.qmd): Bahnen für Rollen, sechs Symbole, ein Beispiel für denselben Ablauf heute und mit KI-Agent. Wer schon ereignisgesteuerte Prozessketten (EPK) kennt, findet sich schnell zurecht; BPMN ist nicht weit davon entfernt.
+
+**Gemeinsam am Beispiel:** Welche Schritte im Soll-Modell sind feste Regeln, welche brauchen Sprachverständnis, und wo bleibt der Mensch? Warum liegt die feste Regel vor dem Modellschritt?
+
+## Recherche-Auftrag bis Woche 2 {#recherche}
+
+::: {.uebung}
+### Bis Montag, 19.10. · in den Gruppen
+
+**Worum es geht:** Bevor die Gruppen mit Verwaltungsmitarbeitenden sprechen, brauchen sie Vokabular, Vergleichsfälle und eine erste Hypothese, wie ein unterstützter Ablauf aussehen könnte.
+
+1. Zwei bis drei Quellen aus der [Literaturliste](../materialien.qmd#literatur) lesen, mindestens „Agentische KI im Hochschulsystem“ und „Building Effective Agents“.
+2. Recherchieren: Wer setzt in Hochschulverwaltung oder Behörden bereits KI für Übersichten, Zusammenfassungen oder Prüfungen ein? Welche Muster wiederholen sich? Was ist gescheitert, und warum?
+3. Einen Verwaltungsprozess auswählen, der zu den [möglichen Bereichen](../projekt.qmd#ausgangslage) passt, und ihn als Referenzprozess in Prosa beschreiben: Rollen, Schritte, Entscheidungen, Rückschleifen. Zwei bis zehn Sätze genügen. In Woche 2 wird daraus mit dem Coding-Agenten ein BPMN-Modell.
+4. Fünf bis acht Leitfragen für das Interview entwerfen. Orientierung: [Interviews führen](../werkzeuge/interviews.qmd).
+5. Alles in der [Teamablage](../start.qmd#ablage) unter `01_Recherche` ablegen: Quellen mit Link, Erkenntnisse in Stichworten, Prozessbeschreibung, Leitfragen.
+
+**Prüfung:** Jede Erkenntnis hat eine Quelle. Die Prozessbeschreibung nennt mindestens zwei Rollen und eine Entscheidung. Die Leitfragen fragen nach Tätigkeiten und Informationen, nicht nach Wunsch-Automatisierungen.
+
+**Ergebnis:** Ein Ordner `01_Recherche` mit Quellen, Referenzprozess und Leitfragen. In Woche 2 stellt jede Gruppe ihren Referenzprozess in drei Minuten vor.
+:::
+
+Ein Hinweis zur Recherche mit KI: Gemini und andere Chat-Werkzeuge dürfen zur Recherche verwendet werden. Jede Aussage, die in die Ablage kommt, wird gegen die Originalquelle geprüft. Eine KI-Antwort ohne Quelle ist eine Vermutung.
+
+## Bis Woche 2 vorbereiten {#vorbereitung}
+
+1. [HdM-VPN](../start.qmd#vpn) einrichten und die Verbindung zur Projektumgebung testen.
+2. Google-Konto bereithalten; wer möchte, das [Studierendenangebot](../start.qmd#google) einlösen. Pro Gruppe reicht ein Zugang zu Antigravity.
+3. Den Recherche-Auftrag erledigen.
+
+[**Weiter zu Woche 2: Werkzeuge**](woche-02.qmd)

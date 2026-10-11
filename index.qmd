@@ -1,0 +1,41 @@
+---
+title: ""
+page-layout: full
+toc: false
+anchor-sections: false
+---
+
+::: {.hero}
+[HdM Stuttgart · WS 2026/27 · montags 11:45 bis 13:15 Uhr · Raum I110]{.hero-eyebrow}
+
+# KI in der Verwaltung
+
+[Die Gruppen untersuchen gemeinsam mit Bereichen der HdM-Verwaltung, wo KI-Agenten Verwaltungsarbeit unterstützen können: vom Interview über das Prozessmodell bis zum Prototyp in n8n. Jeder Prototyp bereitet Entscheidungen vor, die Entscheidung bleibt beim Menschen.]{.hero-lead}
+
+::: {.hero-actions}
+<a href="projekt.html" class="btn btn-primary">Zum Projekt</a>
+<a href="wochen/woche-01.html" class="btn btn-outline">Woche 1: Montag, 12.10.</a>
+:::
+:::
+
+## Termine
+
+| Datum | Was |
+|---|---|
+| Montag, 12.10.2026 | Projektstart: Kontext, Prozessmodellierung, Recherche-Auftrag, Gruppenbildung |
+| Montag, 19.10.2026 | Werkzeuge: Coding-Agent, n8n, Prozessmodell mit dem Agenten |
+| ab 26.10.2026 | wöchentlich montags, 11:45 bis 13:15 Uhr: Interviews, Modellierung, Prototyp, Reviews |
+| Semesterende | Abschlusspräsentation und Abgabe, Termine werden in der Vorlesung bekannt gegeben |
+
+Der Wochentermin ist der gemeinsame Abstimmungstermin. Interviews, Modellierung und Prototyp entstehen in der eigenständigen Arbeit der Gruppen zwischen den Terminen.
+
+## Nachschlagen
+
+| Seite | Inhalt |
+|---|---|
+| [Vorbereitung](start.qmd) | HdM-VPN, Google-Konto, n8n-Zugang der Gruppe, Zertifikatswarnung |
+| [Projekt](projekt.qmd) | Ausgangslage, Vorgehen in fünf Phasen, Regeln für Daten und Freigaben |
+| [Semesterplan](semester.qmd) | Woche 1 und 2 im Detail, die weiteren Phasen als Rahmen |
+| [Werkzeugkasten](werkzeuge/index.qmd) | Coding-Agent, Prozessmodellierung, Interviews, n8n |
+| [Abgaben](abgaben.qmd) | Was in jeder Phase entsteht und wie es abgelegt wird |
+| [Materialien](materialien.qmd) | Literatur, Beispielprozesse, Prompts, Dokumentation |
