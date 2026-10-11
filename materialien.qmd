@@ -70,6 +70,17 @@ Was Land, Bund und Kommunen bereits einsetzen, und wo die Übersichten liegen. F
 
 Pressemitteilungen beschreiben Systeme aus Sicht der Betreiber. Unabhängige Belege zur Wirkung fehlen meist; genau das ist eine Frage für die eigene Bewertung.
 
+## Entscheidungsmodelle: Ausblick {#entscheidungsmodelle}
+
+Seit Oktober 2026 gibt es eine neue Klasse von Modellen, die keinen Text erzeugen, sondern typisierte Fragen beantworten (Ja/Nein, Auswahl, Bewertung) und dazu kalibrierte Wahrscheinlichkeiten liefern, in Millisekunden und sehr günstig. Das passt zum Muster [Einordnen mit Konfidenz](werkzeuge/n8n.qmd#einordnen). Alle drei laufen in fremden Clouds, also nur mit Mock-Daten; die Leistungsangaben stammen von den Herstellern.
+
+| Quelle | Wofür |
+|---|---|
+| OpenAI: [Decisions-API](https://developers.openai.com/api/docs/guides/decisions) | Fragetypen predicate, choice, score; Hinweise zur Festlegung von Schwellen an gelabelten Beispielen |
+| Microsoft: [Microsoft-Decision-1](https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-microsoft-decision-1-in-microsoft-foundry-for-decision-and-classific/4562742) | Kleines Entscheidungsmodell in Foundry, unterstützt „kann ich nicht beurteilen“ und Konfidenzschwellen mit Weitergabe an Menschen |
+| TypeSafe: [System-One-Modelle und Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) | Erstes Modell dieser Klasse, Early Access; erklärt die Idee der kalibrierten Entscheidungen am besten |
+| Aleph Alpha: [Kolibri](https://aleph-alpha.com/kolibri/) | Kein Entscheidungsmodell, sondern ein offenes deutsch-englisches Sprachmodell (Apache 2.0) für Verwaltung und Industrie; relevant, wenn sensible Daten ein lokal betriebenes Modell erfordern, braucht aber Rechenzentrums-Hardware |
+
 ## Prozessmodellierung {#prozess}
 
 | Material | Verwendung |
