@@ -157,7 +157,7 @@ def hitl():
     # Verbotskasten
     s.card(60, 400, 1000, 130, stroke=RED, dash="8 6")
     s.cross(110, 465, RED, 0.9)
-    s.lines(150, 450, ["Kein Agent schreibt in ein Verwaltungssystem und versendet nichts an Dritte.", "Auch Lesezugriffe auf echte Systeme gibt es im Projekt nicht: Schnittstellen und Daten sind Mocks."], 19, TXT, 400, "start")
+    s.lines(150, 450, ["Im Projekt schreibt kein Agent in ein Verwaltungssystem und versendet nichts an Dritte.", "Auch Lesezugriffe auf echte Systeme gibt es im Projekt nicht: Schnittstellen und Daten sind Mocks."], 19, TXT, 400, "start")
     s.save("human-in-the-loop.svg")
 
 # 4 Mock-System --------------------------------------------------------------

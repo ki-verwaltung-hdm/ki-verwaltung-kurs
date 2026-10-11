@@ -35,6 +35,6 @@
 <path d="M1316,352 L1316,395 L1120,395 L1120,425" fill="none" stroke="#88F297" stroke-width="3" marker-end="url(#arr)"/>
 <rect x="60" y="400" width="1000" height="130" rx="16" fill="#1a2030" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="8 6"/>
 <g transform="translate(110,465) scale(0.9)"><circle cx="0" cy="0" r="18" fill="#ff6b6b"/><path d="M-7,-7 L7,7 M7,-7 L-7,7" stroke="#11161d" stroke-width="4" stroke-linecap="round"/></g>
-<text x="150" y="450.0" font-size="19" fill="#f2f5ff" font-weight="400" text-anchor="start" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Kein Agent schreibt in ein Verwaltungssystem und versendet nichts an Dritte.</text>
+<text x="150" y="450.0" font-size="19" fill="#f2f5ff" font-weight="400" text-anchor="start" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Im Projekt schreibt kein Agent in ein Verwaltungssystem und versendet nichts an Dritte.</text>
 <text x="150" y="474.7" font-size="19" fill="#f2f5ff" font-weight="400" text-anchor="start" font-family='"Avenir Next","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif' opacity="1">Auch Lesezugriffe auf echte Systeme gibt es im Projekt nicht: Schnittstellen und Daten sind Mocks.</text>
 </svg>
