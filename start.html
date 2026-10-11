@@ -293,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="vpn">HdM-VPN</h2>
 <p>Die Projektumgebung (n8n und Datenbanken) läuft auf einem Server der HdM. Sie ist nur aus dem HdM-Netz und über das HdM-VPN erreichbar. Von zu Hause ist das VPN deshalb Voraussetzung für jede Arbeit in n8n.</p>
 <ol type="1">
-<li>Den VPN-Client nach der Anleitung der HdM-IT installieren (FortiClient, Zugang mit der HdM-Kennung).</li>
+<li>Den VPN-Client der HdM installieren (FortiClient, Zugang mit der HdM-Kennung).</li>
 <li>Die VPN-Verbindung aufbauen.</li>
 <li>Prüfen: Die <a href="https://141.62.116.2/">Übersichtsseite der Projektumgebung</a> lädt im Browser. Ohne VPN erscheint eine Zeitüberschreitung.</li>
 </ol>
@@ -301,13 +301,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="zertifikat" class="level2">
 <h2 class="anchored" data-anchor-id="zertifikat">Zertifikatswarnung</h2>
-<p>Die Projektumgebung ist bis auf Weiteres über die IP-Adresse <code>141.62.116.2</code> erreichbar. Der Server nutzt ein selbst ausgestelltes Zertifikat, bis die HdM-IT den Namen <code>ki-in-der-verwaltung.iuk.hdm-stuttgart.de</code> und ein offizielles Zertifikat eingerichtet hat. Der Browser warnt deshalb beim ersten Aufruf vor einer unsicheren Verbindung.</p>
+<p>Die Projektumgebung ist über die Adresse <code>141.62.116.2</code> erreichbar. Der Browser warnt beim ersten Aufruf vor einer unsicheren Verbindung, weil er den Aussteller des Zertifikats nicht kennt.</p>
 <ol type="1">
 <li>In der Warnung auf „Erweitert“ oder „Details“ klicken.</li>
 <li>Die Ausnahme für diese Adresse bestätigen („Weiter zu 141.62.116.2“ oder „Risiko akzeptieren“).</li>
 <li>Prüfen: Die Übersichtsseite mit den Links zu den n8n-Instanzen erscheint.</li>
 </ol>
-<p>Die Ausnahme gilt pro Browser und muss nach einem Browserwechsel erneut bestätigt werden. Die Verbindung ist verschlüsselt. Die Warnung bedeutet nur, dass der Browser den Aussteller des Zertifikats nicht kennt. Sobald der offizielle Name eingerichtet ist, wird die neue Adresse hier bekannt gegeben.</p>
+<p>Die Ausnahme gilt pro Browser und muss nach einem Browserwechsel erneut bestätigt werden. Die Verbindung ist verschlüsselt.</p>
 <div class="callout callout-style-simple callout-warning callout-titled" title="Achtung">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
