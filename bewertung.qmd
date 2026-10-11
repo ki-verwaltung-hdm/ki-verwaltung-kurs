@@ -20,7 +20,7 @@ Die vier benoteten Teile ergeben zusammen 100 Punkte und werden im Team erbracht
 
 ## Vorprüfungsleistung: Online-Kurse {#vorpruefung}
 
-Zweck: gemeinsames Grundwissen zu KI in der Verwaltung und zu n8n, ohne dafür Vorlesungszeit zu verbrauchen.
+Mit den beiden Kursen erwerben alle im eigenen Lerntempo Grundlagen zu KI in der Verwaltung und zu n8n.
 
 | Kurs | Umfang | Nachweis |
 |---|---|---|
