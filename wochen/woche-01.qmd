@@ -1,5 +1,5 @@
 ---
-title: "Woche 1: Projektstart"
+title: "Kick-off"
 toc: true
 ---
 
@@ -58,12 +58,12 @@ Ein kurzer Input mit dem [Werkzeugkasten Prozessmodellierung](../werkzeuge/proze
 
 ## Recherche-Auftrag {#recherche}
 
-Die Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews. Sie hat zwei Etappen: Zuerst ein erster Prozesskandidat, damit die Werkzeuge in Woche 2 daran ausprobiert werden können. Danach die eigentliche Recherche mit Quellen, Referenzprozess und Leitfragen. Der Termin dafür wird noch vereinbart.
+Die Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews. Sie hat zwei Etappen: Zuerst ein erster Prozesskandidat, damit die Werkzeuge beim zweiten Termin daran ausprobiert werden können. Danach die eigentliche Recherche mit Quellen, Referenzprozess und Leitfragen. Der Termin dafür wird noch vereinbart.
 
 ::: {.uebung}
 ### Etappe 1: Prozesskandidat · in den Gruppen
 
-**Worum es geht:** In Woche 2 lernen wir die Werkzeuge kennen. Dafür braucht jede Gruppe einen Prozess, an dem sie den Coding-Agenten ausprobieren kann. Er muss noch nicht der endgültige sein.
+**Worum es geht:** Beim Werkzeugtermin lernen wir Antigravity und n8n kennen. Dafür braucht jede Gruppe einen Prozess, an dem sie den Coding-Agenten ausprobieren kann. Er muss noch nicht der endgültige sein.
 
 1. Einen Verwaltungsprozess auswählen, der zu den [möglichen Bereichen](../projekt.qmd#ausgangslage) passt, und ihn als ersten Entwurf in Prosa beschreiben: Rollen, Schritte, Entscheidungen, Rückschleifen. Zwei bis zehn Sätze genügen; was unklar ist, als Frage markieren.
 2. „Agentische KI im Hochschulsystem“ aus der [Literaturliste](../materialien.qmd#literatur) zumindest überfliegen und die Seiten mit den Verwaltungsszenarien lesen.
@@ -71,7 +71,7 @@ Die Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews.
 
 **Prüfung:** Die Beschreibung nennt mindestens zwei Rollen und eine Entscheidung.
 
-**Ergebnis:** Eine Datei `prozess-beschreibung.md`. In Woche 2 stellt jede Gruppe ihren Kandidaten in zwei Minuten vor; daraus entsteht in der Übung ein erstes BPMN-Modell.
+**Ergebnis:** Eine Datei `prozess-beschreibung.md`. Beim Werkzeugtermin stellt jede Gruppe ihren Kandidaten in zwei Minuten vor; daraus entsteht in der Übung ein erstes BPMN-Modell.
 :::
 
 ::: {.uebung}
@@ -92,10 +92,10 @@ Die Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews.
 
 Ein Hinweis zur Recherche mit KI: Gemini und andere Chat-Werkzeuge dürfen zur Recherche verwendet werden. Jede Aussage, die in die Ablage kommt, prüfen wir gegen die Originalquelle. Eine KI-Antwort ohne Quelle ist ein guter Hinweis, aber noch kein Beleg.
 
-## Bis Woche 2 vorbereiten {#vorbereitung}
+## Bis zum Werkzeugtermin vorbereiten {#vorbereitung}
 
 1. [HdM-VPN](../start.qmd#vpn) einrichten und die Verbindung zur Projektumgebung testen.
 2. Google-Konto bereithalten; wer möchte, das [Studierendenangebot](../start.qmd#google) einlösen. Pro Gruppe reicht ein Zugang zu Antigravity.
 3. Etappe 1 des Recherche-Auftrags erledigen: Prozesskandidat beschreiben.
 
-[**Weiter zu Woche 2: Werkzeuge**](woche-02.qmd)
+[**Weiter: Werkzeuge**](woche-02.qmd)

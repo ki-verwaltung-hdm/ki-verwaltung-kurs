@@ -1,6 +1,6 @@
 # 01_Recherche
 
-Phase 1. Zu Woche 2 ein erster Prozesskandidat als Prosa; danach Quellen, Erkenntnisse, der überarbeitete Referenzprozess und Leitfragen für das Interview (Termin wird noch vereinbart). Die Recherche läuft bis zum ersten Interview weiter.
+Phase 1. Zum Werkzeugtermin ein erster Prozesskandidat als Prosa; danach Quellen, Erkenntnisse, der überarbeitete Referenzprozess und Leitfragen für das Interview (Termin wird noch vereinbart). Die Recherche läuft bis zum ersten Interview weiter.
 
 ## Was hierher gehört
 

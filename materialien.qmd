@@ -7,7 +7,7 @@ toc: true
 
 ## Literatur für die Recherche {#literatur}
 
-Die ersten vier Quellen sind der Einstieg für Woche 1. Die weiteren vertiefen einzelne Phasen.
+Die ersten vier Quellen sind der Einstieg nach dem Kick-off. Die weiteren vertiefen einzelne Phasen.
 
 | Quelle | Wofür |
 |---|---|
@@ -37,7 +37,7 @@ Berichte von KI-Anbietern (Anthropic, OpenAI) sind Selbstauskünfte, keine unabh
 
 ## KI in der Verwaltung: Praxis und Rahmen {#praxis}
 
-Was Land, Bund und Kommunen bereits einsetzen, und wo die Übersichten liegen. Für die Recherche in Woche 1: Welche Muster wiederholen sich, was leisten die Systeme, was nicht?
+Was Land, Bund und Kommunen bereits einsetzen, und wo die Übersichten liegen. Für die Recherche nach dem Kick-off: Welche Muster wiederholen sich, was leisten die Systeme, was nicht?
 
 ### Baden-Württemberg
 

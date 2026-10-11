@@ -48,9 +48,9 @@ website:
           - href: semester.qmd
             text: Semesterplan
           - href: wochen/woche-01.qmd
-            text: "Woche 1: Montag, 12.10."
+            text: "Kick-off"
           - href: wochen/woche-02.qmd
-            text: "Woche 2: Montag, 19.10."
+            text: "Werkzeuge"
       - text: Werkzeugkasten
         menu:
           - href: werkzeuge/index.qmd

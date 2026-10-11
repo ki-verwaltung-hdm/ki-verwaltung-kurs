@@ -9,7 +9,7 @@ toc: true
 
 | Nr. | Ergebnis | Art | Termin | Wo |
 |---|---|---|---|---|
-| 1 | [Recherche, Referenzprozess, Leitfragen](#recherche) | Gruppe, Rückmeldung | Prozesskandidat zu Woche 2; Recherche-Ergebnisse: wird noch vereinbart | Teamablage `01_Recherche` |
+| 1 | [Recherche, Referenzprozess, Leitfragen](#recherche) | Gruppe, Rückmeldung | Prozesskandidat zum Werkzeugtermin; Recherche-Ergebnisse: wird noch vereinbart | Teamablage `01_Recherche` |
 | 2 | [Interviewprotokoll und offene Fragen](#interview) | zwei Gruppen gemeinsam | nach dem Interview | `02_Interviews` |
 | 3 | [Ist- und Soll-Modell mit Begründung](#modelle) | Gruppe, 30 % mit Protokollen | Review 14.12.2026, Abgabe Fr, 12.02.2027 | `03_Prozessmodelle` |
 | 4 | [Prototyp mit Testfällen](#prototyp) | Gruppe, 30 % | Review 14.12.2026, Abgabe Fr, 12.02.2027 | `04_Prototyp` |
@@ -27,11 +27,11 @@ Die Teamablage ist der gemeinsame Arbeitsstand. Dateien, die der Coding-Agent er
 ::: {.uebung #recherche}
 ### 1 · Recherche, Referenzprozess und Leitfragen
 
-[Gruppe · Prozesskandidat zu Woche 2, Recherche-Ergebnisse: Termin wird noch vereinbart · Teamablage]{.uebung-meta}
+[Gruppe · Prozesskandidat zum Werkzeugtermin, Recherche-Ergebnisse: Termin wird noch vereinbart · Teamablage]{.uebung-meta}
 
-Die Aufgabe steht in [Woche 1](wochen/woche-01.qmd#recherche).
+Die Aufgabe steht beim [Kick-off](wochen/woche-01.qmd#recherche).
 
-1. Zu Woche 2: ein Prozesskandidat als Prosa (zwei bis zehn Sätze).
+1. Zum Werkzeugtermin: ein Prozesskandidat als Prosa (zwei bis zehn Sätze).
 2. Danach: Quellen mit Link und je zwei Sätzen Erkenntnis, der überarbeitete Referenzprozess als Prosa und als BPMN-Datei.
 3. Fünf bis acht Leitfragen für das Interview.
 

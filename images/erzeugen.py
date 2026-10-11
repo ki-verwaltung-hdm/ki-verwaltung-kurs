@@ -356,11 +356,11 @@ def agent():
 def semester():
     s = Svg(1600, 520)
     s.label(800, 60, "Semesterplan")
-    s.text(800, 110, "Drei feste Wochen, danach Phasen im Takt der Interviews", 30, TXT, 700)
+    s.text(800, 110, "Kick-off und Werkzeuge, danach Coachings im Takt der Interviews", 30, TXT, 700)
     s.parts.append(f'<line x1="80" y1="300" x2="1520" y2="300" stroke="{EDGE}" stroke-width="6"/>')
-    marks = [(150, "Woche 1", "Mo 12.10.", ["Kontext, BPMN,", "Recherche-Auftrag,", "Gruppen"], GREEN, True),
-             (360, "Woche 2", "Mo 19.10.", ["Coding-Agent, n8n,", "Modell mit dem", "Agenten"], GREEN, True),
-             (570, "Woche 3", "Mo 26.10.", ["Recherche,", "Leitfragen"], GREEN, True),
+    marks = [(150, "Kick-off", "Mo 12.10.", ["Kontext, BPMN,", "Recherche-Auftrag,", "Gruppen"], GREEN, True),
+             (370, "Werkzeuge", "Mo 19.10.", ["Coding-Agent, n8n,", "Modell mit dem", "Agenten"], GREEN, True),
+             (580, "Coachings", "wöchentlich", ["Recherche,", "Leitfragen"], GREEN, False),
              (770, "Interviews", "Termine folgen", ["Erstgespräche,", "Protokolle"], BLUE, False),
              (960, "Modellierung", "", ["Ist, Soll,", "zweites Gespräch"], BLUE, False),
              (1150, "Prototyp", "", ["n8n, Mocks,", "Freigabe"], BLUE, False),
