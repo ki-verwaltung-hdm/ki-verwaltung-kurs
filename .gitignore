@@ -1,0 +1,30 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+.env
+
+# Quarto
+.quarto/
+_site/
+_book/
+**/*.quarto_ipynb
+
+# Lokale Prüf-Artefakte (Screenshots, Browser-Traces)
+.playwright-cli/
+output/playwright/
+
+# OS und Office
+.DS_Store
+~$*
+
+# Lokale Claude-Code-Einstellungen
+.claude/settings.local.json
+
+/.quarto/

@@ -1,0 +1,327 @@
+/*-- scss:defaults --*/
+// =========================================
+// Basis-Theme: Agentic AI fuer Growth Marketing
+//
+// Heller Lesehintergrund, dunkles Slate als Textfarbe,
+// Teal als Akzent. Nur System- und lokal vorhandene Fonts,
+// keine externen Font-Dienste.
+// =========================================
+
+$body-bg:          #ffffff !default;
+$body-color:       #15242c !default;   // Ink, dunkles Slate
+$primary:          #17585f !default;   // Teal, Akzent primaer
+$link-color:       #17585f !default;
+$link-hover-color: #0f3f45 !default;
+$border-color:     #e2e8ea !default;
+$secondary:        #5f7580 !default;
+
+// Typografie: Systemschriften in fester Reihenfolge
+$font-family-sans-serif: "Avenir Next", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:  ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+$headings-font-family:   $font-family-sans-serif;
+$headings-font-weight:   700;
+$headings-letter-spacing: -0.015em;
+
+$font-size-base:   1rem;
+$line-height-base: 1.65;
+
+$code-bg:       #f4f7f8 !default;
+$code-color:    $body-color;
+$code-block-bg: $code-bg !default;
+
+/*-- scss:rules --*/
+
+:root {
+  --paper:       #ffffff;
+  --paper-deep:  #f4f7f8;
+  --ink:         #15242c;
+  --ink-soft:    #5f7580;
+  --rule:        #e2e8ea;
+  --slate:       #17585f;
+  --slate-soft:  #e9f2f2;
+  --slate-deep:  #0f3f45;
+  --tracking-display: -0.015em;
+  --tracking-kicker:  0.1em;
+  --radius:      0.375rem;
+}
+
+// ---------- Lesefläche ----------
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: $font-family-sans-serif;
+  line-height: $line-height-base;
+}
+
+main.content {
+  max-width: 76ch;
+}
+
+// ---------- Überschriften ----------
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ink);
+  font-family: $font-family-sans-serif;
+  font-weight: $headings-font-weight;
+  letter-spacing: $headings-letter-spacing;
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.2rem; margin: 1.5em 0 0.6em; }
+h2 { font-size: 1.6rem; margin: 1.8em 0 0.6em; border-bottom: none; padding-bottom: 0; }
+h3 { font-size: 1.22rem; margin: 1.6em 0 0.5em; }
+h4 { font-size: 1.06rem; margin: 1.4em 0 0.4em; }
+
+.header-section-number {
+  color: inherit;
+  margin-right: 0.35em;
+}
+
+// ---------- Links ----------
+a {
+  color: var(--slate);
+  text-decoration: none;
+  background-image: linear-gradient(to right, var(--slate), var(--slate));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.2s ease;
+
+  &:hover {
+    color: var(--slate);
+    background-size: 100% 1px;
+  }
+}
+
+// ---------- Inhaltsverzeichnis ----------
+#TOC,
+.sidebar.toc-right,
+nav[role="doc-toc"] {
+  .toc-title {
+    color: var(--ink-soft);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-kicker);
+    font-weight: 600;
+  }
+
+  ul {
+    border-left: 1px solid var(--rule);
+    padding-left: 0.9em;
+    list-style: none;
+  }
+
+  a {
+    background-image: none;
+    color: var(--ink-soft);
+    transition: color 0.15s ease;
+
+    &:hover { color: var(--ink); }
+  }
+
+  .active > a,
+  a.active {
+    color: var(--slate);
+    font-weight: 600;
+  }
+}
+
+// ---------- Callouts ----------
+.callout {
+  background-color: var(--paper-deep);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  margin: 1.5em 0;
+  padding: 0;
+
+  .callout-header {
+    background-color: transparent;
+    border-bottom: none;
+    color: var(--ink);
+    font-weight: 600;
+    padding: 0.8em 1em 0.3em;
+  }
+
+  .callout-body-container,
+  .callout-body {
+    padding: 0.4em 1em 1em;
+    color: var(--ink);
+
+    > p:last-child { margin-bottom: 0; }
+  }
+}
+
+div.callout-note.callout {
+  border-left-color: var(--ink-soft);
+  > .callout-header { color: var(--ink-soft); }
+}
+
+div.callout-tip.callout {
+  border-left-color: var(--slate);
+  > .callout-header { color: var(--slate-deep); }
+}
+
+div.callout-important.callout,
+div.callout-caution.callout {
+  border-left-color: var(--slate-deep);
+  > .callout-header { color: var(--slate-deep); }
+}
+
+div.callout-warning.callout {
+  border-left-color: var(--slate-deep);
+  background-color: var(--slate-soft);
+  > .callout-header { color: var(--slate-deep); }
+}
+
+// ---------- Bildunterschriften ----------
+figcaption,
+.figure-caption,
+.quarto-figure figcaption,
+caption {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  font-style: normal;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+// ---------- Code ----------
+code:not(.sourceCode) {
+  background-color: var(--paper-deep);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 0.25rem;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+}
+
+div.sourceCode,
+pre.sourceCode,
+pre {
+  background-color: var(--paper-deep);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+div.sourceCode { margin: 1.2em 0; }
+
+pre.sourceCode,
+pre {
+  padding: 1em 1.2em;
+  font-family: $font-family-monospace;
+  font-size: 0.9em;
+  line-height: 1.55;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.code-copy-button {
+  color: var(--ink-soft);
+  &:hover { color: var(--slate); }
+}
+
+// ---------- Tabellen ----------
+table {
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  width: 100%;
+  font-size: 0.95em;
+
+  th, td {
+    padding: 0.6em 0.9em;
+    text-align: left;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+
+  thead th {
+    color: var(--ink);
+    font-weight: 600;
+    border-bottom: 2px solid var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  tbody tr:hover { background-color: var(--paper-deep); }
+}
+
+// ---------- Zitate, Linien ----------
+blockquote {
+  border-left: 3px solid var(--slate);
+  background-color: transparent;
+  color: var(--ink);
+  font-style: normal;
+  margin: 1.5em 0;
+  padding: 0.5em 0 0.5em 1.2em;
+
+  p:last-child { margin-bottom: 0; }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2.5em 0;
+}
+
+// ---------- Footer ----------
+.page-footer,
+footer.footer {
+  background-color: transparent;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-soft);
+  font-size: 0.85em;
+  padding: 1.5em 0;
+
+  a {
+    color: var(--ink-soft);
+    background-image: none;
+    &:hover { color: var(--slate); }
+  }
+}
+
+// ---------- Navbar ----------
+.navbar {
+  background-color: var(--paper) !important;
+  border-bottom: 1px solid var(--rule);
+
+  .navbar-brand,
+  .navbar-title {
+    color: var(--ink);
+    font-weight: 700;
+    letter-spacing: $headings-letter-spacing;
+  }
+
+  .nav-link {
+    color: var(--ink-soft);
+    &:hover, &.active { color: var(--slate); }
+  }
+
+  .dropdown-item:hover { background-color: var(--slate-soft); }
+}
+
+// ---------- Suche ----------
+.aa-DetachedOverlay { background-color: rgba(21, 36, 44, 0.4); }
+
+.aa-Panel,
+.aa-DetachedFormContainer {
+  background-color: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+// ---------- Buttons ----------
+.btn-primary {
+  background-color: var(--slate);
+  border-color: var(--slate);
+  color: var(--paper);
+
+  &:hover, &:focus {
+    background-color: var(--slate-deep);
+    border-color: var(--slate-deep);
+    color: var(--paper);
+  }
+}
+
+::selection {
+  background-color: var(--slate-soft);
+  color: var(--ink);
+}

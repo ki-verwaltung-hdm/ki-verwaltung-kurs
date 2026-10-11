@@ -1,0 +1,93 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - material/**
+  render:
+    - index.qmd
+    - start.qmd
+    - projekt.qmd
+    - semester.qmd
+    - wochen/woche-01.qmd
+    - wochen/woche-02.qmd
+    - werkzeuge/index.qmd
+    - werkzeuge/einrichtung.qmd
+    - werkzeuge/prozessmodell.qmd
+    - werkzeuge/interviews.qmd
+    - werkzeuge/n8n.qmd
+    - abgaben.qmd
+    - materialien.qmd
+
+lang: de
+
+execute:
+  echo: false
+  warning: false
+  message: false
+  freeze: auto
+
+website:
+  title: "KI in der Verwaltung"
+  description: "Semesterprojekt KI in der Verwaltung, HdM Stuttgart WS 2026/27"
+  page-navigation: true
+  search:
+    type: overlay
+  navbar:
+    background: light
+    pinned: true
+    left:
+      - href: index.qmd
+        text: Start
+      - href: start.qmd
+        text: Vorbereitung
+      - href: projekt.qmd
+        text: Projekt
+      - text: Semester
+        menu:
+          - href: semester.qmd
+            text: Semesterplan
+          - href: wochen/woche-01.qmd
+            text: "Woche 1: Montag, 12.10."
+          - href: wochen/woche-02.qmd
+            text: "Woche 2: Montag, 19.10."
+      - text: Werkzeugkasten
+        menu:
+          - href: werkzeuge/index.qmd
+            text: Übersicht
+          - href: werkzeuge/einrichtung.qmd
+            text: Coding-Agent einrichten
+          - href: werkzeuge/prozessmodell.qmd
+            text: Prozessmodellierung
+          - href: werkzeuge/interviews.qmd
+            text: Interviews führen
+          - href: werkzeuge/n8n.qmd
+            text: n8n auf dem HdM-Server
+      - href: abgaben.qmd
+        text: Abgaben
+      - href: materialien.qmd
+        text: Materialien
+  page-footer:
+    border: true
+    left: |
+      © [Jan Kirenz](https://www.kirenz.com/), 2026
+    right: "HdM Stuttgart, Projekt KI in der Verwaltung, WS 2026/27"
+
+format:
+  html:
+    toc: true
+    toc-title: "Auf dieser Seite"
+    toc-depth: 2
+    link-external-newwindow: true
+    theme:
+      - cosmo
+      - book-theme.scss
+      - website-extras.scss
+    code-copy: true
+    highlight-style: github
+    code-overflow: wrap
+    author-meta: "Jan Kirenz"
+    callout-appearance: simple
+    smooth-scroll: true
+    anchor-sections: true
+    include-in-header:
+      - passwortschutz.html
