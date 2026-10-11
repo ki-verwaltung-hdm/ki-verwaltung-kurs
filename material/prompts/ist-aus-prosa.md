@@ -14,4 +14,4 @@ Format:
 6. Jeder Schritt bekommt eine `bpmn:documentation`: was passiert, mit welcher Grundlage, welche Grenze gilt.
 7. Diagramm-Koordinaten (`bpmndi`) ergänzen, damit die Datei in demo.bpmn.io sofort lesbar ist: Lanes untereinander, Schritte von links nach rechts in Ablaufreihenfolge, keine Überlappungen.
 
-Prüfung: Erfinde keine Schritte, die nicht beschrieben sind. Unklare Stellen als Frage in die `documentation` schreiben. Gib am Ende aus: Dateipfad, Liste der Schritte mit Lane und Typ, Liste der offenen Fragen für das nächste Gespräch.
+Prüfung: Erfinde keine Schritte, die nicht beschrieben sind. Unklare Stellen als Frage in die `documentation` schreiben. Gib am Ende aus: Dateipfad, Liste der Schritte mit Lane und Typ, Liste der offenen Fragen zu unklaren oder lückenhaften Stellen der Beschreibung.

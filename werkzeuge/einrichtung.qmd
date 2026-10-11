@@ -75,8 +75,7 @@ Format: Datei 03_Prozessmodelle/antrag-ist.bpmn. Eine Bahn je Rolle.
 Schrittnamen deutsch mit Verb am Ende, Entscheidungen als Frage.
 
 Prüfung: Erfinde keine Schritte. Liste am Ende auf, welche Stellen der
-Beschreibung unklar waren und welche Frage wir im nächsten Gespräch
-stellen sollten.
+Beschreibung unklar oder lückenhaft sind, als offene Fragen.
 ```
 
 Der Kontext steht oben, die Anweisungen danach. Bei langem Material antworten Modelle so besser, als wenn die Aufgabe vor dem Material steht. Derselbe Standard gilt für Aufträge im Gemini-Chat und in n8n.
