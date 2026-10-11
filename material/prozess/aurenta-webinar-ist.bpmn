@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Synthetischer Übungsfall Aurenta (HdM-Projekt Agentic AI für Growth Marketing, WS 2026/27). Keine Aussage über Zoi oder reale Kunden. Nur Semantik; das Diagramm-Layout ergänzt scripts/layout.mjs. -->
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_Webinar_Ist" targetNamespace="http://kirenz.de/process-lab" exporter="process-lab" exporterVersion="0.1">
+  <bpmn:collaboration id="Collab_Webinar_Ist">
+    <bpmn:participant id="Pool_Aurenta" name="Aurenta · Marketing (heute)" processRef="Prozess_Webinar_Ist" />
+  </bpmn:collaboration>
+  <bpmn:process id="Prozess_Webinar_Ist" name="Webinar-Nachbereitung (heute)" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_Webinar_Ist">
+      <bpmn:lane id="Lane_Marketing" name="Marketing-Team">
+        <bpmn:flowNodeRef>Start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Durchsehen</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Vorlage</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Antworten</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Ende</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_System" name="System (CRM, E-Mail)">
+        <bpmn:flowNodeRef>T_Export</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Versand</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Start" name="Webinar beendet">
+      <bpmn:documentation>Webinar vom 10.09.2026 „KI im Marketing: Vom Einzelprompt zum brauchbaren Ablauf“, 45 Minuten. Kontaktliste enthält Teilnehmende und Angemeldete ohne Teilnahme.</bpmn:documentation>
+      <bpmn:outgoing>F1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="T_Export" name="Kontaktliste aus CRM exportieren">
+      <bpmn:documentation>Alle Anmeldungen als Tabelle. Anliegen aus der Anmeldung sind enthalten, werden aber nicht ausgewertet.</bpmn:documentation>
+      <bpmn:incoming>F1</bpmn:incoming>
+      <bpmn:outgoing>F2</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="T_Durchsehen" name="Kontakte durchsehen">
+      <bpmn:documentation>Sichtprüfung auf Dubletten und offensichtliche Fehler. Keine Einordnung nach Anliegen.</bpmn:documentation>
+      <bpmn:incoming>F2</bpmn:incoming>
+      <bpmn:outgoing>F3</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="T_Vorlage" name="Einheitliches Follow-up mit Erstgesprächs-Angebot erstellen">
+      <bpmn:documentation>Eine Vorlage für alle: Dank, Zusammenfassung, Einladung zum kostenlosen 30-minütigen Erstgespräch. Unabhängig davon, ob jemand Material, eine Rückfrage oder ein Gespräch braucht.</bpmn:documentation>
+      <bpmn:incoming>F3</bpmn:incoming>
+      <bpmn:outgoing>F4</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sendTask id="T_Versand" name="Follow-up an alle versenden">
+      <bpmn:documentation>Serienversand an alle Kontakte mit Kontaktfreigabe.</bpmn:documentation>
+      <bpmn:incoming>F4</bpmn:incoming>
+      <bpmn:outgoing>F5</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:userTask id="T_Antworten" name="Antworten sichten und Gespräche buchen">
+      <bpmn:documentation>Drei synthetische Kampagnen: 198 Follow-ups, 39 Antworten, 16 Buchungen, 10 durchgeführte qualifizierte Gespräche. Der Engpass liegt zwischen Follow-up und Antwort.</bpmn:documentation>
+      <bpmn:incoming>F5</bpmn:incoming>
+      <bpmn:outgoing>F6</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Ende" name="Nachbereitung abgeschlossen">
+      <bpmn:documentation>Kontakte ohne Antwort bleiben ohne weiteren Schritt.</bpmn:documentation>
+      <bpmn:incoming>F6</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="F1" sourceRef="Start" targetRef="T_Export" />
+    <bpmn:sequenceFlow id="F2" sourceRef="T_Export" targetRef="T_Durchsehen" />
+    <bpmn:sequenceFlow id="F3" sourceRef="T_Durchsehen" targetRef="T_Vorlage" />
+    <bpmn:sequenceFlow id="F4" sourceRef="T_Vorlage" targetRef="T_Versand" />
+    <bpmn:sequenceFlow id="F5" sourceRef="T_Versand" targetRef="T_Antworten" />
+    <bpmn:sequenceFlow id="F6" sourceRef="T_Antworten" targetRef="Ende" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_1">
+    <bpmndi:BPMNPlane id="Plane_1" bpmnElement="Collab_Webinar_Ist">
+      <bpmndi:BPMNShape id="Pool_Aurenta_di" bpmnElement="Pool_Aurenta" isHorizontal="true">
+        <dc:Bounds x="0" y="0" width="1620" height="320" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Marketing_di" bpmnElement="Lane_Marketing" isHorizontal="true">
+        <dc:Bounds x="30" y="0" width="1590" height="160" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_System_di" bpmnElement="Lane_System" isHorizontal="true">
+        <dc:Bounds x="30" y="160" width="1590" height="160" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Start_di" bpmnElement="Start">
+        <dc:Bounds x="162" y="62" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="135" y="102" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Export_di" bpmnElement="T_Export">
+        <dc:Bounds x="320" y="200" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Durchsehen_di" bpmnElement="T_Durchsehen">
+        <dc:Bounds x="540" y="40" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Vorlage_di" bpmnElement="T_Vorlage">
+        <dc:Bounds x="760" y="40" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Versand_di" bpmnElement="T_Versand">
+        <dc:Bounds x="980" y="200" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="T_Antworten_di" bpmnElement="T_Antworten">
+        <dc:Bounds x="1200" y="40" width="160" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ende_di" bpmnElement="Ende">
+        <dc:Bounds x="1482" y="62" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1455" y="102" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="F1_di" bpmnElement="F1">
+        <di:waypoint x="198" y="80" />
+        <di:waypoint x="259" y="80" />
+        <di:waypoint x="259" y="240" />
+        <di:waypoint x="320" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="F2_di" bpmnElement="F2">
+        <di:waypoint x="480" y="240" />
+        <di:waypoint x="510" y="240" />
+        <di:waypoint x="510" y="80" />
+        <di:waypoint x="540" y="80" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="F3_di" bpmnElement="F3">
+        <di:waypoint x="700" y="80" />
+        <di:waypoint x="760" y="80" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="F4_di" bpmnElement="F4">
+        <di:waypoint x="920" y="80" />
+        <di:waypoint x="950" y="80" />
+        <di:waypoint x="950" y="240" />
+        <di:waypoint x="980" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="F5_di" bpmnElement="F5">
+        <di:waypoint x="1140" y="240" />
+        <di:waypoint x="1170" y="240" />
+        <di:waypoint x="1170" y="80" />
+        <di:waypoint x="1200" y="80" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="F6_di" bpmnElement="F6">
+        <di:waypoint x="1360" y="80" />
+        <di:waypoint x="1482" y="80" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
