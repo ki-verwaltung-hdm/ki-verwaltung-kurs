@@ -31,7 +31,7 @@ Diese Ausnahme gilt nur für die Projektumgebung an der HdM. Auf anderen Website
 
 ## Google-Konto und Coding-Agent {#google}
 
-Wir arbeiten mit einem Coding-Agenten: Der Agent recherchiert, schreibt Prozessmodelle und Workflow-Dateien, wir prüfen und entscheiden. Wir verwenden [Google Antigravity](https://antigravity.google/), eine Entwicklungsumgebung mit eingebautem Agenten. Die Einrichtung erfolgt gemeinsam in [Woche 2](wochen/woche-02.qmd).
+Wir arbeiten mit einem Coding-Agenten: Der Agent recherchiert, schreibt Prozessmodelle und Workflow-Dateien, wir prüfen und entscheiden. Welcher Anbieter das ist, spielt für das Vorgehen keine Rolle: [Claude Code](https://claude.com/claude-code), [OpenAI Codex](https://openai.com/codex/), [Cursor](https://cursor.com/) oder andere Werkzeuge funktionieren genauso. Wir verwenden [Google Antigravity](https://antigravity.google/), eine Entwicklungsumgebung mit eingebautem Agenten, weil Studierende sie derzeit über das Google-Jahresabo kostenfrei bekommen. Wer bereits einen anderen Coding-Agenten nutzt, kann dabei bleiben. Die Einrichtung erfolgt gemeinsam in [Woche 2](wochen/woche-02.qmd).
 
 ::: {.callout-tip title="Google AI Plus für Studierende"}
 Google stellt Studierenden ein Jahr lang [Google AI Plus](https://gemini.google/de/students/?hl=de) kostenlos bereit. Darin enthalten sind Gemini mit höheren Nutzungslimits und der Zugang zu Antigravity. Das Angebot gilt ab 18 Jahren und ist bis 31.12.2026 einlösbar.

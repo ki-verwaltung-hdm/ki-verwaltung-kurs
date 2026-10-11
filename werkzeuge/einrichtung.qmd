@@ -9,6 +9,8 @@ toc: true
 
 [Google Antigravity](https://antigravity.google/) ist eine Entwicklungsumgebung mit eingebautem Agenten. Der Agent liest die Dateien im Projektordner, schreibt neue Dateien und ändert bestehende. Alles, was er tut, ist im Ordner sichtbar und kann rückgängig gemacht werden.
 
+Antigravity ist nicht die einzige Wahl. Claude Code, OpenAI Codex, Cursor und ähnliche Werkzeuge arbeiten nach demselben Prinzip; die Aufträge und die AGENTS.md auf dieser Seite funktionieren dort ebenso. Wir nehmen Antigravity, weil es im Google-Jahresabo für Studierende enthalten ist und damit nichts kostet.
+
 **Voraussetzungen:** ein Google-Konto; der Zugang zu Antigravity ist im [Studierendenangebot](../start.qmd#google) enthalten. Pro Gruppe reicht eine Installation.
 
 1. Die [Antigravity IDE](https://antigravity.google/product/antigravity-ide/) herunterladen und installieren.
