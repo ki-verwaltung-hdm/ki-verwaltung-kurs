@@ -261,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#projektidee" id="toc-projektidee" class="nav-link" data-scroll-target="#projektidee">Projektidee und Vorgehen</a></li>
   <li><a href="#gruppen" id="toc-gruppen" class="nav-link" data-scroll-target="#gruppen">Umfrage zur Gruppeneinteilung</a></li>
   <li><a href="#bpmn" id="toc-bpmn" class="nav-link" data-scroll-target="#bpmn">Prozessmodellierung: Grundlagen</a></li>
-  <li><a href="#recherche" id="toc-recherche" class="nav-link" data-scroll-target="#recherche">Recherche-Auftrag bis Woche 2</a></li>
+  <li><a href="#recherche" id="toc-recherche" class="nav-link" data-scroll-target="#recherche">Recherche-Auftrag</a></li>
   <li><a href="#vorbereitung" id="toc-vorbereitung" class="nav-link" data-scroll-target="#vorbereitung">Bis Woche 2 vorbereiten</a></li>
   </ul>
 </nav>
@@ -293,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Worum es geht: KI-Agenten in der Verwaltung, der Auftrag der HdM, das Vorgehen im Semester</li>
 <li>Grundlagen der Prozessmodellierung mit BPMN</li>
-<li>Der Recherche-Auftrag bis Woche 2</li>
+<li>Der Recherche-Auftrag: erster Prozesskandidat bis Woche 2, Ergebnisse bis Woche 3</li>
 <li>Umfrage und Gruppenbildung</li>
 </ul>
 </div>
@@ -382,19 +382,31 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Gemeinsam am Beispiel:</strong> Welche Schritte im Soll-Modell sind feste Regeln, welche brauchen Sprachverständnis, und wo bleibt der Mensch? Warum liegt die feste Regel vor dem Modellschritt?</p>
 </section>
 <section id="recherche" class="level2">
-<h2 class="anchored" data-anchor-id="recherche">Recherche-Auftrag bis Woche 2</h2>
-<section id="bis-montag-19.10.-in-den-gruppen" class="level3 uebung">
-<h3 class="anchored" data-anchor-id="bis-montag-19.10.-in-den-gruppen">Bis Montag, 19.10. · in den Gruppen</h3>
+<h2 class="anchored" data-anchor-id="recherche">Recherche-Auftrag</h2>
+<p>Die Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews. Sie hat zwei Etappen: Bis Woche 2 reicht ein erster Prozesskandidat, damit die Werkzeuge daran ausprobiert werden können. Die Ergebnisse der Recherche sind bis Woche 3 fällig.</p>
+<section id="etappe-1-bis-montag-19.10.-in-den-gruppen" class="level3 uebung">
+<h3 class="anchored" data-anchor-id="etappe-1-bis-montag-19.10.-in-den-gruppen">Etappe 1 bis Montag, 19.10. · in den Gruppen</h3>
+<p><strong>Worum es geht:</strong> In Woche 2 lernen wir die Werkzeuge kennen. Dafür braucht jede Gruppe einen Prozess, an dem sie den Coding-Agenten ausprobieren kann. Er muss noch nicht der endgültige sein.</p>
+<ol type="1">
+<li>Einen Verwaltungsprozess auswählen, der zu den <a href="../projekt.html#ausgangslage">möglichen Bereichen</a> passt, und ihn als ersten Entwurf in Prosa beschreiben: Rollen, Schritte, Entscheidungen, Rückschleifen. Zwei bis zehn Sätze genügen; was unklar ist, als Frage markieren.</li>
+<li>„Agentische KI im Hochschulsystem“ aus der <a href="../materialien.html#literatur">Literaturliste</a> zumindest überfliegen und die Seiten mit den Verwaltungsszenarien lesen.</li>
+<li>Die <a href="../start.html#ablage">Teamablage</a> als ZIP herunterladen, entpacken, in den gemeinsamen Ordner legen und die Prozessbeschreibung unter <code>01_Recherche</code> ablegen.</li>
+</ol>
+<p><strong>Prüfung:</strong> Die Beschreibung nennt mindestens zwei Rollen und eine Entscheidung.</p>
+<p><strong>Ergebnis:</strong> Eine Datei <code>prozess-beschreibung.md</code>. In Woche 2 stellt jede Gruppe ihren Kandidaten in zwei Minuten vor; daraus entsteht in der Übung ein erstes BPMN-Modell.</p>
+</section>
+<section id="etappe-2-bis-montag-26.10.-in-den-gruppen" class="level3 uebung">
+<h3 class="anchored" data-anchor-id="etappe-2-bis-montag-26.10.-in-den-gruppen">Etappe 2 bis Montag, 26.10. · in den Gruppen</h3>
 <p><strong>Worum es geht:</strong> Bevor wir mit Verwaltungsmitarbeitenden sprechen, brauchen wir Vokabular, Vergleichsfälle und eine erste Hypothese, wie ein unterstützter Ablauf aussehen könnte.</p>
 <ol type="1">
 <li>Zwei bis drei Quellen aus der <a href="../materialien.html#literatur">Literaturliste</a> lesen, mindestens „Agentische KI im Hochschulsystem“ und „Building Effective Agents“.</li>
 <li>Recherchieren: Wer setzt in Hochschulverwaltung oder Behörden bereits KI für Übersichten, Zusammenfassungen oder Prüfungen ein? Einstieg: <a href="../materialien.html#praxis">Praxis und Rahmen</a>, darunter F13 und KI4BW in Baden-Württemberg, LLMoin, MUCGPT und der Marktplatz der KI-Möglichkeiten des Bundes. Welche Muster wiederholen sich? Was ist gescheitert, und warum?</li>
-<li>Einen Verwaltungsprozess auswählen, der zu den <a href="../projekt.html#ausgangslage">möglichen Bereichen</a> passt, und ihn als Referenzprozess in Prosa beschreiben: Rollen, Schritte, Entscheidungen, Rückschleifen. Zwei bis zehn Sätze genügen. In Woche 2 wird daraus mit dem Coding-Agenten ein BPMN-Modell.</li>
+<li>Die Prozessbeschreibung aus Etappe 1 mit dem Gelernten überarbeiten, bei Bedarf den Prozess wechseln. Daraus wird der Referenzprozess, eine Hypothese für das Interview.</li>
 <li>Fünf bis acht Leitfragen für das Interview entwerfen. Orientierung: <a href="../werkzeuge/interviews.html">Interviews führen</a>.</li>
-<li>Die <a href="../start.html#ablage">Teamablage</a> als ZIP herunterladen, entpacken, in den gemeinsamen Ordner legen und alles unter <code>01_Recherche</code> ablegen: Quellen mit Link, Erkenntnisse in Stichworten, Prozessbeschreibung, Leitfragen.</li>
+<li>Alles unter <code>01_Recherche</code> ablegen: Quellen mit Link, Erkenntnisse in Stichworten, Prozessbeschreibung, Leitfragen.</li>
 </ol>
 <p><strong>Prüfung:</strong> Jede Erkenntnis hat eine Quelle. Die Prozessbeschreibung nennt mindestens zwei Rollen und eine Entscheidung. Die Leitfragen fragen nach Tätigkeiten und Informationen, nicht nach Wunsch-Automatisierungen.</p>
-<p><strong>Ergebnis:</strong> Ein Ordner <code>01_Recherche</code> mit Quellen, Referenzprozess und Leitfragen. In Woche 2 stellt jede Gruppe ihren Referenzprozess in drei Minuten vor.</p>
+<p><strong>Ergebnis:</strong> Ein Ordner <code>01_Recherche</code> mit Quellen, Erkenntnissen, Referenzprozess und Leitfragen. In Woche 3 besprechen wir die Ergebnisse und stimmen die Leitfragen ab. Die Recherche endet damit nicht: Sie läuft bis zum ersten Interview weiter und wird nach dem Gespräch gezielt vertieft.</p>
 </section>
 <p>Ein Hinweis zur Recherche mit KI: Gemini und andere Chat-Werkzeuge dürfen zur Recherche verwendet werden. Jede Aussage, die in die Ablage kommt, prüfen wir gegen die Originalquelle. Eine KI-Antwort ohne Quelle ist eine Vermutung.</p>
 </section>
@@ -403,7 +415,7 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><a href="../start.html#vpn">HdM-VPN</a> einrichten und die Verbindung zur Projektumgebung testen.</li>
 <li>Google-Konto bereithalten; wer möchte, das <a href="../start.html#google">Studierendenangebot</a> einlösen. Pro Gruppe reicht ein Zugang zu Antigravity.</li>
-<li>Den Recherche-Auftrag erledigen.</li>
+<li>Etappe 1 des Recherche-Auftrags erledigen: Prozesskandidat beschreiben.</li>
 </ol>
 <p><a href="../wochen/woche-02.html"><strong>Weiter zu Woche 2: Werkzeuge</strong></a></p>
 
