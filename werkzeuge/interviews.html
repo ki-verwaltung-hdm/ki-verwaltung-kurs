@@ -260,7 +260,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#fokus" id="toc-fokus" class="nav-link active" data-scroll-target="#fokus">Worauf das Interview zielt</a></li>
   <li><a href="#vorbereitung" id="toc-vorbereitung" class="nav-link" data-scroll-target="#vorbereitung">Vorbereitung</a></li>
   <li><a href="#leitfragen" id="toc-leitfragen" class="nav-link" data-scroll-target="#leitfragen">Leitfragen</a></li>
-  <li><a href="#protokoll" id="toc-protokoll" class="nav-link" data-scroll-target="#protokoll">Protokoll statt Aufnahme</a></li>
+  <li><a href="#protokoll" id="toc-protokoll" class="nav-link" data-scroll-target="#protokoll">Protokoll</a></li>
+  <li><a href="#aufnahme" id="toc-aufnahme" class="nav-link" data-scroll-target="#aufnahme">Tonaufnahme mit Zustimmung</a></li>
   <li><a href="#zweites" id="toc-zweites" class="nav-link" data-scroll-target="#zweites">Das zweite Gespräch</a></li>
   <li><a href="#haltung" id="toc-haltung" class="nav-link" data-scroll-target="#haltung">Umgang mit den Gesprächspartnerinnen und Gesprächspartnern</a></li>
   </ul>
@@ -288,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><span class="lead">Das Interview soll zeigen, wie eine Tätigkeit heute wirklich abläuft: welche Informationen hereinkommen, was damit geschieht, welche Entscheidung am Ende steht. Es fragt nicht nach Wunsch-Automatisierungen. Zwei Gruppen führen ein Gespräch gemeinsam, eine Person protokolliert, aufgenommen wird nicht.</span></p>
+<p><span class="lead">Das Interview soll zeigen, wie eine Tätigkeit heute wirklich abläuft: welche Informationen hereinkommen, was damit geschieht, welche Entscheidung am Ende steht. Es fragt nicht nach Wunsch-Automatisierungen. Zwei Gruppen führen ein Gespräch gemeinsam, eine Person protokolliert. Eine Tonaufnahme ist mit Zustimmung möglich und wird nur lokal transkribiert.</span></p>
 <section id="fokus" class="level2">
 <h2 class="anchored" data-anchor-id="fokus">Worauf das Interview zielt</h2>
 <p>Wir suchen Tätigkeiten, bei denen Mitarbeitende unstrukturierte Informationen in strukturierte überführen und Entscheidungen vorbereiten: Übersichten erstellen, Unterlagen zusammenfassen, Angaben gegen Voraussetzungen prüfen, Rückfragen formulieren. Das sind die Stellen, an denen ein Agent eine Vorlage liefern kann, ohne in Systeme schreiben zu müssen.</p>
@@ -337,8 +338,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="protokoll" class="level2">
-<h2 class="anchored" data-anchor-id="protokoll">Protokoll statt Aufnahme</h2>
-<p>Gespräche werden nicht aufgezeichnet. Eine Person schreibt mit, direkt in ein Raster:</p>
+<h2 class="anchored" data-anchor-id="protokoll">Protokoll</h2>
+<p>Eine Person schreibt mit, direkt in ein Raster, auch dann, wenn aufgenommen wird:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -400,6 +401,32 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <p>Wenn im Gespräch Beispielfälle mit echten Personen genannt werden, bleiben diese Angaben im Raum. Ins Protokoll kommt der Fall ohne Namen und ohne Merkmale, die eine Person erkennbar machen.</p>
+</div>
+</div>
+</section>
+<section id="aufnahme" class="level2">
+<h2 class="anchored" data-anchor-id="aufnahme">Tonaufnahme mit Zustimmung</h2>
+<p>Eine Aufnahme macht das Protokoll vollständiger und das Prozessmodell genauer, weil nichts verloren geht, was im Gespräch nur nebenbei gesagt wurde. Sie ist erlaubt, wenn die Gesprächspartnerin oder der Gesprächspartner vorher ausdrücklich zustimmt. Ohne Zustimmung bleibt es beim Protokoll.</p>
+<p><strong>Voraussetzungen:</strong> Zustimmung eingeholt und im Protokoll vermerkt (Datum, wer zugestimmt hat). Ein Rechner der Gruppe mit lokaler Transkription, zum Beispiel <a href="https://github.com/openai/whisper">Whisper</a> oder eine darauf aufbauende App; auf dem Mac etwa <a href="https://goodsnooze.gumroad.com/l/macwhisper">MacWhisper</a>, unter Windows oder Linux etwa <a href="https://github.com/chidiwilliams/buzz">Buzz</a>. Alle Varianten laufen ohne Internetverbindung.</p>
+<ol type="1">
+<li>Zu Beginn des Gesprächs fragen: „Dürfen wir das Gespräch aufnehmen? Wir schreiben es nur auf unserem eigenen Rechner ab, nichts davon geht in eine Cloud, und wir löschen die Aufnahme danach.“ Die Antwort abwarten.</li>
+<li>Bei Zustimmung mit dem Telefon oder Notebook aufnehmen. Trotzdem protokollieren; die Aufnahme ersetzt das Raster nicht.</li>
+<li>Nach dem Gespräch die Aufnahme lokal transkribieren. Keine Cloud-Transkription, auch nicht über Gemini, ChatGPT oder einen Online-Dienst.</li>
+<li>Im Transkript Namen von Personen durch Rollen ersetzen. Erst danach darf der Coding-Agent damit arbeiten, zum Beispiel für den Entwurf des Ist-Modells.</li>
+<li>Aufnahme und Roh-Transkript löschen, sobald das bereinigte Transkript und das Protokoll stehen.</li>
+</ol>
+<p><strong>Prüfung:</strong> Im Protokoll steht die Zustimmung. Das bereinigte Transkript enthält keine Namen. Die Aufnahme ist gelöscht.</p>
+<div class="callout callout-style-simple callout-warning callout-titled" title="Achtung">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warnung</span>Achtung
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Eine Aufnahme ohne Zustimmung ist nicht erlaubt. Aufnahmen und Transkripte gehören nicht in die Teamablage, wenn diese in einem Cloud-Dienst liegt; dort liegt nur das bereinigte Transkript ohne Namen.</p>
 </div>
 </div>
 </section>
