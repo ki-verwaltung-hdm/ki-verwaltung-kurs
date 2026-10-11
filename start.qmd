@@ -71,7 +71,10 @@ Die Projektumgebung: sieben n8n-Instanzen und eine Datenbank je Gruppe auf einem
 
 ## Teamablage {#ablage}
 
-Jede Gruppe arbeitet in einem gemeinsamen Ordner, zum Beispiel in Google Drive oder in einem privaten GitHub-Repository. Vorschlag für die Struktur:
+Jede Gruppe arbeitet in einem gemeinsamen Ordner, zum Beispiel in Google Drive oder in einem privaten GitHub-Repository. Die Struktur gibt es fertig als Download: fünf Ordner mit je einer README, die sagt, was hineingehört und woran man prüft, dass es vollständig ist, dazu Vorlagen für Team, Stand, Entscheidungen und die AGENTS.md für den Coding-Agenten.
+
+<a href="material/vorlagen/teamablage-vorlage.zip" class="btn btn-primary">Teamablage als ZIP herunterladen</a>
+
 
 | Ordner | Inhalt |
 |---|---|
@@ -86,7 +89,7 @@ Zugangsdaten, Passwörter und Schlüssel gehören nicht in die Ablage, auch nich
 ## Arbeitsregeln {#regeln}
 
 - **Keine Realdaten.** In n8n, Gemini und Antigravity verarbeiten wir ausschließlich synthetische oder anonymisierte Daten. Namen, Matrikelnummern, Bewerbungsunterlagen oder interne Dokumente der Verwaltung gehören nicht hinein. Die Gründe stehen unter [Daten und Freigaben](projekt.qmd#regeln).
-- **Interviews werden protokolliert, nicht aufgezeichnet.** Siehe [Interviews führen](werkzeuge/interviews.qmd).
+- **Interviews werden protokolliert.** Eine Tonaufnahme ist nur mit ausdrücklicher Zustimmung der Gesprächspartnerin oder des Gesprächspartners erlaubt und wird ausschließlich lokal transkribiert. Siehe [Interviews führen](werkzeuge/interviews.qmd#aufnahme).
 - **Der Mensch entscheidet.** Jeder Prototyp endet mit einer Prüfung und Freigabe durch eine Person. Kein Workflow schreibt in ein Verwaltungssystem oder versendet etwas an Dritte.
 
 [**Weiter zum Projekt**](projekt.qmd)

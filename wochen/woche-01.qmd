@@ -67,7 +67,7 @@ Ein kurzer Input mit dem [Werkzeugkasten Prozessmodellierung](../werkzeuge/proze
 2. Recherchieren: Wer setzt in Hochschulverwaltung oder Behörden bereits KI für Übersichten, Zusammenfassungen oder Prüfungen ein? Einstieg: [Praxis und Rahmen](../materialien.qmd#praxis), darunter F13 und KI4BW in Baden-Württemberg, LLMoin, MUCGPT und der Marktplatz der KI-Möglichkeiten des Bundes. Welche Muster wiederholen sich? Was ist gescheitert, und warum?
 3. Einen Verwaltungsprozess auswählen, der zu den [möglichen Bereichen](../projekt.qmd#ausgangslage) passt, und ihn als Referenzprozess in Prosa beschreiben: Rollen, Schritte, Entscheidungen, Rückschleifen. Zwei bis zehn Sätze genügen. In Woche 2 wird daraus mit dem Coding-Agenten ein BPMN-Modell.
 4. Fünf bis acht Leitfragen für das Interview entwerfen. Orientierung: [Interviews führen](../werkzeuge/interviews.qmd).
-5. Alles in der [Teamablage](../start.qmd#ablage) unter `01_Recherche` ablegen: Quellen mit Link, Erkenntnisse in Stichworten, Prozessbeschreibung, Leitfragen.
+5. Die [Teamablage](../start.qmd#ablage) als ZIP herunterladen, entpacken, in den gemeinsamen Ordner legen und alles unter `01_Recherche` ablegen: Quellen mit Link, Erkenntnisse in Stichworten, Prozessbeschreibung, Leitfragen.
 
 **Prüfung:** Jede Erkenntnis hat eine Quelle. Die Prozessbeschreibung nennt mindestens zwei Rollen und eine Entscheidung. Die Leitfragen fragen nach Tätigkeiten und Informationen, nicht nach Wunsch-Automatisierungen.
 

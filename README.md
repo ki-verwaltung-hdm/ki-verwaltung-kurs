@@ -36,6 +36,7 @@ Das Skript rendert und ruft `quarto publish gh-pages --no-prompt --no-render` au
 | `materialien.qmd` | Literatur aus `ws2627-ki-verwaltung-literatur.md`, Prozessbeispiele, Prompts, Dokumentation |
 | `material/prozess/` | Aurenta-Beispiel (BPMN und SVG) aus `~/code/process-lab`, Kopie wie im Mercedes-Repo |
 | `material/prompts/` | Aufträge für den Coding-Agenten, aus `~/code/process-lab/prompts` für Antigravity ohne Pipeline umgeschrieben |
+| `vorlagen/teamablage/` | Quelle der Teamablage-Vorlage (fünf Ordner mit README, TEAM.md, STAND.md, ENTSCHEIDUNGEN.md, AGENTS.md). `./paket-bauen.sh` baut daraus `material/vorlagen/teamablage-vorlage.zip`; danach rendern |
 | `images/` | Elf SVG-Abbildungen im dunklen Stil der Growth-Grafiken (Phasen, Ausgangslage, Human in the Loop, Mocks, Projektumgebung, Schritttypen, Interviewzyklus, erster Workflow, Prompt-Standard, Agentenschleife, Semesterplan). Erzeugt von `images/erzeugen.py`; Texte dort ändern und neu laufen lassen, nicht die SVGs von Hand bearbeiten |
 
 Lokale Styles (`book-theme.scss`, `website-extras.scss`), keine externe Schrift.
@@ -54,7 +55,7 @@ Auf den Seiten stehen keine sichtbaren Platzhalter-Markierungen. Die folgenden P
 9. **Adresse der Projektumgebung.** Überall `https://141.62.116.2/n8n-<n>/` plus Abschnitt „Zertifikatswarnung“ in `start.qmd`. Die Seiten nennen bewusst nicht, dass DNS und Zertifikat bei der IT angefragt sind. Nach DNS und Zertifikat: Adressen in `start.qmd`, `werkzeuge/n8n.qmd`, `materialien.qmd` und `images/erzeugen.py` tauschen, Abschnitt „Zertifikatswarnung“ entfernen.
 10. **VPN-Anleitung.** `start.qmd#vpn` nennt FortiClient ohne Link auf die HdM-IT-Anleitung. Link ergänzen.
 11. **Lokale Modelle.** Nicht auf der Website. Wenn Mac Minis oder KI-Institut feststehen, in `projekt.qmd#regeln` ergänzen.
-12. **Aufnahme von Interviews.** Website sagt: Protokoll, keine Aufnahme ohne Zustimmung. Falls lokale Whisper-Transkription mit Einwilligung erlaubt wird, `werkzeuge/interviews.qmd#protokoll` anpassen.
+12. **Aufnahme von Interviews.** Website sagt seit 11.10.: Protokoll immer, Tonaufnahme mit ausdrücklicher Zustimmung erlaubt, nur lokale Transkription (Whisper, MacWhisper, Buzz), Aufnahme danach löschen. Mit Stephan und den Interviewpartnern bestätigen.
 13. **n8n-Registrierung.** Nicht auf der Website. Laut Infrastruktur-Log je Instanz noch nicht erledigt; als Owner in der UI nachholen.
 14. **Formular-Trigger und Wait-Knoten** für die Freigabe (`werkzeuge/n8n.qmd#freigabe`) sind auf der HdM-Instanz noch nicht getestet. Vor Woche 2 einmal durchspielen.
 15. **Erster Workflow** (`werkzeuge/n8n.qmd#erster-workflow`): Beispiel „Antrag prüfen“ mit If-Knoten und Basic LLM Chain, noch nicht auf einer der sieben Instanzen ausgeführt. Vor Woche 2 mit dem Gruppenkonto g1 durchspielen und bei Bedarf Knotennamen anpassen.

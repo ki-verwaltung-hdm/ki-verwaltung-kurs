@@ -101,7 +101,7 @@ Der Prototyp spricht nur mit nachgebauten Systemen. Das Mock macht sichtbar, wel
 
 **Sensible Inhalte bleiben lokal.** Bewerbungsunterlagen, Personalakten und ähnliche Inhalte dürfen nicht in öffentliche Cloud-Dienste gelangen. Für solche Fälle kommen nur lokal oder in Europa betriebene Modelle in Frage. Die Gemini-Verbindung in n8n ist für synthetische Daten vorgesehen.
 
-**Interviews werden nicht aufgezeichnet.** Zwei Gruppen führen ein Gespräch gemeinsam, eine Person protokolliert. Ohne ausdrückliche Zustimmung der Gesprächspartnerinnen und Gesprächspartner nehmen wir nicht auf.
+**Interviews werden protokolliert, Aufnahme nur mit Zustimmung.** Zwei Gruppen führen ein Gespräch gemeinsam, eine Person protokolliert. Wenn die Gesprächspartnerin oder der Gesprächspartner ausdrücklich zustimmt, darf zusätzlich eine Tonaufnahme gemacht werden. Sie wird nur lokal auf einem Rechner der Gruppe transkribiert (zum Beispiel mit Whisper) und danach gelöscht; weder Aufnahme noch Transkript gehen in einen Cloud-Dienst. Das Transkript erleichtert das Protokoll und das Prozessmodell erheblich.
 
 ## Experimenteller Charakter {#experiment}
 

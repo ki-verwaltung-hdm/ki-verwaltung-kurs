@@ -49,7 +49,7 @@ Die Aufgabe steht in [Woche 1](wochen/woche-01.qmd#recherche).
 
 Vorgehen und Protokollraster: [Interviews führen](werkzeuge/interviews.qmd).
 
-1. Protokoll im Raster, am Tag des Gesprächs vervollständigt.
+1. Protokoll im Raster, am Tag des Gesprächs vervollständigt. Bei Tonaufnahme mit Zustimmung: bereinigtes Transkript ohne Namen dazu.
 2. Liste offener Fragen für das zweite Gespräch.
 3. Beide Gruppen legen dasselbe Protokoll ab.
 

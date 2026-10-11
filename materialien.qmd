@@ -32,6 +32,7 @@ Berichte von KI-Anbietern (Anthropic, OpenAI) sind Selbstauskünfte, keine unabh
 | Material | Wofür |
 |---|---|
 | [Projektbeschreibung](https://kirenz.github.io/hdm-projekte/projekte/ws-2026/ki-hochschulverwaltung.html) | Idee, Themenfelder, Betreuung |
+| [Teamablage als ZIP](material/vorlagen/teamablage-vorlage.zip) | Fünf Ordner mit README je Ordner, dazu TEAM.md, STAND.md, ENTSCHEIDUNGEN.md und AGENTS.md |
 | [Umfrage zur Gruppeneinteilung](https://docs.google.com/forms/d/e/1FAIpQLSdLsp_8heWx2s6YLvpmuUhsHeuRjsOiBDAbdSGK41yqwPxWHg/viewform) | Woche 1, etwa 6 bis 8 Minuten |
 
 ## KI in der Verwaltung: Praxis und Rahmen {#praxis}

@@ -3,7 +3,7 @@ title: "Interviews führen"
 toc: true
 ---
 
-[Das Interview soll zeigen, wie eine Tätigkeit heute wirklich abläuft: welche Informationen hereinkommen, was damit geschieht, welche Entscheidung am Ende steht. Es fragt nicht nach Wunsch-Automatisierungen. Zwei Gruppen führen ein Gespräch gemeinsam, eine Person protokolliert, aufgenommen wird nicht.]{.lead}
+[Das Interview soll zeigen, wie eine Tätigkeit heute wirklich abläuft: welche Informationen hereinkommen, was damit geschieht, welche Entscheidung am Ende steht. Es fragt nicht nach Wunsch-Automatisierungen. Zwei Gruppen führen ein Gespräch gemeinsam, eine Person protokolliert. Eine Tonaufnahme ist mit Zustimmung möglich und wird nur lokal transkribiert.]{.lead}
 
 ## Worauf das Interview zielt {#fokus}
 
@@ -54,9 +54,9 @@ Zum Aufwand:
 - Welcher Teil kostet am meisten Zeit? Welcher Teil ist am fehleranfälligsten?
 - Welche Informationen sind vertraulich, und wer darf sie sehen?
 
-## Protokoll statt Aufnahme {#protokoll}
+## Protokoll {#protokoll}
 
-Gespräche werden nicht aufgezeichnet. Eine Person schreibt mit, direkt in ein Raster:
+Eine Person schreibt mit, direkt in ein Raster, auch dann, wenn aufgenommen wird:
 
 | Spalte | Inhalt |
 |---|---|
@@ -79,6 +79,24 @@ Direkt nach dem Gespräch, am besten noch am selben Tag:
 
 ::: {.callout-warning title="Achtung"}
 Wenn im Gespräch Beispielfälle mit echten Personen genannt werden, bleiben diese Angaben im Raum. Ins Protokoll kommt der Fall ohne Namen und ohne Merkmale, die eine Person erkennbar machen.
+:::
+
+## Tonaufnahme mit Zustimmung {#aufnahme}
+
+Eine Aufnahme macht das Protokoll vollständiger und das Prozessmodell genauer, weil nichts verloren geht, was im Gespräch nur nebenbei gesagt wurde. Sie ist erlaubt, wenn die Gesprächspartnerin oder der Gesprächspartner vorher ausdrücklich zustimmt. Ohne Zustimmung bleibt es beim Protokoll.
+
+**Voraussetzungen:** Zustimmung eingeholt und im Protokoll vermerkt (Datum, wer zugestimmt hat). Ein Rechner der Gruppe mit lokaler Transkription, zum Beispiel [Whisper](https://github.com/openai/whisper) oder eine darauf aufbauende App; auf dem Mac etwa [MacWhisper](https://goodsnooze.gumroad.com/l/macwhisper), unter Windows oder Linux etwa [Buzz](https://github.com/chidiwilliams/buzz). Alle Varianten laufen ohne Internetverbindung.
+
+1. Zu Beginn des Gesprächs fragen: „Dürfen wir das Gespräch aufnehmen? Wir schreiben es nur auf unserem eigenen Rechner ab, nichts davon geht in eine Cloud, und wir löschen die Aufnahme danach.“ Die Antwort abwarten.
+2. Bei Zustimmung mit dem Telefon oder Notebook aufnehmen. Trotzdem protokollieren; die Aufnahme ersetzt das Raster nicht.
+3. Nach dem Gespräch die Aufnahme lokal transkribieren. Keine Cloud-Transkription, auch nicht über Gemini, ChatGPT oder einen Online-Dienst.
+4. Im Transkript Namen von Personen durch Rollen ersetzen. Erst danach darf der Coding-Agent damit arbeiten, zum Beispiel für den Entwurf des Ist-Modells.
+5. Aufnahme und Roh-Transkript löschen, sobald das bereinigte Transkript und das Protokoll stehen.
+
+**Prüfung:** Im Protokoll steht die Zustimmung. Das bereinigte Transkript enthält keine Namen. Die Aufnahme ist gelöscht.
+
+::: {.callout-warning title="Achtung"}
+Eine Aufnahme ohne Zustimmung ist nicht erlaubt. Aufnahmen und Transkripte gehören nicht in die Teamablage, wenn diese in einem Cloud-Dienst liegt; dort liegt nur das bereinigte Transkript ohne Namen.
 :::
 
 ## Das zweite Gespräch {#zweites}
