@@ -8,7 +8,7 @@ toc: true
 ::: {.lead}
 - Worum es geht: KI-Agenten in der Verwaltung, der Auftrag der HdM, das Vorgehen im Semester
 - Grundlagen der Prozessmodellierung mit BPMN
-- Der Recherche-Auftrag: erster Prozesskandidat bis Woche 2, Ergebnisse bis Woche 3
+- Der Recherche-Auftrag in zwei Etappen
 - Umfrage und Gruppenbildung
 :::
 
@@ -58,10 +58,10 @@ Ein kurzer Input mit dem [Werkzeugkasten Prozessmodellierung](../werkzeuge/proze
 
 ## Recherche-Auftrag {#recherche}
 
-Die Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews. Sie hat zwei Etappen: Bis Woche 2 reicht ein erster Prozesskandidat, damit die Werkzeuge daran ausprobiert werden können. Die Ergebnisse der Recherche sind bis Woche 3 fällig.
+Die Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews. Sie hat zwei Etappen: Zuerst ein erster Prozesskandidat, damit die Werkzeuge in Woche 2 daran ausprobiert werden können. Danach die eigentliche Recherche mit Quellen, Referenzprozess und Leitfragen. Der Termin dafür wird noch vereinbart.
 
 ::: {.uebung}
-### Etappe 1 bis Montag, 19.10. · in den Gruppen
+### Etappe 1: Prozesskandidat · in den Gruppen
 
 **Worum es geht:** In Woche 2 lernen wir die Werkzeuge kennen. Dafür braucht jede Gruppe einen Prozess, an dem sie den Coding-Agenten ausprobieren kann. Er muss noch nicht der endgültige sein.
 
@@ -75,7 +75,7 @@ Die Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews.
 :::
 
 ::: {.uebung}
-### Etappe 2 bis Montag, 26.10. · in den Gruppen
+### Etappe 2: Recherche · Termin wird noch vereinbart · in den Gruppen
 
 **Worum es geht:** Bevor wir mit Verwaltungsmitarbeitenden sprechen, brauchen wir Vokabular, Vergleichsfälle und eine erste Hypothese, wie ein unterstützter Ablauf aussehen könnte.
 
@@ -87,7 +87,7 @@ Die Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews.
 
 **Prüfung:** Jede Erkenntnis hat eine Quelle. Die Prozessbeschreibung nennt mindestens zwei Rollen und eine Entscheidung. Die Leitfragen fragen nach Tätigkeiten und Informationen, nicht nach Wunsch-Automatisierungen.
 
-**Ergebnis:** Ein Ordner `01_Recherche` mit Quellen, Erkenntnissen, Referenzprozess und Leitfragen. In Woche 3 besprechen wir die Ergebnisse und stimmen die Leitfragen ab. Die Recherche endet damit nicht: Sie läuft bis zum ersten Interview weiter und wird nach dem Gespräch gezielt vertieft.
+**Ergebnis:** Ein Ordner `01_Recherche` mit Quellen, Erkenntnissen, Referenzprozess und Leitfragen. Wir besprechen die Ergebnisse im Coaching und stimmen die Leitfragen ab. Die Recherche endet damit nicht: Sie läuft bis zum ersten Interview weiter und wird nach dem Gespräch gezielt vertieft.
 :::
 
 Ein Hinweis zur Recherche mit KI: Gemini und andere Chat-Werkzeuge dürfen zur Recherche verwendet werden. Jede Aussage, die in die Ablage kommt, prüfen wir gegen die Originalquelle. Eine KI-Antwort ohne Quelle ist ein guter Hinweis, aber noch kein Beleg.

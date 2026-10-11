@@ -83,6 +83,6 @@ Jede Gruppe nennt in zwei Minuten: den gewählten Prozess, die beteiligten Rolle
 
 ## Nächste Schritte {#naechste}
 
-Bis Woche 3 (Montag, 26.10.) ist Etappe 2 des [Recherche-Auftrags](woche-01.qmd#recherche) fällig: Quellen, Erkenntnisse, überarbeiteter Referenzprozess, Leitfragen. In Woche 3 besprechen wir die Ergebnisse und stimmen die Leitfragen ab. Die Interviewtermine vereinbaren wir mit den Verwaltungsbereichen; sobald ein Termin steht, bereiten sich die beiden zugeordneten Gruppen gemeinsam nach [Interviews führen](../werkzeuge/interviews.qmd) vor.
+Als Nächstes folgt Etappe 2 des [Recherche-Auftrags](woche-01.qmd#recherche): Quellen, Erkenntnisse, überarbeiteter Referenzprozess, Leitfragen. Den Termin dafür vereinbaren wir gemeinsam; die Ergebnisse besprechen wir im Coaching. Die Interviewtermine vereinbaren wir mit den Verwaltungsbereichen; sobald ein Termin steht, bereiten sich die beiden zugeordneten Gruppen gemeinsam nach [Interviews führen](../werkzeuge/interviews.qmd) vor.
 
 [**Zurück zu Woche 1**](woche-01.qmd) · [**Semesterplan**](../semester.qmd)
