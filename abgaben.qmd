@@ -18,11 +18,9 @@ toc: true
 
 Die Form der Prüfungsleistung, ihre Bestandteile und die Bewertungskriterien werden in der Vorlesung bekannt gegeben. Die Schritte auf dieser Seite beschreiben die Arbeitsergebnisse, auf denen die Bewertung aufbaut.
 
-## Laufend: jede Woche {#laufend}
+## Laufend {#laufend}
 
-1. Vor dem Montagstermin den Stand in der Teamablage aktualisieren: fertig, offen, blockiert.
-2. Entscheidungen aus dem Termin mit Datum festhalten.
-3. Dateien, die der Coding-Agent erzeugt hat, erst nach Prüfung durch eine Person ablegen.
+Die Teamablage ist der gemeinsame Arbeitsstand. Dateien, die der Coding-Agent erzeugt hat, kommen erst nach Prüfung durch eine Person hinein. Wichtige Entscheidungen lohnt es sich mit Datum festzuhalten; das erleichtert später die Bewertung und die Präsentation.
 
 ## Schritt für Schritt {#schritte}
 
@@ -61,7 +59,7 @@ Vorgehen und Protokollraster: [Interviews führen](werkzeuge/interviews.qmd).
 ::: {.uebung #modelle}
 ### 3 · Ist- und Soll-Modell mit Begründung
 
-[Gruppe · Rückmeldung im Wochentermin · Teamablage]{.uebung-meta}
+[Gruppe · Rückmeldung im Coaching · Teamablage]{.uebung-meta}
 
 Vorgehen: [Prozessmodellierung](werkzeuge/prozessmodell.qmd#vom-ist-zum-soll).
 
@@ -78,7 +76,7 @@ Vorgehen: [Prozessmodellierung](werkzeuge/prozessmodell.qmd#vom-ist-zum-soll).
 ::: {.uebung #prototyp}
 ### 4 · Prototyp mit Testfällen
 
-[Gruppe · Review im Wochentermin · Teamablage]{.uebung-meta}
+[Gruppe · Review im Coaching · Teamablage]{.uebung-meta}
 
 Vorgehen: [n8n auf dem HdM-Server](werkzeuge/n8n.qmd).
 

@@ -12,9 +12,9 @@ toc: true
 Zwei feste Wochen, danach Phasen im Takt der Interviews. Leere Punkte werden im Semester vereinbart.
 :::
 
-## Wöchentlicher Termin
+## Wöchentliches Coaching
 
-Montags, 11:45 bis 13:15 Uhr, Raum I110. Ein typischer Termin: 15 Minuten gemeinsamer Input oder Befund, danach Rückmeldung zu den Zwischenständen, am Ende Entscheidungen für die nächste Woche. Zwischen den Terminen arbeiten wir eigenständig weiter.
+Montags, 11:45 bis 13:15 Uhr, Raum I110. Nach den ersten drei Wochen ist der Termin ein Coaching-Angebot: Fragen aus den Gruppen, Rückmeldung zu Zwischenständen, bei Bedarf ein kurzer Input, Abstimmung der nächsten Schritte. Die Projektarbeit selbst passiert zwischen den Terminen.
 
 ## Die ersten drei Wochen
 
@@ -26,7 +26,7 @@ Montags, 11:45 bis 13:15 Uhr, Raum I110. Ein typischer Termin: 15 Minuten gemein
 
 ## Die weiteren Phasen
 
-| Phase | Was passiert | Ergebnis zum Wochentermin |
+| Phase | Was passiert | Ergebnis |
 |---|---|---|
 | Interviews | Erstgespräche mit den Verwaltungsbereichen, je zwei Gruppen gemeinsam. Vorbereitung mit Leitfaden, Protokoll statt Aufnahme | Protokoll und offene Fragen |
 | Modellierung | Ist-Prozess aus dem Protokoll modellieren, Soll-Prozess mit KI-Agent entwerfen, zweites Gespräch zum Nachschärfen, Vorstellung beim Interviewpartner | Ist- und Soll-Modell, bestätigt |
@@ -36,8 +36,3 @@ Montags, 11:45 bis 13:15 Uhr, Raum I110. Ein typischer Termin: 15 Minuten gemein
 
 Die Reihenfolge der Interviews hängt von der Verfügbarkeit der Verwaltungsbereiche ab. Wer noch auf sein Interview wartet, arbeitet an Recherche, Referenzmodell und Mock-Daten weiter.
 
-## Was jede Woche gilt
-
-1. Vor dem Termin den Stand in der Teamablage aktualisieren: Was ist fertig, was ist offen, wo hakt es?
-2. Eine Person je Gruppe stellt den Stand in zwei Minuten vor, ohne Folien.
-3. Entscheidungen aus dem Termin mit Datum in der Ablage festhalten.

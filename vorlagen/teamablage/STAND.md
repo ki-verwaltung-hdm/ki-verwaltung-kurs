@@ -1,6 +1,6 @@
 # Stand
 
-Vor jedem Montagstermin aktualisieren. Neuester Eintrag oben.
+Kurznotiz für das Coaching, neuester Eintrag oben. Freiwillig, aber hilfreich.
 
 ## JJJJ-MM-TT
 

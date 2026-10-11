@@ -91,7 +91,7 @@ def phasen():
         s.text(x + w / 2 + 20, y0 + 52, t, 26, TXT, 700)
         s.lines(x + w / 2, y0 + 120, d, 20, SOFT)
         if i < 4: s.arrow(x + w + 6, y0 + 150, x + w + gap - 6, y0 + 150)
-    s.text(800, 530, "Der Montagstermin dient der Abstimmung. Die Arbeit in den Phasen passiert zwischen den Terminen.", 19, SOFT)
+    s.text(800, 530, "Der Montagstermin ist das Coaching. Die Arbeit in den Phasen passiert zwischen den Terminen.", 19, SOFT)
     s.save("projekt-phasen.svg")
 
 # 2 Unstrukturiert → strukturiert → Entscheidung ------------------------------

@@ -16,7 +16,7 @@ toc: true
 | Sprache | Deutsch |
 | Programmierung | keine Voraussetzung; Prototypen entstehen in n8n, Dateien schreibt der Coding-Agent |
 
-Der Wochentermin dient der Abstimmung: Input, Rückmeldung zu Zwischenständen, Entscheidungen. Recherche, Interviews, Modellierung und Prototyp entstehen in der eigenständigen Arbeit der Gruppen. Die öffentliche [Projektbeschreibung](https://kirenz.github.io/hdm-projekte/projekte/ws-2026/ki-hochschulverwaltung.html) fasst Idee und Themenfelder zusammen.
+Der Wochentermin ist nach den ersten drei Wochen ein Coaching-Angebot: Fragen, Rückmeldung zu Zwischenständen, bei Bedarf Input. Recherche, Interviews, Modellierung und Prototyp entstehen in der eigenständigen Arbeit der Gruppen. Die öffentliche [Projektbeschreibung](https://kirenz.github.io/hdm-projekte/projekte/ws-2026/ki-hochschulverwaltung.html) fasst Idee und Themenfelder zusammen.
 
 ## Ausgangslage {#ausgangslage}
 
@@ -64,7 +64,7 @@ Die Phasen bauen aufeinander auf. Wochen 1 und 2 stehen im [Semesterplan](semest
 ![](images/projekt-phasen.svg){.abbildung fig-alt="Fünf Phasen als Kette: Recherche, Interviews, Modellierung, Prototyp, Bewertung."}
 
 ::: {.abb-cap}
-Die fünf Phasen des Projekts. Der Montagstermin dient der Abstimmung, die Arbeit passiert dazwischen.
+Die fünf Phasen des Projekts. Der Montagstermin ist das Coaching, die Arbeit passiert dazwischen.
 :::
 
 ### Warum zuerst recherchieren

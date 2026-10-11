@@ -22,11 +22,10 @@ Gemeinsamer Ordner der Gruppe für das HdM-Projekt „KI in der Verwaltung“ (W
 - Keine Namen von Verwaltungsmitarbeitenden, Studierenden oder Bewerbenden. In Protokollen und Modellen stehen Rollen.
 - Keine Passwörter, Schlüssel oder Zugangsdaten, auch nicht in n8n-Exporten oder Screenshots.
 - Dateien, die der Coding-Agent erzeugt hat, erst nach Prüfung durch eine Person ablegen.
-- Wichtige Entscheidungen mit Datum in `ENTSCHEIDUNGEN.md` festhalten.
+- Wichtige Entscheidungen lohnt es sich mit Datum in `ENTSCHEIDUNGEN.md` festzuhalten.
 
-## Vor jedem Montagstermin
+## Coaching
 
-1. Stand in `STAND.md` aktualisieren: fertig, offen, blockiert.
-2. Eine Person stellt den Stand in zwei Minuten vor.
+Montags gibt es Coaching. Wer Fragen oder einen Zwischenstand mitbringt, hält ihn am besten kurz in `STAND.md` fest.
 
 Kurswebsite: https://kirenz.github.io/ki-verwaltung-kurs/
