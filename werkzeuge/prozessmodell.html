@@ -224,6 +224,10 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Prozessmodellierung</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../werkzeuge/bpmn-uebung.html">
+ <span class="dropdown-text">BPMN-Übung</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../werkzeuge/interviews.html">
  <span class="dropdown-text">Interviews führen</span></a>
   </li>  
@@ -266,6 +270,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#beispiel-ablauf-heute-und-mit-agent" id="toc-beispiel-ablauf-heute-und-mit-agent" class="nav-link" data-scroll-target="#beispiel-ablauf-heute-und-mit-agent">Beispiel: Ablauf heute und mit Agent</a></li>
   <li><a href="#übertragen-auf-einen-verwaltungsprozess" id="toc-übertragen-auf-einen-verwaltungsprozess" class="nav-link" data-scroll-target="#übertragen-auf-einen-verwaltungsprozess">Übertragen auf einen Verwaltungsprozess</a></li>
   <li><a href="#vom-ist-zum-soll" id="toc-vom-ist-zum-soll" class="nav-link" data-scroll-target="#vom-ist-zum-soll">Vom Ist zum Soll</a></li>
+  <li><a href="#vertiefung" id="toc-vertiefung" class="nav-link" data-scroll-target="#vertiefung">Vertiefung: BPMN 2.0 im Detail</a></li>
   <li><a href="#werkzeuge" id="toc-werkzeuge" class="nav-link" data-scroll-target="#werkzeuge">Werkzeuge</a></li>
   </ul>
 </nav>
@@ -374,10 +379,37 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>Die Aufträge für den Coding-Agenten stehen fertig in den Materialien: <a href="../material/prompts/ist-aus-prosa.md">Ist-Prozess aus einer Beschreibung</a> und <a href="../material/prompts/redesign-mit-ki.md">Prozess mit KI neu denken</a>. Ein Soll-Modell ist eine Gestaltungshypothese; ob sie trägt, zeigt sich im Gespräch und im Prototyp.</p>
 </section>
+<section id="vertiefung" class="level2">
+<h2 class="anchored" data-anchor-id="vertiefung">Vertiefung: BPMN 2.0 im Detail</h2>
+<p>Für die Modelle im Projekt reichen die Symbole oben. Wer Prozesse vollständig und normgerecht modellieren will, findet in der Einführung alle wichtigen Elemente an Beispielen aus der Hochschulverwaltung: Ereignisarten, Gateways (XOR, OR, AND, ereignisbasiert), Pools und Nachrichtenflüsse, Teilprozesse, Daten.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Material</th>
+<th>Wofür</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Einführung in BPMN 2.0 als <a href="../material/bpmn/einfuehrung-bpmn.pdf">PDF</a> oder <a href="../material/bpmn/einfuehrung-bpmn.pptx">PowerPoint</a></td>
+<td>Folien aus dem Kick-off, gleicher Inhalt in beiden Formaten</td>
+</tr>
+<tr class="even">
+<td><a href="../werkzeuge/bpmn-uebung.html">BPMN-Übung: Anerkennung von Studienleistungen</a></td>
+<td>Übung für zuhause: Kollaborationsdiagramm mit allen zentralen Elementen</td>
+</tr>
+<tr class="odd">
+<td>Bundesverwaltungsamt: <a href="https://www.bva.bund.de/SharedDocs/Downloads/DE/Behoerden/Beratung/Prozessmanagement/PMT/Attributkatalog_PMT.pdf?__blob=publicationFile&amp;v=2">Attributkatalog für BPMN 2.0</a></td>
+<td>Wie die Bundesverwaltung BPMN-Modelle dokumentiert und steuert; Benennung, Attribute, Pflichtangaben</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="werkzeuge" class="level2">
 <h2 class="anchored" data-anchor-id="werkzeuge">Werkzeuge</h2>
 <ul>
 <li><a href="https://demo.bpmn.io/">demo.bpmn.io</a>: öffnet, zeigt und bearbeitet <code>.bpmn</code>-Dateien direkt im Browser, exportiert als SVG</li>
+<li><a href="https://camunda.com/download/modeler/">Camunda Modeler</a>: kostenloses Programm zum Herunterladen, für umfangreichere Modelle wie in der Übung</li>
 <li><a href="https://app.diagrams.net/">draw.io</a>: kostenlos im Browser, Formenbibliothek „BPMN 2.0“ über „Weitere Formen“ aktivieren; für Skizzen von Hand</li>
 <li>Der Coding-Agent schreibt die <code>.bpmn</code>-Datei; wir sehen sie in demo.bpmn.io an und formulieren Korrekturen als neuen Auftrag</li>
 </ul>
