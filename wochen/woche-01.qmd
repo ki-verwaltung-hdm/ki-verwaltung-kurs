@@ -7,7 +7,7 @@ toc: true
 
 ::: {.lead}
 - Worum es geht: KI-Agenten in der Verwaltung, der Auftrag der HdM, das Vorgehen im Semester
-- Grundlagen der Prozessmodellierung mit BPMN
+- Einführung in BPMN 2.0 mit Beispielen aus der Hochschulverwaltung
 - Der Recherche-Auftrag in zwei Etappen
 - Umfrage und Gruppenbildung
 :::
@@ -22,7 +22,7 @@ Am Ende des Termins kennen alle den Auftrag, das Vorgehen in fünf Phasen und di
 |---|---|---|
 | Projektidee, Rollen, Vorgehen im Semester | 20 Minuten | Gemeinsam |
 | Umfrage zur Gruppeneinteilung | 10 Minuten | Einzeln |
-| Prozessmodellierung: Grundlagen und Beispiel | 25 Minuten | Input mit Rückfragen |
+| Einführung in BPMN 2.0 mit Übung zu zweit | 25 Minuten | Input, Übung zu zweit |
 | Recherche-Auftrag und Leitfragen für Interviews | 20 Minuten | Gemeinsam |
 | Gruppen, Teamablage, offene Fragen | 15 Minuten | Gemeinsam |
 
@@ -50,19 +50,44 @@ Die Umfrage zur Gruppeneinteilung ausfüllen. Sie fragt nach Studiengang, Stärk
 
 Die Einteilung wird nach dem Termin bekannt gegeben. Dann erhält jede Gruppe ihre Nummer und den Zugang zur [n8n-Instanz](../start.qmd#n8n).
 
-## Prozessmodellierung: Grundlagen {#bpmn}
+## Einführung in BPMN 2.0 {#bpmn}
 
-Ein kurzer Input mit der [Einführung in BPMN 2.0](../material/bpmn/einfuehrung-bpmn.pdf) ([PowerPoint](../material/bpmn/einfuehrung-bpmn.pptx)) und dem [Werkzeugkasten Prozessmodellierung](../werkzeuge/prozessmodell.qmd): Bahnen für Rollen, sechs Symbole, ein Beispiel für denselben Ablauf heute und mit KI-Agent. Wer schon ereignisgesteuerte Prozessketten (EPK) kennt, findet sich schnell zurecht; BPMN ist nicht weit davon entfernt.
+BPMN 2.0 ist die Standardnotation für Prozessmodelle, in Unternehmen wie in Verwaltungen. Die Einführung zeigt die wichtigsten Elemente an Beispielen aus der Hochschulverwaltung, vom Ersetzen eines Studierendenausweises bis zur Abgabe der Abschlussarbeit. Wer ereignisgesteuerte Prozessketten (EPK) kennt, findet sich schnell zurecht.
 
-**Gemeinsam am Beispiel:** Welche Schritte im Soll-Modell sind feste Regeln, welche brauchen Sprachverständnis, und wo bleibt der Mensch? Warum liegt die feste Regel vor dem Modellschritt?
+<a href="../material/bpmn/einfuehrung-bpmn.pdf" class="btn btn-primary" target="_blank" rel="noopener">Folien als PDF</a> <a href="../material/bpmn/einfuehrung-bpmn.pptx" class="btn btn-outline-primary">Folien als PowerPoint</a>
+
+**Nach der Einführung können wir:**
+
+1. eine Prozessbeschreibung lesen und in BPMN-Elemente übersetzen,
+2. Aktivitäten, Ereignisse und Gateways fachlich korrekt einsetzen,
+3. Zuständigkeiten mit Pools und Lanes, Kommunikation mit Nachrichtenflüssen abbilden,
+4. ein eigenes Kollaborationsdiagramm im Modellierungswerkzeug erstellen.
+
+| Teil | Inhalt | Beispiel aus der Verwaltung |
+|---|---|---|
+| Grundelemente | Start, Aufgaben, Ende; gute Namen | Studierendenausweis ersetzen |
+| Gateways | Exklusiv (XOR), parallel (AND), inklusiv (OR), kurzes Quiz | Prüfungsanmeldung, Einschreibung, Bewerbung |
+| Ereignisse | Zeitereignisse, ereignisbasiertes Gateway, Randereignisse | Zulassungsverfahren, Abgabe der Abschlussarbeit |
+| Beteiligte | Pools, Lanes, Nachrichtenflüsse; sechs typische Fehler | Rücktritt von einer Prüfung |
+| Daten und Details | Datenobjekte, Aufgabentypen, Marker, Teilprozesse | Noten verbuchen, Abschlussarbeit begutachten |
+
+::: {.uebung}
+### Übung zu zweit: Urlaubssemester beantragen · etwa 10 Minuten
+
+Den Ablauf aus den Folien als BPMN-Skizze modellieren, auf Papier oder in [demo.bpmn.io](https://demo.bpmn.io/). Danach mit der möglichen Lösung auf der folgenden Folie vergleichen.
+:::
 
 ::: {.todo}
 [Aufgabe · Übung für zuhause · etwa 2 Stunden]{.todo-label}
 
-Die BPMN-Übung „Anerkennung von Studienleistungen“ in Gruppen von zwei bis drei Personen bearbeiten: Fallbeschreibung analysieren, Kollaborationsdiagramm modellieren, Teilprozess detaillieren, Modell begründen.
+Die BPMN-Übung „Anerkennung von Studienleistungen“ in Gruppen von zwei bis drei Personen bearbeiten: Fallbeschreibung analysieren, Kollaborationsdiagramm modellieren, Teilprozess detaillieren, Modell begründen. Alle Elemente auf einen Blick stehen auf der letzten Folie der Einführung.
 
 <a href="../werkzeuge/bpmn-uebung.html" class="btn btn-primary">Übung öffnen</a>
 :::
+
+**Wie die Verwaltung selbst modelliert:** Das Bundesverwaltungsamt legt im [Attributkatalog für BPMN 2.0](https://www.bva.bund.de/SharedDocs/Downloads/DE/Behoerden/Beratung/Prozessmanagement/PMT/Attributkatalog_PMT.pdf?__blob=publicationFile&v=2) fest, wie Behörden des Bundes ihre Prozessmodelle benennen und dokumentieren. Zum Nachschlagen, nicht zum Durchlesen.
+
+**Brücke zum Projekt:** Im Projekt reicht ein kleiner Teil der Notation. Der [Werkzeugkasten Prozessmodellierung](../werkzeuge/prozessmodell.qmd) zeigt ein Beispiel für denselben Ablauf heute und mit KI-Agent. Gemeinsam am Beispiel: Welche Schritte im Soll-Modell sind feste Regeln, welche brauchen Sprachverständnis, und wo bleibt der Mensch?
 
 ## Recherche-Auftrag {#recherche}
 
