@@ -21,7 +21,7 @@ Studierende, die an einer anderen Hochschule Leistungen erbracht haben (etwa im 
 8. Danach erstellt das Prüfungsamt den Bescheid. Es versendet ihn an die Studierenden und archiviert gleichzeitig Antrag und Bescheid in der digitalen Studierendenakte. Sind beide Schritte erledigt, ist der Antrag abschließend bearbeitet.
 
 ::: {.uebung}
-### Aufgabe 1: Fallbeschreibung analysieren · etwa 15 Minuten
+### Aufgabe 1: Fallbeschreibung analysieren
 
 Die Fallbeschreibung lesen und die gefundenen Begriffe in die mittlere Spalte eintragen. In der rechten Spalte angeben, mit welchem BPMN-Element der Begriff dargestellt wird.
 
@@ -40,7 +40,7 @@ Die Fallbeschreibung lesen und die gefundenen Begriffe in die mittlere Spalte ei
 :::
 
 ::: {.uebung}
-### Aufgabe 2: Kollaborationsdiagramm modellieren · etwa 60 Minuten
+### Aufgabe 2: Kollaborationsdiagramm modellieren
 
 Das Anerkennungsverfahren aus Sicht der Hochschule als BPMN-Kollaborationsdiagramm modellieren. Die Studierenden als zugeklappten Pool (Black Box) darstellen, die Hochschule als Pool mit einer Lane je Rolle. Die fachliche Prüfung aus Schritt 4 hier als zugeklappten Teilprozess modellieren.
 
@@ -62,7 +62,7 @@ Das Modell verwendet jedes der folgenden Elemente mindestens einmal fachlich kor
 :::
 
 ::: {.uebung}
-### Aufgabe 3: Teilprozess „Fachliche Prüfung“ detaillieren · etwa 20 Minuten
+### Aufgabe 3: Teilprozess „Fachliche Prüfung“ detaillieren
 
 Den Teilprozess aus Aufgabe 2 in einem eigenen Diagramm modellieren. Er läuft vollständig bei der Fachprüferin bzw. dem Fachprüfer ab und besteht aus folgenden Schritten:
 
@@ -75,7 +75,7 @@ Im Diagramm aus Aufgabe 2 zusätzlich kennzeichnen, dass der Teilprozess für je
 :::
 
 ::: {.uebung}
-### Aufgabe 4: Modell begründen · etwa 15 Minuten
+### Aufgabe 4: Modell begründen
 
 Die folgenden Fragen jeweils in zwei bis drei Sätzen beantworten:
 

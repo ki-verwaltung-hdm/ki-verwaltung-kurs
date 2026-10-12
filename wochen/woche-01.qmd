@@ -22,7 +22,7 @@ Am Ende des Termins kennen alle den Auftrag, das Vorgehen in fünf Phasen und di
 |---|---|---|
 | Projektidee, Rollen, Vorgehen im Semester | 20 Minuten | Gemeinsam |
 | Umfrage zur Gruppeneinteilung | 10 Minuten | Einzeln |
-| Einführung in BPMN 2.0 mit Übung zu zweit | 25 Minuten | Input, Übung zu zweit |
+| Einführung in BPMN 2.0 | 25 Minuten | Input mit Übung |
 | Recherche-Auftrag und Leitfragen für Interviews | 20 Minuten | Gemeinsam |
 | Gruppen, Teamablage, offene Fragen | 15 Minuten | Gemeinsam |
 
@@ -71,14 +71,8 @@ BPMN 2.0 ist die Standardnotation für Prozessmodelle, in Unternehmen wie in Ver
 | Beteiligte | Pools, Lanes, Nachrichtenflüsse; sechs typische Fehler | Rücktritt von einer Prüfung |
 | Daten und Details | Datenobjekte, Aufgabentypen, Marker, Teilprozesse | Noten verbuchen, Abschlussarbeit begutachten |
 
-::: {.uebung}
-### Übung zu zweit: Urlaubssemester beantragen · etwa 10 Minuten
-
-Den Ablauf aus den Folien als BPMN-Skizze modellieren, auf Papier oder in [demo.bpmn.io](https://demo.bpmn.io/). Danach mit der möglichen Lösung auf der folgenden Folie vergleichen.
-:::
-
 ::: {.todo}
-[Aufgabe · Übung für zuhause · etwa 2 Stunden]{.todo-label}
+[Aufgabe · Übung für zuhause]{.todo-label}
 
 Die BPMN-Übung „Anerkennung von Studienleistungen“ in Gruppen von zwei bis drei Personen bearbeiten: Fallbeschreibung analysieren, Kollaborationsdiagramm modellieren, Teilprozess detaillieren, Modell begründen. Alle Elemente auf einen Blick stehen auf der letzten Folie der Einführung.
 
