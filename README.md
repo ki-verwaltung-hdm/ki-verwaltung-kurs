@@ -30,12 +30,14 @@ Das Skript rendert und ruft `quarto publish gh-pages --no-prompt --no-render` au
 | `werkzeuge/index.qmd` | Werkzeugkasten-Übersicht |
 | `werkzeuge/einrichtung.qmd` | Antigravity, AGENTS.md-Vorlage, Prompt-Standard (Kontext, Aufgabe, Format, Prüfung) |
 | `werkzeuge/prozessmodell.qmd` | BPMN-Symbole, Aurenta-Beispiel, Übertragung auf einen Verwaltungsprozess, Ist zu Soll |
+| `werkzeuge/bpmn-uebung.qmd` | BPMN-Übung „Anerkennung von Studienleistungen“ von Stephan (12.10.2026), aus seiner Markdown-Fassung übernommen |
 | `werkzeuge/interviews.qmd` | Fokus, Vorbereitung, Leitfragen, Protokollraster, zweites Gespräch |
 | `werkzeuge/n8n.qmd` | Login, erster Workflow (Antrag prüfen), Gemini-Credential, Freigabe, Webhooks mit Gruppenpräfix, Postgres/pgvector, Fehler |
 | `abgaben.qmd` | Arbeitsergebnisse je Phase mit Gewichten und Terminen aus der Bewertungsseite |
 | `bewertung.qmd` | Vorprüfungsleistung, vier Komponenten mit Kriterien und Punkten, Teamarbeit, Notentabelle |
 | `materialien.qmd` | Literatur aus `ws2627-ki-verwaltung-literatur.md`, Prozessbeispiele, Prompts, Dokumentation |
 | `material/prozess/` | Aurenta-Beispiel (BPMN und SVG) aus `~/code/process-lab`, Kopie wie im Mercedes-Repo |
+| `material/bpmn/` | Von Stephan (12.10.2026): Einführung in BPMN 2.0 als PDF und PPTX, Übung als DOCX. Den BVA-Attributkatalog nur verlinken, nicht ablegen: Das PDF untersagt Veröffentlichungen ohne Genehmigung, das Repo ist öffentlich |
 | `material/prompts/` | Aufträge für den Coding-Agenten, aus `~/code/process-lab/prompts` für Antigravity ohne Pipeline umgeschrieben |
 | `vorlagen/teamablage/` | Quelle der Teamablage-Vorlage (fünf Ordner mit README, TEAM.md, STAND.md, ENTSCHEIDUNGEN.md, AGENTS.md). `./paket-bauen.sh` baut daraus `material/vorlagen/teamablage-vorlage.zip`; danach rendern |
 | `images/` | Elf SVG-Abbildungen im dunklen Stil der Growth-Grafiken (Phasen, Ausgangslage, Human in the Loop, Mocks, Projektumgebung, Schritttypen, Interviewzyklus, erster Workflow, Prompt-Standard, Agentenschleife, Semesterplan). Erzeugt von `images/erzeugen.py`; Texte dort ändern und neu laufen lassen, nicht die SVGs von Hand bearbeiten |
@@ -60,6 +62,7 @@ Auf den Seiten stehen keine sichtbaren Platzhalter-Markierungen. Die folgenden P
 13. **n8n-Registrierung.** Nicht auf der Website. Laut Infrastruktur-Log je Instanz noch nicht erledigt; als Owner in der UI nachholen.
 14. **Formular-Trigger und Wait-Knoten** für die Freigabe (`werkzeuge/n8n.qmd#freigabe`) sind auf der HdM-Instanz noch nicht getestet. Vor Woche 2 einmal durchspielen.
 15. **Erster Workflow** (`werkzeuge/n8n.qmd#erster-workflow`): Beispiel „Antrag prüfen“ mit If-Knoten und Basic LLM Chain, noch nicht auf einer der sieben Instanzen ausgeführt. Vor Woche 2 mit dem Gruppenkonto g1 durchspielen und bei Bedarf Knotennamen anpassen.
+16. **BPMN-Übung.** Abgabetermin und Abgabeort fehlen bei Stephan; die Seite nennt nur, was abgegeben wird. Mit Stephan klären und in `werkzeuge/bpmn-uebung.qmd` sowie Woche 1 ergänzen.
 
 ## Vertraulichkeit
 

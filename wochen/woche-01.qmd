@@ -52,9 +52,17 @@ Die Einteilung wird nach dem Termin bekannt gegeben. Dann erhält jede Gruppe ih
 
 ## Prozessmodellierung: Grundlagen {#bpmn}
 
-Ein kurzer Input mit dem [Werkzeugkasten Prozessmodellierung](../werkzeuge/prozessmodell.qmd): Bahnen für Rollen, sechs Symbole, ein Beispiel für denselben Ablauf heute und mit KI-Agent. Wer schon ereignisgesteuerte Prozessketten (EPK) kennt, findet sich schnell zurecht; BPMN ist nicht weit davon entfernt.
+Ein kurzer Input mit der [Einführung in BPMN 2.0](../material/bpmn/einfuehrung-bpmn.pdf) ([PowerPoint](../material/bpmn/einfuehrung-bpmn.pptx)) und dem [Werkzeugkasten Prozessmodellierung](../werkzeuge/prozessmodell.qmd): Bahnen für Rollen, sechs Symbole, ein Beispiel für denselben Ablauf heute und mit KI-Agent. Wer schon ereignisgesteuerte Prozessketten (EPK) kennt, findet sich schnell zurecht; BPMN ist nicht weit davon entfernt.
 
 **Gemeinsam am Beispiel:** Welche Schritte im Soll-Modell sind feste Regeln, welche brauchen Sprachverständnis, und wo bleibt der Mensch? Warum liegt die feste Regel vor dem Modellschritt?
+
+::: {.todo}
+[Aufgabe · Übung für zuhause · etwa 2 Stunden]{.todo-label}
+
+Die BPMN-Übung „Anerkennung von Studienleistungen“ in Gruppen von zwei bis drei Personen bearbeiten: Fallbeschreibung analysieren, Kollaborationsdiagramm modellieren, Teilprozess detaillieren, Modell begründen.
+
+<a href="../werkzeuge/bpmn-uebung.html" class="btn btn-primary">Übung öffnen</a>
+:::
 
 ## Recherche-Auftrag {#recherche}
 

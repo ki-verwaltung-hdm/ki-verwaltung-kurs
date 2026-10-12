@@ -86,8 +86,11 @@ Seit Oktober 2026 gibt es eine neue Klasse von Modellen, die keinen Text erzeuge
 | Material | Verwendung |
 |---|---|
 | [Werkzeugkasten Prozessmodellierung](werkzeuge/prozessmodell.qmd) | Symbole, Beispiel, Übertragung auf einen Verwaltungsprozess |
+| Einführung in BPMN 2.0 als [PDF](material/bpmn/einfuehrung-bpmn.pdf) oder [PowerPoint](material/bpmn/einfuehrung-bpmn.pptx) | Folien aus dem Kick-off: alle wichtigen Elemente an Beispielen aus der Hochschulverwaltung |
+| [BPMN-Übung: Anerkennung von Studienleistungen](werkzeuge/bpmn-uebung.qmd), auch [als Word-Datei](material/bpmn/bpmn-uebung-anerkennung.docx) | Übung für zuhause zum Kollaborationsdiagramm |
+| Bundesverwaltungsamt (2023): [Attributkatalog für BPMN 2.0](https://www.bva.bund.de/SharedDocs/Downloads/DE/Behoerden/Beratung/Prozessmanagement/PMT/Attributkatalog_PMT.pdf?__blob=publicationFile&v=2) | Standard der Bundesverwaltung für die Dokumentation von BPMN-Modellen |
 | Beispiel [heute](material/prozess/aurenta-webinar-ist.svg) und [mit Agent](material/prozess/aurenta-webinar-soll.svg); BPMN: [heute](material/prozess/aurenta-webinar-ist.bpmn), [mit Agent](material/prozess/aurenta-webinar-soll.bpmn) | Erfundener Fall aus einem anderen Projekt, zeigt die Form; zum Öffnen in demo.bpmn.io |
-| [demo.bpmn.io](https://demo.bpmn.io/) · [draw.io](https://app.diagrams.net/) | BPMN-Dateien ansehen, bearbeiten, exportieren |
+| [demo.bpmn.io](https://demo.bpmn.io/) · [Camunda Modeler](https://camunda.com/download/modeler/) · [draw.io](https://app.diagrams.net/) | BPMN-Dateien ansehen, bearbeiten, exportieren |
 
 ## Aufträge für den Coding-Agenten {#prompts}
 

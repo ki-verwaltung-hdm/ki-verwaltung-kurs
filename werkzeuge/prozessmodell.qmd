@@ -65,9 +65,20 @@ Rückschleifen gehören ins Modell: Was passiert bei einem fehlenden Nachweis? W
 
 Die Aufträge für den Coding-Agenten stehen fertig in den Materialien: [Ist-Prozess aus einer Beschreibung](../material/prompts/ist-aus-prosa.md) und [Prozess mit KI neu denken](../material/prompts/redesign-mit-ki.md). Ein Soll-Modell ist eine Gestaltungshypothese; ob sie trägt, zeigt sich im Gespräch und im Prototyp.
 
+## Vertiefung: BPMN 2.0 im Detail {#vertiefung}
+
+Für die Modelle im Projekt reichen die Symbole oben. Wer Prozesse vollständig und normgerecht modellieren will, findet in der Einführung alle wichtigen Elemente an Beispielen aus der Hochschulverwaltung: Ereignisarten, Gateways (XOR, OR, AND, ereignisbasiert), Pools und Nachrichtenflüsse, Teilprozesse, Daten.
+
+| Material | Wofür |
+|---|---|
+| Einführung in BPMN 2.0 als [PDF](../material/bpmn/einfuehrung-bpmn.pdf) oder [PowerPoint](../material/bpmn/einfuehrung-bpmn.pptx) | Folien aus dem Kick-off, gleicher Inhalt in beiden Formaten |
+| [BPMN-Übung: Anerkennung von Studienleistungen](bpmn-uebung.qmd) | Übung für zuhause: Kollaborationsdiagramm mit allen zentralen Elementen |
+| Bundesverwaltungsamt: [Attributkatalog für BPMN 2.0](https://www.bva.bund.de/SharedDocs/Downloads/DE/Behoerden/Beratung/Prozessmanagement/PMT/Attributkatalog_PMT.pdf?__blob=publicationFile&v=2) | Wie die Bundesverwaltung BPMN-Modelle dokumentiert und steuert; Benennung, Attribute, Pflichtangaben |
+
 ## Werkzeuge
 
 - [demo.bpmn.io](https://demo.bpmn.io/): öffnet, zeigt und bearbeitet `.bpmn`-Dateien direkt im Browser, exportiert als SVG
+- [Camunda Modeler](https://camunda.com/download/modeler/): kostenloses Programm zum Herunterladen, für umfangreichere Modelle wie in der Übung
 - [draw.io](https://app.diagrams.net/): kostenlos im Browser, Formenbibliothek „BPMN 2.0“ über „Weitere Formen“ aktivieren; für Skizzen von Hand
 - Der Coding-Agent schreibt die `.bpmn`-Datei; wir sehen sie in demo.bpmn.io an und formulieren Korrekturen als neuen Auftrag
 

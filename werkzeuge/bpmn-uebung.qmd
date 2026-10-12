@@ -1,0 +1,120 @@
+---
+title: "BPMN-Übung: Anerkennung von Studienleistungen"
+toc: true
+---
+
+[Eine Übung für zuhause zur [Einführung in BPMN 2.0](../material/bpmn/einfuehrung-bpmn.pdf). In Gruppen von zwei bis drei Personen wird das Verfahren modelliert, mit dem eine Hochschule an anderen Hochschulen erbrachte Studienleistungen anerkennt. Das Modell soll die zentralen BPMN-Elemente aus der Einführung korrekt einsetzen.]{.lead}
+
+Die Aufgabenstellung gibt es auch [als Word-Datei](../material/bpmn/bpmn-uebung-anerkennung.docx), etwa um die Tabelle in Aufgabe 1 direkt auszufüllen.
+
+## Ausgangssituation
+
+Studierende, die an einer anderen Hochschule Leistungen erbracht haben (etwa im Auslandssemester oder vor einem Hochschulwechsel), können deren Anerkennung beantragen. Beteiligt sind die Studierenden, das Prüfungsamt, die für das jeweilige Modul verantwortlichen Fachprüferinnen und Fachprüfer sowie die bzw. der Vorsitzende des Prüfungsausschusses. Das Verfahren läuft wie folgt ab:
+
+1. Der Prozess beginnt, sobald im Prüfungsamt ein Antrag auf Anerkennung eingeht. Die Studierenden reichen den Antrag über das Campus-Management-System ein und fügen ein Transcript of Records sowie die Modulbeschreibungen der anderen Hochschule bei.
+2. Das Prüfungsamt prüft den Antrag auf Vollständigkeit. Fehlen Unterlagen, fordert es diese bei den Studierenden nach.
+3. Nach der Nachforderung wartet das Prüfungsamt. Gehen die Unterlagen ein, wird die Vollständigkeit erneut geprüft. Gehen sie innerhalb von vier Wochen nicht ein, gilt der Antrag als zurückgezogen: Das Prüfungsamt informiert die Studierenden, und der Prozess endet.
+4. Ist der Antrag vollständig, leitet das Prüfungsamt ihn an die zuständige Fachprüferin bzw. den zuständigen Fachprüfer weiter. Diese führen die fachliche Prüfung durch und geben für jedes beantragte Modul eine Empfehlung ab (anerkennen oder nicht anerkennen).
+5. Liegt die Empfehlung zwei Wochen nach der Weiterleitung noch nicht vor, erinnert das Prüfungsamt die Fachprüferin bzw. den Fachprüfer. Die fachliche Prüfung läuft dabei weiter; sie wird durch die Erinnerung nicht abgebrochen.
+6. Auf Grundlage der Empfehlungen entscheidet die bzw. der Vorsitzende des Prüfungsausschusses über den Antrag.
+7. Anschließend bereitet das Prüfungsamt den Bescheid vor: Wurde mindestens ein Modul anerkannt, verbucht es die anerkannten Leistungen im Campus-Management-System. Wurde mindestens ein Modul abgelehnt, formuliert es eine schriftliche Begründung mit Rechtsbehelfsbelehrung. Bei einer teilweisen Anerkennung geschieht beides.
+8. Danach erstellt das Prüfungsamt den Bescheid. Es versendet ihn an die Studierenden und archiviert gleichzeitig Antrag und Bescheid in der digitalen Studierendenakte. Sind beide Schritte erledigt, ist der Antrag abschließend bearbeitet.
+
+::: {.uebung}
+### Aufgabe 1: Fallbeschreibung analysieren · etwa 15 Minuten
+
+Die Fallbeschreibung lesen und die gefundenen Begriffe in die mittlere Spalte eintragen. In der rechten Spalte angeben, mit welchem BPMN-Element der Begriff dargestellt wird.
+
+| Kategorie | Fundstellen im Text (Nr.) und Begriffe | Geplantes BPMN-Element |
+|---|---|---|
+| Beteiligte Organisationen | | |
+| Rollen innerhalb der Hochschule | | |
+| Auslösendes Ereignis | | |
+| Mögliche Ergebnisse des Prozesses | | |
+| Entscheidungen | | |
+| Wartesituationen und Fristen | | |
+| Nachrichten zwischen den Beteiligten | | |
+| Dokumente und IT-Systeme | | |
+
+**Leitfragen:** Wer arbeitet in eigener Verantwortung und kommuniziert nur über Nachrichten? Welche Schritte laufen gleichzeitig ab, welche schließen sich gegenseitig aus, und wo können mehrere Pfade zugleich aktiv sein?
+:::
+
+::: {.uebung}
+### Aufgabe 2: Kollaborationsdiagramm modellieren · etwa 60 Minuten
+
+Das Anerkennungsverfahren aus Sicht der Hochschule als BPMN-Kollaborationsdiagramm modellieren. Die Studierenden als zugeklappten Pool (Black Box) darstellen, die Hochschule als Pool mit einer Lane je Rolle. Die fachliche Prüfung aus Schritt 4 hier als zugeklappten Teilprozess modellieren.
+
+Das Modell verwendet jedes der folgenden Elemente mindestens einmal fachlich korrekt:
+
+- [ ] Pool mit Lanes sowie ein zugeklappter Pool
+- [ ] Nachrichtenfluss zwischen den Pools (eingehend und ausgehend)
+- [ ] Nachrichten-Startereignis
+- [ ] mindestens zwei unterschiedlich benannte Endereignisse
+- [ ] Aufgaben, davon mindestens eine Sende- und eine Benutzeraufgabe
+- [ ] exklusives Gateway (XOR) mit einer Schleife
+- [ ] ereignisbasiertes Gateway mit Nachrichten- und Zeit-Zwischenereignis
+- [ ] nicht unterbrechendes Zeit-Randereignis (Boundary Event)
+- [ ] inklusives Gateway (OR) mit passendem Zusammenführungs-Gateway
+- [ ] paralleles Gateway (AND) mit passendem Zusammenführungs-Gateway
+- [ ] zugeklappter Teilprozess
+- [ ] mindestens zwei Datenobjekte und ein Datenspeicher, jeweils mit Assoziation
+- [ ] eine Textanmerkung, die eine fachliche Regel aus dem Text festhält
+:::
+
+::: {.uebung}
+### Aufgabe 3: Teilprozess „Fachliche Prüfung“ detaillieren · etwa 20 Minuten
+
+Den Teilprozess aus Aufgabe 2 in einem eigenen Diagramm modellieren. Er läuft vollständig bei der Fachprüferin bzw. dem Fachprüfer ab und besteht aus folgenden Schritten:
+
+1. Die Fachprüferin sichtet die eingereichten Modulbeschreibungen.
+2. Danach vergleicht sie die Lernergebnisse und den Arbeitsaufwand in ECTS-Punkten mit dem entsprechenden Modul des eigenen Studiengangs. Beide Vergleiche sind voneinander unabhängig und können in beliebiger Reihenfolge erfolgen.
+3. Bestehen keine wesentlichen Unterschiede, empfiehlt sie die Anerkennung. Andernfalls hält sie die wesentlichen Unterschiede fest und empfiehlt die Ablehnung.
+4. Abschließend trägt sie ihre Empfehlung in das Anerkennungsformular ein.
+
+Im Diagramm aus Aufgabe 2 zusätzlich kennzeichnen, dass der Teilprozess für jedes beantragte Modul einmal durchlaufen wird. Welcher Marker ist dafür vorgesehen, und finden die Durchläufe parallel oder nacheinander statt?
+:::
+
+::: {.uebung}
+### Aufgabe 4: Modell begründen · etwa 15 Minuten
+
+Die folgenden Fragen jeweils in zwei bis drei Sätzen beantworten:
+
+1. Warum eignet sich nach der Nachforderung ein ereignisbasiertes Gateway besser als ein exklusives Gateway?
+2. Was würde sich am Prozessablauf ändern, wenn das Zeit-Randereignis aus Schritt 5 unterbrechend wäre?
+3. Warum wird in Schritt 7 ein inklusives Gateway verwendet und kein exklusives oder paralleles Gateway?
+4. Warum werden Prüfungsamt, Fachprüfer und Prüfungsausschuss als Lanes eines Pools modelliert, die Studierenden dagegen als eigener Pool?
+5. Eine Stelle im Prozess nennen, an der die Durchlaufzeit gefährdet ist, und eine Verbesserung vorschlagen.
+:::
+
+::: {.uebung}
+### Zusatzaufgabe: Rücknahme des Antrags · optional
+
+Studierende können ihren Antrag zurücknehmen, solange der Prüfungsausschuss noch nicht entschieden hat. Geht eine Rücknahme ein, wird die laufende Bearbeitung sofort abgebrochen. Das Prüfungsamt bestätigt den Studierenden die Rücknahme, und der Prozess endet.
+
+Das Modell entsprechend erweitern. Dazu die betroffenen Schritte so zusammenfassen, dass ein einziges Ereignis die Bearbeitung an jeder Stelle beenden kann. Begründen, ob ein unterbrechendes oder ein nicht unterbrechendes Ereignis passt.
+:::
+
+## Modellierungsregeln
+
+Es gelten die Konventionen aus der [Einführung](../material/bpmn/einfuehrung-bpmn.pdf):
+
+| Element | Benennungsregel | Beispiel |
+|---|---|---|
+| Aufgabe | Objekt + Verb im Infinitiv | Antrag prüfen |
+| Ereignis | Objekt + Partizip (Zustand) | Antrag eingegangen |
+| Exklusives Gateway | Frage; ausgehende Kanten mit den Antworten beschriftet | Antrag vollständig? ja / nein |
+| Pool / Lane | Organisation bzw. Rolle, keine Person | Prüfungsamt |
+
+- Sequenzflüsse verbinden nur Elemente innerhalb eines Pools; zwischen Pools gibt es ausschließlich Nachrichtenflüsse.
+- Jeder Pfad endet in einem Endereignis; Verzweigungen werden mit einem Gateway desselben Typs wieder zusammengeführt.
+- Von links nach rechts modellieren und sich kreuzende Kanten vermeiden, wo es möglich ist.
+
+## Werkzeug und Abgabe
+
+**Werkzeug:** der kostenlose [Camunda Modeler](https://camunda.com/download/modeler/) oder die Browser-Version [demo.bpmn.io](https://demo.bpmn.io/).
+
+**Abgabe:** je Gruppe die Modelldateien (`.bpmn`) aus Aufgabe 2 und 3, ein PDF mit den Diagrammen sowie die Antworten zu Aufgabe 4. Die Namen aller Gruppenmitglieder vermerken.
+
+Wie Verwaltungen selbst BPMN-Modelle dokumentieren, zeigt der [Attributkatalog für BPMN 2.0](https://www.bva.bund.de/SharedDocs/Downloads/DE/Behoerden/Beratung/Prozessmanagement/PMT/Attributkatalog_PMT.pdf?__blob=publicationFile&v=2) des Bundesverwaltungsamts.
+
+[**Zurück: Prozessmodellierung**](prozessmodell.qmd)

@@ -13,6 +13,7 @@ project:
     - werkzeuge/index.qmd
     - werkzeuge/einrichtung.qmd
     - werkzeuge/prozessmodell.qmd
+    - werkzeuge/bpmn-uebung.qmd
     - werkzeuge/interviews.qmd
     - werkzeuge/n8n.qmd
     - abgaben.qmd
@@ -59,6 +60,8 @@ website:
             text: Coding-Agent einrichten
           - href: werkzeuge/prozessmodell.qmd
             text: Prozessmodellierung
+          - href: werkzeuge/bpmn-uebung.qmd
+            text: "BPMN-Übung"
           - href: werkzeuge/interviews.qmd
             text: Interviews führen
           - href: werkzeuge/n8n.qmd

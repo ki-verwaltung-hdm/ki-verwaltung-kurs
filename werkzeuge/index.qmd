@@ -11,6 +11,7 @@ Der Werkzeugkasten ist zum Nachschlagen da, nicht zum Durchlesen am Stück. In d
 |---|---|
 | Wie arbeite ich mit einem Coding-Agenten, und wie formuliere ich Aufträge? | [Coding-Agent einrichten](einrichtung.qmd) |
 | Wie bilde ich einen Ablauf so ab, dass klar wird, wo KI hilft? | [Prozessmodellierung](prozessmodell.qmd) |
+| Wie übe ich BPMN an einem vollständigen Verwaltungsprozess? | [BPMN-Übung](bpmn-uebung.qmd) |
 | Wie bereite ich ein Interview vor, und wie protokolliere ich es? | [Interviews führen](interviews.qmd) |
 | Wie baue ich einen Workflow auf dem HdM-Server? | [n8n auf dem HdM-Server](n8n.qmd) |
 
