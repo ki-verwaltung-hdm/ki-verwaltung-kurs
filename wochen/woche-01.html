@@ -268,7 +268,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#ziel-des-termins" id="toc-ziel-des-termins" class="nav-link active" data-scroll-target="#ziel-des-termins">Ziel des Termins</a></li>
   <li><a href="#projektidee" id="toc-projektidee" class="nav-link" data-scroll-target="#projektidee">Projektidee und Vorgehen</a></li>
   <li><a href="#gruppen" id="toc-gruppen" class="nav-link" data-scroll-target="#gruppen">Umfrage zur Gruppeneinteilung</a></li>
-  <li><a href="#bpmn" id="toc-bpmn" class="nav-link" data-scroll-target="#bpmn">Prozessmodellierung: Grundlagen</a></li>
+  <li><a href="#bpmn" id="toc-bpmn" class="nav-link" data-scroll-target="#bpmn">Einführung in BPMN 2.0</a></li>
   <li><a href="#recherche" id="toc-recherche" class="nav-link" data-scroll-target="#recherche">Recherche-Auftrag</a></li>
   <li><a href="#vorbereitung" id="toc-vorbereitung" class="nav-link" data-scroll-target="#vorbereitung">Bis zum Werkzeugtermin vorbereiten</a></li>
   </ul>
@@ -300,7 +300,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="lead">
 <ul>
 <li>Worum es geht: KI-Agenten in der Verwaltung, der Auftrag der HdM, das Vorgehen im Semester</li>
-<li>Grundlagen der Prozessmodellierung mit BPMN</li>
+<li>Einführung in BPMN 2.0 mit Beispielen aus der Hochschulverwaltung</li>
 <li>Der Recherche-Auftrag in zwei Etappen</li>
 <li>Umfrage und Gruppenbildung</li>
 </ul>
@@ -345,9 +345,9 @@ ul.task-list li input[type="checkbox"] {
 <td>Einzeln</td>
 </tr>
 <tr class="odd">
-<td>Prozessmodellierung: Grundlagen und Beispiel</td>
+<td>Einführung in BPMN 2.0 mit Übung zu zweit</td>
 <td>25 Minuten</td>
-<td>Input mit Rückfragen</td>
+<td>Input, Übung zu zweit</td>
 </tr>
 <tr class="even">
 <td>Recherche-Auftrag und Leitfragen für Interviews</td>
@@ -385,14 +385,68 @@ ul.task-list li input[type="checkbox"] {
 <p>Die Einteilung wird nach dem Termin bekannt gegeben. Dann erhält jede Gruppe ihre Nummer und den Zugang zur <a href="../start.html#n8n">n8n-Instanz</a>.</p>
 </section>
 <section id="bpmn" class="level2">
-<h2 class="anchored" data-anchor-id="bpmn">Prozessmodellierung: Grundlagen</h2>
-<p>Ein kurzer Input mit der <a href="../material/bpmn/einfuehrung-bpmn.pdf">Einführung in BPMN 2.0</a> (<a href="../material/bpmn/einfuehrung-bpmn.pptx">PowerPoint</a>) und dem <a href="../werkzeuge/prozessmodell.html">Werkzeugkasten Prozessmodellierung</a>: Bahnen für Rollen, sechs Symbole, ein Beispiel für denselben Ablauf heute und mit KI-Agent. Wer schon ereignisgesteuerte Prozessketten (EPK) kennt, findet sich schnell zurecht; BPMN ist nicht weit davon entfernt.</p>
-<p><strong>Gemeinsam am Beispiel:</strong> Welche Schritte im Soll-Modell sind feste Regeln, welche brauchen Sprachverständnis, und wo bleibt der Mensch? Warum liegt die feste Regel vor dem Modellschritt?</p>
+<h2 class="anchored" data-anchor-id="bpmn">Einführung in BPMN 2.0</h2>
+<p>BPMN 2.0 ist die Standardnotation für Prozessmodelle, in Unternehmen wie in Verwaltungen. Die Einführung zeigt die wichtigsten Elemente an Beispielen aus der Hochschulverwaltung, vom Ersetzen eines Studierendenausweises bis zur Abgabe der Abschlussarbeit. Wer ereignisgesteuerte Prozessketten (EPK) kennt, findet sich schnell zurecht.</p>
+<p><a href="../material/bpmn/einfuehrung-bpmn.pdf" class="btn btn-primary" target="_blank" rel="noopener">Folien als PDF</a> <a href="../material/bpmn/einfuehrung-bpmn.pptx" class="btn btn-outline-primary">Folien als PowerPoint</a></p>
+<p><strong>Nach der Einführung können wir:</strong></p>
+<ol type="1">
+<li>eine Prozessbeschreibung lesen und in BPMN-Elemente übersetzen,</li>
+<li>Aktivitäten, Ereignisse und Gateways fachlich korrekt einsetzen,</li>
+<li>Zuständigkeiten mit Pools und Lanes, Kommunikation mit Nachrichtenflüssen abbilden,</li>
+<li>ein eigenes Kollaborationsdiagramm im Modellierungswerkzeug erstellen.</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Teil</th>
+<th>Inhalt</th>
+<th>Beispiel aus der Verwaltung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Grundelemente</td>
+<td>Start, Aufgaben, Ende; gute Namen</td>
+<td>Studierendenausweis ersetzen</td>
+</tr>
+<tr class="even">
+<td>Gateways</td>
+<td>Exklusiv (XOR), parallel (AND), inklusiv (OR), kurzes Quiz</td>
+<td>Prüfungsanmeldung, Einschreibung, Bewerbung</td>
+</tr>
+<tr class="odd">
+<td>Ereignisse</td>
+<td>Zeitereignisse, ereignisbasiertes Gateway, Randereignisse</td>
+<td>Zulassungsverfahren, Abgabe der Abschlussarbeit</td>
+</tr>
+<tr class="even">
+<td>Beteiligte</td>
+<td>Pools, Lanes, Nachrichtenflüsse; sechs typische Fehler</td>
+<td>Rücktritt von einer Prüfung</td>
+</tr>
+<tr class="odd">
+<td>Daten und Details</td>
+<td>Datenobjekte, Aufgabentypen, Marker, Teilprozesse</td>
+<td>Noten verbuchen, Abschlussarbeit begutachten</td>
+</tr>
+</tbody>
+</table>
+<section id="übung-zu-zweit-urlaubssemester-beantragen-etwa-10-minuten" class="level3 uebung">
+<h3 class="anchored" data-anchor-id="übung-zu-zweit-urlaubssemester-beantragen-etwa-10-minuten">Übung zu zweit: Urlaubssemester beantragen · etwa 10 Minuten</h3>
+<p>Den Ablauf aus den Folien als BPMN-Skizze modellieren, auf Papier oder in <a href="https://demo.bpmn.io/">demo.bpmn.io</a>. Danach mit der möglichen Lösung auf der folgenden Folie vergleichen.</p>
+</section>
 <div class="todo">
 <p><span class="todo-label">Aufgabe · Übung für zuhause · etwa 2 Stunden</span></p>
-<p>Die BPMN-Übung „Anerkennung von Studienleistungen“ in Gruppen von zwei bis drei Personen bearbeiten: Fallbeschreibung analysieren, Kollaborationsdiagramm modellieren, Teilprozess detaillieren, Modell begründen.</p>
+<p>Die BPMN-Übung „Anerkennung von Studienleistungen“ in Gruppen von zwei bis drei Personen bearbeiten: Fallbeschreibung analysieren, Kollaborationsdiagramm modellieren, Teilprozess detaillieren, Modell begründen. Alle Elemente auf einen Blick stehen auf der letzten Folie der Einführung.</p>
 <p><a href="../werkzeuge/bpmn-uebung.html" class="btn btn-primary">Übung öffnen</a></p>
 </div>
+<p><strong>Wie die Verwaltung selbst modelliert:</strong> Das Bundesverwaltungsamt legt im <a href="https://www.bva.bund.de/SharedDocs/Downloads/DE/Behoerden/Beratung/Prozessmanagement/PMT/Attributkatalog_PMT.pdf?__blob=publicationFile&amp;v=2">Attributkatalog für BPMN 2.0</a> fest, wie Behörden des Bundes ihre Prozessmodelle benennen und dokumentieren. Zum Nachschlagen, nicht zum Durchlesen.</p>
+<p><strong>Brücke zum Projekt:</strong> Im Projekt reicht ein kleiner Teil der Notation. Der <a href="../werkzeuge/prozessmodell.html">Werkzeugkasten Prozessmodellierung</a> zeigt ein Beispiel für denselben Ablauf heute und mit KI-Agent. Gemeinsam am Beispiel: Welche Schritte im Soll-Modell sind feste Regeln, welche brauchen Sprachverständnis, und wo bleibt der Mensch?</p>
 </section>
 <section id="recherche" class="level2">
 <h2 class="anchored" data-anchor-id="recherche">Recherche-Auftrag</h2>
