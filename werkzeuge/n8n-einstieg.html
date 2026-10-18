@@ -315,6 +315,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#formular" id="toc-formular" class="nav-link" data-scroll-target="#formular">Beispiel 5: Hallo Formular</a></li>
   <li><a href="#webhook" id="toc-webhook" class="nav-link" data-scroll-target="#webhook">Beispiel 6: Hallo Webhook</a></li>
   <li><a href="#datenbank" id="toc-datenbank" class="nav-link" data-scroll-target="#datenbank">Beispiel 7: Hallo Datenbank</a></li>
+  <li><a href="#datentabelle" id="toc-datentabelle" class="nav-link" data-scroll-target="#datentabelle">Beispiel 8: Ein Mensch entscheidet in der Tabelle</a></li>
   <li><a href="#fehler" id="toc-fehler" class="nav-link" data-scroll-target="#fehler">Wenn etwas nicht klappt</a></li>
   <li><a href="#dateien" id="toc-dateien" class="nav-link" data-scroll-target="#dateien">Alle Dateien</a></li>
   </ul>
@@ -342,8 +343,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><span class="lead">Sieben kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle und Datenbank.</span></p>
-<p>Die Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Alle sieben liegen schon fertig in der Instanz jeder Gruppe, als „DEMO 01“ bis „DEMO 07“, mit den Verbindungen und Pfaden der Gruppe. Damit klicken wir sie im Termin gemeinsam durch. Zum Üben baut man sie danach selbst nach und vergleicht mit der DEMO-Fassung. Zusätzlich gibt es jede Datei zum Importieren. Danach folgt der <a href="../werkzeuge/n8n.html#erster-workflow">erste vollständige Workflow</a> „Antrag prüfen“.</p>
+<p><span class="lead">Acht kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle, Datenbank und eine Tabelle, in der ein Mensch entscheidet.</span></p>
+<p>Die Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Alle liegen schon fertig in der Instanz jeder Gruppe, als „DEMO 01“ bis „DEMO 08b“, mit den Verbindungen und Pfaden der Gruppe. Damit klicken wir sie im Termin gemeinsam durch. Zum Üben baut man sie danach selbst nach und vergleicht mit der DEMO-Fassung. Zusätzlich gibt es jede Datei zum Importieren. Danach folgt der <a href="../werkzeuge/n8n.html#erster-workflow">erste vollständige Workflow</a> „Antrag prüfen“.</p>
 <section id="voraussetzungen" class="level2">
 <h2 class="anchored" data-anchor-id="voraussetzungen">Voraussetzungen</h2>
 <ul>
@@ -439,8 +440,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>Rechteck mit Person, eigene Bahn</td>
-<td>n8n Form (Eingabe, Freigabe, Bestätigung)</td>
-<td>5</td>
+<td>n8n Form (Eingabe, Bestätigung), Eintrag in einer Datentabelle (Freigabe)</td>
+<td>5, 8</td>
 </tr>
 <tr class="odd">
 <td>Eigener Pool mit Nachrichtenflüssen</td>
@@ -449,8 +450,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>Datenspeicher (Zylinder)</td>
-<td>Postgres-Knoten auf der Gruppen-Datenbank</td>
-<td>7</td>
+<td>Postgres-Knoten auf der Gruppen-Datenbank, Datentabelle in n8n</td>
+<td>7, 8</td>
 </tr>
 <tr class="odd">
 <td>Endereignis (dicker Kreis)</td>
@@ -622,6 +623,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Jedes Item läuft einzeln durch die folgenden Knoten. Ein If-Knoten mit der Regel aus Beispiel 2 prüft also alle drei Anträge in einem Lauf. Die SQL-Anweisungen für eigene Mock-Tabellen schreibt der Coding-Agent. Wir prüfen sie, bevor wir sie ausführen.</p>
 <p><a href="../material/n8n/07-hallo-datenbank.json" download="07-hallo-datenbank.json">Datei: 07-hallo-datenbank.json</a></p>
 </section>
+<section id="datentabelle" class="level2">
+<h2 class="anchored" data-anchor-id="datentabelle">Beispiel 8: Ein Mensch entscheidet in der Tabelle</h2>
+<p><strong>Ziel:</strong> Fälle in eine Tabelle schreiben, eine Person entscheiden lassen und danach mit der Entscheidung weiterarbeiten. Das ist das Muster Human in the Loop aus dem Projekt.</p>
+<p>Eine <strong>Datentabelle</strong> (Data Table) ist eine einfache Tabelle in n8n selbst. Sie liegt auf dem HdM-Server, braucht keine Verbindung und lässt sich in der Oberfläche wie eine Tabellenkalkulation bearbeiten. Für Mock-Daten und kleine Prüflisten ist sie bequemer als die Postgres-Datenbank. Das Beispiel besteht aus zwei Workflows, weil zwischen ihnen ein Mensch arbeitet.</p>
+<section id="a-prüfliste-füllen" class="level3">
+<h3 class="anchored" data-anchor-id="a-prüfliste-füllen">8a: Prüfliste füllen</h3>
+<ol type="1">
+<li>Einen neuen Workflow „08a Pruefliste fuellen“ mit <strong>Trigger manually</strong> anlegen.</li>
+<li>Einen Knoten <strong>Data table</strong> mit der Aktion „Create a data table“ einfügen und „Tabelle anlegen“ nennen.</li>
+<li>Als Namen <code>pruefliste</code> eintragen und vier Spalten vom Typ String anlegen: <code>antrag_id</code>, <code>art</code>, <code>empfehlung</code>, <code>entscheidung</code>.</li>
+<li>Unter „Options“ die Einstellung „Reuse Existing Tables“ einschalten.</li>
+<li>Einen Knoten <strong>Edit Fields</strong> „Faelle“ anhängen, Feld <code>faelle</code> vom Typ Array mit drei erfundenen Fällen (siehe Datei).</li>
+<li>Einen Knoten <strong>Split Out</strong> „Einzeln“ anhängen, „Field To Split Out“ auf <code>faelle</code> setzen.</li>
+<li>Einen Knoten <strong>Data table</strong> mit der Aktion „Upsert row(s)“ anhängen und „Zeilen eintragen“ nennen.</li>
+<li>Als Tabelle „By Name“ <code>pruefliste</code> wählen und als Bedingung <code>antrag_id</code> gleich <code>{ $json.antrag_id }</code> setzen.</li>
+<li>Unter „Mapping Column Mode“ die Option „Map Automatically“ wählen.</li>
+<li>Den Workflow ausführen.</li>
+</ol>
+<p><strong>Prüfung:</strong> Links im Menü „Overview“, dann den Reiter „Data tables“ öffnen. Die Tabelle <code>pruefliste</code> hat drei Zeilen, die Spalte <code>entscheidung</code> ist leer.</p>
+</section>
+<section id="die-person-entscheidet" class="level3">
+<h3 class="anchored" data-anchor-id="die-person-entscheidet">Die Person entscheidet</h3>
+<ol type="1">
+<li>Die Tabelle <code>pruefliste</code> öffnen.</li>
+<li>Bei <code>A-001</code> in der Spalte <code>entscheidung</code> den Wert <code>freigeben</code> eintragen.</li>
+<li>Bei <code>A-003</code> den Wert <code>zurückgeben</code> eintragen.</li>
+<li><code>A-002</code> leer lassen. Dieser Fall ist noch nicht entschieden.</li>
+</ol>
+</section>
+<section id="b-entscheidungen-auswerten" class="level3">
+<h3 class="anchored" data-anchor-id="b-entscheidungen-auswerten">8b: Entscheidungen auswerten</h3>
+<ol type="1">
+<li>Einen neuen Workflow „08b Entscheidungen auswerten“ mit <strong>Trigger manually</strong> anlegen.</li>
+<li>Einen Knoten <strong>Data table</strong> mit der Aktion „Get row(s)“ einfügen und „Entschiedene Faelle“ nennen.</li>
+<li>Als Tabelle <code>pruefliste</code> wählen und als Bedingung <code>entscheidung</code> „Is Not Empty“ setzen. „Return All“ einschalten.</li>
+<li>Einen Knoten <strong>If</strong> „Freigegeben?“ anhängen: <code>{ $json.entscheidung }</code> ist gleich <code>freigeben</code>, unter „Options“ „Ignore Case“ einschalten.</li>
+<li>An <code>true</code> einen Knoten <strong>Edit Fields</strong> „Bescheid vorbereiten“ hängen, an <code>false</code> einen Knoten „Rueckfrage vorbereiten“.</li>
+<li>Zusätzlich an „Entschiedene Faelle“ einen Knoten <strong>Convert to File</strong> mit „Convert to CSV“ hängen, Dateiname <code>pruefliste.csv</code>.</li>
+<li>Den Workflow ausführen.</li>
+</ol>
+<p><strong>Prüfung:</strong> Nur <code>A-001</code> und <code>A-003</code> kommen an. <code>A-001</code> landet bei „Bescheid vorbereiten“, <code>A-003</code> bei „Rueckfrage vorbereiten“. Der Knoten „Als CSV“ zeigt unter „Binary“ eine Datei zum Herunterladen.</p>
+<p>Ein zweiter Lauf von 8a überschreibt keine Entscheidung, weil Upsert nur die Spalten aus den Fällen schreibt. Kein Schritt schreibt in ein Verwaltungssystem: „Bescheid vorbereiten“ zeigt nur, was als Nächstes geschähe. Im Prototyp ersetzt diese Tabelle die Freigabe per Formular aus <a href="../werkzeuge/n8n.html#freigabe">n8n auf dem HdM-Server</a>, wenn mehrere Fälle gesammelt entschieden werden.</p>
+<p><a href="../material/n8n/08a-pruefliste-fuellen.json" download="08a-pruefliste-fuellen.json">Datei: 08a-pruefliste-fuellen.json</a> · <a href="../material/n8n/08b-entscheidungen-auswerten.json" download="08b-entscheidungen-auswerten.json">Datei: 08b-entscheidungen-auswerten.json</a></p>
+</section>
+</section>
 <section id="fehler" class="level2">
 <h2 class="anchored" data-anchor-id="fehler">Wenn etwas nicht klappt</h2>
 <table class="caption-top table">
@@ -659,6 +705,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td>Postgres meldet „relation does not exist“</td>
 <td>Zuerst den Knoten „Tabelle anlegen“ ausführen</td>
+</tr>
+<tr class="odd">
+<td>Data table findet <code>pruefliste</code> nicht</td>
+<td>Zuerst 8a ausführen. Die Tabelle gehört zum Projekt, in dem 8a lief</td>
 </tr>
 </tbody>
 </table>
@@ -701,6 +751,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="../material/n8n/07-hallo-datenbank.json" download="07-hallo-datenbank.json">07-hallo-datenbank.json</a></td>
 <td>Postgres in der Gruppen-Datenbank</td>
+</tr>
+<tr class="even">
+<td><a href="../material/n8n/08a-pruefliste-fuellen.json" download="08a-pruefliste-fuellen.json">08a-pruefliste-fuellen.json</a></td>
+<td>Datentabelle anlegen und per Upsert füllen</td>
+</tr>
+<tr class="odd">
+<td><a href="../material/n8n/08b-entscheidungen-auswerten.json" download="08b-entscheidungen-auswerten.json">08b-entscheidungen-auswerten.json</a></td>
+<td>Entscheidungen lesen, verzweigen, als CSV ausgeben</td>
 </tr>
 </tbody>
 </table>

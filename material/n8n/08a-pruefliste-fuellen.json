@@ -1,0 +1,259 @@
+{
+  "name": "08a Pruefliste fuellen",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "### Tabelle anlegen (Data Table)\nLegt `pruefliste` mit vier Spalten an. *Reuse Existing Tables* ist an: Gibt es die Tabelle schon, nimmt der Knoten sie.\n\n**BPMN:** Datenspeicher „Prüfliste“.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "9e79ae2f-8d2a-580b-a2a2-8e503eb9df39",
+      "name": "Notiz Tabelle anlegen",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        250,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Faelle (Edit Fields)\nDrei erfundene Fälle als Liste. Im Prototyp stammen Empfehlungen aus einem Modellschritt wie in Beispiel 4.\n\n**BPMN:** Datenobjekt „Fälle“.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "a7864515-6bfc-5eea-830c-e6b0637ec2b7",
+      "name": "Notiz Faelle",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        580,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Einzeln (Split Out)\nMacht aus der Liste drei Items, eines pro Fall. Jedes Item läuft einzeln weiter.\n\n**BPMN:** kein eigenes Element, technischer Schritt.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "013c7d90-39bc-5a7e-95bd-4669206c18c0",
+      "name": "Notiz Einzeln",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        910,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Zeilen eintragen (Data Table, Upsert)\nSchreibt jeden Fall als Zeile. Upsert nach `antrag_id`: Ein zweiter Lauf legt nichts doppelt an und lässt `entscheidung` stehen.\n\n**BPMN:** Aufgabe, die in den Datenspeicher schreibt.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "2ad8883b-e1d9-5e83-be72-49a25f211aa9",
+      "name": "Notiz Zeilen eintragen",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1240,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Beispiel 8a: Prüfliste füllen\nDer Workflow schreibt Fälle mit einer Empfehlung in eine **Datentabelle**. Die Tabelle liegt in n8n auf dem HdM-Server, nicht in einer fremden Cloud.\n\n**Ausprobieren:** ausführen. Dann links im Menü *Overview* → *Data tables* → `pruefliste` öffnen. In der Spalte `entscheidung` bei zwei Fällen `freigeben` oder `zurückgeben` eintragen. Weiter mit 08b.\n\n**BPMN 2.0:** Die Tabelle ist ein **Datenspeicher**. Das Eintragen der Entscheidung ist ein **Rechteck mit Person** in der Bahn Sachbearbeitung.",
+        "height": 400,
+        "width": 380,
+        "color": 1
+      },
+      "id": "d0e86c19-ad7f-5e40-b4bb-4d735cf9830c",
+      "name": "Notiz Uebersicht",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        -250
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "18378f69-2e94-54fc-a137-324378b0845c",
+      "name": "Start",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "table",
+        "operation": "create",
+        "tableName": "pruefliste",
+        "columns": {
+          "column": [
+            {
+              "name": "antrag_id",
+              "type": "string"
+            },
+            {
+              "name": "art",
+              "type": "string"
+            },
+            {
+              "name": "empfehlung",
+              "type": "string"
+            },
+            {
+              "name": "entscheidung",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {
+          "createIfNotExists": true
+        }
+      },
+      "id": "8511a3fe-958b-54fa-a978-5fd83ca49bbd",
+      "name": "Tabelle anlegen",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        330,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e591b593-7460-570e-b4e1-6243a01485c5",
+              "name": "faelle",
+              "value": "={{ [{ \"antrag_id\": \"A-001\", \"art\": \"Anmeldung Abschlussarbeit\", \"empfehlung\": \"Unterlagen vollständig, freigeben\" }, { \"antrag_id\": \"A-002\", \"art\": \"Anmeldung Abschlussarbeit\", \"empfehlung\": \"Zweitprüfer fehlt, Rückfrage\" }, { \"antrag_id\": \"A-003\", \"art\": \"Anerkennung\", \"empfehlung\": \"Modulbeschreibung fehlt, Rückfrage\" }] }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e869307b-675c-53c6-80c4-f78facc286fc",
+      "name": "Faelle",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        660,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "faelle",
+        "options": {}
+      },
+      "id": "9412f711-977e-5dc8-ae47-265a040381c6",
+      "name": "Einzeln",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        990,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "row",
+        "operation": "upsert",
+        "dataTableId": {
+          "__rl": true,
+          "mode": "name",
+          "value": "pruefliste"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "antrag_id",
+              "condition": "eq",
+              "keyValue": "={{ $json.antrag_id }}"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "fe3b0f5a-6390-5c7c-938c-88840c72aae3",
+      "name": "Zeilen eintragen",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        1320,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Tabelle anlegen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tabelle anlegen": {
+      "main": [
+        [
+          {
+            "node": "Faelle",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Faelle": {
+      "main": [
+        [
+          {
+            "node": "Einzeln",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Einzeln": {
+      "main": [
+        [
+          {
+            "node": "Zeilen eintragen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false
+}
