@@ -6,33 +6,86 @@ toc: true
 [Montag, 19. Oktober 2026 · 11:45 bis 13:15 Uhr · Raum I110 · Notebook mitbringen, VPN eingerichtet]{.kicker}
 
 ::: {.lead}
-- Prozesskandidaten in zwei Minuten je Gruppe
-- Coding-Agent einrichten: Antigravity und die Projektbeschreibung für den Agenten
-- n8n auf dem HdM-Server: Login, erster Workflow, Modellverbindung
-- Aus der Prozessbeschreibung ein BPMN-Modell erzeugen lassen und prüfen
+- Einführung in KI-Agenten: was ein Agent ist und wann ein Workflow besser passt
+- n8n auf dem HdM-Server: die DEMO-Workflows gemeinsam durchklicken, vom ersten Knoten bis zum Agenten
+- Antigravity: den Coding-Agenten einrichten und aus dem Prozesskandidaten ein BPMN-Modell erzeugen
 :::
 
 ## Ziel des Termins
 
-Am Ende hat jede Gruppe Antigravity mit einem Projektordner eingerichtet, sich in ihrer n8n-Instanz angemeldet, einen ersten Workflow ausgeführt und aus ihrer Prozessbeschreibung ein BPMN-Modell erzeugt und im Browser angesehen.
+Am Ende kann jede Gruppe erklären, was einen Agenten von einem Workflow unterscheidet. Sie hat sich in ihrer n8n-Instanz angemeldet und die ersten DEMO-Workflows selbst ausgeführt. Sie hat Antigravity mit einem Projektordner eingerichtet und aus ihrem Prozesskandidaten ein erstes BPMN-Modell erzeugt.
 
 ::: {#bausteine .callout-note collapse="true" title="Bausteine des Termins"}
 
 | Baustein | Dauer etwa | Arbeitsform |
 |---|---|---|
-| Prozesskandidaten vorstellen | 15 Minuten | Gruppen, je 2 Minuten |
-| Antigravity einrichten, AGENTS.md anlegen | 25 Minuten | Angeleitet, in den Gruppen |
-| n8n: Login, erster Workflow, Modellverbindung | 25 Minuten | Angeleitet, in den Gruppen |
-| Prozessmodell mit dem Agenten erzeugen | 20 Minuten | In den Gruppen |
-| Nächste Schritte: Interviews | 5 Minuten | Gemeinsam |
+| Einführung in KI-Agenten, Übung Agent oder Workflow | 20 Minuten | Input, dann in den Gruppen |
+| n8n: DEMO 01 bis 04 gemeinsam, DEMO 10 als Ausblick | 30 Minuten | Angeleitet, in den Gruppen |
+| Antigravity einrichten, AGENTS.md anlegen | 20 Minuten | Angeleitet, in den Gruppen |
+| Prozessmodell mit dem Agenten erzeugen | 15 Minuten | In den Gruppen |
+| Nächste Schritte: Recherche und Interviews | 5 Minuten | Gemeinsam |
 
 :::
 
-## Prozesskandidaten vorstellen {#vorstellen}
+## Einführung in KI-Agenten {#agenten}
 
-Jede Gruppe nennt in zwei Minuten: den gewählten Prozess, die beteiligten Rollen und die Stelle, an der unstrukturierte Information strukturiert werden muss. Folien sind nicht nötig. Der Kandidat ist ein Arbeitsstand für die heutigen Übungen; die Recherche läuft danach weiter.
+Ein **KI-Agent** ist ein Sprachmodell, das in einer Schleife arbeitet. Es bekommt einen Auftrag und Werkzeuge, plant den nächsten Schritt, ruft ein Werkzeug auf, liest das Ergebnis und entscheidet, was als Nächstes kommt. Das wiederholt es, bis der Auftrag erledigt ist oder eine Grenze erreicht ist. Ein Chat ohne Werkzeuge ist noch kein Agent. Ein Modell, das nur einmal einen Text zusammenfasst, auch nicht.
 
-## Übung 2.1: Coding-Agent einrichten {#uebung-2-1}
+Drei Bausteine machen einen Agenten aus:
+
+| Baustein | Bedeutung | Beispiel im Projekt |
+|---|---|---|
+| Modell | Plant die Schritte und formuliert das Ergebnis | Gemini in n8n, das Modell in Antigravity |
+| Werkzeuge | Alles, womit der Agent etwas nachschlagen oder tun kann | Antrag in der Datenbank nachschlagen, Ordnung durchsuchen, Dateien schreiben |
+| Anweisungen und Grenzen | Rolle, Vorgehen, Antwortformat, was er nicht darf | Systemprompt, AGENTS.md, „Die Entscheidung trifft die zuständige Person“ |
+
+**Workflow oder Agent?** In einem Workflow legen wir die Reihenfolge der Schritte fest. Ein Modell kann darin einzelne Schritte übernehmen, etwa eine Zusammenfassung. In einem Agenten legt das Modell die Reihenfolge innerhalb gesetzter Grenzen selbst fest. Für die meisten Verwaltungsprozesse reicht ein Workflow, weil die Schritte bekannt sind und jede Abweichung nachvollziehbar sein muss. Ein Agent lohnt sich dort, wo der Weg vom Fall abhängt, und nur, wenn er einen belegbaren Vorteil bringt. Mehr dazu unter [Was n8n im Projekt leistet](../werkzeuge/n8n.qmd#rolle) und in [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents).
+
+Heute begegnen uns zwei Arten von Agenten:
+
+- In **n8n** baut der Agent im Prototyp mit: Er prüft einen erfundenen Antrag und wählt dafür selbst seine Werkzeuge ([DEMO 10](../werkzeuge/n8n-einstieg.qmd#agent)).
+- **Antigravity** ist ein **Coding-Agent**. Seine Werkzeuge sind Dateien und Befehle im Projektordner. Er schreibt Prozessmodelle, Mock-Daten und Workflow-Exporte, wir prüfen und entscheiden.
+
+Für beide gilt dieselbe Regel wie im ganzen Projekt: Der Agent bereitet vor, der Mensch entscheidet. Kein Agent schreibt in ein Verwaltungssystem.
+
+## Übung 2.1: Agent oder Workflow? {#uebung-2-1}
+
+::: {.uebung}
+### Etwa 5 Minuten · in den Gruppen
+
+1. Für jede der drei Aufgaben entscheiden: fester Workflow, Workflow mit einem Modellschritt oder Agent.
+   - Prüfen, ob ein Antrag mindestens 210 Leistungspunkte hat.
+   - Eine eingehende Mail einer Antragsart zuordnen und die Angaben in feste Felder übertragen.
+   - Eine Frage einer Studentin beantworten, für die erst der Antrag nachgeschlagen und dann die passende Regel in der Ordnung gesucht werden muss.
+2. Jede Entscheidung in einem Satz begründen.
+3. Für den eigenen Prozesskandidaten festhalten: Welcher Schritt wäre ein Kandidat für einen Agenten, und warum?
+
+**Prüfung:** Jede Begründung nennt, ob die Reihenfolge der Schritte vorher feststeht. Die Auflösung zeigen die DEMO-Workflows 2, 4 und 10.
+:::
+
+## Übung 2.2: n8n gemeinsam durchklicken {#uebung-2-2}
+
+::: {.uebung}
+### Etwa 30 Minuten · in den Gruppen, vorne läuft dieselbe Instanz am Beamer
+
+**Material:** [n8n Schritt für Schritt](../werkzeuge/n8n-einstieg.qmd), Zugangsdaten der Gruppe.
+
+In jeder Gruppeninstanz liegen die Beispiele schon fertig als „DEMO 01“ bis „DEMO 10“. Verbindungen und Pfade der Gruppe sind eingetragen. Jeder Workflow enthält Notizen, die jeden Knoten erklären und ihm ein BPMN-Element zuordnen.
+
+1. VPN verbinden, die n8n-Adresse der Gruppe öffnen, anmelden.
+2. Unter „Overview“ prüfen: Die Workflows „DEMO 01“ bis „DEMO 10“ und die Credentials „Postgres g<n>“ und „Gemini g<n>“ sind vorhanden.
+3. DEMO 01 öffnen, ausführen und den Knoten „Gruss“ öffnen: links die Eingabe, in der Mitte die Expression, rechts die Ausgabe.
+4. DEMO 02 ausführen. Den Wert im Knoten „Antrag“ auf 214 ändern und erneut ausführen.
+5. DEMO 03 ausführen, zweimal. Die beiden Antworten vergleichen.
+6. DEMO 04 ausführen und unter `output` prüfen, was in `fehlende_angaben` steht.
+7. Vorne zeigen wir DEMO 10: einen Agenten, der Antrag und Ordnung selbst nachschlägt. Wer schneller ist, führt vorher DEMO 07 und DEMO 09a aus und dann DEMO 10 selbst.
+
+**Prüfung:** DEMO 02 wechselt mit 214 Leistungspunkten auf den Zweig `true`. In DEMO 04 steht das nur angekündigte Zeugnis unter `fehlende_angaben`. Die Gruppe kann sagen, welcher Knoten in DEMO 04 dem Modellschritt im BPMN-Modell entspricht.
+
+**Danach:** Die Beispiele 5 bis 10 arbeiten die Gruppen bis zum nächsten Coaching selbst durch. Zum Üben jeden Workflow einmal selbst nachbauen und mit der DEMO-Fassung vergleichen.
+:::
+
+## Übung 2.3: Antigravity einrichten {#uebung-2-3}
 
 ::: {.uebung}
 ### Etwa 20 Minuten · eine Person pro Gruppe am Rechner, die anderen prüfen
@@ -44,31 +97,15 @@ Jede Gruppe nennt in zwei Minuten: den gewählten Prozess, die beteiligten Rolle
 3. Eine Datei `AGENTS.md` anlegen: Projektziel in drei Sätzen, der gewählte Prozess, die Regeln (keine Realdaten, Freigabe beim Menschen, Deutsch). Vorlage im [Werkzeugkasten](../werkzeuge/einrichtung.qmd#agents-md).
 4. Einen ersten Auftrag im Chat stellen, zum Beispiel: „Lies AGENTS.md und fasse in fünf Sätzen zusammen, was dieses Projekt will.“
 
-**Prüfung:** Die Zusammenfassung des Agenten stimmt mit dem überein, was wir meinen. Wenn nicht, AGENTS.md präzisieren.
+**Prüfung:** Die Zusammenfassung des Agenten stimmt mit dem überein, was wir meinen. Wenn nicht, AGENTS.md präzisieren. Die AGENTS.md entspricht dem Baustein „Anweisungen und Grenzen“ aus der Einführung.
 :::
 
-## Übung 2.2: n8n auf dem HdM-Server {#uebung-2-2}
+## Übung 2.4: Prozessmodell mit dem Agenten {#uebung-2-4}
 
 ::: {.uebung}
-### Etwa 25 Minuten · in den Gruppen
+### Etwa 15 Minuten · in den Gruppen
 
-**Material:** [n8n Schritt für Schritt](../werkzeuge/n8n-einstieg.qmd) (Beispiele 1 bis 3), [n8n auf dem HdM-Server](../werkzeuge/n8n.qmd), Zugangsdaten der Gruppe.
-
-1. VPN verbinden, die n8n-Adresse der Gruppe öffnen, anmelden.
-2. Unter Credentials prüfen, dass die beiden Verbindungen der Gruppe vorhanden sind (Datenbank und Modell).
-3. Einen neuen Workflow anlegen: Manual Trigger, dann ein Edit-Fields-Knoten mit drei Feldern eines erfundenen Antrags (zum Beispiel `antrag_id`, `art`, `nachweise`). Ausführen und die Ausgabe ansehen.
-4. Eine Basic LLM Chain anhängen, als Modell die vorbereitete Gemini-Verbindung wählen und einen Auftrag nach dem [Prompt-Standard](../werkzeuge/einrichtung.qmd#prompt) formulieren: Kontext, Aufgabe, Format, Prüfung. Ausführen.
-5. Den Workflow speichern und als JSON exportieren, Export in die Teamablage unter `04_Prototyp`.
-
-**Prüfung:** Die Felder des Antrags kommen beim Modell an. Die Ausgabe nennt, was fehlt oder unsicher ist, statt es zu erfinden. Der Export enthält keine Zugangsdaten.
-:::
-
-## Übung 2.3: Prozessmodell mit dem Agenten {#uebung-2-3}
-
-::: {.uebung}
-### Etwa 20 Minuten · in den Gruppen
-
-**Material:** [Prozessmodellierung](../werkzeuge/prozessmodell.qmd), [Auftrag: Ist-Prozess aus einer Beschreibung](../material/prompts/ist-aus-prosa.md), die eigene Prozessbeschreibung aus Etappe 1 der Recherche.
+**Material:** [Prozessmodellierung](../werkzeuge/prozessmodell.qmd), [Auftrag: Ist-Prozess aus einer Beschreibung](../material/prompts/ist-aus-prosa.md), der Prozesskandidat aus Etappe 1 der Recherche.
 
 1. Die Prozessbeschreibung als `prozess-beschreibung.md` in den Projektordner legen.
 2. Den Auftrag aus `ist-aus-prosa.md` in den Chat von Antigravity einfügen. Der Agent schreibt eine Datei `referenzprozess-ist.bpmn`.
@@ -78,11 +115,11 @@ Jede Gruppe nennt in zwei Minuten: den gewählten Prozess, die beteiligten Rolle
 
 **Prüfung:** Eine Person aus einer anderen Gruppe versteht den Ablauf anhand des Bildes ohne Erklärung.
 
-**Ergebnis:** Ein erstes BPMN-Modell des Referenzprozesses. Es ist eine Hypothese, die im Interview geprüft wird.
+**Ergebnis:** Ein erstes BPMN-Modell des Referenzprozesses. Es ist eine Hypothese, die im Interview geprüft wird. Was hier nicht fertig wird, schließt die Gruppe bis zum nächsten Coaching ab.
 :::
 
 ## Nächste Schritte {#naechste}
 
-Als Nächstes folgt Etappe 2 des [Recherche-Auftrags](woche-01.qmd#recherche): Quellen, Erkenntnisse, überarbeiteter Referenzprozess, Leitfragen. Den Termin dafür vereinbaren wir gemeinsam; die Ergebnisse besprechen wir im Coaching. Die Interviewtermine vereinbaren wir mit den Verwaltungsbereichen; sobald ein Termin steht, bereiten sich die beiden zugeordneten Gruppen gemeinsam nach [Interviews führen](../werkzeuge/interviews.qmd) vor.
+Als Nächstes folgt Etappe 2 des [Recherche-Auftrags](woche-01.qmd#recherche): Quellen, Erkenntnisse, überarbeiteter Referenzprozess, Leitfragen. Den Termin dafür vereinbaren wir gemeinsam; die Ergebnisse besprechen wir im Coaching. Parallel arbeiten die Gruppen die n8n-Beispiele 5 bis 10 durch. Die Interviewtermine vereinbaren wir mit den Verwaltungsbereichen; sobald ein Termin steht, bereiten sich die beiden zugeordneten Gruppen gemeinsam nach [Interviews führen](../werkzeuge/interviews.qmd) vor.
 
 [**Zurück zum Kick-off**](woche-01.qmd) · [**Semesterplan**](../semester.qmd)

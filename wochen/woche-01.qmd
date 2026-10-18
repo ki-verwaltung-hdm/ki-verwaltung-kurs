@@ -90,7 +90,7 @@ Die Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews.
 ::: {.uebung}
 ### Etappe 1: Prozesskandidat · in den Gruppen
 
-**Worum es geht:** Beim Werkzeugtermin lernen wir Antigravity und n8n kennen. Dafür braucht jede Gruppe einen Prozess, an dem sie den Coding-Agenten ausprobieren kann. Er muss noch nicht der endgültige sein.
+**Worum es geht:** Beim Werkzeugtermin lernen wir KI-Agenten, n8n und Antigravity kennen. Dafür braucht jede Gruppe einen Prozess, an dem sie den Coding-Agenten ausprobieren kann. Er muss noch nicht der endgültige sein.
 
 1. Einen Verwaltungsprozess auswählen, der zu den [möglichen Bereichen](../projekt.qmd#ausgangslage) passt, und ihn als ersten Entwurf in Prosa beschreiben: Rollen, Schritte, Entscheidungen, Rückschleifen. Zwei bis zehn Sätze genügen; was unklar ist, als Frage markieren.
 2. „Agentische KI im Hochschulsystem“ aus der [Literaturliste](../materialien.qmd#literatur) zumindest überfliegen und die Seiten mit den Verwaltungsszenarien lesen.
@@ -98,7 +98,7 @@ Die Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews.
 
 **Prüfung:** Die Beschreibung nennt mindestens zwei Rollen und eine Entscheidung.
 
-**Ergebnis:** Eine Datei `prozess-beschreibung.md`. Beim Werkzeugtermin stellt jede Gruppe ihren Kandidaten in zwei Minuten vor; daraus entsteht in der Übung ein erstes BPMN-Modell.
+**Ergebnis:** Eine Datei `prozess-beschreibung.md`. Beim Werkzeugtermin erzeugt jede Gruppe daraus mit Antigravity ein erstes BPMN-Modell.
 :::
 
 ::: {.uebung}

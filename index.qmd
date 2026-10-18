@@ -23,7 +23,7 @@ anchor-sections: false
 | Termin | Was |
 |---|---|
 | [Kick-off](wochen/woche-01.qmd) | Kontext, Prozessmodellierung, Recherche-Auftrag, Gruppenbildung |
-| [Werkzeuge](wochen/woche-02.qmd) | Coding-Agent, n8n, Prozessmodell mit dem Agenten |
+| [Werkzeuge](wochen/woche-02.qmd) | KI-Agenten, n8n, Antigravity und Prozessmodell mit dem Agenten |
 | Coachings | wöchentlich montags, 11:45 bis 13:15 Uhr: Fragen, Rückmeldung zu Interviews, Modellierung und Prototyp |
 | Abschlusspräsentation und Abgabe | Termine werden noch vereinbart, Details unter [Bewertung](bewertung.qmd) |
 

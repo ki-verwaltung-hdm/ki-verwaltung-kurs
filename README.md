@@ -26,7 +26,7 @@ Das Skript rendert und ruft `quarto publish gh-pages --no-prompt --no-render` au
 | `projekt.qmd` | Rahmen, Ausgangslage, mögliche Bereiche (nur Rollen), fünf Phasen, Daten und Freigaben, experimenteller Charakter |
 | `semester.qmd` | Semesterplan: Woche 1 und 2, weitere Phasen als Rahmen ohne Termine |
 | `wochen/woche-01.qmd` | Montag, 12.10.: Kontext, Umfrage, BPMN-Grundlagen, Recherche-Auftrag |
-| `wochen/woche-02.qmd` | Montag, 19.10.: Referenzprozesse, Antigravity, n8n-Einstieg, BPMN mit dem Agenten |
+| `wochen/woche-02.qmd` | Montag, 19.10.: Einführung KI-Agenten (Übung Agent oder Workflow), n8n mit den DEMO-Workflows (01 bis 04 gemeinsam, 10 als Ausblick), Antigravity einrichten, BPMN mit dem Agenten. Reihenfolge nach Jan, 18.10. |
 | `werkzeuge/index.qmd` | Werkzeugkasten-Übersicht |
 | `werkzeuge/einrichtung.qmd` | Antigravity, AGENTS.md-Vorlage, Prompt-Standard (Kontext, Aufgabe, Format, Prüfung) |
 | `werkzeuge/prozessmodell.qmd` | BPMN-Symbole, Aurenta-Beispiel, Übertragung auf einen Verwaltungsprozess, Ist zu Soll |
