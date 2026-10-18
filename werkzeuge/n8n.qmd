@@ -5,7 +5,7 @@ toc: true
 
 [Jede Gruppe hat eine eigene n8n-Instanz mit eigener Datenbank auf einem Server der HdM. Diese Seite beschreibt Login, den ersten Workflow, die vorbereiteten Verbindungen zu Modell und Datenbank, Webhooks und die häufigsten Fehler.]{.lead}
 
-Neu in n8n? Zuerst die neun kleinen Beispiele unter [n8n Schritt für Schritt](n8n-einstieg.qmd) durcharbeiten. Sie zeigen jeden Baustein einzeln, der hier im Zusammenhang vorkommt.
+Neu in n8n? Zuerst die zehn kleinen Beispiele unter [n8n Schritt für Schritt](n8n-einstieg.qmd) durcharbeiten. Sie zeigen jeden Baustein einzeln, der hier im Zusammenhang vorkommt.
 
 ## Was n8n im Projekt leistet {#rolle}
 

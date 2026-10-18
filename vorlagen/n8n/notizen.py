@@ -257,6 +257,36 @@ Sucht in `ordnung_vektoren` nach Abschnitten, deren Vektor dem der Frage am näc
  "Embeddings": """### Embeddings (Gemini)
 Rechnet die Frage in einen Vektor um, mit demselben Modell wie in 9a.""",
 },
+"10-agent.json": {
+ "_": """## Beispiel 10: Ein Agent prüft einen Antrag
+Bisher war der Ablauf fest vorgegeben. Hier entscheidet das **Modell selbst**, welches Werkzeug es wann nutzt. Das ist der Unterschied zwischen Workflow und **Agent**.
+
+**Voraussetzung:** 07 und 09a einmal ausgeführt (Tabelle `antraege` und Ordnung im Vektorspeicher).
+
+**Ausprobieren:** ausführen. Im Agenten unter *Logs* nachsehen, welche Werkzeuge er in welcher Reihenfolge aufgerufen hat. Dann A-002 prüfen lassen: Das Praxissemester steht nicht in der Tabelle, das Ergebnis sollte unklar lauten.
+
+**BPMN 2.0:** Rechteck mit Zahnrädern in der Bahn KI-Agent. Innen ist die Reihenfolge nicht festgelegt. Wo die Reihenfolge feststeht, ist ein Workflow die bessere Wahl.""",
+ "Auftrag": """### Auftrag (Edit Fields)
+Der Prüfauftrag in einem Satz, zum Beispiel für A-001.
+
+**BPMN:** Datenobjekt „Auftrag“.""",
+ "Pruef-Agent": """### Pruef-Agent (AI Agent)
+Der Systemprompt unter *Options* legt Rolle, Vorgehen, Antwortformat und Grenzen fest. *Max Iterations* 6 begrenzt die Schleife. *Return Intermediate Steps* zeigt die Werkzeugaufrufe.
+
+**BPMN:** Modellschritt, Bahn KI-Agent.""",
+ "Gemini": """### Gemini (Chat Model)
+Das Modell plant die Schritte und formuliert das Ergebnis.""",
+ "antrag_nachschlagen": """### antrag_nachschlagen (Postgres Tool)
+Liest einen Antrag aus `antraege`. Die Antragsnummer setzt der Agent selbst ein, über `$fromAI('antrag_id')`. Die Beschreibung sagt ihm, wofür das Werkzeug da ist.
+
+**BPMN:** Systemabfrage gegen den Datenspeicher.""",
+ "ordnung_durchsuchen": """### ordnung_durchsuchen (PGVector als Tool)
+Dieselbe Vektortabelle wie in 9b, hier als Werkzeug. Der Agent formuliert die Suchanfrage selbst.
+
+**BPMN:** Abfrage des Datenspeichers „Ordnung“.""",
+ "Embeddings": """### Embeddings (Gemini)
+Dasselbe Modell wie in 9a, sonst passen die Vektoren nicht zusammen.""",
+},
 }
 
 

@@ -287,4 +287,41 @@ write("09b-ordnung-fragen.json", "09b Ordnung fragen", [
     "Retriever": {"ai_retriever": [[{"node": "Antwort aus der Ordnung", "type": "ai_retriever", "index": 0}]]},
     "Ordnung (Vektorspeicher)": {"ai_vectorStore": [[{"node": "Retriever", "type": "ai_vectorStore", "index": 0}]]},
     "Embeddings": {"ai_embedding": [[{"node": "Ordnung (Vektorspeicher)", "type": "ai_embedding", "index": 0}]]}})
+
+# 10 Agent mit zwei Werkzeugen (braucht die Tabellen aus 07 und 09a)
+SYSTEM_AGENT = ("Du unterstützt das Prüfungsamt bei der Vorprüfung von Anträgen. Alle Daten sind erfunden.\n"
+                "Arbeite so:\n"
+                "1. Schlage den Antrag mit dem Werkzeug antrag_nachschlagen nach.\n"
+                "2. Suche die passende Regel mit dem Werkzeug ordnung_durchsuchen.\n"
+                "3. Vergleiche Antrag und Regel.\n"
+                "Antworte auf Deutsch mit: Ergebnis (zulässig, nicht zulässig oder unklar), Begründung mit Paragraf, "
+                "genutzte Werkzeuge. Erfinde keine Daten. Was die Werkzeuge nicht liefern, ist unklar und nicht "
+                "fehlend: Nenne es als offene Prüfung. Ist eine Voraussetzung unklar, lautet das Ergebnis höchstens unklar.\n"
+                "Schließe immer mit dem Satz: Die Entscheidung trifft die zuständige Person.")
+w = "agent"
+write("10-agent.json", "10 Agent", [
+    manual(w),
+    setnode(w, "Auftrag", (220, 0), [("auftrag", "Prüfe, ob Antrag A-001 zur Bachelorarbeit zugelassen werden kann.", "string")]),
+    node(w, "Pruef-Agent", "@n8n/n8n-nodes-langchain.agent", 3.1, [480, 0], {
+        "promptType": "define", "text": "={{ $json.auftrag }}",
+        "options": {"systemMessage": SYSTEM_AGENT, "maxIterations": 6, "returnIntermediateSteps": True}}),
+    gemini(w, (300, 220)),
+    node(w, "antrag_nachschlagen", "n8n-nodes-base.postgresTool", 2.6, [500, 220], {
+        "descriptionType": "manual",
+        "toolDescription": "Liest einen Antrag aus der Tabelle antraege: Antragsnummer, Art, Leistungspunkte. Eingabe: Antragsnummer wie A-001.",
+        "operation": "executeQuery",
+        "query": "SELECT antrag_id, art, leistungspunkte FROM antraege WHERE antrag_id = $1;",
+        "options": {"queryReplacement": "={{ $fromAI('antrag_id', 'Antragsnummer, zum Beispiel A-001', 'string') }}"}}),
+    node(w, "ordnung_durchsuchen", "@n8n/n8n-nodes-langchain.vectorStorePGVector", 1.3, [700, 220], {
+        "mode": "retrieve-as-tool",
+        "toolDescription": "Durchsucht die Ordnung für die Bachelorarbeit und liefert passende Paragrafen. Eingabe: eine Frage oder ein Stichwort.",
+        "tableName": "ordnung_vektoren", "topK": 3, "options": {}}),
+    node(w, "Embeddings", "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini", 1, [900, 420],
+         {"modelName": "models/gemini-embedding-001"}),
+], {"Start": {"main": [[main(w, "Auftrag")]]},
+    "Auftrag": {"main": [[main(w, "Pruef-Agent")]]},
+    "Gemini": {"ai_languageModel": [[{"node": "Pruef-Agent", "type": "ai_languageModel", "index": 0}]]},
+    "antrag_nachschlagen": {"ai_tool": [[{"node": "Pruef-Agent", "type": "ai_tool", "index": 0}]]},
+    "ordnung_durchsuchen": {"ai_tool": [[{"node": "Pruef-Agent", "type": "ai_tool", "index": 0}]]},
+    "Embeddings": {"ai_embedding": [[{"node": "ordnung_durchsuchen", "type": "ai_embedding", "index": 0}]]}})
 print("ok", sorted(p.name for p in OUT.iterdir()))

@@ -3,9 +3,9 @@ title: "n8n Schritt für Schritt"
 toc: true
 ---
 
-[Neun kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle, Datenbank, eine Tabelle, in der ein Mensch entscheidet, und eine Wissenssuche über eine Ordnung.]{.lead}
+[Zehn kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle, Datenbank, eine Tabelle, in der ein Mensch entscheidet, eine Wissenssuche über eine Ordnung und zum Schluss ein Agent, der selbst Werkzeuge wählt.]{.lead}
 
-Die Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Alle liegen schon fertig in der Instanz jeder Gruppe, als „DEMO 01“ bis „DEMO 09b“, mit den Verbindungen und Pfaden der Gruppe. Damit klicken wir sie im Termin gemeinsam durch. Zum Üben baut man sie danach selbst nach und vergleicht mit der DEMO-Fassung. Zusätzlich gibt es jede Datei zum Importieren. Danach folgt der [erste vollständige Workflow](n8n.qmd#erster-workflow) „Antrag prüfen“.
+Die Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Alle liegen schon fertig in der Instanz jeder Gruppe, als „DEMO 01“ bis „DEMO 10“, mit den Verbindungen und Pfaden der Gruppe. Damit klicken wir sie im Termin gemeinsam durch. Zum Üben baut man sie danach selbst nach und vergleicht mit der DEMO-Fassung. Zusätzlich gibt es jede Datei zum Importieren. Danach folgt der [erste vollständige Workflow](n8n.qmd#erster-workflow) „Antrag prüfen“.
 
 ## Voraussetzungen {#voraussetzungen}
 
@@ -42,6 +42,7 @@ Das Soll-Modell in BPMN 2.0 ist der Bauplan, der Workflow in n8n die Umsetzung. 
 | Eigener Pool mit Nachrichtenflüssen | Webhook und Respond to Webhook als Mock | 6 |
 | Datenspeicher (Zylinder) | Postgres-Knoten auf der Gruppen-Datenbank, Datentabelle in n8n | 7, 8 |
 | Rechteck mit Zahnrädern, das aus einem Datenspeicher liest | Q&A Chain mit PGVector (Wissenssuche) | 9 |
+| Rechteck mit Zahnrädern, innen ohne feste Reihenfolge | AI Agent mit Werkzeugen | 10 |
 | Endereignis (dicker Kreis) | Letzter Knoten ohne Nachfolger, Form Ending | 1, 5 |
 
 Jede Datei enthält Notizen auf der Arbeitsfläche: eine gelbe mit Ziel, Ausprobieren und BPMN-Bezug, dazu eine blaue an jedem Knoten. Beim eigenen Nachbauen lohnt es sich, dieselbe Zuordnung als Notiz festzuhalten. So bleibt sichtbar, welcher Knoten welchen Schritt des Soll-Modells umsetzt.
@@ -310,6 +311,36 @@ Gerade der zweite Test zählt. Eine Wissenssuche, die bei fehlender Grundlage tr
 
 [Datei: 09a-ordnung-ablegen.json](../material/n8n/09a-ordnung-ablegen.json){download="09a-ordnung-ablegen.json"} · [Datei: 09b-ordnung-fragen.json](../material/n8n/09b-ordnung-fragen.json){download="09b-ordnung-fragen.json"}
 
+## Beispiel 10: Ein Agent prüft einen Antrag {#agent}
+
+**Ziel:** Einen Agenten bauen, der für einen Prüfauftrag selbst entscheidet, welche Werkzeuge er nutzt.
+
+In den Beispielen 1 bis 9 legt der Workflow die Reihenfolge fest. Ein **Agent** bekommt dagegen einen Auftrag und Werkzeuge und plant die Schritte selbst. Das ist flexibler, aber schwerer zu prüfen. Deshalb gilt aus [n8n auf dem HdM-Server](n8n.qmd#rolle): Ein Agent ist nur dann die bessere Wahl, wenn er einen belegbaren Vorteil bringt. Der Agent hier verbindet zwei Bausteine, die schon da sind: die Tabelle `antraege` aus Beispiel 7 und die Ordnung aus Beispiel 9.
+
+**Voraussetzungen:** Beispiel 7 und Beispiel 9a sind einmal ausgeführt.
+
+1. Einen neuen Workflow „10 Agent“ mit **Trigger manually** anlegen.
+2. Einen Knoten **Edit Fields** „Auftrag“ mit dem Feld `auftrag` einfügen: Prüfe, ob Antrag A-001 zur Bachelorarbeit zugelassen werden kann.
+3. Einen Knoten **AI Agent** anhängen und „Pruef-Agent“ nennen. „Source for Prompt“ auf „Define below“, als Prompt `{{ $json.auftrag }}`.
+4. Unter „Options“ eine „System Message“ eintragen: Rolle, Vorgehen in drei Schritten, Antwortformat, Grenzen (siehe Datei).
+5. Unter „Options“ zusätzlich „Max Iterations“ auf 6 setzen und „Return Intermediate Steps“ einschalten.
+6. Am Anschluss „Chat Model“ den Knoten **Google Gemini Chat Model** mit **Gemini g<n>** einfügen.
+7. Am Anschluss „Tool“ den Knoten **Postgres Tool** einfügen und `antrag_nachschlagen` nennen, Credential **Postgres g<n>**.
+8. Im Postgres Tool eine Beschreibung eintragen: Liest einen Antrag aus der Tabelle antraege. Eingabe: Antragsnummer wie A-001.
+9. Als Query `SELECT antrag_id, art, leistungspunkte FROM antraege WHERE antrag_id = $1;` eintragen.
+10. Unter „Options“ bei „Query Parameters“ den Wert `{{ $fromAI('antrag_id', 'Antragsnummer, zum Beispiel A-001', 'string') }}` eintragen.
+11. Am Anschluss „Tool“ einen zweiten Knoten **Postgres PGVector Store** einfügen, Operation Mode „Retrieve Documents (As Tool for AI Agent)“, Name `ordnung_durchsuchen`, Tabelle `ordnung_vektoren`, Limit 3.
+12. Daran den Knoten **Embeddings Google Gemini** mit **Gemini g<n>** einfügen.
+13. Den Workflow ausführen.
+
+**Prüfung:** Unter „Logs“ zeigt der Agent zwei Werkzeugaufrufe: zuerst `antrag_nachschlagen` mit A-001, dann `ordnung_durchsuchen`. Das Ergebnis lautet „nicht zulässig“, weil A-001 195 statt 210 Leistungspunkte hat (§ 2). Das Praxissemester steht nicht in der Tabelle und erscheint als offene Prüfung, nicht als Mangel. Die Antwort endet mit „Die Entscheidung trifft die zuständige Person.“
+
+Dann den Auftrag auf A-002 ändern. A-002 hat genug Leistungspunkte, das Praxissemester bleibt aber unbekannt. Das Ergebnis sollte deshalb „unklar“ lauten, nicht „zulässig“.
+
+Genau diese Stellen prüfen wir bei jedem Agenten: Ruft er die Werkzeuge auf, statt zu raten? Behauptet er etwas, das kein Werkzeug geliefert hat? Hält er die Grenzen aus dem Systemprompt ein? Den Systemprompt haben wir nach dem ersten Test nachgeschärft. Ohne den Satz „Was die Werkzeuge nicht liefern, ist unklar und nicht fehlend“ behauptete der Agent, das Praxissemester sei nicht nachgewiesen.
+
+[Datei: 10-agent.json](../material/n8n/10-agent.json){download="10-agent.json"}
+
 ## Wenn etwas nicht klappt {#fehler}
 
 | Beobachtung | Nächster Prüfschritt |
@@ -322,7 +353,9 @@ Gerade der zweite Test zählt. Eine Wissenssuche, die bei fehlender Grundlage tr
 | Postgres meldet „relation does not exist“ | Zuerst den Knoten „Tabelle anlegen“ ausführen |
 | Data table findet `pruefliste` nicht | Zuerst 8a ausführen. Die Tabelle gehört zum Projekt, in dem 8a lief |
 | 9b meldet, die Tabelle `ordnung_vektoren` fehle | Zuerst 9a ausführen |
-| 9b antwortet „Dazu steht nichts in der Ordnung“, obwohl es dort steht | Frage näher am Wortlaut der Ordnung stellen oder im Retriever Top K erhöhen |
+| 9b antwortet „Dazu steht nichts in der Ordnung“, obwohl es dort steht | Frage näher am Wortlaut der Ordnung stellen oder im Retriever das Limit erhöhen |
+| Agent ruft kein Werkzeug auf oder rät | Werkzeugbeschreibung präzisieren. Im Systemprompt das Vorgehen als Schritte vorgeben |
+| Agent bricht mit „max iterations“ ab | Auftrag enger fassen oder Max Iterations erhöhen |
 
 Weitere Fälle stehen unter [Wenn ein Lauf nicht funktioniert](n8n.qmd#fehler).
 
@@ -341,6 +374,7 @@ Weitere Fälle stehen unter [Wenn ein Lauf nicht funktioniert](n8n.qmd#fehler).
 | [08b-entscheidungen-auswerten.json](../material/n8n/08b-entscheidungen-auswerten.json){download="08b-entscheidungen-auswerten.json"} | Entscheidungen lesen, verzweigen, als CSV ausgeben |
 | [09a-ordnung-ablegen.json](../material/n8n/09a-ordnung-ablegen.json){download="09a-ordnung-ablegen.json"} | Ordnung zerlegen und als Vektoren in pgvector ablegen |
 | [09b-ordnung-fragen.json](../material/n8n/09b-ordnung-fragen.json){download="09b-ordnung-fragen.json"} | Frage an die Ordnung mit Q&A Chain, Antwort mit Paragraf |
+| [10-agent.json](../material/n8n/10-agent.json){download="10-agent.json"} | AI Agent mit Postgres-Werkzeug und Ordnungssuche |
 
 In den Dateien 05 und 06 steht der Pfad `gX-...`. Nach dem Import das `X` durch die Gruppennummer ersetzen.
 
