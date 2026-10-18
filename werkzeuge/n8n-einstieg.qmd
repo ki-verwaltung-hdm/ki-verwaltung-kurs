@@ -126,7 +126,7 @@ In der Datei ist das Modell voreingestellt, die Temperatur steht auf 0,2. Je nie
 5. Den Prompt nach dem [Prompt-Standard](einrichtung.qmd#prompt) umschreiben: Kontext (was für die Anmeldung nötig ist), Aufgabe (Mail in die Felder übertragen), Prüfung (nur eintragen, was in der Mail steht).
 6. Den Workflow ausführen.
 
-**Prüfung:** Die Ausgabe hat genau die fünf Felder. Das nur angekündigte Zeugnis steht unter `fehlende_angaben`, nicht unter `genannte_nachweise`. Der Zweitprüfer fehlt in der Mail und steht deshalb ebenfalls unter `fehlende_angaben`.
+**Prüfung:** Die Ausgabe hat unter `output` genau die fünf Felder. Das nur angekündigte Zeugnis steht unter `fehlende_angaben`. Der Zweitprüfer fehlt in der Mail und steht deshalb ebenfalls dort. `rueckfrage_noetig` ist `true`.
 
 Mit festen Feldern kann ein If-Knoten weiterarbeiten, zum Beispiel mit `rueckfrage_noetig`. So entsteht das Muster aus dem Projekt: Das Modell strukturiert, die Regel prüft, der Mensch entscheidet.
 
