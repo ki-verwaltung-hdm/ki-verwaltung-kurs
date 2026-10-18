@@ -52,9 +52,9 @@ Jede Gruppe nennt in zwei Minuten: den gewählten Prozess, die beteiligten Rolle
 ::: {.uebung}
 ### Etwa 25 Minuten · in den Gruppen
 
-**Material:** [n8n auf dem HdM-Server](../werkzeuge/n8n.qmd), Zugangsdaten der Gruppe.
+**Material:** [n8n Schritt für Schritt](../werkzeuge/n8n-einstieg.qmd) (Beispiele 1 bis 3), [n8n auf dem HdM-Server](../werkzeuge/n8n.qmd), Zugangsdaten der Gruppe.
 
-1. VPN verbinden, die n8n-Adresse der Gruppe öffnen, Zertifikatswarnung bestätigen, anmelden.
+1. VPN verbinden, die n8n-Adresse der Gruppe öffnen, anmelden.
 2. Unter Credentials prüfen, dass die beiden Verbindungen der Gruppe vorhanden sind (Datenbank und Modell).
 3. Einen neuen Workflow anlegen: Manual Trigger, dann ein Edit-Fields-Knoten mit drei Feldern eines erfundenen Antrags (zum Beispiel `antrag_id`, `art`, `nachweise`). Ausführen und die Ausgabe ansehen.
 4. Eine Basic LLM Chain anhängen, als Modell die vorbereitete Gemini-Verbindung wählen und einen Auftrag nach dem [Prompt-Standard](../werkzeuge/einrichtung.qmd#prompt) formulieren: Kontext, Aufgabe, Format, Prüfung. Ausführen.

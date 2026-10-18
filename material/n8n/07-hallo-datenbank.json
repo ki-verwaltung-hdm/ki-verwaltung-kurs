@@ -1,0 +1,76 @@
+{
+  "name": "07 Hallo Datenbank",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "785e76a0-21fd-53b1-87b3-acf882698f3d",
+      "name": "Start",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "CREATE TABLE IF NOT EXISTS antraege (\n  antrag_id text PRIMARY KEY,\n  art text NOT NULL,\n  leistungspunkte integer NOT NULL\n);\nINSERT INTO antraege VALUES\n  ('A-001', 'Anmeldung Abschlussarbeit', 195),\n  ('A-002', 'Anmeldung Abschlussarbeit', 214),\n  ('A-003', 'Anerkennung', 30)\nON CONFLICT (antrag_id) DO NOTHING;",
+        "options": {}
+      },
+      "id": "01d47a24-f4eb-5274-b005-f381f07a3a87",
+      "name": "Tabelle anlegen",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT antrag_id, art, leistungspunkte FROM antraege ORDER BY antrag_id;",
+        "options": {}
+      },
+      "id": "0dba4106-de3b-5d39-bfbf-2c39d6d38131",
+      "name": "Antraege lesen",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        440,
+        0
+      ],
+      "executeOnce": true
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Tabelle anlegen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tabelle anlegen": {
+      "main": [
+        [
+          {
+            "node": "Antraege lesen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false
+}

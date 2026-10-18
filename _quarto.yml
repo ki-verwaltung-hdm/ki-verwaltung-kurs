@@ -15,6 +15,7 @@ project:
     - werkzeuge/prozessmodell.qmd
     - werkzeuge/bpmn-uebung.qmd
     - werkzeuge/interviews.qmd
+    - werkzeuge/n8n-einstieg.qmd
     - werkzeuge/n8n.qmd
     - abgaben.qmd
     - bewertung.qmd
@@ -64,6 +65,8 @@ website:
             text: "BPMN-Übung"
           - href: werkzeuge/interviews.qmd
             text: Interviews führen
+          - href: werkzeuge/n8n-einstieg.qmd
+            text: n8n Schritt für Schritt
           - href: werkzeuge/n8n.qmd
             text: n8n auf dem HdM-Server
       - href: abgaben.qmd

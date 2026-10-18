@@ -111,5 +111,6 @@ Die Aufträge als Text in den Chat von Antigravity einfügen und die Platzhalter
 | [Google Antigravity](https://antigravity.google/) · [Antigravity IDE](https://antigravity.google/product/antigravity-ide/) | Entwicklungsumgebung mit Coding-Agent; die IDE ist das Programm zum Herunterladen |
 | [agents.md](https://agents.md/) | Format und Beispiele für AGENTS.md |
 | [n8n-Dokumentation](https://docs.n8n.io/) · [KI in n8n](https://docs.n8n.io/build/integrate-ai) | Knoten, Trigger, Modelle, Vektorsuche |
+| [n8n Schritt für Schritt](werkzeuge/n8n-einstieg.qmd) | Sieben Hello-World-Beispiele mit Workflow-Dateien zum Importieren |
 | [n8n Course Level 1](https://docs.n8n.io/courses/level-one) | Textkurs für den Einstieg in n8n, freiwillig |
-| [Übersichtsseite der Projektumgebung](https://141.62.116.2/) | Links zu den sieben n8n-Instanzen, nur HdM-Netz und VPN |
+| [Übersichtsseite der Projektumgebung](https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/) | Links zu den sieben n8n-Instanzen, nur HdM-Netz und VPN |

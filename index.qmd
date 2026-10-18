@@ -41,7 +41,7 @@ So gehen wir vor: fünf Phasen, jede baut auf der vorherigen auf. Details auf de
 
 | Seite | Inhalt |
 |---|---|
-| [Vorbereitung](start.qmd) | HdM-VPN, Google-Konto, n8n-Zugang der Gruppe, Zertifikatswarnung |
+| [Vorbereitung](start.qmd) | HdM-VPN, Google-Konto, n8n-Zugang der Gruppe |
 | [Projekt](projekt.qmd) | Ausgangslage, Vorgehen in fünf Phasen, Regeln für Daten und Freigaben |
 | [Semesterplan](semester.qmd) | Kick-off und Werkzeuge im Detail, die weiteren Phasen als Rahmen |
 | [Werkzeugkasten](werkzeuge/index.qmd) | Coding-Agent, Prozessmodellierung, Interviews, n8n |

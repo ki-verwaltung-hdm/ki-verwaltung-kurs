@@ -1,0 +1,239 @@
+---
+title: "n8n Schritt für Schritt"
+toc: true
+---
+
+[Sieben kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle und Datenbank.]{.lead}
+
+Die Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Zu jedem Beispiel gibt es eine fertige Datei zum Importieren. Damit lässt sich das eigene Ergebnis vergleichen, oder man springt direkt zum nächsten Baustein. Danach folgt der [erste vollständige Workflow](n8n.qmd#erster-workflow) „Antrag prüfen“.
+
+## Voraussetzungen {#voraussetzungen}
+
+- HdM-Netz vor Ort oder [VPN](../start.qmd#vpn) verbunden.
+- Die Adresse der eigenen Instanz, zum Beispiel `https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-3/` für Gruppe 3. Alle Adressen stehen in der [Vorbereitung](../start.qmd#n8n).
+- Login und Passwort der Gruppe.
+- Nur erfundene Daten. Das gilt für jedes Beispiel auf dieser Seite.
+
+## Die Oberfläche in sechs Begriffen {#begriffe}
+
+| Begriff | Bedeutung |
+|---|---|
+| Workflow | Ein Ablauf auf der Arbeitsfläche (Canvas). Er wird gespeichert und kann exportiert werden. |
+| Knoten (Node) | Ein Schritt im Ablauf. Das Plus-Symbol öffnet die Liste aller Knoten mit Suchfeld. |
+| Trigger | Der erste Knoten. Er startet den Ablauf: per Klick, per Formular oder per Aufruf einer Adresse. |
+| Item | Ein Datensatz, der von Knoten zu Knoten weitergereicht wird. Intern ist das JSON, also Feldname und Wert. |
+| Expression | Ein Platzhalter in doppelten geschweiften Klammern, zum Beispiel `{{ $json.name }}`. n8n setzt dort den Wert aus dem vorherigen Knoten ein. |
+| Ausführung | Ein Lauf des Workflows. Jeder Knoten zeigt danach links seine Eingabe und rechts seine Ausgabe. |
+
+Ein Doppelklick auf einen Knoten öffnet ihn. Links steht die Eingabe (Input), in der Mitte die Einstellungen, rechts die Ausgabe (Output). Die Ansicht der Daten lässt sich oben zwischen Schema, Table und JSON umschalten.
+
+## Einen Workflow importieren {#importieren}
+
+Für jedes Beispiel gibt es eine JSON-Datei. So kommt sie in die eigene Instanz:
+
+1. Die Datei herunterladen.
+2. In n8n oben rechts „Create Workflow“ wählen.
+3. Im Menü mit den drei Punkten oben rechts „Import from File...“ wählen.
+4. Die heruntergeladene Datei auswählen.
+5. Den Workflow speichern (Strg+S oder Cmd+S).
+6. Prüfen: Die Knoten stehen verbunden auf der Arbeitsfläche.
+
+Alternativ die Datei in einem Texteditor öffnen, alles kopieren und mit Strg+V oder Cmd+V auf der leeren Arbeitsfläche einfügen.
+
+Die Dateien enthalten keine Zugangsdaten. Knoten, die eine Verbindung brauchen (Gemini, Postgres), zeigen nach dem Import ein Warnsymbol. Den Knoten öffnen und unter „Credential“ die Verbindung der Gruppe wählen. Gibt es nur eine passende Verbindung, setzt n8n sie oft schon selbst ein.
+
+## Beispiel 1: Hallo Welt {#hallo-welt}
+
+**Ziel:** Daten anlegen und mit einer Expression weiterverwenden.
+
+1. Einen neuen Workflow anlegen und „01 Hallo Welt“ nennen.
+2. Auf „Add first step“ klicken und **Trigger manually** wählen.
+3. Hinter den Trigger den Knoten **Edit Fields (Set)** einfügen und „Name“ nennen.
+4. Unter „Fields to Set“ ein Feld `name` vom Typ String mit dem Wert `Welt` anlegen.
+5. Einen zweiten Knoten **Edit Fields (Set)** anhängen und „Gruss“ nennen.
+6. Darin ein Feld `gruss` anlegen.
+7. Als Wert `Hallo ` eintippen und dann das Feld `name` aus der Eingabe links in das Wertfeld ziehen.
+8. Ein Ausrufezeichen ergänzen. Der Wert lautet jetzt `Hallo {{ $json.name }}!`.
+9. Unten auf „Execute workflow“ klicken.
+
+**Prüfung:** Die Ausgabe des Knotens „Gruss“ zeigt `gruss: Hallo Welt!`. Den Wert im Knoten „Name“ ändern und erneut ausführen. Der Gruß ändert sich mit.
+
+Edit Fields gibt standardmäßig nur die Felder aus, die dort angelegt sind. Sollen die Felder aus dem vorherigen Knoten erhalten bleiben, unter „Options“ die Einstellung „Include Other Input Fields“ einschalten.
+
+[Datei: 01-hallo-welt.json](../material/n8n/01-hallo-welt.json){download="01-hallo-welt.json"}
+
+## Beispiel 2: Wenn, dann {#wenn-dann}
+
+**Ziel:** Eine feste Regel prüfen, ohne Modell.
+
+1. Einen neuen Workflow „02 Wenn dann“ mit **Trigger manually** anlegen.
+2. Einen Knoten **Edit Fields (Set)** „Antrag“ einfügen.
+3. Darin `antrag_id` (String, `A-001`) und `leistungspunkte` (Number, `195`) anlegen.
+4. Einen Knoten **If** anhängen und „Mindestens 210 LP?“ nennen.
+5. Als Bedingung links `{{ $json.leistungspunkte }}` einsetzen.
+6. Als Vergleich „Number“ und dann „is greater than or equal to“ wählen, rechts `210` eintragen.
+7. An den Ausgang `true` einen Knoten **Edit Fields** „Zulaessig“ hängen, Feld `ergebnis` mit einem kurzen Text.
+8. An den Ausgang `false` einen Knoten **Edit Fields** „Nicht zulaessig“ hängen.
+9. Dort `ergebnis` auf `Es fehlen {{ 210 - $json.leistungspunkte }} Leistungspunkte.` setzen.
+10. Den Workflow ausführen.
+
+**Prüfung:** Nur der Zweig `false` läuft. Die Ausgabe lautet „Es fehlen 15 Leistungspunkte.“ Mit `214` im Antrag läuft nur der Zweig `true`.
+
+Der Typ ist wichtig. Steht `195` als String im Antrag, meldet der If-Knoten einen Typfehler. Dann den Feldtyp auf Number stellen.
+
+[Datei: 02-wenn-dann.json](../material/n8n/02-wenn-dann.json){download="02-wenn-dann.json"}
+
+## Beispiel 3: Hallo Gemini {#hallo-gemini}
+
+**Ziel:** Ein Sprachmodell einen Text bearbeiten lassen.
+
+1. Einen neuen Workflow „03 Hallo Gemini“ mit **Trigger manually** anlegen.
+2. Einen Knoten **Edit Fields (Set)** „Mail“ mit dem Feld `mail` einfügen.
+3. Als Wert eine erfundene Mail an das Prüfungsamt eintragen, drei bis vier Sätze.
+4. Einen Knoten **Basic LLM Chain** anhängen und „Zusammenfassen“ nennen.
+5. Unter „Source for Prompt“ die Option „Define below“ wählen.
+6. Als Prompt eintragen: `Fasse die folgende Mail in einem Satz zusammen. Nenne nur, was in der Mail steht.`
+7. Darunter `Mail: {{ $json.mail }}` ergänzen.
+8. Unten am Knoten auf das Plus bei „Model“ klicken und **Google Gemini Chat Model** wählen.
+9. Unter „Credential“ die Verbindung **Gemini g<n>** der Gruppe wählen. Kein eigenes Google-Konto eintragen.
+10. Den Workflow ausführen.
+
+**Prüfung:** Die Ausgabe enthält ein Feld `text` mit einem Satz. Der Satz enthält nichts, was nicht in der Mail steht. Zweimal ausführen und vergleichen: Der Wortlaut ändert sich, der Inhalt sollte gleich bleiben.
+
+In der Datei ist das Modell voreingestellt, die Temperatur steht auf 0,2. Je niedriger die Temperatur, desto weniger schwanken die Antworten.
+
+[Datei: 03-hallo-gemini.json](../material/n8n/03-hallo-gemini.json){download="03-hallo-gemini.json"}
+
+## Beispiel 4: Aus Text werden Felder {#strukturiert}
+
+**Ziel:** Unstrukturierten Text in feste Felder übertragen. Das ist der Kern fast aller Projektprozesse.
+
+1. Den Workflow aus Beispiel 3 duplizieren (Menü mit drei Punkten, „Duplicate“) und „04 Strukturierte Antwort“ nennen.
+2. In der Basic LLM Chain die Option „Require Specific Output Format“ einschalten.
+3. Am neuen Anschluss „Output Parser“ den Knoten **Structured Output Parser** einfügen.
+4. Dort „Generate From JSON Example“ wählen und ein Beispiel der gewünschten Felder eintragen:
+
+```json
+{
+  "anliegen": "Anmeldung Bachelorarbeit",
+  "wunschtermin": "2026-12-01",
+  "genannte_nachweise": ["Praxissemester abgeschlossen"],
+  "fehlende_angaben": ["Zweitprüfer"],
+  "rueckfrage_noetig": true
+}
+```
+
+5. Den Prompt nach dem [Prompt-Standard](einrichtung.qmd#prompt) umschreiben: Kontext (was für die Anmeldung nötig ist), Aufgabe (Mail in die Felder übertragen), Prüfung (nur eintragen, was in der Mail steht).
+6. Den Workflow ausführen.
+
+**Prüfung:** Die Ausgabe hat genau die fünf Felder. Das nur angekündigte Zeugnis steht unter `fehlende_angaben`, nicht unter `genannte_nachweise`. Der Zweitprüfer fehlt in der Mail und steht deshalb ebenfalls unter `fehlende_angaben`.
+
+Mit festen Feldern kann ein If-Knoten weiterarbeiten, zum Beispiel mit `rueckfrage_noetig`. So entsteht das Muster aus dem Projekt: Das Modell strukturiert, die Regel prüft, der Mensch entscheidet.
+
+[Datei: 04-strukturierte-antwort.json](../material/n8n/04-strukturierte-antwort.json){download="04-strukturierte-antwort.json"}
+
+## Beispiel 5: Hallo Formular {#formular}
+
+**Ziel:** Eine kleine Web-Seite bauen, auf der eine Person etwas eingibt.
+
+1. Einen neuen Workflow „05 Hallo Formular“ anlegen.
+2. Als Trigger **On form submission** (n8n Form Trigger) wählen.
+3. Den Titel „Anfrage an das Prüfungsamt (Test)“ eintragen.
+4. Drei Felder anlegen: „Name“ (Text, Pflicht), „Anliegen“ (Dropdown mit drei Optionen, Pflicht), „Nachricht“ (Textarea).
+5. Unter „Options“ den „Form Path“ auf `gX-anfrage` setzen, mit der Gruppennummer statt `X`.
+6. Einen Knoten **Edit Fields** „Eingang“ anhängen, Feld `bestaetigung` mit `Danke, {{ $json.Name }}. Ihr Anliegen ist eingegangen.`
+7. Einen Knoten **n8n Form** anhängen, als Operation „Form Ending“ wählen.
+8. Als „Completion Message“ `{{ $json.bestaetigung }}` eintragen.
+9. Im Trigger auf „Execute step“ klicken. n8n öffnet das Formular in einem neuen Tab.
+10. Das Formular mit erfundenen Angaben ausfüllen und absenden.
+
+**Prüfung:** Die Seite zeigt die Bestätigung mit dem eingegebenen Namen. In n8n zeigt der Trigger die drei Felder als Ausgabe.
+
+Die Test-Adresse enthält `form-test` und gilt nur, solange n8n auf eine Eingabe wartet. Für eine dauerhafte Adresse den Workflow oben rechts mit „Publish“ veröffentlichen. Dann gilt `https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-<n>/form/gX-anfrage`, erreichbar nur aus dem HdM-Netz und über VPN.
+
+[Datei: 05-hallo-formular.json](../material/n8n/05-hallo-formular.json){download="05-hallo-formular.json"}
+
+## Beispiel 6: Hallo Webhook {#webhook}
+
+**Ziel:** Ein Verwaltungssystem nachbauen, das auf eine Anfrage mit erfundenen Daten antwortet (Mock).
+
+1. Einen neuen Workflow „06 Hallo Webhook“ anlegen.
+2. Als Trigger **On webhook call** (Webhook) wählen.
+3. Als „HTTP Method“ GET wählen und als „Path“ `gX-hallo` eintragen, mit der Gruppennummer statt `X`.
+4. Unter „Respond“ die Option „Using 'Respond to Webhook' Node“ wählen.
+5. Einen Knoten **Respond to Webhook** anhängen, „Respond With“ auf JSON stellen.
+6. Als Antwort eintragen:
+
+```default
+{{ { "antrag_id": $json.query.id, "status": "in Prüfung", "leistungspunkte": 195, "hinweis": "Mock, erfundene Daten" } }}
+```
+
+7. Im Webhook-Knoten auf „Listen for test event“ klicken.
+8. Die Test-Adresse kopieren und im Browser mit `?id=A-007` am Ende aufrufen.
+
+**Prüfung:** Der Browser zeigt die Antwort als JSON mit `"antrag_id": "A-007"`. In n8n zeigt der Webhook unter `query` den Wert `id`.
+
+Nach „Publish“ gilt die Adresse ohne `-test`: `https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-<n>/webhook/gX-hallo?id=A-007`. Ein anderer Workflow ruft sie mit dem Knoten **HTTP Request** auf. So fragt der Prototyp den Mock statt eines echten Systems. Mehr dazu unter [Mock-Schnittstellen mit Webhooks](n8n.qmd#webhook).
+
+[Datei: 06-hallo-webhook.json](../material/n8n/06-hallo-webhook.json){download="06-hallo-webhook.json"}
+
+## Beispiel 7: Hallo Datenbank {#datenbank}
+
+**Ziel:** Erfundene Daten in der Gruppen-Datenbank ablegen und lesen.
+
+1. Einen neuen Workflow „07 Hallo Datenbank“ mit **Trigger manually** anlegen.
+2. Einen Knoten **Postgres** mit der Aktion „Execute a SQL query“ einfügen und „Tabelle anlegen“ nennen.
+3. Unter „Credential“ die Verbindung **Postgres g<n>** der Gruppe wählen.
+4. Als Query eintragen:
+
+```sql
+CREATE TABLE IF NOT EXISTS antraege (
+  antrag_id text PRIMARY KEY,
+  art text NOT NULL,
+  leistungspunkte integer NOT NULL
+);
+INSERT INTO antraege VALUES
+  ('A-001', 'Anmeldung Abschlussarbeit', 195),
+  ('A-002', 'Anmeldung Abschlussarbeit', 214),
+  ('A-003', 'Anerkennung', 30)
+ON CONFLICT (antrag_id) DO NOTHING;
+```
+
+5. Einen zweiten Knoten **Postgres** „Antraege lesen“ anhängen, ebenfalls „Execute a SQL query“.
+6. Als Query `SELECT antrag_id, art, leistungspunkte FROM antraege ORDER BY antrag_id;` eintragen.
+7. Den Workflow ausführen.
+
+**Prüfung:** „Antraege lesen“ gibt drei Items aus, eines pro Zeile der Tabelle. Ein zweiter Lauf legt keine doppelten Zeilen an.
+
+Jedes Item läuft einzeln durch die folgenden Knoten. Ein If-Knoten mit der Regel aus Beispiel 2 prüft also alle drei Anträge in einem Lauf. Die SQL-Anweisungen für eigene Mock-Tabellen schreibt der Coding-Agent. Wir prüfen sie, bevor wir sie ausführen.
+
+[Datei: 07-hallo-datenbank.json](../material/n8n/07-hallo-datenbank.json){download="07-hallo-datenbank.json"}
+
+## Wenn etwas nicht klappt {#fehler}
+
+| Beobachtung | Nächster Prüfschritt |
+|---|---|
+| Knoten mit rotem Warnsymbol nach dem Import | Knoten öffnen, unter „Credential“ die Verbindung der Gruppe wählen |
+| Expression zeigt `undefined` oder bleibt leer | Workflow einmal ausführen, damit der vorherige Knoten Daten hat. Dann Feldnamen links prüfen |
+| If-Knoten meldet einen Typfehler | Feldtyp im Edit-Fields-Knoten auf Number stellen |
+| Structured Output Parser meldet „could not parse“ | Prompt um „Antworte nur im vorgegebenen Format“ ergänzen und erneut ausführen |
+| Formular oder Webhook antwortet nicht | Test-Adresse gilt nur während „Listen for test event“. Sonst „Publish“ und Adresse ohne `-test` |
+| Postgres meldet „relation does not exist“ | Zuerst den Knoten „Tabelle anlegen“ ausführen |
+
+Weitere Fälle stehen unter [Wenn ein Lauf nicht funktioniert](n8n.qmd#fehler).
+
+## Alle Dateien {#dateien}
+
+| Datei | Baustein |
+|---|---|
+| [01-hallo-welt.json](../material/n8n/01-hallo-welt.json){download="01-hallo-welt.json"} | Trigger, Edit Fields, Expression |
+| [02-wenn-dann.json](../material/n8n/02-wenn-dann.json){download="02-wenn-dann.json"} | If-Knoten mit fester Regel |
+| [03-hallo-gemini.json](../material/n8n/03-hallo-gemini.json){download="03-hallo-gemini.json"} | Basic LLM Chain mit Gemini |
+| [04-strukturierte-antwort.json](../material/n8n/04-strukturierte-antwort.json){download="04-strukturierte-antwort.json"} | Structured Output Parser |
+| [05-hallo-formular.json](../material/n8n/05-hallo-formular.json){download="05-hallo-formular.json"} | n8n Form Trigger und Form Ending |
+| [06-hallo-webhook.json](../material/n8n/06-hallo-webhook.json){download="06-hallo-webhook.json"} | Webhook und Respond to Webhook (Mock) |
+| [07-hallo-datenbank.json](../material/n8n/07-hallo-datenbank.json){download="07-hallo-datenbank.json"} | Postgres in der Gruppen-Datenbank |
+
+In den Dateien 05 und 06 steht der Pfad `gX-...`. Nach dem Import das `X` durch die Gruppennummer ersetzen.
+
+[**Weiter zum ersten Workflow „Antrag prüfen“**](n8n.qmd#erster-workflow)

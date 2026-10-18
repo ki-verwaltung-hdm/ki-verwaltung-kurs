@@ -1,0 +1,91 @@
+{
+  "name": "01 Hallo Welt",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "3b4e7de9-88ba-511a-97b1-dc41e09d6fa7",
+      "name": "Start",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "af846b39-48dc-5bed-bae4-a069076ec519",
+              "name": "name",
+              "value": "Welt",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "11a06182-296c-57a3-ade4-36086f7e9713",
+      "name": "Name",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "04bbb8df-392a-5442-8c51-371b7599867d",
+              "name": "gruss",
+              "value": "=Hallo {{ $json.name }}!",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "da583c2e-47fe-5bd3-81ea-6d11438b7f10",
+      "name": "Gruss",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        440,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Name",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Name": {
+      "main": [
+        [
+          {
+            "node": "Gruss",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false
+}

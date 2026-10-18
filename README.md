@@ -22,7 +22,7 @@ Das Skript rendert und ruft `quarto publish gh-pages --no-prompt --no-render` au
 | Datei | Inhalt |
 |---|---|
 | `index.qmd` | Startseite: Projektidee, Termine, Nachschlagen |
-| `start.qmd` | Vorbereitung: HdM-VPN, Zertifikatswarnung, Google-Konto und Antigravity, n8n-Zugang je Gruppe, Teamablage, Arbeitsregeln |
+| `start.qmd` | Vorbereitung: HdM-VPN, Google-Konto und Antigravity, n8n-Zugang je Gruppe, Teamablage, Arbeitsregeln |
 | `projekt.qmd` | Rahmen, Ausgangslage, mögliche Bereiche (nur Rollen), fünf Phasen, Daten und Freigaben, experimenteller Charakter |
 | `semester.qmd` | Semesterplan: Woche 1 und 2, weitere Phasen als Rahmen ohne Termine |
 | `wochen/woche-01.qmd` | Montag, 12.10.: Kontext, Umfrage, BPMN-Grundlagen, Recherche-Auftrag |
@@ -32,12 +32,14 @@ Das Skript rendert und ruft `quarto publish gh-pages --no-prompt --no-render` au
 | `werkzeuge/prozessmodell.qmd` | BPMN-Symbole, Aurenta-Beispiel, Übertragung auf einen Verwaltungsprozess, Ist zu Soll |
 | `werkzeuge/bpmn-uebung.qmd` | BPMN-Übung „Anerkennung von Studienleistungen“ von Stephan (12.10.2026), aus seiner Markdown-Fassung übernommen |
 | `werkzeuge/interviews.qmd` | Fokus, Vorbereitung, Leitfragen, Protokollraster, zweites Gespräch |
+| `werkzeuge/n8n-einstieg.qmd` | n8n Schritt für Schritt: sechs Begriffe, Import, sieben Hello-World-Beispiele (Edit Fields, If, Gemini, Structured Output, Formular, Webhook-Mock, Postgres), Fehlertabelle |
 | `werkzeuge/n8n.qmd` | Login, erster Workflow (Antrag prüfen), Gemini-Credential, Freigabe, Webhooks mit Gruppenpräfix, Postgres/pgvector, Fehler |
 | `abgaben.qmd` | Arbeitsergebnisse je Phase mit Gewichten und Terminen aus der Bewertungsseite |
 | `bewertung.qmd` | Vorprüfungsleistung, vier Komponenten mit Kriterien und Punkten, Teamarbeit, Notentabelle |
 | `materialien.qmd` | Literatur aus `ws2627-ki-verwaltung-literatur.md`, Prozessbeispiele, Prompts, Dokumentation |
 | `material/prozess/` | Aurenta-Beispiel (BPMN und SVG) aus `~/code/process-lab`, Kopie wie im Mercedes-Repo |
 | `material/bpmn/` | Von Stephan (12.10.2026): Einführung in BPMN 2.0 als PDF und PPTX, Übung als DOCX. Den BVA-Attributkatalog nur verlinken, nicht ablegen: Das PDF untersagt Veröffentlichungen ohne Genehmigung, das Repo ist öffentlich |
+| `material/n8n/` | Workflow-Dateien zu den Hello-World-Beispielen (n8n 2.42.6), ohne Credentials. Pfade `gX-...` ersetzen die Gruppen selbst |
 | `material/prompts/` | Aufträge für den Coding-Agenten, aus `~/code/process-lab/prompts` für Antigravity ohne Pipeline umgeschrieben |
 | `vorlagen/teamablage/` | Quelle der Teamablage-Vorlage (fünf Ordner mit README, TEAM.md, STAND.md, ENTSCHEIDUNGEN.md, AGENTS.md). `./paket-bauen.sh` baut daraus `material/vorlagen/teamablage-vorlage.zip`; danach rendern |
 | `images/` | Elf SVG-Abbildungen im dunklen Stil der Growth-Grafiken (Phasen, Ausgangslage, Human in the Loop, Mocks, Projektumgebung, Schritttypen, Interviewzyklus, erster Workflow, Prompt-Standard, Agentenschleife, Semesterplan). Erzeugt von `images/erzeugen.py`; Texte dort ändern und neu laufen lassen, nicht die SVGs von Hand bearbeiten |
@@ -55,14 +57,14 @@ Auf den Seiten stehen keine sichtbaren Platzhalter-Markierungen. Die folgenden P
 6. **Prüfungsleistung, Gewichte, ECTS.** `bewertung.qmd` enthält den Vorschlag aus `notes/02_Areas/HdM_Projekte/ws2627-ki-verwaltung-leistungsbewertung.md` (30/30/25/15, Vorprüfung KIÖV und n8n Level 1, Termine 30.11., 14.12., Präsentation KW 4/5, Abgabe 12.02.). Mit Stephan bestätigen, bevor die Seite veröffentlicht wird; ECTS bewusst nicht genannt. `abgaben.qmd` verweist auf „wird in der Vorlesung bekannt gegeben“. Die öffentliche Projektseite nennt „3 SWS / 5 ECTS (neu: 6 ECTS)“ und „Fachspezifisches Projekt“; wenn das feststeht, in `projekt.qmd#rahmen` ergänzen. Keine Vorprüfungsleistung angelegt.
 7. **Termine ab Woche 4.** Der Termin für die Recherche-Ergebnisse steht bewusst als „wird noch vereinbart“ (Jan, 11.10.). `index.qmd`, `semester.qmd` und `abgaben.qmd` nennen nur „ab 26.10. wöchentlich“ und „wird vereinbart“. Interviewtermine, Reviews, Abschlusspräsentation und Abgabe ergänzen, sobald bekannt. Keine Blocktage im Plan.
 8. **Gemini-Modell in n8n.** `werkzeuge/n8n.qmd` sagt „ein Flash-Modell, welches wird in der Vorlesung genannt“. Modellnamen eintragen, sobald festgelegt (Growth-Kurs nutzt `gemini-3.1-flash-lite`).
-9. **Adresse der Projektumgebung.** Überall `https://141.62.116.2/n8n-<n>/` plus Abschnitt „Zertifikatswarnung“ in `start.qmd`. Die Seiten nennen bewusst nicht, dass DNS und Zertifikat bei der IT angefragt sind. Nach DNS und Zertifikat: Adressen in `start.qmd`, `werkzeuge/n8n.qmd`, `materialien.qmd` und `images/erzeugen.py` tauschen, Abschnitt „Zertifikatswarnung“ entfernen.
 10. **VPN-Anleitung.** `start.qmd#vpn` nennt FortiClient ohne Link auf die HdM-IT-Anleitung. Link ergänzen.
 11. **Lokale Modelle.** Nicht auf der Website. Wenn Mac Minis oder KI-Institut feststehen, in `projekt.qmd#regeln` ergänzen.
 12. **Aufnahme von Interviews.** Website sagt seit 11.10.: Protokoll immer, Tonaufnahme mit ausdrücklicher Zustimmung erlaubt, nur lokale Transkription (Whisper, MacWhisper, Buzz), Aufnahme danach löschen. Mit Stephan und den Interviewpartnern bestätigen.
 13. **n8n-Registrierung.** Nicht auf der Website. Laut Infrastruktur-Log je Instanz noch nicht erledigt; als Owner in der UI nachholen.
-14. **Formular-Trigger und Wait-Knoten** für die Freigabe (`werkzeuge/n8n.qmd#freigabe`) sind auf der HdM-Instanz noch nicht getestet. Vor Woche 2 einmal durchspielen.
-15. **Erster Workflow** (`werkzeuge/n8n.qmd#erster-workflow`): Beispiel „Antrag prüfen“ mit If-Knoten und Basic LLM Chain, noch nicht auf einer der sieben Instanzen ausgeführt. Vor Woche 2 mit dem Gruppenkonto g1 durchspielen und bei Bedarf Knotennamen anpassen.
-16. **BPMN-Übung.** Abgabetermin und Abgabeort fehlen bei Stephan; die Seite nennt nur, was abgegeben wird. Mit Stephan klären und in `werkzeuge/bpmn-uebung.qmd` sowie Woche 1 ergänzen.
+14. **Hello-World-Beispiele** (`werkzeuge/n8n-einstieg.qmd`): 01, 02, 05, 06 und 07 am 18.10.2026 in einer lokalen n8n 2.42.6 importiert und ausgeführt (Formular mit Form Ending, Webhook, Postgres mit pgvector-Image). 03 und 04 (Gemini) nur importiert, nicht ausgeführt. Auf einer HdM-Instanz noch nicht durchgespielt, vor allem Formular und Webhook hinter dem Caddy-Prefix `/n8n-<n>/`.
+15. **Formular-Trigger und Wait-Knoten** für die Freigabe (`werkzeuge/n8n.qmd#freigabe`) sind auf der HdM-Instanz noch nicht getestet. Vor Woche 2 einmal durchspielen.
+16. **Erster Workflow** (`werkzeuge/n8n.qmd#erster-workflow`): Beispiel „Antrag prüfen“ mit If-Knoten und Basic LLM Chain, noch nicht auf einer der sieben Instanzen ausgeführt. Vor Woche 2 mit dem Gruppenkonto g1 durchspielen und bei Bedarf Knotennamen anpassen.
+17. **BPMN-Übung.** Abgabetermin und Abgabeort fehlen bei Stephan; die Seite nennt nur, was abgegeben wird. Mit Stephan klären und in `werkzeuge/bpmn-uebung.qmd` sowie Woche 1 ergänzen.
 
 ## Vertraulichkeit
 
