@@ -111,6 +111,6 @@ Die Aufträge als Text in den Chat von Antigravity einfügen und die Platzhalter
 | [Google Antigravity](https://antigravity.google/) · [Antigravity IDE](https://antigravity.google/product/antigravity-ide/) | Entwicklungsumgebung mit Coding-Agent; die IDE ist das Programm zum Herunterladen |
 | [agents.md](https://agents.md/) | Format und Beispiele für AGENTS.md |
 | [n8n-Dokumentation](https://docs.n8n.io/) · [KI in n8n](https://docs.n8n.io/build/integrate-ai) | Knoten, Trigger, Modelle, Vektorsuche |
-| [n8n Schritt für Schritt](werkzeuge/n8n-einstieg.qmd) | Sieben Hello-World-Beispiele mit Workflow-Dateien zum Importieren |
-| [n8n Quickstart (QS101)](https://learn.n8n.io/courses/course-v1:n8n+QS101+2026H2/about) | Kurs der n8n Academy, Teil der [Vorprüfungsleistung](bewertung.qmd#vorpruefung); dafür die Testphase von n8n Cloud nutzen |
+| [n8n Schritt für Schritt](werkzeuge/n8n-einstieg.qmd) | Acht Hello-World-Beispiele mit Workflow-Dateien zum Importieren |
+| [n8n Quickstart (QS101)](https://learn.n8n.io/courses/course-v1:n8n+QS101+2026H2/about) | Kurs der n8n Academy, Teil der [Vorprüfungsleistung](bewertung.qmd#vorpruefung); in der n8n-Instanz der Gruppe bearbeiten |
 | [Übersichtsseite der Projektumgebung](https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/) | Links zu den sieben n8n-Instanzen, nur HdM-Netz und VPN |

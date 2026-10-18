@@ -33,7 +33,7 @@ Mit den beiden Kursen erwerben alle im eigenen Lerntempo Grundlagen zu KI in der
 **Prüfen:** Je Person zwei Nachweise, Kurstitel und eigener Name sind lesbar.
 
 ::: {.callout-note title="n8n-Instanz für den Kurs"}
-Der n8n-Kurs braucht eine eigene, öffentlich erreichbare n8n-Instanz. Die Gruppeninstanzen auf dem HdM-Server sind nur im HdM-Netz und über VPN erreichbar und haben ein Konto pro Gruppe. Nutzen Sie für den Kurs deshalb die kostenlose Testphase von [n8n Cloud](https://n8n.io/pricing/). Starten Sie die Testphase erst, wenn Sie den Kurs am Stück bearbeiten können, denn sie ist zeitlich begrenzt. Für den Teil zum KI-Agenten brauchen Sie einen API-Schlüssel eines Modellanbieters; ein kostenloser Schlüssel von Google Gemini oder Groq reicht.
+Bearbeiten Sie den n8n-Kurs in der n8n-Instanz Ihrer Gruppe auf dem HdM-Server, nicht in n8n Cloud. Den Schritt „setting up n8n“ am Kursbeginn überspringen Sie also. Von zu Hause brauchen Sie dafür das [HdM-VPN](start.qmd#vpn). Für den Teil zum KI-Agenten nehmen Sie die vorbereitete Gemini-Verbindung der Gruppe, ein eigener API-Schlüssel ist nicht nötig. Weil sich die Gruppe ein Konto teilt, beginnt jeder Ihrer Workflow-Namen mit Ihrem Nachnamen (zum Beispiel „Müller · QS101 Übung 1“).
 :::
 
 ::: {.callout-warning title="Achtung"}
