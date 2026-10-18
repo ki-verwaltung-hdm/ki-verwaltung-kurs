@@ -484,7 +484,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Den Prompt nach dem <a href="../werkzeuge/einrichtung.html#prompt">Prompt-Standard</a> umschreiben: Kontext (was für die Anmeldung nötig ist), Aufgabe (Mail in die Felder übertragen), Prüfung (nur eintragen, was in der Mail steht).</li>
 <li>Den Workflow ausführen.</li>
 </ol>
-<p><strong>Prüfung:</strong> Die Ausgabe hat genau die fünf Felder. Das nur angekündigte Zeugnis steht unter <code>fehlende_angaben</code>, nicht unter <code>genannte_nachweise</code>. Der Zweitprüfer fehlt in der Mail und steht deshalb ebenfalls unter <code>fehlende_angaben</code>.</p>
+<p><strong>Prüfung:</strong> Die Ausgabe hat unter <code>output</code> genau die fünf Felder. Das nur angekündigte Zeugnis steht unter <code>fehlende_angaben</code>. Der Zweitprüfer fehlt in der Mail und steht deshalb ebenfalls dort. <code>rueckfrage_noetig</code> ist <code>true</code>.</p>
 <p>Mit festen Feldern kann ein If-Knoten weiterarbeiten, zum Beispiel mit <code>rueckfrage_noetig</code>. So entsteht das Muster aus dem Projekt: Das Modell strukturiert, die Regel prüft, der Mensch entscheidet.</p>
 <p><a href="../material/n8n/04-strukturierte-antwort.json" download="04-strukturierte-antwort.json">Datei: 04-strukturierte-antwort.json</a></p>
 </section>
