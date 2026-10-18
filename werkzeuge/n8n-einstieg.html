@@ -306,6 +306,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#voraussetzungen" id="toc-voraussetzungen" class="nav-link active" data-scroll-target="#voraussetzungen">Voraussetzungen</a></li>
   <li><a href="#begriffe" id="toc-begriffe" class="nav-link" data-scroll-target="#begriffe">Die Oberfläche in sechs Begriffen</a></li>
+  <li><a href="#bpmn" id="toc-bpmn" class="nav-link" data-scroll-target="#bpmn">n8n und BPMN 2.0</a></li>
   <li><a href="#importieren" id="toc-importieren" class="nav-link" data-scroll-target="#importieren">Einen Workflow importieren</a></li>
   <li><a href="#hallo-welt" id="toc-hallo-welt" class="nav-link" data-scroll-target="#hallo-welt">Beispiel 1: Hallo Welt</a></li>
   <li><a href="#wenn-dann" id="toc-wenn-dann" class="nav-link" data-scroll-target="#wenn-dann">Beispiel 2: Wenn, dann</a></li>
@@ -393,6 +394,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p>Ein Doppelklick auf einen Knoten öffnet ihn. Links steht die Eingabe (Input), in der Mitte die Einstellungen, rechts die Ausgabe (Output). Die Ansicht der Daten lässt sich oben zwischen Schema, Table und JSON umschalten.</p>
+</section>
+<section id="bpmn" class="level2">
+<h2 class="anchored" data-anchor-id="bpmn">n8n und BPMN 2.0</h2>
+<p>Das Soll-Modell in BPMN 2.0 ist der Bauplan, der Workflow in n8n die Umsetzung. Jedes Beispiel auf dieser Seite übt ein BPMN-Element, das im Prototyp wieder vorkommt. Die Symbole stehen unter <a href="../werkzeuge/prozessmodell.html">Prozessmodellierung</a>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>BPMN 2.0</th>
+<th>n8n</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Startereignis (dünner Kreis)</td>
+<td>Trigger: Manual, Form oder Webhook</td>
+<td>1, 5, 6</td>
+</tr>
+<tr class="even">
+<td>Datenobjekt</td>
+<td>Item mit Feldern, angelegt mit Edit Fields</td>
+<td>1, 2</td>
+</tr>
+<tr class="odd">
+<td>Rechteck mit Tabelle (feste Regel) und Raute mit X</td>
+<td>If-Knoten mit den Ausgängen <code>true</code> und <code>false</code></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Rechteck mit Zahnrädern in der Bahn KI-Agent</td>
+<td>Basic LLM Chain mit Chat Model</td>
+<td>3, 4</td>
+</tr>
+<tr class="odd">
+<td>Datenobjekt mit festen Attributen</td>
+<td>Structured Output Parser</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>Rechteck mit Person, eigene Bahn</td>
+<td>n8n Form (Eingabe, Freigabe, Bestätigung)</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>Eigener Pool mit Nachrichtenflüssen</td>
+<td>Webhook und Respond to Webhook als Mock</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Datenspeicher (Zylinder)</td>
+<td>Postgres-Knoten auf der Gruppen-Datenbank</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>Endereignis (dicker Kreis)</td>
+<td>Letzter Knoten ohne Nachfolger, Form Ending</td>
+<td>1, 5</td>
+</tr>
+</tbody>
+</table>
+<p>Jede Datei enthält Notizen auf der Arbeitsfläche: eine gelbe mit Ziel, Ausprobieren und BPMN-Bezug, dazu eine blaue an jedem Knoten. Beim eigenen Nachbauen lohnt es sich, dieselbe Zuordnung als Notiz festzuhalten. So bleibt sichtbar, welcher Knoten welchen Schritt des Soll-Modells umsetzt.</p>
 </section>
 <section id="importieren" class="level2">
 <h2 class="anchored" data-anchor-id="importieren">Einen Workflow importieren</h2>

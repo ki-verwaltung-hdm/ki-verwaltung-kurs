@@ -2,6 +2,70 @@
   "name": "03 Hallo Gemini",
   "nodes": [
     {
+      "parameters": {
+        "content": "### Mail (Edit Fields)\nEine erfundene Mail an das Prüfungsamt. Nie echte Mails einfügen.\n\n**BPMN:** Datenobjekt „Mail“, unstrukturierte Information.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "02bf892f-79d2-5a39-9076-fe325fae5b20",
+      "name": "Notiz Mail",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        250,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Zusammenfassen (Basic LLM Chain)\nSchickt den Prompt mit der Mail an das Modell. Die Antwort steht im Feld `text`.\n\n**BPMN:** Modellschritt, Rechteck mit Zahnrädern, Bahn KI-Agent.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "5d005949-de86-5ece-be52-ded794449fe5",
+      "name": "Notiz Zusammenfassen",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        580,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Gemini (Chat Model)\nDas Modell hinter der Chain. Verbindung **Gemini g<n>** der Gruppe wählen, kein eigenes Konto.\n\n**BPMN:** kein eigenes Element. Gehört zum Modellschritt darüber.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "7d5cbecd-bfd6-56e1-b86b-9d42e42faf68",
+      "name": "Notiz Gemini",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        580,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Beispiel 3: Hallo Gemini\nEin **Sprachmodell** fasst eine erfundene Mail zusammen.\n\n**Ausprobieren:** ausführen, zweimal. Der Wortlaut ändert sich, der Inhalt sollte gleich bleiben.\n\n**BPMN 2.0:** Rechteck mit Zahnrädern in der Bahn **KI-Agent**. Im Soll-Modell markiert genau dieses Symbol die Stelle, an der KI hilft.",
+        "height": 400,
+        "width": 380,
+        "color": 1
+      },
+      "id": "f591c6d1-334a-5c59-853d-366d7b84db60",
+      "name": "Notiz Uebersicht",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        -250
+      ]
+    },
+    {
       "parameters": {},
       "id": "6675633a-b496-5f09-9a6a-1fd8661811cb",
       "name": "Start",
@@ -31,7 +95,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        220,
+        330,
         0
       ]
     },
@@ -45,7 +109,7 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.7,
       "position": [
-        440,
+        660,
         0
       ]
     },
@@ -61,8 +125,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1,
       "position": [
-        440,
-        220
+        660,
+        330
       ]
     }
   ],

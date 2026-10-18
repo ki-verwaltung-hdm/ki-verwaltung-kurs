@@ -3,6 +3,70 @@
   "nodes": [
     {
       "parameters": {
+        "content": "### Formular (Form Trigger)\nDrei Felder. Der Pfad unter *Options* heißt `gX-anfrage`: **X durch die Gruppennummer ersetzen.**\n\n**BPMN:** Startereignis „Anfrage eingegangen“, ausgelöst aus der Bahn Antragstellende.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "8fef96e5-15f7-5c7d-8db7-399922f3ccc3",
+      "name": "Notiz Formular",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Eingang (Edit Fields)\nBaut aus den Formularfeldern einen Bestätigungstext.\n\n**BPMN:** Aufgabe in der Bahn Workflow-System.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "e36e80a2-604f-5363-b6c6-45ddf07667bb",
+      "name": "Notiz Eingang",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        250,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Bestaetigung (Form Ending)\nZeigt der Person die Bestätigung im Browser.\n\n**BPMN:** Endereignis mit Nachricht an die Bahn Antragstellende. Für eine Freigabe: Rechteck mit Person.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "5b340195-78ec-5eb8-b4a4-c3c474cc7458",
+      "name": "Notiz Bestaetigung",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        580,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Beispiel 5: Hallo Formular\nEine kleine **Web-Seite**, auf der eine Person etwas eingibt. So bauen wir später die Freigabe durch den Menschen.\n\n**Ausprobieren:** im Knoten „Formular“ auf *Execute step* klicken, das Formular füllt sich in einem neuen Tab. Nur erfundene Angaben.\n\n**BPMN 2.0:** Startereignis mit Nachricht, danach Aufgabe im Workflow-System, am Ende Endereignis. Die ausfüllende Person hat ihre eigene Bahn.",
+        "height": 400,
+        "width": 380,
+        "color": 1
+      },
+      "id": "a26c0249-874d-5b92-a753-f1a92338924c",
+      "name": "Notiz Uebersicht",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        -250
+      ]
+    },
+    {
+      "parameters": {
         "formTitle": "Anfrage an das Prüfungsamt (Test)",
         "formDescription": "Nur erfundene Angaben eintragen.",
         "formFields": {
@@ -74,7 +138,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        220,
+        330,
         0
       ]
     },
@@ -90,7 +154,7 @@
       "type": "n8n-nodes-base.form",
       "typeVersion": 1,
       "position": [
-        440,
+        660,
         0
       ],
       "webhookId": "34a8f9fa-16ca-51b1-be86-81f7a9953ce7"

@@ -3,6 +3,54 @@
   "nodes": [
     {
       "parameters": {
+        "content": "### Webhook\nNimmt die Anfrage an. Pfad `gX-hallo`: **X durch die Gruppennummer ersetzen.** Nach *Publish* gilt die Adresse ohne `-test`.\n\n**BPMN:** eingehender Nachrichtenfluss im Pool Campus-System.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "a0332afb-2a2e-50b7-8190-ca7797324e75",
+      "name": "Notiz Webhook",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Antwort (Respond to Webhook)\nGibt ein erfundenes JSON zurück, so wie das echte System antworten würde.\n\n**BPMN:** ausgehender Nachrichtenfluss zurück zum Prozess. Im Soll-Modell: Rechteck mit Zahnrädern „Status abfragen“.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "70a4f2d3-c6b2-59a0-a1d3-2c5ab357e1df",
+      "name": "Notiz Antwort",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        250,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Beispiel 6: Hallo Webhook\nEin **Mock**: Der Workflow spielt ein Verwaltungssystem und antwortet mit erfundenen Daten. Der Prototyp fragt den Mock statt eines echten Systems.\n\n**Ausprobieren:** im Webhook *Listen for test event* wählen, die Test-Adresse mit `?id=A-007` im Browser öffnen.\n\n**BPMN 2.0:** Das Campus-System ist ein eigener **Pool**. Anfrage und Antwort sind **Nachrichtenflüsse** (gestrichelte Pfeile) zwischen den Pools.",
+        "height": 400,
+        "width": 380,
+        "color": 1
+      },
+      "id": "e587628d-6416-5b22-8b7f-daf31b85229b",
+      "name": "Notiz Uebersicht",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        -250
+      ]
+    },
+    {
+      "parameters": {
         "path": "gX-hallo",
         "responseMode": "responseNode",
         "options": {}
@@ -28,7 +76,7 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.1,
       "position": [
-        220,
+        330,
         0
       ]
     }

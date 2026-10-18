@@ -105,6 +105,13 @@
     "text": "Die Oberfläche in sechs Begriffen\n\n\n\n\n\n\n\nBegriff\nBedeutung\n\n\n\n\nWorkflow\nEin Ablauf auf der Arbeitsfläche (Canvas). Er wird gespeichert und kann exportiert werden.\n\n\nKnoten (Node)\nEin Schritt im Ablauf. Das Plus-Symbol öffnet die Liste aller Knoten mit Suchfeld.\n\n\nTrigger\nDer erste Knoten. Er startet den Ablauf: per Klick, per Formular oder per Aufruf einer Adresse.\n\n\nItem\nEin Datensatz, der von Knoten zu Knoten weitergereicht wird. Intern ist das JSON, also Feldname und Wert.\n\n\nExpression\nEin Platzhalter in doppelten geschweiften Klammern, zum Beispiel { $json.name }. n8n setzt dort den Wert aus dem vorherigen Knoten ein.\n\n\nAusführung\nEin Lauf des Workflows. Jeder Knoten zeigt danach links seine Eingabe und rechts seine Ausgabe.\n\n\n\nEin Doppelklick auf einen Knoten öffnet ihn. Links steht die Eingabe (Input), in der Mitte die Einstellungen, rechts die Ausgabe (Output). Die Ansicht der Daten lässt sich oben zwischen Schema, Table und JSON umschalten."
   },
   {
+    "objectID": "werkzeuge/n8n-einstieg.html#bpmn",
+    "href": "werkzeuge/n8n-einstieg.html#bpmn",
+    "title": "n8n Schritt für Schritt",
+    "section": "n8n und BPMN 2.0",
+    "text": "n8n und BPMN 2.0\nDas Soll-Modell in BPMN 2.0 ist der Bauplan, der Workflow in n8n die Umsetzung. Jedes Beispiel auf dieser Seite übt ein BPMN-Element, das im Prototyp wieder vorkommt. Die Symbole stehen unter Prozessmodellierung.\n\n\n\n\n\n\n\n\nBPMN 2.0\nn8n\nBeispiel\n\n\n\n\nStartereignis (dünner Kreis)\nTrigger: Manual, Form oder Webhook\n1, 5, 6\n\n\nDatenobjekt\nItem mit Feldern, angelegt mit Edit Fields\n1, 2\n\n\nRechteck mit Tabelle (feste Regel) und Raute mit X\nIf-Knoten mit den Ausgängen true und false\n2\n\n\nRechteck mit Zahnrädern in der Bahn KI-Agent\nBasic LLM Chain mit Chat Model\n3, 4\n\n\nDatenobjekt mit festen Attributen\nStructured Output Parser\n4\n\n\nRechteck mit Person, eigene Bahn\nn8n Form (Eingabe, Freigabe, Bestätigung)\n5\n\n\nEigener Pool mit Nachrichtenflüssen\nWebhook und Respond to Webhook als Mock\n6\n\n\nDatenspeicher (Zylinder)\nPostgres-Knoten auf der Gruppen-Datenbank\n7\n\n\nEndereignis (dicker Kreis)\nLetzter Knoten ohne Nachfolger, Form Ending\n1, 5\n\n\n\nJede Datei enthält Notizen auf der Arbeitsfläche: eine gelbe mit Ziel, Ausprobieren und BPMN-Bezug, dazu eine blaue an jedem Knoten. Beim eigenen Nachbauen lohnt es sich, dieselbe Zuordnung als Notiz festzuhalten. So bleibt sichtbar, welcher Knoten welchen Schritt des Soll-Modells umsetzt."
+  },
+  {
     "objectID": "werkzeuge/n8n-einstieg.html#importieren",
     "href": "werkzeuge/n8n-einstieg.html#importieren",
     "title": "n8n Schritt für Schritt",

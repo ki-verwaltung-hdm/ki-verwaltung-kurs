@@ -2,6 +2,54 @@
   "name": "07 Hallo Datenbank",
   "nodes": [
     {
+      "parameters": {
+        "content": "### Tabelle anlegen (Postgres)\nLegt die Tabelle `antraege` an und füllt sie mit drei erfundenen Anträgen. Verbindung **Postgres g<n>**.\n\n**BPMN:** Aufgabe, die in den Datenspeicher schreibt.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "aee3b1cf-95f0-5ad0-bc2b-372ed800c7d5",
+      "name": "Notiz Tabelle anlegen",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        250,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Antraege lesen (Postgres)\nLiest alle Zeilen. Jedes Item läuft einzeln durch die nächsten Knoten, z. B. durch die Regel aus Beispiel 2.\n\n**BPMN:** Aufgabe, die aus dem Datenspeicher liest.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "90368c73-8a98-5fbd-98af-d0720a7fa86e",
+      "name": "Notiz Antraege lesen",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        580,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Beispiel 7: Hallo Datenbank\nErfundene Anträge in der **Gruppen-Datenbank** ablegen und lesen.\n\n**Ausprobieren:** ausführen. „Antraege lesen“ gibt drei Items aus, eines pro Zeile. Ein zweiter Lauf legt keine Doppelten an.\n\n**BPMN 2.0:** Die Tabelle ist ein **Datenspeicher** (Zylinder). Die Knoten lesen und schreiben ihn über Datenassoziationen (gepunktete Linien).",
+        "height": 400,
+        "width": 380,
+        "color": 1
+      },
+      "id": "7552317f-0646-5a5d-87d1-c014179cac33",
+      "name": "Notiz Uebersicht",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        -250
+      ]
+    },
+    {
       "parameters": {},
       "id": "785e76a0-21fd-53b1-87b3-acf882698f3d",
       "name": "Start",
@@ -23,7 +71,7 @@
       "type": "n8n-nodes-base.postgres",
       "typeVersion": 2.6,
       "position": [
-        220,
+        330,
         0
       ]
     },
@@ -38,7 +86,7 @@
       "type": "n8n-nodes-base.postgres",
       "typeVersion": 2.6,
       "position": [
-        440,
+        660,
         0
       ],
       "executeOnce": true
