@@ -220,4 +220,71 @@ write("08b-entscheidungen-auswerten.json", "08b Entscheidungen auswerten", [
 ], {"Start": {"main": [[main(w, "Entschiedene Faelle")]]},
     "Entschiedene Faelle": {"main": [[main(w, "Freigegeben?"), main(w, "Als CSV")]]},
     "Freigegeben?": {"main": [[main(w, "Bescheid vorbereiten")], [main(w, "Rueckfrage vorbereiten")]]}})
+
+# 9 Wissenssuche mit pgvector: Ordnung ablegen (a) und fragen (b)
+ORDNUNG = """Musterordnung für die Bachelorarbeit im Studiengang Verwaltungsdigitalisierung (erfunden, nur für Übungen)
+
+§ 1 Geltungsbereich
+Diese Ordnung regelt Anmeldung, Bearbeitung und Bewertung der Bachelorarbeit im Studiengang Verwaltungsdigitalisierung.
+
+§ 2 Zulassung zur Bachelorarbeit
+Zur Bachelorarbeit wird zugelassen, wer mindestens 210 Leistungspunkte erworben und das Praxissemester abgeschlossen hat. Der Nachweis über das Praxissemester ist das Zeugnis der Praxisstelle. Die Anmeldung erfolgt mit dem unterschriebenen Anmeldeformular beim Prüfungsamt.
+
+§ 3 Bearbeitungszeit
+Die Bearbeitungszeit beträgt vier Monate ab Ausgabe des Themas. Auf begründeten Antrag kann der Prüfungsausschuss die Bearbeitungszeit einmal um höchstens vier Wochen verlängern. Der Antrag muss vor Ablauf der Bearbeitungszeit gestellt werden.
+
+§ 4 Betreuung
+Die Bachelorarbeit wird von einer Erstprüferin oder einem Erstprüfer und einer Zweitprüferin oder einem Zweitprüfer betreut. Mindestens eine der beiden Personen muss Professorin oder Professor der Hochschule sein. Beide Personen sind bei der Anmeldung zu benennen.
+
+§ 5 Anerkennung von Studienleistungen
+Studienleistungen aus anderen Hochschulen werden auf Antrag anerkannt, wenn keine wesentlichen Unterschiede bestehen. Dem Antrag sind die Modulbeschreibung und ein Notenspiegel beizufügen. Der Antrag ist innerhalb des ersten Semesters nach der Einschreibung zu stellen.
+
+§ 6 Rücktritt
+Ein Rücktritt von der Bachelorarbeit ist innerhalb von zwei Wochen nach Ausgabe des Themas ohne Angabe von Gründen möglich. Danach ist ein Rücktritt nur aus wichtigem Grund möglich, der unverzüglich schriftlich nachzuweisen ist."""
+
+w = "wissen-a"
+write("09a-ordnung-ablegen.json", "09a Ordnung ablegen", [
+    manual(w),
+    node(w, "Tabelle leeren", "n8n-nodes-base.postgres", 2.6, [220, 0],
+         {"operation": "executeQuery", "query": "DROP TABLE IF EXISTS ordnung_vektoren;", "options": {}}),
+    setnode(w, "Ordnung", (440, 0), [("text", ORDNUNG, "string")]),
+    node(w, "In Vektorspeicher", "@n8n/n8n-nodes-langchain.vectorStorePGVector", 1.3, [680, 0], {
+        "mode": "insert", "tableName": "ordnung_vektoren", "options": {}}),
+    node(w, "Embeddings", "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini", 1, [600, 220],
+         {"modelName": "models/gemini-embedding-001"}),
+    node(w, "Loader", "@n8n/n8n-nodes-langchain.documentDefaultDataLoader", 1.1, [780, 220], {
+        "jsonMode": "expressionData", "jsonData": "={{ $json.text }}",
+        "textSplittingMode": "custom", "options": {}}),
+    node(w, "Splitter", "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter", 1, [1000, 420],
+         {"chunkSize": 500, "chunkOverlap": 50, "options": {}}),
+], {"Start": {"main": [[main(w, "Tabelle leeren")]]},
+    "Tabelle leeren": {"main": [[main(w, "Ordnung")]]},
+    "Ordnung": {"main": [[main(w, "In Vektorspeicher")]]},
+    "Embeddings": {"ai_embedding": [[{"node": "In Vektorspeicher", "type": "ai_embedding", "index": 0}]]},
+    "Loader": {"ai_document": [[{"node": "In Vektorspeicher", "type": "ai_document", "index": 0}]]},
+    "Splitter": {"ai_textSplitter": [[{"node": "Loader", "type": "ai_textSplitter", "index": 0}]]}})
+
+SYSTEM_QA = ("Du beantwortest Fragen zur Ordnung für die Bachelorarbeit. Nutze ausschließlich den Kontext unten. "
+             "Nenne zu jeder Aussage den Paragrafen. Steht die Antwort nicht im Kontext, antworte: "
+             "Dazu steht nichts in der Ordnung. Antworte auf Deutsch in höchstens drei Sätzen.\n\n"
+             "Kontext:\n{context}")
+w = "wissen-b"
+write("09b-ordnung-fragen.json", "09b Ordnung fragen", [
+    manual(w),
+    setnode(w, "Frage", (220, 0), [("frage", "Bis wann kann ich von der Bachelorarbeit zurücktreten, und brauche ich dafür einen Grund?", "string")]),
+    node(w, "Antwort aus der Ordnung", "@n8n/n8n-nodes-langchain.chainRetrievalQa", 1.7, [460, 0], {
+        "promptType": "define", "text": "={{ $json.frage }}",
+        "options": {"systemPromptTemplate": SYSTEM_QA}}),
+    gemini(w, (380, 220)),
+    node(w, "Retriever", "@n8n/n8n-nodes-langchain.retrieverVectorStore", 1, [560, 220], {"topK": 3}),
+    node(w, "Ordnung (Vektorspeicher)", "@n8n/n8n-nodes-langchain.vectorStorePGVector", 1.3, [760, 420], {
+        "tableName": "ordnung_vektoren", "options": {}}),
+    node(w, "Embeddings", "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini", 1, [960, 420],
+         {"modelName": "models/gemini-embedding-001"}),
+], {"Start": {"main": [[main(w, "Frage")]]},
+    "Frage": {"main": [[main(w, "Antwort aus der Ordnung")]]},
+    "Gemini": {"ai_languageModel": [[{"node": "Antwort aus der Ordnung", "type": "ai_languageModel", "index": 0}]]},
+    "Retriever": {"ai_retriever": [[{"node": "Antwort aus der Ordnung", "type": "ai_retriever", "index": 0}]]},
+    "Ordnung (Vektorspeicher)": {"ai_vectorStore": [[{"node": "Retriever", "type": "ai_vectorStore", "index": 0}]]},
+    "Embeddings": {"ai_embedding": [[{"node": "Ordnung (Vektorspeicher)", "type": "ai_embedding", "index": 0}]]}})
 print("ok", sorted(p.name for p in OUT.iterdir()))

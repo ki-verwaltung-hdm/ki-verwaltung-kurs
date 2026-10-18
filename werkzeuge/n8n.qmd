@@ -5,7 +5,7 @@ toc: true
 
 [Jede Gruppe hat eine eigene n8n-Instanz mit eigener Datenbank auf einem Server der HdM. Diese Seite beschreibt Login, den ersten Workflow, die vorbereiteten Verbindungen zu Modell und Datenbank, Webhooks und die häufigsten Fehler.]{.lead}
 
-Neu in n8n? Zuerst die acht kleinen Beispiele unter [n8n Schritt für Schritt](n8n-einstieg.qmd) durcharbeiten. Sie zeigen jeden Baustein einzeln, der hier im Zusammenhang vorkommt.
+Neu in n8n? Zuerst die neun kleinen Beispiele unter [n8n Schritt für Schritt](n8n-einstieg.qmd) durcharbeiten. Sie zeigen jeden Baustein einzeln, der hier im Zusammenhang vorkommt.
 
 ## Was n8n im Projekt leistet {#rolle}
 
@@ -122,7 +122,7 @@ Zum Testen in n8n „Listen for test event“ wählen und die Adresse im Browser
 Jede Gruppe hat eine eigene Postgres-Datenbank mit der Erweiterung pgvector. Die Verbindung **Postgres g<n>** ist im Konto hinterlegt. Zwei Einsatzzwecke:
 
 - **Mock-Daten:** Eine Tabelle mit erfundenen Anträgen oder Studierenden, die der Prototyp mit dem **Postgres**-Knoten liest. Der Coding-Agent erzeugt die SQL-Anweisungen zum Anlegen und Befüllen; ausgeführt werden sie in einem Postgres-Knoten.
-- **Wissenssuche über Dokumente:** Ordnungen, Merkblätter und Formulare (öffentliche oder erfundene) werden mit dem Knoten **PGVector Vector Store** abgelegt und per Ähnlichkeitssuche gefunden, damit das Modell mit der passenden Textstelle antwortet. Der Knoten legt die Tabelle `n8n_vectors` selbst an. Für Einbettungen den Knoten **Embeddings Google Gemini** mit der Gemini-Verbindung der Gruppe verwenden.
+- **Wissenssuche über Dokumente:** Ordnungen, Merkblätter und Formulare (öffentliche oder erfundene) werden mit dem Knoten **PGVector Vector Store** abgelegt und per Ähnlichkeitssuche gefunden, damit das Modell mit der passenden Textstelle antwortet. Der Knoten legt die Tabelle `n8n_vectors` selbst an. Für Einbettungen den Knoten **Embeddings Google Gemini** mit der Gemini-Verbindung der Gruppe verwenden. Ein vollständiges Beispiel steht unter [Wissenssuche in einer Ordnung](n8n-einstieg.qmd#wissenssuche).
 
 Die Datenbank der Gruppe ist nur für die Gruppe sichtbar. Auch hier gilt: keine Realdaten.
 

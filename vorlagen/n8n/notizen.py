@@ -201,6 +201,62 @@ Macht aus den entschiedenen Fällen die Datei `pruefliste.csv`. In der Ausgabe u
 
 **BPMN:** Datenobjekt „Prüfliste (Datei)“.""",
 },
+"09a-ordnung-ablegen.json": {
+ "_": """## Beispiel 9a: Ordnung ablegen
+Eine erfundene Prüfungsordnung wird in Abschnitte zerlegt. Jeder Abschnitt wird als **Vektor** in der Gruppen-Datenbank (pgvector) abgelegt. Ein Vektor ist eine Zahlenreihe, die die Bedeutung des Textes beschreibt.
+
+**Ausprobieren:** ausführen. Unter „In Vektorspeicher“ stehen danach sechs Abschnitte, einer pro Paragraf.
+
+**BPMN 2.0:** Vorbereitender Prozess vor dem eigentlichen Ablauf. Die Vektortabelle ist ein **Datenspeicher** „Ordnung“.""",
+ "Tabelle leeren": """### Tabelle leeren (Postgres)
+Löscht `ordnung_vektoren`, damit ein zweiter Lauf nichts doppelt ablegt.
+
+**BPMN:** Aufgabe am Datenspeicher.""",
+ "Ordnung": """### Ordnung (Edit Fields)
+Der Text der Ordnung im Feld `text`. Nur öffentliche oder erfundene Texte, keine internen Dokumente.
+
+**BPMN:** Datenobjekt „Ordnung“.""",
+ "In Vektorspeicher": """### In Vektorspeicher (PGVector, Insert)
+Schreibt jeden Abschnitt mit seinem Vektor in die Tabelle `ordnung_vektoren` der Gruppen-Datenbank.
+
+**BPMN:** Aufgabe, die in den Datenspeicher schreibt.""",
+ "Embeddings": """### Embeddings (Gemini)
+Rechnet Text in Vektoren um. Ablegen und Suchen müssen dasselbe Modell nutzen.
+
+**BPMN:** kein eigenes Element.""",
+ "Loader": """### Loader (Default Data Loader)
+Nimmt das Feld `text` als Dokument.
+
+**BPMN:** kein eigenes Element.""",
+ "Splitter": """### Splitter
+Zerlegt das Dokument in Abschnitte mit höchstens 500 Zeichen, bevorzugt an Leerzeilen. So landet jeder Paragraf in einem eigenen Abschnitt.""",
+},
+"09b-ordnung-fragen.json": {
+ "_": """## Beispiel 9b: Ordnung fragen
+Die Frage sucht die drei ähnlichsten Abschnitte der Ordnung. Das Modell antwortet nur mit diesen Abschnitten und nennt den Paragrafen. Dieses Muster heißt **RAG** (Retrieval-Augmented Generation).
+
+**Ausprobieren:** erst 09a ausführen, dann hier. Danach im Knoten „Frage“ eine Frage stellen, die die Ordnung nicht beantwortet, etwa nach dem Semesterbeitrag. Erwartet: „Dazu steht nichts in der Ordnung.“
+
+**BPMN 2.0:** Rechteck mit Zahnrädern in der Bahn KI-Agent, das aus dem Datenspeicher „Ordnung“ liest.""",
+ "Frage": """### Frage (Edit Fields)
+Die Frage einer Sachbearbeiterin oder eines Studenten.
+
+**BPMN:** Datenobjekt „Frage“.""",
+ "Antwort aus der Ordnung": """### Antwort aus der Ordnung (Q&A Chain)
+Holt passende Abschnitte und gibt sie dem Modell als Kontext. Der Systemprompt unter *Options* verlangt Paragrafen und verbietet Antworten ohne Grundlage.
+
+**BPMN:** Modellschritt, Bahn KI-Agent.""",
+ "Gemini": """### Gemini (Chat Model)
+Formuliert die Antwort aus dem Kontext. Temperatur 0,2.""",
+ "Retriever": """### Retriever
+Gibt die drei ähnlichsten Abschnitte weiter (Top K = 3). Mehr Abschnitte heißt mehr Kontext, aber auch mehr Störung.""",
+ "Ordnung (Vektorspeicher)": """### Ordnung (PGVector)
+Sucht in `ordnung_vektoren` nach Abschnitten, deren Vektor dem der Frage am nächsten liegt.
+
+**BPMN:** Aufgabe, die aus dem Datenspeicher liest.""",
+ "Embeddings": """### Embeddings (Gemini)
+Rechnet die Frage in einen Vektor um, mit demselben Modell wie in 9a.""",
+},
 }
 
 

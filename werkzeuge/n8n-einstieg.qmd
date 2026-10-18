@@ -3,9 +3,9 @@ title: "n8n Schritt für Schritt"
 toc: true
 ---
 
-[Acht kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle, Datenbank und eine Tabelle, in der ein Mensch entscheidet.]{.lead}
+[Neun kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle, Datenbank, eine Tabelle, in der ein Mensch entscheidet, und eine Wissenssuche über eine Ordnung.]{.lead}
 
-Die Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Alle liegen schon fertig in der Instanz jeder Gruppe, als „DEMO 01“ bis „DEMO 08b“, mit den Verbindungen und Pfaden der Gruppe. Damit klicken wir sie im Termin gemeinsam durch. Zum Üben baut man sie danach selbst nach und vergleicht mit der DEMO-Fassung. Zusätzlich gibt es jede Datei zum Importieren. Danach folgt der [erste vollständige Workflow](n8n.qmd#erster-workflow) „Antrag prüfen“.
+Die Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Alle liegen schon fertig in der Instanz jeder Gruppe, als „DEMO 01“ bis „DEMO 09b“, mit den Verbindungen und Pfaden der Gruppe. Damit klicken wir sie im Termin gemeinsam durch. Zum Üben baut man sie danach selbst nach und vergleicht mit der DEMO-Fassung. Zusätzlich gibt es jede Datei zum Importieren. Danach folgt der [erste vollständige Workflow](n8n.qmd#erster-workflow) „Antrag prüfen“.
 
 ## Voraussetzungen {#voraussetzungen}
 
@@ -41,6 +41,7 @@ Das Soll-Modell in BPMN 2.0 ist der Bauplan, der Workflow in n8n die Umsetzung. 
 | Rechteck mit Person, eigene Bahn | n8n Form (Eingabe, Bestätigung), Eintrag in einer Datentabelle (Freigabe) | 5, 8 |
 | Eigener Pool mit Nachrichtenflüssen | Webhook und Respond to Webhook als Mock | 6 |
 | Datenspeicher (Zylinder) | Postgres-Knoten auf der Gruppen-Datenbank, Datentabelle in n8n | 7, 8 |
+| Rechteck mit Zahnrädern, das aus einem Datenspeicher liest | Q&A Chain mit PGVector (Wissenssuche) | 9 |
 | Endereignis (dicker Kreis) | Letzter Knoten ohne Nachfolger, Form Ending | 1, 5 |
 
 Jede Datei enthält Notizen auf der Arbeitsfläche: eine gelbe mit Ziel, Ausprobieren und BPMN-Bezug, dazu eine blaue an jedem Knoten. Beim eigenen Nachbauen lohnt es sich, dieselbe Zuordnung als Notiz festzuhalten. So bleibt sichtbar, welcher Knoten welchen Schritt des Soll-Modells umsetzt.
@@ -271,6 +272,44 @@ Ein zweiter Lauf von 8a überschreibt keine Entscheidung, weil Upsert nur die Sp
 
 [Datei: 08a-pruefliste-fuellen.json](../material/n8n/08a-pruefliste-fuellen.json){download="08a-pruefliste-fuellen.json"} · [Datei: 08b-entscheidungen-auswerten.json](../material/n8n/08b-entscheidungen-auswerten.json){download="08b-entscheidungen-auswerten.json"}
 
+## Beispiel 9: Wissenssuche in einer Ordnung {#wissenssuche}
+
+**Ziel:** Fragen zu einer Ordnung beantworten lassen, und zwar nur mit dem, was in der Ordnung steht, mit Angabe des Paragrafen.
+
+Das Muster heißt **RAG** (Retrieval-Augmented Generation). Die Ordnung wird einmal in Abschnitte zerlegt. Ein Embedding-Modell rechnet jeden Abschnitt in einen Vektor um, also eine Zahlenreihe, die die Bedeutung beschreibt. Die Vektoren liegen in der Gruppen-Datenbank (Postgres mit pgvector). Bei einer Frage sucht der Workflow die Abschnitte mit den ähnlichsten Vektoren und gibt nur diese dem Modell. Die Ordnung im Beispiel ist erfunden.
+
+### 9a: Ordnung ablegen
+
+1. Einen neuen Workflow „09a Ordnung ablegen“ mit **Trigger manually** anlegen.
+2. Einen Knoten **Postgres** „Tabelle leeren“ mit „Execute a SQL query“ einfügen: `DROP TABLE IF EXISTS ordnung_vektoren;`
+3. Einen Knoten **Edit Fields** „Ordnung“ anhängen, Feld `text` mit dem Text der Ordnung (siehe Datei).
+4. Einen Knoten **Postgres PGVector Store** anhängen, „Operation Mode“ auf „Insert Documents“, und „In Vektorspeicher“ nennen.
+5. Als Credential **Postgres g<n>** wählen und als „Table Name“ `ordnung_vektoren` eintragen.
+6. Am Anschluss „Embedding“ den Knoten **Embeddings Google Gemini** einfügen, Credential **Gemini g<n>**.
+7. Am Anschluss „Document“ den Knoten **Default Data Loader** einfügen. „Mode“ auf „Load Specific Data“ stellen, als Daten `{{ $json.text }}` eintragen.
+8. Im Loader „Text Splitting“ auf „Custom“ stellen und am Anschluss den Knoten **Recursive Character Text Splitter** einfügen: „Chunk Size“ 500, „Chunk Overlap“ 50.
+9. Den Workflow ausführen.
+
+**Prüfung:** „In Vektorspeicher“ gibt sechs Items aus, eines pro Paragraf. Ein zweiter Lauf ergibt wieder sechs, nicht zwölf.
+
+### 9b: Ordnung fragen
+
+1. Einen neuen Workflow „09b Ordnung fragen“ mit **Trigger manually** anlegen.
+2. Einen Knoten **Edit Fields** „Frage“ mit dem Feld `frage` einfügen, zum Beispiel: Bis wann kann ich von der Bachelorarbeit zurücktreten, und brauche ich dafür einen Grund?
+3. Einen Knoten **Question and Answer Chain** anhängen. „Source for Prompt“ auf „Define below“, als Prompt `{{ $json.frage }}`.
+4. Unter „Options“ eine „System Prompt Template“ eintragen: nur den Kontext nutzen, Paragrafen nennen, sonst „Dazu steht nichts in der Ordnung“ antworten. Der Platzhalter `{context}` muss darin stehen (siehe Datei).
+5. Am Anschluss „Model“ den Knoten **Google Gemini Chat Model** mit **Gemini g<n>** einfügen.
+6. Am Anschluss „Retriever“ den Knoten **Vector Store Retriever** einfügen, „Limit“ 3.
+7. Am Retriever den Knoten **Postgres PGVector Store** einfügen („Retrieve Documents (As Vector Store for Chain/Tool)“), Credential **Postgres g<n>**, Tabelle `ordnung_vektoren`.
+8. Am Vector Store den Knoten **Embeddings Google Gemini** mit **Gemini g<n>** einfügen, dasselbe Modell wie in 9a.
+9. Den Workflow ausführen.
+
+**Prüfung:** Die Antwort nennt zwei Wochen ohne Grund und danach nur aus wichtigem Grund, jeweils mit § 6. Dann eine Frage stellen, die die Ordnung nicht beantwortet, etwa nach dem Semesterbeitrag. Die Antwort lautet: „Dazu steht nichts in der Ordnung.“
+
+Gerade der zweite Test zählt. Eine Wissenssuche, die bei fehlender Grundlage trotzdem antwortet, ist für die Verwaltung wertlos. Für den Prototyp gilt: Nur öffentliche oder erfundene Texte ablegen, und die Antwort mit dem Paragrafen in der echten Ordnung gegenprüfen. Mehr zu Vektoren unter [Datenbank und Vektorsuche](n8n.qmd#postgres).
+
+[Datei: 09a-ordnung-ablegen.json](../material/n8n/09a-ordnung-ablegen.json){download="09a-ordnung-ablegen.json"} · [Datei: 09b-ordnung-fragen.json](../material/n8n/09b-ordnung-fragen.json){download="09b-ordnung-fragen.json"}
+
 ## Wenn etwas nicht klappt {#fehler}
 
 | Beobachtung | Nächster Prüfschritt |
@@ -282,6 +321,8 @@ Ein zweiter Lauf von 8a überschreibt keine Entscheidung, weil Upsert nur die Sp
 | Formular oder Webhook antwortet nicht | Test-Adresse gilt nur während „Listen for test event“. Sonst „Publish“ und Adresse ohne `-test` |
 | Postgres meldet „relation does not exist“ | Zuerst den Knoten „Tabelle anlegen“ ausführen |
 | Data table findet `pruefliste` nicht | Zuerst 8a ausführen. Die Tabelle gehört zum Projekt, in dem 8a lief |
+| 9b meldet, die Tabelle `ordnung_vektoren` fehle | Zuerst 9a ausführen |
+| 9b antwortet „Dazu steht nichts in der Ordnung“, obwohl es dort steht | Frage näher am Wortlaut der Ordnung stellen oder im Retriever Top K erhöhen |
 
 Weitere Fälle stehen unter [Wenn ein Lauf nicht funktioniert](n8n.qmd#fehler).
 
@@ -298,6 +339,8 @@ Weitere Fälle stehen unter [Wenn ein Lauf nicht funktioniert](n8n.qmd#fehler).
 | [07-hallo-datenbank.json](../material/n8n/07-hallo-datenbank.json){download="07-hallo-datenbank.json"} | Postgres in der Gruppen-Datenbank |
 | [08a-pruefliste-fuellen.json](../material/n8n/08a-pruefliste-fuellen.json){download="08a-pruefliste-fuellen.json"} | Datentabelle anlegen und per Upsert füllen |
 | [08b-entscheidungen-auswerten.json](../material/n8n/08b-entscheidungen-auswerten.json){download="08b-entscheidungen-auswerten.json"} | Entscheidungen lesen, verzweigen, als CSV ausgeben |
+| [09a-ordnung-ablegen.json](../material/n8n/09a-ordnung-ablegen.json){download="09a-ordnung-ablegen.json"} | Ordnung zerlegen und als Vektoren in pgvector ablegen |
+| [09b-ordnung-fragen.json](../material/n8n/09b-ordnung-fragen.json){download="09b-ordnung-fragen.json"} | Frage an die Ordnung mit Q&A Chain, Antwort mit Paragraf |
 
 In den Dateien 05 und 06 steht der Pfad `gX-...`. Nach dem Import das `X` durch die Gruppennummer ersetzen.
 
