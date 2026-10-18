@@ -2,6 +2,86 @@
   "name": "02 Wenn dann",
   "nodes": [
     {
+      "parameters": {
+        "content": "### Antrag (Edit Fields)\nEin erfundener Antrag mit 195 Leistungspunkten. Typ **Number**, sonst meldet die Regel einen Typfehler.\n\n**BPMN:** Datenobjekt „Antrag“.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "6148c63d-38a2-5f0d-a405-095869a152a5",
+      "name": "Notiz Antrag",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        250,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Mindestens 210 LP? (If)\nVergleicht eine Zahl mit 210. Was eine Zahl entscheidet, prüft eine Regel zuverlässiger als ein Modell.\n\n**BPMN:** Rechteck mit Tabelle in der Bahn Workflow-System, danach Raute mit X.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "ba02d164-4e50-5344-833a-b940be59e39a",
+      "name": "Notiz Mindestens 210 LP?",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        580,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Zulaessig\nAusgang `true`.\n\n**BPMN:** Pfeil „ja“ aus der Raute.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "8f20279a-f669-5f1c-9bfc-b3988acfa39c",
+      "name": "Notiz Zulaessig",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        940,
+        -400
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Nicht zulaessig\nAusgang `false`. Rechnet aus, wie viele Punkte fehlen.\n\n**BPMN:** Pfeil „nein“ aus der Raute, endet ohne Modellaufruf.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "d3da82f1-aa03-5a48-a0f1-cb9ef299e612",
+      "name": "Notiz Nicht zulaessig",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        940,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Beispiel 2: Wenn, dann\nEine **feste Regel** entscheidet, ganz ohne Modell.\n\n**Ausprobieren:** ausführen. Nur der Zweig `false` läuft. Dann im „Antrag“ 214 eintragen: Jetzt läuft `true`.\n\n**BPMN 2.0:** Rechteck mit Tabelle (Regel) und Raute mit X (exklusives Gateway). Die beschrifteten Ausgänge ja und nein entsprechen `true` und `false`.",
+        "height": 400,
+        "width": 380,
+        "color": 1
+      },
+      "id": "2c6110cd-d7cb-50fb-bfbe-4b7ce43a4ad9",
+      "name": "Notiz Uebersicht",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        -250
+      ]
+    },
+    {
       "parameters": {},
       "id": "ba7728ee-0de1-593e-aad8-7e621a1f4e9c",
       "name": "Start",
@@ -37,7 +117,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        220,
+        330,
         0
       ]
     },
@@ -70,7 +150,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        440,
+        660,
         0
       ]
     },
@@ -93,8 +173,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        680,
-        -100
+        1020,
+        -150
       ]
     },
     {
@@ -116,8 +196,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        680,
-        100
+        1020,
+        150
       ]
     }
   ],

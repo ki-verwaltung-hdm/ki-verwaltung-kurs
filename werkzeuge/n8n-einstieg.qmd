@@ -27,6 +27,24 @@ Die Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe 
 
 Ein Doppelklick auf einen Knoten öffnet ihn. Links steht die Eingabe (Input), in der Mitte die Einstellungen, rechts die Ausgabe (Output). Die Ansicht der Daten lässt sich oben zwischen Schema, Table und JSON umschalten.
 
+## n8n und BPMN 2.0 {#bpmn}
+
+Das Soll-Modell in BPMN 2.0 ist der Bauplan, der Workflow in n8n die Umsetzung. Jedes Beispiel auf dieser Seite übt ein BPMN-Element, das im Prototyp wieder vorkommt. Die Symbole stehen unter [Prozessmodellierung](prozessmodell.qmd).
+
+| BPMN 2.0 | n8n | Beispiel |
+|---|---|---|
+| Startereignis (dünner Kreis) | Trigger: Manual, Form oder Webhook | 1, 5, 6 |
+| Datenobjekt | Item mit Feldern, angelegt mit Edit Fields | 1, 2 |
+| Rechteck mit Tabelle (feste Regel) und Raute mit X | If-Knoten mit den Ausgängen `true` und `false` | 2 |
+| Rechteck mit Zahnrädern in der Bahn KI-Agent | Basic LLM Chain mit Chat Model | 3, 4 |
+| Datenobjekt mit festen Attributen | Structured Output Parser | 4 |
+| Rechteck mit Person, eigene Bahn | n8n Form (Eingabe, Freigabe, Bestätigung) | 5 |
+| Eigener Pool mit Nachrichtenflüssen | Webhook und Respond to Webhook als Mock | 6 |
+| Datenspeicher (Zylinder) | Postgres-Knoten auf der Gruppen-Datenbank | 7 |
+| Endereignis (dicker Kreis) | Letzter Knoten ohne Nachfolger, Form Ending | 1, 5 |
+
+Jede Datei enthält Notizen auf der Arbeitsfläche: eine gelbe mit Ziel, Ausprobieren und BPMN-Bezug, dazu eine blaue an jedem Knoten. Beim eigenen Nachbauen lohnt es sich, dieselbe Zuordnung als Notiz festzuhalten. So bleibt sichtbar, welcher Knoten welchen Schritt des Soll-Modells umsetzt.
+
 ## Einen Workflow importieren {#importieren}
 
 Für jedes Beispiel gibt es eine JSON-Datei. So kommt sie in die eigene Instanz:

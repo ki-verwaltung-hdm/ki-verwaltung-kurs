@@ -2,6 +2,86 @@
   "name": "04 Strukturierte Antwort",
   "nodes": [
     {
+      "parameters": {
+        "content": "### Mail (Edit Fields)\nDieselbe erfundene Mail wie in Beispiel 3.\n\n**BPMN:** Datenobjekt „Mail“ (Eingang).",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "bab1abb9-04f1-57d0-914a-86b86faa3512",
+      "name": "Notiz Mail",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        250,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Mail auswerten (Basic LLM Chain)\nPrompt nach dem Standard: Kontext, Aufgabe, Prüfung. *Require Specific Output Format* ist an.\n\n**BPMN:** Rechteck mit Zahnrädern, Bahn KI-Agent.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "7808a7da-850c-5669-a836-8eac38521692",
+      "name": "Notiz Mail auswerten",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        580,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Gemini (Chat Model)\nVerbindung **Gemini g<n>** der Gruppe. Temperatur 0,2 für ruhige Antworten.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "3e027e9a-1c21-58ad-a51c-54be215c958a",
+      "name": "Notiz Gemini",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        490,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Format (Structured Output Parser)\nDas JSON-Beispiel legt die Felder fest. Das Modell muss genau diese Felder liefern.\n\n**BPMN:** Datenobjekt „Prüfübersicht“ mit festen Attributen (Ausgang).",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "3d72bc77-6b86-5b60-936f-34559612626f",
+      "name": "Notiz Format",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        760,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Beispiel 4: Aus Text werden Felder\nDas Modell überträgt die Mail in **feste Felder**. Das ist der Kern fast aller Projektprozesse: unstrukturiert rein, strukturiert raus.\n\n**Ausprobieren:** ausführen und unter `output` prüfen: Steht das nur angekündigte Zeugnis unter `fehlende_angaben`?\n\n**BPMN 2.0:** Modellschritt, der ein Datenobjekt mit festen Attributen erzeugt. Danach kann eine Raute mit X auf `rueckfrage_noetig` entscheiden.",
+        "height": 400,
+        "width": 380,
+        "color": 1
+      },
+      "id": "d5540dc2-6804-515f-adbc-ccf20677bd49",
+      "name": "Notiz Uebersicht",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        -250
+      ]
+    },
+    {
       "parameters": {},
       "id": "c74f1478-dc36-5ba1-8fd4-a07d2ccff74a",
       "name": "Start",
@@ -31,7 +111,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        220,
+        330,
         0
       ]
     },
@@ -46,7 +126,7 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.7,
       "position": [
-        440,
+        660,
         0
       ]
     },
@@ -62,8 +142,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1,
       "position": [
-        380,
-        220
+        570,
+        330
       ]
     },
     {
@@ -75,8 +155,8 @@
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
       "position": [
-        560,
-        220
+        840,
+        330
       ]
     }
   ],

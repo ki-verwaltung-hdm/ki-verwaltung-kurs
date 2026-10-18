@@ -39,7 +39,7 @@ Das Skript rendert und ruft `quarto publish gh-pages --no-prompt --no-render` au
 | `materialien.qmd` | Literatur aus `ws2627-ki-verwaltung-literatur.md`, Prozessbeispiele, Prompts, Dokumentation |
 | `material/prozess/` | Aurenta-Beispiel (BPMN und SVG) aus `~/code/process-lab`, Kopie wie im Mercedes-Repo |
 | `material/bpmn/` | Von Stephan (12.10.2026): Einführung in BPMN 2.0 als PDF und PPTX, Übung als DOCX. Den BVA-Attributkatalog nur verlinken, nicht ablegen: Das PDF untersagt Veröffentlichungen ohne Genehmigung, das Repo ist öffentlich |
-| `material/n8n/` | Workflow-Dateien zu den Hello-World-Beispielen (n8n 2.42.6), ohne Credentials. Pfade `gX-...` ersetzen die Gruppen selbst |
+| `material/n8n/` | Workflow-Dateien zu den Hello-World-Beispielen (n8n 2.42.6), ohne Credentials, mit Sticky Notes (Erklärung und BPMN-Bezug). Pfade `gX-...` ersetzen die Gruppen selbst. Erzeugt mit `python3 vorlagen/n8n/erzeugen.py material/n8n && python3 vorlagen/n8n/notizen.py material/n8n`; Texte dort ändern, nicht in den JSON-Dateien |
 | `material/prompts/` | Aufträge für den Coding-Agenten, aus `~/code/process-lab/prompts` für Antigravity ohne Pipeline umgeschrieben |
 | `vorlagen/teamablage/` | Quelle der Teamablage-Vorlage (fünf Ordner mit README, TEAM.md, STAND.md, ENTSCHEIDUNGEN.md, AGENTS.md). `./paket-bauen.sh` baut daraus `material/vorlagen/teamablage-vorlage.zip`; danach rendern |
 | `images/` | Elf SVG-Abbildungen im dunklen Stil der Growth-Grafiken (Phasen, Ausgangslage, Human in the Loop, Mocks, Projektumgebung, Schritttypen, Interviewzyklus, erster Workflow, Prompt-Standard, Agentenschleife, Semesterplan). Erzeugt von `images/erzeugen.py`; Texte dort ändern und neu laufen lassen, nicht die SVGs von Hand bearbeiten |

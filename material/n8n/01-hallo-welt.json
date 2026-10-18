@@ -2,6 +2,70 @@
   "name": "01 Hallo Welt",
   "nodes": [
     {
+      "parameters": {
+        "content": "### Start\nStartet den Lauf per Klick.\n\n**BPMN:** Startereignis (dünner Kreis). Im echten Prozess ist das z. B. „Antrag geht ein“.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "518be94c-9c21-53b0-8e9d-4ac7bcafc680",
+      "name": "Notiz Start",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Name (Edit Fields)\nLegt ein Feld `name` mit dem Wert `Welt` an. So entstehen Testdaten.\n\n**BPMN:** Datenobjekt, also die Information, mit der der Prozess arbeitet.",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "226f22a9-7632-5689-a5e4-5c679fba0d6a",
+      "name": "Notiz Name",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        250,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Gruss (Edit Fields)\n`{{ $json.name }}` setzt den Wert aus dem vorherigen Knoten ein.\n\n**BPMN:** Aufgabe im Workflow-System. Der letzte Knoten ohne Nachfolger ist das Endereignis (dicker Kreis).",
+        "height": 210,
+        "width": 260,
+        "color": 5
+      },
+      "id": "9085f2bd-9cf5-5280-a7bf-f00acc29c684",
+      "name": "Notiz Gruss",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        580,
+        -250
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Beispiel 1: Hallo Welt\nDaten anlegen und mit einer **Expression** weiterverwenden.\n\n**Ausprobieren:** unten auf *Execute workflow* klicken, dann „Gruss“ doppelt anklicken: links Eingabe, rechts Ausgabe.\n\n**Abwandeln:** im Knoten „Name“ einen anderen Wert eintragen und erneut ausführen.\n\n**BPMN 2.0:** Start (dünner Kreis), zwei Aufgaben, Ende. Jeder Knoten entspricht einem Element im Prozessmodell.",
+        "height": 400,
+        "width": 380,
+        "color": 1
+      },
+      "id": "297b7997-5cfe-50d3-8f13-6151256f7f5d",
+      "name": "Notiz Uebersicht",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        -250
+      ]
+    },
+    {
       "parameters": {},
       "id": "3b4e7de9-88ba-511a-97b1-dc41e09d6fa7",
       "name": "Start",
@@ -31,7 +95,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        220,
+        330,
         0
       ]
     },
@@ -54,7 +118,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        440,
+        660,
         0
       ]
     }
