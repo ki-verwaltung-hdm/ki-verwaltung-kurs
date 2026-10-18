@@ -88,7 +88,7 @@
     "href": "werkzeuge/n8n-einstieg.html",
     "title": "n8n Schritt für Schritt",
     "section": "",
-    "text": "Sieben kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle und Datenbank.\nDie Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Zu jedem Beispiel gibt es eine fertige Datei zum Importieren. Damit lässt sich das eigene Ergebnis vergleichen, oder man springt direkt zum nächsten Baustein. Danach folgt der erste vollständige Workflow „Antrag prüfen“."
+    "text": "Sieben kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle und Datenbank.\nDie Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Alle sieben liegen schon fertig in der Instanz jeder Gruppe, als „DEMO 01“ bis „DEMO 07“, mit den Verbindungen und Pfaden der Gruppe. Damit klicken wir sie im Termin gemeinsam durch. Zum Üben baut man sie danach selbst nach und vergleicht mit der DEMO-Fassung. Zusätzlich gibt es jede Datei zum Importieren. Danach folgt der erste vollständige Workflow „Antrag prüfen“."
   },
   {
     "objectID": "werkzeuge/n8n-einstieg.html#voraussetzungen",
