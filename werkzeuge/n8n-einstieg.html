@@ -316,6 +316,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#webhook" id="toc-webhook" class="nav-link" data-scroll-target="#webhook">Beispiel 6: Hallo Webhook</a></li>
   <li><a href="#datenbank" id="toc-datenbank" class="nav-link" data-scroll-target="#datenbank">Beispiel 7: Hallo Datenbank</a></li>
   <li><a href="#datentabelle" id="toc-datentabelle" class="nav-link" data-scroll-target="#datentabelle">Beispiel 8: Ein Mensch entscheidet in der Tabelle</a></li>
+  <li><a href="#wissenssuche" id="toc-wissenssuche" class="nav-link" data-scroll-target="#wissenssuche">Beispiel 9: Wissenssuche in einer Ordnung</a></li>
   <li><a href="#fehler" id="toc-fehler" class="nav-link" data-scroll-target="#fehler">Wenn etwas nicht klappt</a></li>
   <li><a href="#dateien" id="toc-dateien" class="nav-link" data-scroll-target="#dateien">Alle Dateien</a></li>
   </ul>
@@ -343,8 +344,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><span class="lead">Acht kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle, Datenbank und eine Tabelle, in der ein Mensch entscheidet.</span></p>
-<p>Die Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Alle liegen schon fertig in der Instanz jeder Gruppe, als „DEMO 01“ bis „DEMO 08b“, mit den Verbindungen und Pfaden der Gruppe. Damit klicken wir sie im Termin gemeinsam durch. Zum Üben baut man sie danach selbst nach und vergleicht mit der DEMO-Fassung. Zusätzlich gibt es jede Datei zum Importieren. Danach folgt der <a href="../werkzeuge/n8n.html#erster-workflow">erste vollständige Workflow</a> „Antrag prüfen“.</p>
+<p><span class="lead">Neun kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle, Datenbank, eine Tabelle, in der ein Mensch entscheidet, und eine Wissenssuche über eine Ordnung.</span></p>
+<p>Die Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Alle liegen schon fertig in der Instanz jeder Gruppe, als „DEMO 01“ bis „DEMO 09b“, mit den Verbindungen und Pfaden der Gruppe. Damit klicken wir sie im Termin gemeinsam durch. Zum Üben baut man sie danach selbst nach und vergleicht mit der DEMO-Fassung. Zusätzlich gibt es jede Datei zum Importieren. Danach folgt der <a href="../werkzeuge/n8n.html#erster-workflow">erste vollständige Workflow</a> „Antrag prüfen“.</p>
 <section id="voraussetzungen" class="level2">
 <h2 class="anchored" data-anchor-id="voraussetzungen">Voraussetzungen</h2>
 <ul>
@@ -454,6 +455,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>7, 8</td>
 </tr>
 <tr class="odd">
+<td>Rechteck mit Zahnrädern, das aus einem Datenspeicher liest</td>
+<td>Q&amp;A Chain mit PGVector (Wissenssuche)</td>
+<td>9</td>
+</tr>
+<tr class="even">
 <td>Endereignis (dicker Kreis)</td>
 <td>Letzter Knoten ohne Nachfolger, Form Ending</td>
 <td>1, 5</td>
@@ -668,6 +674,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><a href="../material/n8n/08a-pruefliste-fuellen.json" download="08a-pruefliste-fuellen.json">Datei: 08a-pruefliste-fuellen.json</a> · <a href="../material/n8n/08b-entscheidungen-auswerten.json" download="08b-entscheidungen-auswerten.json">Datei: 08b-entscheidungen-auswerten.json</a></p>
 </section>
 </section>
+<section id="wissenssuche" class="level2">
+<h2 class="anchored" data-anchor-id="wissenssuche">Beispiel 9: Wissenssuche in einer Ordnung</h2>
+<p><strong>Ziel:</strong> Fragen zu einer Ordnung beantworten lassen, und zwar nur mit dem, was in der Ordnung steht, mit Angabe des Paragrafen.</p>
+<p>Das Muster heißt <strong>RAG</strong> (Retrieval-Augmented Generation). Die Ordnung wird einmal in Abschnitte zerlegt. Ein Embedding-Modell rechnet jeden Abschnitt in einen Vektor um, also eine Zahlenreihe, die die Bedeutung beschreibt. Die Vektoren liegen in der Gruppen-Datenbank (Postgres mit pgvector). Bei einer Frage sucht der Workflow die Abschnitte mit den ähnlichsten Vektoren und gibt nur diese dem Modell. Die Ordnung im Beispiel ist erfunden.</p>
+<section id="a-ordnung-ablegen" class="level3">
+<h3 class="anchored" data-anchor-id="a-ordnung-ablegen">9a: Ordnung ablegen</h3>
+<ol type="1">
+<li>Einen neuen Workflow „09a Ordnung ablegen“ mit <strong>Trigger manually</strong> anlegen.</li>
+<li>Einen Knoten <strong>Postgres</strong> „Tabelle leeren“ mit „Execute a SQL query“ einfügen: <code>DROP TABLE IF EXISTS ordnung_vektoren;</code></li>
+<li>Einen Knoten <strong>Edit Fields</strong> „Ordnung“ anhängen, Feld <code>text</code> mit dem Text der Ordnung (siehe Datei).</li>
+<li>Einen Knoten <strong>Postgres PGVector Store</strong> anhängen, „Operation Mode“ auf „Insert Documents“, und „In Vektorspeicher“ nennen.</li>
+<li>Als Credential <strong>Postgres g<n></n></strong> wählen und als „Table Name“ <code>ordnung_vektoren</code> eintragen.</li>
+<li>Am Anschluss „Embedding“ den Knoten <strong>Embeddings Google Gemini</strong> einfügen, Credential <strong>Gemini g<n></n></strong>.</li>
+<li>Am Anschluss „Document“ den Knoten <strong>Default Data Loader</strong> einfügen. „Mode“ auf „Load Specific Data“ stellen, als Daten <code>{ $json.text }</code> eintragen.</li>
+<li>Im Loader „Text Splitting“ auf „Custom“ stellen und am Anschluss den Knoten <strong>Recursive Character Text Splitter</strong> einfügen: „Chunk Size“ 500, „Chunk Overlap“ 50.</li>
+<li>Den Workflow ausführen.</li>
+</ol>
+<p><strong>Prüfung:</strong> „In Vektorspeicher“ gibt sechs Items aus, eines pro Paragraf. Ein zweiter Lauf ergibt wieder sechs, nicht zwölf.</p>
+</section>
+<section id="b-ordnung-fragen" class="level3">
+<h3 class="anchored" data-anchor-id="b-ordnung-fragen">9b: Ordnung fragen</h3>
+<ol type="1">
+<li>Einen neuen Workflow „09b Ordnung fragen“ mit <strong>Trigger manually</strong> anlegen.</li>
+<li>Einen Knoten <strong>Edit Fields</strong> „Frage“ mit dem Feld <code>frage</code> einfügen, zum Beispiel: Bis wann kann ich von der Bachelorarbeit zurücktreten, und brauche ich dafür einen Grund?</li>
+<li>Einen Knoten <strong>Question and Answer Chain</strong> anhängen. „Source for Prompt“ auf „Define below“, als Prompt <code>{ $json.frage }</code>.</li>
+<li>Unter „Options“ eine „System Prompt Template“ eintragen: nur den Kontext nutzen, Paragrafen nennen, sonst „Dazu steht nichts in der Ordnung“ antworten. Der Platzhalter <code>{context}</code> muss darin stehen (siehe Datei).</li>
+<li>Am Anschluss „Model“ den Knoten <strong>Google Gemini Chat Model</strong> mit <strong>Gemini g<n></n></strong> einfügen.</li>
+<li>Am Anschluss „Retriever“ den Knoten <strong>Vector Store Retriever</strong> einfügen, „Limit“ 3.</li>
+<li>Am Retriever den Knoten <strong>Postgres PGVector Store</strong> einfügen („Retrieve Documents (As Vector Store for Chain/Tool)“), Credential <strong>Postgres g<n></n></strong>, Tabelle <code>ordnung_vektoren</code>.</li>
+<li>Am Vector Store den Knoten <strong>Embeddings Google Gemini</strong> mit <strong>Gemini g<n></n></strong> einfügen, dasselbe Modell wie in 9a.</li>
+<li>Den Workflow ausführen.</li>
+</ol>
+<p><strong>Prüfung:</strong> Die Antwort nennt zwei Wochen ohne Grund und danach nur aus wichtigem Grund, jeweils mit § 6. Dann eine Frage stellen, die die Ordnung nicht beantwortet, etwa nach dem Semesterbeitrag. Die Antwort lautet: „Dazu steht nichts in der Ordnung.“</p>
+<p>Gerade der zweite Test zählt. Eine Wissenssuche, die bei fehlender Grundlage trotzdem antwortet, ist für die Verwaltung wertlos. Für den Prototyp gilt: Nur öffentliche oder erfundene Texte ablegen, und die Antwort mit dem Paragrafen in der echten Ordnung gegenprüfen. Mehr zu Vektoren unter <a href="../werkzeuge/n8n.html#postgres">Datenbank und Vektorsuche</a>.</p>
+<p><a href="../material/n8n/09a-ordnung-ablegen.json" download="09a-ordnung-ablegen.json">Datei: 09a-ordnung-ablegen.json</a> · <a href="../material/n8n/09b-ordnung-fragen.json" download="09b-ordnung-fragen.json">Datei: 09b-ordnung-fragen.json</a></p>
+</section>
+</section>
 <section id="fehler" class="level2">
 <h2 class="anchored" data-anchor-id="fehler">Wenn etwas nicht klappt</h2>
 <table class="caption-top table">
@@ -709,6 +752,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td>Data table findet <code>pruefliste</code> nicht</td>
 <td>Zuerst 8a ausführen. Die Tabelle gehört zum Projekt, in dem 8a lief</td>
+</tr>
+<tr class="even">
+<td>9b meldet, die Tabelle <code>ordnung_vektoren</code> fehle</td>
+<td>Zuerst 9a ausführen</td>
+</tr>
+<tr class="odd">
+<td>9b antwortet „Dazu steht nichts in der Ordnung“, obwohl es dort steht</td>
+<td>Frage näher am Wortlaut der Ordnung stellen oder im Retriever Top K erhöhen</td>
 </tr>
 </tbody>
 </table>
@@ -759,6 +810,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="../material/n8n/08b-entscheidungen-auswerten.json" download="08b-entscheidungen-auswerten.json">08b-entscheidungen-auswerten.json</a></td>
 <td>Entscheidungen lesen, verzweigen, als CSV ausgeben</td>
+</tr>
+<tr class="even">
+<td><a href="../material/n8n/09a-ordnung-ablegen.json" download="09a-ordnung-ablegen.json">09a-ordnung-ablegen.json</a></td>
+<td>Ordnung zerlegen und als Vektoren in pgvector ablegen</td>
+</tr>
+<tr class="odd">
+<td><a href="../material/n8n/09b-ordnung-fragen.json" download="09b-ordnung-fragen.json">09b-ordnung-fragen.json</a></td>
+<td>Frage an die Ordnung mit Q&amp;A Chain, Antwort mit Paragraf</td>
 </tr>
 </tbody>
 </table>
