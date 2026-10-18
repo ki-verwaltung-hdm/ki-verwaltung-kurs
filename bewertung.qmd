@@ -25,12 +25,16 @@ Mit den beiden Kursen erwerben alle im eigenen Lerntempo Grundlagen zu KI in der
 | Kurs | Umfang | Nachweis |
 |---|---|---|
 | [KIÖV: KI in öffentlichen Verwaltungen](https://ki-campus.org/kurse/ki-oev) (KI-Campus, kostenlos) | ca. 5 Stunden | Zertifikat des KI-Campus als PDF |
-| [n8n Course Level 1](https://docs.n8n.io/courses/level-one) (kostenlos) | Textkurs, zwei Workflows | Screenshot des Abschlussquiz mit mindestens 80 % oder Badge; das Quiz kann beliebig oft wiederholt werden |
+| [n8n Quickstart (QS101)](https://learn.n8n.io/courses/course-v1:n8n+QS101+2026H2/about) (n8n Academy, kostenlos, englisch) | ca. 3 bis 5 Stunden, Workflows bis zum KI-Agenten | Teilnahmebescheinigung oder Badge der n8n Academy (bestanden ab 70 %) |
 
 1. Beide Kurse vollständig durcharbeiten.
 2. Die Nachweise bis Montag, 30.11.2026, in der Teamablage unter `00_Nachweise/<Nachname>/` ablegen.
 
 **Prüfen:** Je Person zwei Nachweise, Kurstitel und eigener Name sind lesbar.
+
+::: {.callout-note title="n8n-Instanz für den Kurs"}
+Der n8n-Kurs braucht eine eigene, öffentlich erreichbare n8n-Instanz. Die Gruppeninstanzen auf dem HdM-Server sind nur im HdM-Netz und über VPN erreichbar und haben ein Konto pro Gruppe. Nutzen Sie für den Kurs deshalb die kostenlose Testphase von [n8n Cloud](https://n8n.io/pricing/). Starten Sie die Testphase erst, wenn Sie den Kurs am Stück bearbeiten können, denn sie ist zeitlich begrenzt. Für den Teil zum KI-Agenten brauchen Sie einen API-Schlüssel eines Modellanbieters; ein kostenloser Schlüssel von Google Gemini oder Groq reicht.
+:::
 
 ::: {.callout-warning title="Achtung"}
 Ohne bestandene Vorprüfungsleistung wird die Modulprüfung nicht bewertet.
