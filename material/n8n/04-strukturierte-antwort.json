@@ -1,0 +1,134 @@
+{
+  "name": "04 Strukturierte Antwort",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "c74f1478-dc36-5ba1-8fd4-a07d2ccff74a",
+      "name": "Start",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b11f98ed-6a32-5b0f-9d74-64056fc22b49",
+              "name": "mail",
+              "value": "Sehr geehrte Damen und Herren, ich möchte meine Bachelorarbeit anmelden. Mein Praxissemester habe ich im Sommer abgeschlossen, das Zeugnis reiche ich nach. Als Erstprüferin ist Frau Muster einverstanden. Ich würde gern am 1. Dezember beginnen. Viele Grüße, Alex Beispiel (erfundene Testmail)",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fd256083-c731-5e25-9b64-60137f2430f8",
+      "name": "Mail",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Kontext: Mail einer Studentin oder eines Studenten an das Prüfungsamt. Für die Anmeldung der Bachelorarbeit braucht es: abgeschlossenes Praxissemester mit Zeugnis, Erstprüfer, Zweitprüfer, Wunschtermin. Alle Angaben sind erfundene Testdaten.\n\nAufgabe: Übertrage die Mail in die Felder des Formats.\n\nPrüfung: Trage nur ein, was in der Mail steht. Was fehlt oder nur angekündigt ist, kommt in fehlende_angaben.\n\nMail:\n{{ $json.mail }}",
+        "hasOutputParser": true
+      },
+      "id": "bdaeec95-ed82-5b52-b64a-177c16467cc3",
+      "name": "Mail auswerten",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        440,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-3.1-flash-lite",
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "id": "d889fbaa-6d00-577b-ac7a-d2514b904433",
+      "name": "Gemini",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        380,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"anliegen\": \"Anmeldung Bachelorarbeit\",\n  \"wunschtermin\": \"2026-12-01\",\n  \"genannte_nachweise\": [\n    \"Praxissemester abgeschlossen\"\n  ],\n  \"fehlende_angaben\": [\n    \"Zweitprüfer\"\n  ],\n  \"rueckfrage_noetig\": true\n}"
+      },
+      "id": "12864825-f372-524b-8692-acf999d203d1",
+      "name": "Format",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        560,
+        220
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Mail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mail": {
+      "main": [
+        [
+          {
+            "node": "Mail auswerten",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Mail auswerten",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Mail auswerten",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false
+}

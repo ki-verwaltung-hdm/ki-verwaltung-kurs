@@ -232,6 +232,10 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Interviews führen</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./werkzeuge/n8n-einstieg.html">
+ <span class="dropdown-text">n8n Schritt für Schritt</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./werkzeuge/n8n.html">
  <span class="dropdown-text">n8n auf dem HdM-Server</span></a>
   </li>  
@@ -266,7 +270,6 @@ ul.task-list li input[type="checkbox"] {
    
   <ul class="collapse">
   <li><a href="#vpn" id="toc-vpn" class="nav-link active" data-scroll-target="#vpn">HdM-VPN</a></li>
-  <li><a href="#zertifikat" id="toc-zertifikat" class="nav-link" data-scroll-target="#zertifikat">Zertifikatswarnung</a></li>
   <li><a href="#google" id="toc-google" class="nav-link" data-scroll-target="#google">Google-Konto und Coding-Agent</a></li>
   <li><a href="#n8n" id="toc-n8n" class="nav-link" data-scroll-target="#n8n">n8n-Zugang der Gruppe</a></li>
   <li><a href="#ablage" id="toc-ablage" class="nav-link" data-scroll-target="#ablage">Teamablage</a></li>
@@ -303,32 +306,9 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li>Den VPN-Client der HdM installieren (FortiClient, Zugang mit der HdM-Kennung).</li>
 <li>Die VPN-Verbindung aufbauen.</li>
-<li>Prüfen: Die <a href="https://141.62.116.2/">Übersichtsseite der Projektumgebung</a> lädt im Browser. Ohne VPN erscheint eine Zeitüberschreitung.</li>
+<li>Prüfen: Die <a href="https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/">Übersichtsseite der Projektumgebung</a> lädt im Browser. Ohne VPN erscheint eine Zeitüberschreitung.</li>
 </ol>
 <p>Im Hochschulnetz vor Ort (WLAN eduroam oder Kabel) ist kein VPN nötig.</p>
-</section>
-<section id="zertifikat" class="level2">
-<h2 class="anchored" data-anchor-id="zertifikat">Zertifikatswarnung</h2>
-<p>Die Projektumgebung ist über die Adresse <code>141.62.116.2</code> erreichbar. Der Browser warnt beim ersten Aufruf vor einer unsicheren Verbindung, weil er den Aussteller des Zertifikats nicht kennt.</p>
-<ol type="1">
-<li>In der Warnung auf „Erweitert“ oder „Details“ klicken.</li>
-<li>Die Ausnahme für diese Adresse bestätigen („Weiter zu 141.62.116.2“ oder „Risiko akzeptieren“).</li>
-<li>Prüfen: Die Übersichtsseite mit den Links zu den n8n-Instanzen erscheint.</li>
-</ol>
-<p>Die Ausnahme gilt pro Browser und muss nach einem Browserwechsel erneut bestätigt werden. Die Verbindung ist verschlüsselt.</p>
-<div class="callout callout-style-simple callout-warning callout-titled" title="Achtung">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warnung</span>Achtung
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Diese Ausnahme gilt nur für die Projektumgebung an der HdM. Auf anderen Websites bleibt eine Zertifikatswarnung ein Warnsignal.</p>
-</div>
-</div>
 </section>
 <section id="google" class="level2">
 <h2 class="anchored" data-anchor-id="google">Google-Konto und Coding-Agent</h2>
@@ -359,6 +339,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="n8n">n8n-Zugang der Gruppe</h2>
 <p>Jede Gruppe hat eine eigene n8n-Instanz mit eigener Datenbank auf dem HdM-Server. Die Gruppe teilt sich ein Konto. Login und Passwort werden nach der Gruppeneinteilung bereitgestellt. Das Passwort wird nicht per Mail, Chat oder in Dokumenten weitergegeben und nicht in Screenshots gezeigt.</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Gruppe</th>
@@ -368,31 +352,31 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Gruppe 1</td>
-<td><code>https://141.62.116.2/n8n-1/</code></td>
+<td><code>https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-1/</code></td>
 </tr>
 <tr class="even">
 <td>Gruppe 2</td>
-<td><code>https://141.62.116.2/n8n-2/</code></td>
+<td><code>https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-2/</code></td>
 </tr>
 <tr class="odd">
 <td>Gruppe 3</td>
-<td><code>https://141.62.116.2/n8n-3/</code></td>
+<td><code>https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-3/</code></td>
 </tr>
 <tr class="even">
 <td>Gruppe 4</td>
-<td><code>https://141.62.116.2/n8n-4/</code></td>
+<td><code>https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-4/</code></td>
 </tr>
 <tr class="odd">
 <td>Gruppe 5</td>
-<td><code>https://141.62.116.2/n8n-5/</code></td>
+<td><code>https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-5/</code></td>
 </tr>
 <tr class="even">
 <td>Gruppe 6</td>
-<td><code>https://141.62.116.2/n8n-6/</code></td>
+<td><code>https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-6/</code></td>
 </tr>
 <tr class="odd">
 <td>Gruppe 7</td>
-<td><code>https://141.62.116.2/n8n-7/</code></td>
+<td><code>https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-7/</code></td>
 </tr>
 </tbody>
 </table>

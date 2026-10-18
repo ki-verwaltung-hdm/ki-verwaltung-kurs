@@ -1,0 +1,128 @@
+{
+  "name": "05 Hallo Formular",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Anfrage an das Prüfungsamt (Test)",
+        "formDescription": "Nur erfundene Angaben eintragen.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Name",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Anliegen",
+              "fieldType": "dropdown",
+              "requiredField": true,
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Anmeldung Abschlussarbeit"
+                  },
+                  {
+                    "option": "Anerkennung von Leistungen"
+                  },
+                  {
+                    "option": "Sonstiges"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "Nachricht",
+              "fieldType": "textarea"
+            }
+          ]
+        },
+        "options": {
+          "path": "gX-anfrage"
+        }
+      },
+      "id": "45db3fc6-5e42-5ef7-9e1c-864dd0d93913",
+      "name": "Formular",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "6de65b85-cb9a-55ce-bfdb-f8afa97798eb"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9948fda8-39cc-55dc-a523-10af3e8ec247",
+              "name": "vorgang",
+              "value": "={{ $json.Anliegen }}",
+              "type": "string"
+            },
+            {
+              "id": "0635c1c3-6d1a-56a6-a180-d6f28fc37de4",
+              "name": "bestaetigung",
+              "value": "=Danke, {{ $json.Name }}. Ihr Anliegen „{{ $json.Anliegen }}“ ist eingegangen.",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "dbbd17a1-9e1e-558a-92cf-d1b97e1ac975",
+      "name": "Eingang",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "completionTitle": "Eingegangen",
+        "completionMessage": "={{ $json.bestaetigung }}",
+        "options": {}
+      },
+      "id": "9943c9b7-d71d-5f3f-81ef-04ed98997958",
+      "name": "Bestaetigung",
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        440,
+        0
+      ],
+      "webhookId": "34a8f9fa-16ca-51b1-be86-81f7a9953ce7"
+    }
+  ],
+  "connections": {
+    "Formular": {
+      "main": [
+        [
+          {
+            "node": "Eingang",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Eingang": {
+      "main": [
+        [
+          {
+            "node": "Bestaetigung",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false
+}

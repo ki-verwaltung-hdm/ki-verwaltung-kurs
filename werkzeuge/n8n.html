@@ -267,6 +267,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="dropdown-text">Interviews führen</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../werkzeuge/n8n-einstieg.html">
+ <span class="dropdown-text">n8n Schritt für Schritt</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../werkzeuge/n8n.html">
  <span class="dropdown-text">n8n auf dem HdM-Server</span></a>
   </li>  
@@ -336,6 +340,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><span class="lead">Jede Gruppe hat eine eigene n8n-Instanz mit eigener Datenbank auf einem Server der HdM. Diese Seite beschreibt Login, den ersten Workflow, die vorbereiteten Verbindungen zu Modell und Datenbank, Webhooks und die häufigsten Fehler.</span></p>
+<p>Neu in n8n? Zuerst die sieben kleinen Beispiele unter <a href="../werkzeuge/n8n-einstieg.html">n8n Schritt für Schritt</a> durcharbeiten. Sie zeigen jeden Baustein einzeln, der hier im Zusammenhang vorkommt.</p>
 <section id="rolle" class="level2">
 <h2 class="anchored" data-anchor-id="rolle">Was n8n im Projekt leistet</h2>
 <p><a href="https://n8n.io/">n8n</a> ist ein Workflow-System: Ein <strong>Trigger</strong> startet den Ablauf, <strong>Knoten</strong> verarbeiten Daten Schritt für Schritt, Verzweigungen bilden Entscheidungen ab. Im Projekt übernimmt n8n das Gerüst des Soll-Prozesses: feste Regeln als If-Knoten, Modellschritte als Aufruf des Sprachmodells, Mock-Schnittstellen als Webhook oder Datenbankabfrage, und die Freigabe durch einen Menschen als eigener Schritt. Programmieren müssen wir dabei nicht; die Knoten werden in der Oberfläche verbunden, oder der Coding-Agent schreibt den Export als Datei.</p>
@@ -367,8 +372,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="login">Login</h2>
 <p><strong>Voraussetzungen:</strong> HdM-Netz oder <a href="../start.html#vpn">VPN</a>, Zugangsdaten der Gruppe.</p>
 <ol type="1">
-<li>Die Adresse der Gruppe öffnen: <code>https://141.62.116.2/n8n-&lt;n&gt;/</code>, mit der Gruppennummer statt <code>&lt;n&gt;</code>. Alle Adressen stehen in der <a href="../start.html#n8n">Vorbereitung</a>.</li>
-<li>Die <a href="../start.html#zertifikat">Zertifikatswarnung</a> einmal bestätigen.</li>
+<li>Die Adresse der Gruppe öffnen: <code>https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-&lt;n&gt;/</code>, mit der Gruppennummer statt <code>&lt;n&gt;</code>. Alle Adressen stehen in der <a href="../start.html#n8n">Vorbereitung</a>.</li>
 <li>Mit dem Gruppenkonto anmelden (<code>verwaltung-g&lt;n&gt;@hdm-stuttgart.de</code> und das Passwort der Gruppe).</li>
 <li>Prüfen: Die Workflow-Übersicht erscheint. Unter „Credentials“ stehen „Postgres g<n>“ und „Gemini g<n>“.</n></n></li>
 </ol>
@@ -474,8 +478,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="webhook" class="level2">
 <h2 class="anchored" data-anchor-id="webhook">Mock-Schnittstellen mit Webhooks</h2>
 <p>Ein <strong>Webhook</strong>-Knoten macht einen Workflow über eine Adresse aufrufbar. So lässt sich ein echtes System nachbauen: Ein kleiner Workflow „Mock Campus-System“ nimmt eine Antrags-ID entgegen und antwortet mit erfundenen Daten, so wie das echte System antworten würde. Der Prototyp ruft diesen Mock auf, statt auf ein echtes System zuzugreifen.</p>
-<p>Die Adresse lautet <code>https://141.62.116.2/n8n-&lt;n&gt;/webhook/&lt;pfad&gt;</code>. Der Pfad wird im Webhook-Knoten festgelegt. Damit sich die Gruppen nicht in die Quere kommen, beginnt jeder Pfad mit der Gruppennummer, zum Beispiel <code>g3-campus-mock</code>. Webhooks sind wie alles andere nur aus dem HdM-Netz und über VPN erreichbar; externe Dienste erreichen sie nicht.</p>
-<p>Zum Testen in n8n „Listen for test event“ wählen und die Adresse im Browser aufrufen. Für den Dauerbetrieb den Workflow aktivieren; dann gilt die Produktionsadresse ohne <code>-test</code>.</p>
+<p>Die Adresse lautet <code>https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-&lt;n&gt;/webhook/&lt;pfad&gt;</code>. Der Pfad wird im Webhook-Knoten festgelegt. Damit sich die Gruppen nicht in die Quere kommen, beginnt jeder Pfad mit der Gruppennummer, zum Beispiel <code>g3-campus-mock</code>. Webhooks sind wie alles andere nur aus dem HdM-Netz und über VPN erreichbar; externe Dienste erreichen sie nicht.</p>
+<p>Zum Testen in n8n „Listen for test event“ wählen und die Adresse im Browser aufrufen. Für den Dauerbetrieb den Workflow oben rechts mit „Publish“ veröffentlichen; dann gilt die Produktionsadresse ohne <code>-test</code>.</p>
 </section>
 <section id="postgres" class="level2">
 <h2 class="anchored" data-anchor-id="postgres">Datenbank und Vektorsuche</h2>
@@ -505,30 +509,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>VPN verbunden? Adresse mit <code>/n8n-&lt;n&gt;/</code> am Ende?</td>
 </tr>
 <tr class="even">
-<td>Zertifikatswarnung erneut</td>
-<td>Anderer Browser oder Ausnahme gelöscht; einmal neu bestätigen</td>
-</tr>
-<tr class="odd">
 <td>Verbindung im Modellknoten fehlt</td>
 <td>„Gemini g<n>“ aus der Liste wählen; keinen eigenen Schlüssel eintragen</n></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Modell antwortet mit Fehler oder Kontingent</td>
 <td>Fehlermeldung ohne Zugangsdaten notieren und im Coaching melden</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Leeres Feld im Prompt</td>
 <td>Schreibweise des Feldes und Zuordnung im Antrag-Knoten prüfen</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Webhook antwortet nicht</td>
 <td>Pfad mit Gruppenpräfix prüfen; Test-Adresse nur, solange „Listen for test event“ aktiv ist</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Postgres-Fehler „permission denied“</td>
 <td>Die Gruppe sieht nur die eigene Datenbank; Tabellenname und Schema prüfen</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Formal korrekt, fachlich falsch</td>
 <td>Regel, Prompt und Testfall vergleichen; der Fehler liegt meist im Kontext</td>
 </tr>

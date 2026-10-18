@@ -53,7 +53,7 @@
     "href": "materialien.html#werkzeuge",
     "title": "Materialien",
     "section": "Werkzeuge und Dokumentation",
-    "text": "Werkzeuge und Dokumentation\n\n\n\nMaterial\nWofür\n\n\n\n\nGoogle AI Plus für Studierende\nFreiwillig, enthält Antigravity; Bedingungen in der Vorbereitung\n\n\nGoogle Antigravity · Antigravity IDE\nEntwicklungsumgebung mit Coding-Agent; die IDE ist das Programm zum Herunterladen\n\n\nagents.md\nFormat und Beispiele für AGENTS.md\n\n\nn8n-Dokumentation · KI in n8n\nKnoten, Trigger, Modelle, Vektorsuche\n\n\nn8n Course Level 1\nTextkurs für den Einstieg in n8n, freiwillig\n\n\nÜbersichtsseite der Projektumgebung\nLinks zu den sieben n8n-Instanzen, nur HdM-Netz und VPN"
+    "text": "Werkzeuge und Dokumentation\n\n\n\nMaterial\nWofür\n\n\n\n\nGoogle AI Plus für Studierende\nFreiwillig, enthält Antigravity; Bedingungen in der Vorbereitung\n\n\nGoogle Antigravity · Antigravity IDE\nEntwicklungsumgebung mit Coding-Agent; die IDE ist das Programm zum Herunterladen\n\n\nagents.md\nFormat und Beispiele für AGENTS.md\n\n\nn8n-Dokumentation · KI in n8n\nKnoten, Trigger, Modelle, Vektorsuche\n\n\nn8n Schritt für Schritt\nSieben Hello-World-Beispiele mit Workflow-Dateien zum Importieren\n\n\nn8n Course Level 1\nTextkurs für den Einstieg in n8n, freiwillig\n\n\nÜbersichtsseite der Projektumgebung\nLinks zu den sieben n8n-Instanzen, nur HdM-Netz und VPN"
   },
   {
     "objectID": "abgaben.html",
@@ -84,60 +84,410 @@
     "text": "Schritt für Schritt\n\n\n1 · Recherche, Referenzprozess und Leitfragen\nGruppe · Prozesskandidat zum Werkzeugtermin, Recherche-Ergebnisse: Termin wird noch vereinbart · Teamablage\nDie Aufgabe steht beim Kick-off.\n\nZum Werkzeugtermin: ein Prozesskandidat als Prosa (zwei bis zehn Sätze).\nDanach: Quellen mit Link und je zwei Sätzen Erkenntnis, der überarbeitete Referenzprozess als Prosa und als BPMN-Datei.\nFünf bis acht Leitfragen für das Interview.\n\n\nPrüfen: Jede Erkenntnis hat eine Quelle. Die Leitfragen fragen nach Tätigkeiten und Informationen, nicht nach Wunsch-Automatisierungen.\n\n\n\n\n\n2 · Interviewprotokoll und offene Fragen\nZwei Gruppen gemeinsam · nach dem Erstgespräch · Teamablage\nVorgehen und Protokollraster: Interviews führen.\n\nProtokoll im Raster, am Tag des Gesprächs vervollständigt. Bei Tonaufnahme mit Zustimmung: bereinigtes Transkript ohne Namen dazu.\nListe offener Fragen für das zweite Gespräch.\nBeide Gruppen legen dasselbe Protokoll ab.\n\n\nPrüfen: Keine Namen von Personen, keine erkennbaren Einzelfälle. Aus dem Protokoll lässt sich der Ablauf modellieren.\n\n\n\n\n\n3 · Ist- und Soll-Modell mit Begründung\nGruppe · Rückmeldung im Coaching · Teamablage\nVorgehen: Prozessmodellierung.\n\nIst-Modell als .bpmn und als Bild, aus dem Protokoll, im zweiten Gespräch bestätigt.\nSoll-Modell mit den Bahnen „KI-Agent“ und „Workflow-System“.\nBegründung als Tabelle: Entfällt, Bleibt beim Menschen, Neu. Dazu, was ein Pilot messen müsste.\nRückmeldung der interviewten Person in Stichworten.\n\n\nPrüfen: Jede feste Regel steht vor dem Modellschritt, der sich auf sie verlässt. Die Freigabe liegt in einer menschlichen Bahn. Kein Schritt schreibt in ein Verwaltungssystem.\n\n\n\n\n\n4 · Prototyp mit Testfällen\nGruppe · Review im Coaching · Teamablage\nVorgehen: n8n auf dem HdM-Server.\n\nn8n-Export als JSON, Prompts im Wortlaut als eigene Dateien.\nMock-Daten und Mock-Schnittstellen mit Beschreibung, was sie nachbilden.\nMindestens fünf Testfälle: Eingabe, erwartetes Ergebnis, tatsächliches Ergebnis, Datum. Darunter ein Normalfall, ein Fall mit fehlender Angabe und ein Fall, den eine feste Regel abfängt.\nDer Freigabeschritt ist im Workflow sichtbar und in den Testfällen dokumentiert.\n\n\nPrüfen: Der Export enthält keine Zugangsdaten. Eine Person aus einer anderen Gruppe kann den Workflow importieren, die Verbindungen auswählen und einen Testfall ausführen.\n\n\n\n\n\n5 · Bewertung und Empfehlungen\nGruppe · Teamablage\n\nWas der Prototyp leistet und was nicht, belegt mit den Testfällen.\nGrenzen: Daten, Schnittstellen, Rechte, Modellqualität, Datenschutz. Welche Voraussetzungen müssten erfüllt sein, damit der Ablauf real eingesetzt werden könnte?\nEmpfehlung an den Verwaltungsbereich: weiterverfolgen, anpassen oder nicht weiterverfolgen, mit Begründung.\nOffenlegung, wofür KI-Werkzeuge in der Projektarbeit genutzt wurden.\n\n\nPrüfen: Die Empfehlung stützt sich auf die Testfälle, nicht nur auf den Eindruck einer Demo. Eine begründete Empfehlung gegen den Einsatz ist ein vollwertiges Ergebnis.\n\n\n\n\n\n6 · Abschlusspräsentation\nGruppe · Semesterende · vor den beteiligten Verwaltungsbereichen\n\nAusgangslage und Ablauf heute in zwei Minuten.\nSoll-Modell und Prototyp an einem Testfall live zeigen, einschließlich Freigabeschritt.\nGrenzen und Empfehlungen.\nJede Person der Gruppe präsentiert einen Teil.\n\n\n\n\n\n\n\nWarnungAchtung\n\n\n\nDie Demo läuft mit erfundenen Daten und nachgebauten Schnittstellen. Das wird zu Beginn der Präsentation gesagt.\n\n\n\n\n\n\n\n\n\n\nWarnungAchtung\n\n\n\nKeine Passwörter, Schlüssel oder Zugangsdaten in Ablagen, Exporten, Screenshots oder Präsentationen. Benötigte Zugänge nur nach ihrem Zweck beschreiben (zum Beispiel „Verbindung zum Modell für den Prüfschritt“)."
   },
   {
-    "objectID": "werkzeuge/interviews.html",
-    "href": "werkzeuge/interviews.html",
-    "title": "Interviews führen",
+    "objectID": "werkzeuge/n8n-einstieg.html",
+    "href": "werkzeuge/n8n-einstieg.html",
+    "title": "n8n Schritt für Schritt",
     "section": "",
-    "text": "Das Interview soll zeigen, wie eine Tätigkeit heute wirklich abläuft: welche Informationen hereinkommen, was damit geschieht, welche Entscheidung am Ende steht. Es fragt nicht nach Wunsch-Automatisierungen. Zwei Gruppen führen ein Gespräch gemeinsam, eine Person protokolliert. Eine Tonaufnahme ist mit Zustimmung möglich und wird nur lokal transkribiert."
+    "text": "Sieben kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle und Datenbank.\nDie Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Zu jedem Beispiel gibt es eine fertige Datei zum Importieren. Damit lässt sich das eigene Ergebnis vergleichen, oder man springt direkt zum nächsten Baustein. Danach folgt der erste vollständige Workflow „Antrag prüfen“."
   },
   {
-    "objectID": "werkzeuge/interviews.html#fokus",
-    "href": "werkzeuge/interviews.html#fokus",
-    "title": "Interviews führen",
-    "section": "Worauf das Interview zielt",
-    "text": "Worauf das Interview zielt\nWir suchen Tätigkeiten, bei denen Mitarbeitende unstrukturierte Informationen in strukturierte überführen und Entscheidungen vorbereiten: Übersichten erstellen, Unterlagen zusammenfassen, Angaben gegen Voraussetzungen prüfen, Rückfragen formulieren. Das sind die Stellen, an denen ein Agent eine Vorlage liefern kann, ohne in Systeme schreiben zu müssen.\nDie Frage „Welchen Workflow würden Sie gern automatisieren?“ ist für die meisten schwer zu beantworten. Leichter fällt es, von konkreten Vorgängen der letzten Wochen zu erzählen; danach fragen wir.\n\n\nZwei Gespräche, dazwischen das Modell. Was beim Modellieren unklar bleibt, wird im zweiten Gespräch geklärt."
+    "objectID": "werkzeuge/n8n-einstieg.html#voraussetzungen",
+    "href": "werkzeuge/n8n-einstieg.html#voraussetzungen",
+    "title": "n8n Schritt für Schritt",
+    "section": "Voraussetzungen",
+    "text": "Voraussetzungen\n\nHdM-Netz vor Ort oder VPN verbunden.\nDie Adresse der eigenen Instanz, zum Beispiel https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-3/ für Gruppe 3. Alle Adressen stehen in der Vorbereitung.\nLogin und Passwort der Gruppe.\nNur erfundene Daten. Das gilt für jedes Beispiel auf dieser Seite."
   },
   {
-    "objectID": "werkzeuge/interviews.html#vorbereitung",
-    "href": "werkzeuge/interviews.html#vorbereitung",
-    "title": "Interviews führen",
-    "section": "Vorbereitung",
-    "text": "Vorbereitung\nVoraussetzungen: Recherche abgeschlossen, Referenzprozess als Hypothese vorhanden, Leitfragen abgestimmt, Rollen im Gespräch verteilt.\n\nDie beiden Gruppen legen ihre Leitfragen zusammen und einigen sich auf eine Reihenfolge: zuerst der Ablauf, dann die Informationen, dann die Entscheidungen, zuletzt die Schmerzpunkte.\nRollen verteilen: eine Person führt das Gespräch, eine protokolliert, eine achtet auf die Zeit und offene Punkte. Die zweite Gruppe ergänzt mit Nachfragen.\nDen Referenzprozess als Bild mitnehmen, aber erst am Ende zeigen. Vorher soll die interviewte Person den eigenen Ablauf frei beschreiben.\nDas Protokollraster vorbereiten (siehe unten).\n\nPrüfung: Jede Leitfrage lässt sich mit einer Beschreibung beantworten, nicht mit ja oder nein."
+    "objectID": "werkzeuge/n8n-einstieg.html#begriffe",
+    "href": "werkzeuge/n8n-einstieg.html#begriffe",
+    "title": "n8n Schritt für Schritt",
+    "section": "Die Oberfläche in sechs Begriffen",
+    "text": "Die Oberfläche in sechs Begriffen\n\n\n\n\n\n\n\nBegriff\nBedeutung\n\n\n\n\nWorkflow\nEin Ablauf auf der Arbeitsfläche (Canvas). Er wird gespeichert und kann exportiert werden.\n\n\nKnoten (Node)\nEin Schritt im Ablauf. Das Plus-Symbol öffnet die Liste aller Knoten mit Suchfeld.\n\n\nTrigger\nDer erste Knoten. Er startet den Ablauf: per Klick, per Formular oder per Aufruf einer Adresse.\n\n\nItem\nEin Datensatz, der von Knoten zu Knoten weitergereicht wird. Intern ist das JSON, also Feldname und Wert.\n\n\nExpression\nEin Platzhalter in doppelten geschweiften Klammern, zum Beispiel { $json.name }. n8n setzt dort den Wert aus dem vorherigen Knoten ein.\n\n\nAusführung\nEin Lauf des Workflows. Jeder Knoten zeigt danach links seine Eingabe und rechts seine Ausgabe.\n\n\n\nEin Doppelklick auf einen Knoten öffnet ihn. Links steht die Eingabe (Input), in der Mitte die Einstellungen, rechts die Ausgabe (Output). Die Ansicht der Daten lässt sich oben zwischen Schema, Table und JSON umschalten."
   },
   {
-    "objectID": "werkzeuge/interviews.html#leitfragen",
-    "href": "werkzeuge/interviews.html#leitfragen",
-    "title": "Interviews führen",
-    "section": "Leitfragen",
-    "text": "Leitfragen\nZum Ablauf:\n\nBeschreiben Sie bitte einen typischen Vorgang vom Eingang bis zum Abschluss. Was passiert zuerst, was danach?\nWer ist beteiligt, und an welcher Stelle? Wer gibt etwas weiter, wer prüft, wer entscheidet, wer unterschreibt?\nWas passiert, wenn etwas fehlt oder nicht stimmt? An wen geht der Vorgang zurück?\n\nZu den Informationen:\n\nWelche Unterlagen und Angaben kommen herein, und in welcher Form (Formular, PDF, Mail, Systemauszug)?\nIn welchen Systemen schauen Sie nach, und was suchen Sie dort?\nWo dokumentieren Sie Ihre Prüfung und Ihre Entscheidung?\n\nZu Prüfung und Entscheidung:\n\nWelche Voraussetzungen prüfen Sie, und woher stammen die Regeln dafür (Ordnung, Richtlinie, Erfahrung)?\nWelche Fälle sind eindeutig, welche brauchen Ermessen?\nWas müsste eine Übersicht enthalten, damit Sie schneller und sicherer entscheiden könnten?\n\nZum Aufwand:\n\nWie oft kommt der Vorgang vor, und wie lange dauert ein Fall ungefähr?\nWelcher Teil kostet am meisten Zeit? Welcher Teil ist am fehleranfälligsten?\nWelche Informationen sind vertraulich, und wer darf sie sehen?"
+    "objectID": "werkzeuge/n8n-einstieg.html#importieren",
+    "href": "werkzeuge/n8n-einstieg.html#importieren",
+    "title": "n8n Schritt für Schritt",
+    "section": "Einen Workflow importieren",
+    "text": "Einen Workflow importieren\nFür jedes Beispiel gibt es eine JSON-Datei. So kommt sie in die eigene Instanz:\n\nDie Datei herunterladen.\nIn n8n oben rechts „Create Workflow“ wählen.\nIm Menü mit den drei Punkten oben rechts „Import from File…“ wählen.\nDie heruntergeladene Datei auswählen.\nDen Workflow speichern (Strg+S oder Cmd+S).\nPrüfen: Die Knoten stehen verbunden auf der Arbeitsfläche.\n\nAlternativ die Datei in einem Texteditor öffnen, alles kopieren und mit Strg+V oder Cmd+V auf der leeren Arbeitsfläche einfügen.\nDie Dateien enthalten keine Zugangsdaten. Knoten, die eine Verbindung brauchen (Gemini, Postgres), zeigen nach dem Import ein Warnsymbol. Den Knoten öffnen und unter „Credential“ die Verbindung der Gruppe wählen. Gibt es nur eine passende Verbindung, setzt n8n sie oft schon selbst ein."
   },
   {
-    "objectID": "werkzeuge/interviews.html#protokoll",
-    "href": "werkzeuge/interviews.html#protokoll",
-    "title": "Interviews führen",
-    "section": "Protokoll",
-    "text": "Protokoll\nEine Person schreibt mit, direkt in ein Raster, auch dann, wenn aufgenommen wird:\n\n\n\n\n\n\n\nSpalte\nInhalt\n\n\n\n\nSchritt\nWas passiert, in der Reihenfolge des Gesprächs\n\n\nRolle\nWer den Schritt ausführt, als Rolle, nicht als Name\n\n\nEingang\nWelche Information oder Unterlage hereinkommt, in welcher Form\n\n\nSystem\nWelches System dabei genutzt wird, lesend oder schreibend\n\n\nRegel oder Ermessen\nFeste Regel mit Quelle, oder Ermessensentscheidung\n\n\nRückschleife\nWas bei Fehlern oder fehlenden Angaben passiert\n\n\nOffene Frage\nWas unklar geblieben ist\n\n\n\nDirekt nach dem Gespräch, am besten noch am selben Tag:\n\nDas Protokoll gemeinsam ergänzen, solange die Erinnerung frisch ist.\nZitate nur sinngemäß festhalten, keine Namen von Personen, keine Namen von Studierenden oder Bewerbenden aus Beispielen.\nOffene Fragen in eine eigene Liste für das zweite Gespräch übertragen.\nProtokoll unter 02_Interviews ablegen.\n\nPrüfung: Aus dem Protokoll lässt sich der Ablauf als Prozessmodell zeichnen, ohne nachzufragen. Wo das nicht geht, steht eine offene Frage.\n\n\n\n\n\n\nWarnungAchtung\n\n\n\nWenn im Gespräch Beispielfälle mit echten Personen genannt werden, bleiben diese Angaben im Raum. Ins Protokoll kommt der Fall ohne Namen und ohne Merkmale, die eine Person erkennbar machen."
+    "objectID": "werkzeuge/n8n-einstieg.html#hallo-welt",
+    "href": "werkzeuge/n8n-einstieg.html#hallo-welt",
+    "title": "n8n Schritt für Schritt",
+    "section": "Beispiel 1: Hallo Welt",
+    "text": "Beispiel 1: Hallo Welt\nZiel: Daten anlegen und mit einer Expression weiterverwenden.\n\nEinen neuen Workflow anlegen und „01 Hallo Welt“ nennen.\nAuf „Add first step“ klicken und Trigger manually wählen.\nHinter den Trigger den Knoten Edit Fields (Set) einfügen und „Name“ nennen.\nUnter „Fields to Set“ ein Feld name vom Typ String mit dem Wert Welt anlegen.\nEinen zweiten Knoten Edit Fields (Set) anhängen und „Gruss“ nennen.\nDarin ein Feld gruss anlegen.\nAls Wert Hallo eintippen und dann das Feld name aus der Eingabe links in das Wertfeld ziehen.\nEin Ausrufezeichen ergänzen. Der Wert lautet jetzt Hallo {{ $json.name }}!.\nUnten auf „Execute workflow“ klicken.\n\nPrüfung: Die Ausgabe des Knotens „Gruss“ zeigt gruss: Hallo Welt!. Den Wert im Knoten „Name“ ändern und erneut ausführen. Der Gruß ändert sich mit.\nEdit Fields gibt standardmäßig nur die Felder aus, die dort angelegt sind. Sollen die Felder aus dem vorherigen Knoten erhalten bleiben, unter „Options“ die Einstellung „Include Other Input Fields“ einschalten.\nDatei: 01-hallo-welt.json"
   },
   {
-    "objectID": "werkzeuge/interviews.html#aufnahme",
-    "href": "werkzeuge/interviews.html#aufnahme",
-    "title": "Interviews führen",
-    "section": "Tonaufnahme mit Zustimmung",
-    "text": "Tonaufnahme mit Zustimmung\nEine Aufnahme macht das Protokoll vollständiger und das Prozessmodell genauer, weil nichts verloren geht, was im Gespräch nur nebenbei gesagt wurde. Sie ist erlaubt, wenn die Gesprächspartnerin oder der Gesprächspartner vorher ausdrücklich zustimmt. Ohne Zustimmung bleibt es beim Protokoll.\nVoraussetzungen: Zustimmung eingeholt und im Protokoll vermerkt (Datum, wer zugestimmt hat). Ein Rechner der Gruppe mit lokaler Transkription, zum Beispiel Whisper oder eine darauf aufbauende App; auf dem Mac etwa MacWhisper, unter Windows oder Linux etwa Buzz. Alle Varianten laufen ohne Internetverbindung.\n\nZu Beginn des Gesprächs fragen: „Dürfen wir das Gespräch aufnehmen? Wir schreiben es nur auf unserem eigenen Rechner ab, nichts davon geht in eine Cloud, und wir löschen die Aufnahme danach.“ Die Antwort abwarten.\nBei Zustimmung mit dem Telefon oder Notebook aufnehmen. Trotzdem protokollieren; die Aufnahme ersetzt das Raster nicht.\nNach dem Gespräch die Aufnahme lokal transkribieren. Keine Cloud-Transkription, auch nicht über Gemini, ChatGPT oder einen Online-Dienst.\nIm Transkript Namen von Personen durch Rollen ersetzen. Erst danach darf der Coding-Agent damit arbeiten, zum Beispiel für den Entwurf des Ist-Modells.\nAufnahme und Roh-Transkript löschen, sobald das bereinigte Transkript und das Protokoll stehen.\n\nPrüfung: Im Protokoll steht die Zustimmung. Das bereinigte Transkript enthält keine Namen. Die Aufnahme ist gelöscht.\n\n\n\n\n\n\nWarnungAchtung\n\n\n\nOhne Zustimmung bleibt es beim Protokoll. Aufnahmen und Transkripte gehören nicht in die Teamablage, wenn diese in einem Cloud-Dienst liegt; dort liegt nur das bereinigte Transkript ohne Namen."
+    "objectID": "werkzeuge/n8n-einstieg.html#wenn-dann",
+    "href": "werkzeuge/n8n-einstieg.html#wenn-dann",
+    "title": "n8n Schritt für Schritt",
+    "section": "Beispiel 2: Wenn, dann",
+    "text": "Beispiel 2: Wenn, dann\nZiel: Eine feste Regel prüfen, ohne Modell.\n\nEinen neuen Workflow „02 Wenn dann“ mit Trigger manually anlegen.\nEinen Knoten Edit Fields (Set) „Antrag“ einfügen.\nDarin antrag_id (String, A-001) und leistungspunkte (Number, 195) anlegen.\nEinen Knoten If anhängen und „Mindestens 210 LP?“ nennen.\nAls Bedingung links { $json.leistungspunkte } einsetzen.\nAls Vergleich „Number“ und dann „is greater than or equal to“ wählen, rechts 210 eintragen.\nAn den Ausgang true einen Knoten Edit Fields „Zulaessig“ hängen, Feld ergebnis mit einem kurzen Text.\nAn den Ausgang false einen Knoten Edit Fields „Nicht zulaessig“ hängen.\nDort ergebnis auf Es fehlen {{ 210 - $json.leistungspunkte }} Leistungspunkte. setzen.\nDen Workflow ausführen.\n\nPrüfung: Nur der Zweig false läuft. Die Ausgabe lautet „Es fehlen 15 Leistungspunkte.“ Mit 214 im Antrag läuft nur der Zweig true.\nDer Typ ist wichtig. Steht 195 als String im Antrag, meldet der If-Knoten einen Typfehler. Dann den Feldtyp auf Number stellen.\nDatei: 02-wenn-dann.json"
   },
   {
-    "objectID": "werkzeuge/interviews.html#zweites",
-    "href": "werkzeuge/interviews.html#zweites",
-    "title": "Interviews führen",
-    "section": "Das zweite Gespräch",
-    "text": "Das zweite Gespräch\nNach der Modellierung bleiben Lücken: Rollen, Ausnahmen, Rückschleifen. Das zweite Gespräch ist kürzer und arbeitet am Modell.\n\nDas Ist-Modell ausdrucken oder auf dem Bildschirm zeigen.\nSchritt für Schritt durchgehen: „Haben wir das richtig verstanden?“\nDie offenen Fragen aus der Liste stellen.\nAm Ende das Soll-Modell als Idee vorstellen und fragen, welche Schritte die Person einem Agenten überlassen würde und welche nicht.\n\nErgebnis: Ein bestätigtes Ist-Modell und eine erste Rückmeldung zum Soll-Modell."
+    "objectID": "werkzeuge/n8n-einstieg.html#hallo-gemini",
+    "href": "werkzeuge/n8n-einstieg.html#hallo-gemini",
+    "title": "n8n Schritt für Schritt",
+    "section": "Beispiel 3: Hallo Gemini",
+    "text": "Beispiel 3: Hallo Gemini\nZiel: Ein Sprachmodell einen Text bearbeiten lassen.\n\nEinen neuen Workflow „03 Hallo Gemini“ mit Trigger manually anlegen.\nEinen Knoten Edit Fields (Set) „Mail“ mit dem Feld mail einfügen.\nAls Wert eine erfundene Mail an das Prüfungsamt eintragen, drei bis vier Sätze.\nEinen Knoten Basic LLM Chain anhängen und „Zusammenfassen“ nennen.\nUnter „Source for Prompt“ die Option „Define below“ wählen.\nAls Prompt eintragen: Fasse die folgende Mail in einem Satz zusammen. Nenne nur, was in der Mail steht.\nDarunter Mail: {{ $json.mail }} ergänzen.\nUnten am Knoten auf das Plus bei „Model“ klicken und Google Gemini Chat Model wählen.\nUnter „Credential“ die Verbindung Gemini g der Gruppe wählen. Kein eigenes Google-Konto eintragen.\nDen Workflow ausführen.\n\nPrüfung: Die Ausgabe enthält ein Feld text mit einem Satz. Der Satz enthält nichts, was nicht in der Mail steht. Zweimal ausführen und vergleichen: Der Wortlaut ändert sich, der Inhalt sollte gleich bleiben.\nIn der Datei ist das Modell voreingestellt, die Temperatur steht auf 0,2. Je niedriger die Temperatur, desto weniger schwanken die Antworten.\nDatei: 03-hallo-gemini.json"
   },
   {
-    "objectID": "werkzeuge/interviews.html#haltung",
-    "href": "werkzeuge/interviews.html#haltung",
-    "title": "Interviews führen",
-    "section": "Umgang mit den Gesprächspartnerinnen und Gesprächspartnern",
-    "text": "Umgang mit den Gesprächspartnerinnen und Gesprächspartnern\nDie Verwaltungsmitarbeitenden nehmen sich Zeit für das Projekt. Dafür lohnt es sich, pünktlich und vorbereitet zu kommen, gut zuzuhören und nichts zu versprechen, was das Projekt nicht halten kann. Wir liefern Vorschläge und Prototypen mit erfundenen Daten. Ob etwas eingeführt wird, entscheidet die Hochschule. Diese Grenze benennen wir im Gespräch.\nWeiter: n8n auf dem HdM-Server"
+    "objectID": "werkzeuge/n8n-einstieg.html#strukturiert",
+    "href": "werkzeuge/n8n-einstieg.html#strukturiert",
+    "title": "n8n Schritt für Schritt",
+    "section": "Beispiel 4: Aus Text werden Felder",
+    "text": "Beispiel 4: Aus Text werden Felder\nZiel: Unstrukturierten Text in feste Felder übertragen. Das ist der Kern fast aller Projektprozesse.\n\nDen Workflow aus Beispiel 3 duplizieren (Menü mit drei Punkten, „Duplicate“) und „04 Strukturierte Antwort“ nennen.\nIn der Basic LLM Chain die Option „Require Specific Output Format“ einschalten.\nAm neuen Anschluss „Output Parser“ den Knoten Structured Output Parser einfügen.\nDort „Generate From JSON Example“ wählen und ein Beispiel der gewünschten Felder eintragen:\n\n{\n  \"anliegen\": \"Anmeldung Bachelorarbeit\",\n  \"wunschtermin\": \"2026-12-01\",\n  \"genannte_nachweise\": [\"Praxissemester abgeschlossen\"],\n  \"fehlende_angaben\": [\"Zweitprüfer\"],\n  \"rueckfrage_noetig\": true\n}\n\nDen Prompt nach dem Prompt-Standard umschreiben: Kontext (was für die Anmeldung nötig ist), Aufgabe (Mail in die Felder übertragen), Prüfung (nur eintragen, was in der Mail steht).\nDen Workflow ausführen.\n\nPrüfung: Die Ausgabe hat genau die fünf Felder. Das nur angekündigte Zeugnis steht unter fehlende_angaben, nicht unter genannte_nachweise. Der Zweitprüfer fehlt in der Mail und steht deshalb ebenfalls unter fehlende_angaben.\nMit festen Feldern kann ein If-Knoten weiterarbeiten, zum Beispiel mit rueckfrage_noetig. So entsteht das Muster aus dem Projekt: Das Modell strukturiert, die Regel prüft, der Mensch entscheidet.\nDatei: 04-strukturierte-antwort.json"
+  },
+  {
+    "objectID": "werkzeuge/n8n-einstieg.html#formular",
+    "href": "werkzeuge/n8n-einstieg.html#formular",
+    "title": "n8n Schritt für Schritt",
+    "section": "Beispiel 5: Hallo Formular",
+    "text": "Beispiel 5: Hallo Formular\nZiel: Eine kleine Web-Seite bauen, auf der eine Person etwas eingibt.\n\nEinen neuen Workflow „05 Hallo Formular“ anlegen.\nAls Trigger On form submission (n8n Form Trigger) wählen.\nDen Titel „Anfrage an das Prüfungsamt (Test)“ eintragen.\nDrei Felder anlegen: „Name“ (Text, Pflicht), „Anliegen“ (Dropdown mit drei Optionen, Pflicht), „Nachricht“ (Textarea).\nUnter „Options“ den „Form Path“ auf gX-anfrage setzen, mit der Gruppennummer statt X.\nEinen Knoten Edit Fields „Eingang“ anhängen, Feld bestaetigung mit Danke, {{ $json.Name }}. Ihr Anliegen ist eingegangen.\nEinen Knoten n8n Form anhängen, als Operation „Form Ending“ wählen.\nAls „Completion Message“ { $json.bestaetigung } eintragen.\nIm Trigger auf „Execute step“ klicken. n8n öffnet das Formular in einem neuen Tab.\nDas Formular mit erfundenen Angaben ausfüllen und absenden.\n\nPrüfung: Die Seite zeigt die Bestätigung mit dem eingegebenen Namen. In n8n zeigt der Trigger die drei Felder als Ausgabe.\nDie Test-Adresse enthält form-test und gilt nur, solange n8n auf eine Eingabe wartet. Für eine dauerhafte Adresse den Workflow oben rechts mit „Publish“ veröffentlichen. Dann gilt https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-&lt;n&gt;/form/gX-anfrage, erreichbar nur aus dem HdM-Netz und über VPN.\nDatei: 05-hallo-formular.json"
+  },
+  {
+    "objectID": "werkzeuge/n8n-einstieg.html#webhook",
+    "href": "werkzeuge/n8n-einstieg.html#webhook",
+    "title": "n8n Schritt für Schritt",
+    "section": "Beispiel 6: Hallo Webhook",
+    "text": "Beispiel 6: Hallo Webhook\nZiel: Ein Verwaltungssystem nachbauen, das auf eine Anfrage mit erfundenen Daten antwortet (Mock).\n\nEinen neuen Workflow „06 Hallo Webhook“ anlegen.\nAls Trigger On webhook call (Webhook) wählen.\nAls „HTTP Method“ GET wählen und als „Path“ gX-hallo eintragen, mit der Gruppennummer statt X.\nUnter „Respond“ die Option „Using ‘Respond to Webhook’ Node“ wählen.\nEinen Knoten Respond to Webhook anhängen, „Respond With“ auf JSON stellen.\nAls Antwort eintragen:\n\n{{ { \"antrag_id\": $json.query.id, \"status\": \"in Prüfung\", \"leistungspunkte\": 195, \"hinweis\": \"Mock, erfundene Daten\" } }}\n\nIm Webhook-Knoten auf „Listen for test event“ klicken.\nDie Test-Adresse kopieren und im Browser mit ?id=A-007 am Ende aufrufen.\n\nPrüfung: Der Browser zeigt die Antwort als JSON mit \"antrag_id\": \"A-007\". In n8n zeigt der Webhook unter query den Wert id.\nNach „Publish“ gilt die Adresse ohne -test: https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-&lt;n&gt;/webhook/gX-hallo?id=A-007. Ein anderer Workflow ruft sie mit dem Knoten HTTP Request auf. So fragt der Prototyp den Mock statt eines echten Systems. Mehr dazu unter Mock-Schnittstellen mit Webhooks.\nDatei: 06-hallo-webhook.json"
+  },
+  {
+    "objectID": "werkzeuge/n8n-einstieg.html#datenbank",
+    "href": "werkzeuge/n8n-einstieg.html#datenbank",
+    "title": "n8n Schritt für Schritt",
+    "section": "Beispiel 7: Hallo Datenbank",
+    "text": "Beispiel 7: Hallo Datenbank\nZiel: Erfundene Daten in der Gruppen-Datenbank ablegen und lesen.\n\nEinen neuen Workflow „07 Hallo Datenbank“ mit Trigger manually anlegen.\nEinen Knoten Postgres mit der Aktion „Execute a SQL query“ einfügen und „Tabelle anlegen“ nennen.\nUnter „Credential“ die Verbindung Postgres g der Gruppe wählen.\nAls Query eintragen:\n\nCREATE TABLE IF NOT EXISTS antraege (\n  antrag_id text PRIMARY KEY,\n  art text NOT NULL,\n  leistungspunkte integer NOT NULL\n);\nINSERT INTO antraege VALUES\n  ('A-001', 'Anmeldung Abschlussarbeit', 195),\n  ('A-002', 'Anmeldung Abschlussarbeit', 214),\n  ('A-003', 'Anerkennung', 30)\nON CONFLICT (antrag_id) DO NOTHING;\n\nEinen zweiten Knoten Postgres „Antraege lesen“ anhängen, ebenfalls „Execute a SQL query“.\nAls Query SELECT antrag_id, art, leistungspunkte FROM antraege ORDER BY antrag_id; eintragen.\nDen Workflow ausführen.\n\nPrüfung: „Antraege lesen“ gibt drei Items aus, eines pro Zeile der Tabelle. Ein zweiter Lauf legt keine doppelten Zeilen an.\nJedes Item läuft einzeln durch die folgenden Knoten. Ein If-Knoten mit der Regel aus Beispiel 2 prüft also alle drei Anträge in einem Lauf. Die SQL-Anweisungen für eigene Mock-Tabellen schreibt der Coding-Agent. Wir prüfen sie, bevor wir sie ausführen.\nDatei: 07-hallo-datenbank.json"
+  },
+  {
+    "objectID": "werkzeuge/n8n-einstieg.html#fehler",
+    "href": "werkzeuge/n8n-einstieg.html#fehler",
+    "title": "n8n Schritt für Schritt",
+    "section": "Wenn etwas nicht klappt",
+    "text": "Wenn etwas nicht klappt\n\n\n\n\n\n\n\nBeobachtung\nNächster Prüfschritt\n\n\n\n\nKnoten mit rotem Warnsymbol nach dem Import\nKnoten öffnen, unter „Credential“ die Verbindung der Gruppe wählen\n\n\nExpression zeigt undefined oder bleibt leer\nWorkflow einmal ausführen, damit der vorherige Knoten Daten hat. Dann Feldnamen links prüfen\n\n\nIf-Knoten meldet einen Typfehler\nFeldtyp im Edit-Fields-Knoten auf Number stellen\n\n\nStructured Output Parser meldet „could not parse“\nPrompt um „Antworte nur im vorgegebenen Format“ ergänzen und erneut ausführen\n\n\nFormular oder Webhook antwortet nicht\nTest-Adresse gilt nur während „Listen for test event“. Sonst „Publish“ und Adresse ohne -test\n\n\nPostgres meldet „relation does not exist“\nZuerst den Knoten „Tabelle anlegen“ ausführen\n\n\n\nWeitere Fälle stehen unter Wenn ein Lauf nicht funktioniert."
+  },
+  {
+    "objectID": "werkzeuge/n8n-einstieg.html#dateien",
+    "href": "werkzeuge/n8n-einstieg.html#dateien",
+    "title": "n8n Schritt für Schritt",
+    "section": "Alle Dateien",
+    "text": "Alle Dateien\n\n\n\nDatei\nBaustein\n\n\n\n\n01-hallo-welt.json\nTrigger, Edit Fields, Expression\n\n\n02-wenn-dann.json\nIf-Knoten mit fester Regel\n\n\n03-hallo-gemini.json\nBasic LLM Chain mit Gemini\n\n\n04-strukturierte-antwort.json\nStructured Output Parser\n\n\n05-hallo-formular.json\nn8n Form Trigger und Form Ending\n\n\n06-hallo-webhook.json\nWebhook und Respond to Webhook (Mock)\n\n\n07-hallo-datenbank.json\nPostgres in der Gruppen-Datenbank\n\n\n\nIn den Dateien 05 und 06 steht der Pfad gX-.... Nach dem Import das X durch die Gruppennummer ersetzen.\nWeiter zum ersten Workflow „Antrag prüfen“"
+  },
+  {
+    "objectID": "werkzeuge/bpmn-uebung.html",
+    "href": "werkzeuge/bpmn-uebung.html",
+    "title": "BPMN-Übung: Anerkennung von Studienleistungen",
+    "section": "",
+    "text": "Eine Übung für zuhause zur Einführung in BPMN 2.0. In Gruppen von zwei bis drei Personen wird das Verfahren modelliert, mit dem eine Hochschule an anderen Hochschulen erbrachte Studienleistungen anerkennt. Das Modell soll die zentralen BPMN-Elemente aus der Einführung korrekt einsetzen.\nDie Aufgabenstellung gibt es auch als Word-Datei, etwa um die Tabelle in Aufgabe 1 direkt auszufüllen."
+  },
+  {
+    "objectID": "werkzeuge/bpmn-uebung.html#ausgangssituation",
+    "href": "werkzeuge/bpmn-uebung.html#ausgangssituation",
+    "title": "BPMN-Übung: Anerkennung von Studienleistungen",
+    "section": "Ausgangssituation",
+    "text": "Ausgangssituation\nStudierende, die an einer anderen Hochschule Leistungen erbracht haben (etwa im Auslandssemester oder vor einem Hochschulwechsel), können deren Anerkennung beantragen. Beteiligt sind die Studierenden, das Prüfungsamt, die für das jeweilige Modul verantwortlichen Fachprüferinnen und Fachprüfer sowie die bzw. der Vorsitzende des Prüfungsausschusses. Das Verfahren läuft wie folgt ab:\n\nDer Prozess beginnt, sobald im Prüfungsamt ein Antrag auf Anerkennung eingeht. Die Studierenden reichen den Antrag über das Campus-Management-System ein und fügen ein Transcript of Records sowie die Modulbeschreibungen der anderen Hochschule bei.\nDas Prüfungsamt prüft den Antrag auf Vollständigkeit. Fehlen Unterlagen, fordert es diese bei den Studierenden nach.\nNach der Nachforderung wartet das Prüfungsamt. Gehen die Unterlagen ein, wird die Vollständigkeit erneut geprüft. Gehen sie innerhalb von vier Wochen nicht ein, gilt der Antrag als zurückgezogen: Das Prüfungsamt informiert die Studierenden, und der Prozess endet.\nIst der Antrag vollständig, leitet das Prüfungsamt ihn an die zuständige Fachprüferin bzw. den zuständigen Fachprüfer weiter. Diese führen die fachliche Prüfung durch und geben für jedes beantragte Modul eine Empfehlung ab (anerkennen oder nicht anerkennen).\nLiegt die Empfehlung zwei Wochen nach der Weiterleitung noch nicht vor, erinnert das Prüfungsamt die Fachprüferin bzw. den Fachprüfer. Die fachliche Prüfung läuft dabei weiter; sie wird durch die Erinnerung nicht abgebrochen.\nAuf Grundlage der Empfehlungen entscheidet die bzw. der Vorsitzende des Prüfungsausschusses über den Antrag.\nAnschließend bereitet das Prüfungsamt den Bescheid vor: Wurde mindestens ein Modul anerkannt, verbucht es die anerkannten Leistungen im Campus-Management-System. Wurde mindestens ein Modul abgelehnt, formuliert es eine schriftliche Begründung mit Rechtsbehelfsbelehrung. Bei einer teilweisen Anerkennung geschieht beides.\nDanach erstellt das Prüfungsamt den Bescheid. Es versendet ihn an die Studierenden und archiviert gleichzeitig Antrag und Bescheid in der digitalen Studierendenakte. Sind beide Schritte erledigt, ist der Antrag abschließend bearbeitet.\n\n\nAufgabe 1: Fallbeschreibung analysieren\nDie Fallbeschreibung lesen und die gefundenen Begriffe in die mittlere Spalte eintragen. In der rechten Spalte angeben, mit welchem BPMN-Element der Begriff dargestellt wird.\n\n\n\n\n\n\n\n\nKategorie\nFundstellen im Text (Nr.) und Begriffe\nGeplantes BPMN-Element\n\n\n\n\nBeteiligte Organisationen\n\n\n\n\nRollen innerhalb der Hochschule\n\n\n\n\nAuslösendes Ereignis\n\n\n\n\nMögliche Ergebnisse des Prozesses\n\n\n\n\nEntscheidungen\n\n\n\n\nWartesituationen und Fristen\n\n\n\n\nNachrichten zwischen den Beteiligten\n\n\n\n\nDokumente und IT-Systeme\n\n\n\n\n\nLeitfragen: Wer arbeitet in eigener Verantwortung und kommuniziert nur über Nachrichten? Welche Schritte laufen gleichzeitig ab, welche schließen sich gegenseitig aus, und wo können mehrere Pfade zugleich aktiv sein?\n\n\nAufgabe 2: Kollaborationsdiagramm modellieren\nDas Anerkennungsverfahren aus Sicht der Hochschule als BPMN-Kollaborationsdiagramm modellieren. Die Studierenden als zugeklappten Pool (Black Box) darstellen, die Hochschule als Pool mit einer Lane je Rolle. Die fachliche Prüfung aus Schritt 4 hier als zugeklappten Teilprozess modellieren.\nDas Modell verwendet jedes der folgenden Elemente mindestens einmal fachlich korrekt:\n\nPool mit Lanes sowie ein zugeklappter Pool\nNachrichtenfluss zwischen den Pools (eingehend und ausgehend)\nNachrichten-Startereignis\nmindestens zwei unterschiedlich benannte Endereignisse\nAufgaben, davon mindestens eine Sende- und eine Benutzeraufgabe\nexklusives Gateway (XOR) mit einer Schleife\nereignisbasiertes Gateway mit Nachrichten- und Zeit-Zwischenereignis\nnicht unterbrechendes Zeit-Randereignis (Boundary Event)\ninklusives Gateway (OR) mit passendem Zusammenführungs-Gateway\nparalleles Gateway (AND) mit passendem Zusammenführungs-Gateway\nzugeklappter Teilprozess\nmindestens zwei Datenobjekte und ein Datenspeicher, jeweils mit Assoziation\neine Textanmerkung, die eine fachliche Regel aus dem Text festhält\n\n\n\nAufgabe 3: Teilprozess „Fachliche Prüfung“ detaillieren\nDen Teilprozess aus Aufgabe 2 in einem eigenen Diagramm modellieren. Er läuft vollständig bei der Fachprüferin bzw. dem Fachprüfer ab und besteht aus folgenden Schritten:\n\nDie Fachprüferin sichtet die eingereichten Modulbeschreibungen.\nDanach vergleicht sie die Lernergebnisse und den Arbeitsaufwand in ECTS-Punkten mit dem entsprechenden Modul des eigenen Studiengangs. Beide Vergleiche sind voneinander unabhängig und können in beliebiger Reihenfolge erfolgen.\nBestehen keine wesentlichen Unterschiede, empfiehlt sie die Anerkennung. Andernfalls hält sie die wesentlichen Unterschiede fest und empfiehlt die Ablehnung.\nAbschließend trägt sie ihre Empfehlung in das Anerkennungsformular ein.\n\nIm Diagramm aus Aufgabe 2 zusätzlich kennzeichnen, dass der Teilprozess für jedes beantragte Modul einmal durchlaufen wird. Welcher Marker ist dafür vorgesehen, und finden die Durchläufe parallel oder nacheinander statt?\n\n\nAufgabe 4: Modell begründen\nDie folgenden Fragen jeweils in zwei bis drei Sätzen beantworten:\n\nWarum eignet sich nach der Nachforderung ein ereignisbasiertes Gateway besser als ein exklusives Gateway?\nWas würde sich am Prozessablauf ändern, wenn das Zeit-Randereignis aus Schritt 5 unterbrechend wäre?\nWarum wird in Schritt 7 ein inklusives Gateway verwendet und kein exklusives oder paralleles Gateway?\nWarum werden Prüfungsamt, Fachprüfer und Prüfungsausschuss als Lanes eines Pools modelliert, die Studierenden dagegen als eigener Pool?\nEine Stelle im Prozess nennen, an der die Durchlaufzeit gefährdet ist, und eine Verbesserung vorschlagen.\n\n\n\nZusatzaufgabe: Rücknahme des Antrags · optional\nStudierende können ihren Antrag zurücknehmen, solange der Prüfungsausschuss noch nicht entschieden hat. Geht eine Rücknahme ein, wird die laufende Bearbeitung sofort abgebrochen. Das Prüfungsamt bestätigt den Studierenden die Rücknahme, und der Prozess endet.\nDas Modell entsprechend erweitern. Dazu die betroffenen Schritte so zusammenfassen, dass ein einziges Ereignis die Bearbeitung an jeder Stelle beenden kann. Begründen, ob ein unterbrechendes oder ein nicht unterbrechendes Ereignis passt."
+  },
+  {
+    "objectID": "werkzeuge/bpmn-uebung.html#modellierungsregeln",
+    "href": "werkzeuge/bpmn-uebung.html#modellierungsregeln",
+    "title": "BPMN-Übung: Anerkennung von Studienleistungen",
+    "section": "Modellierungsregeln",
+    "text": "Modellierungsregeln\nEs gelten die Konventionen aus der Einführung:\n\n\n\n\n\n\n\n\nElement\nBenennungsregel\nBeispiel\n\n\n\n\nAufgabe\nObjekt + Verb im Infinitiv\nAntrag prüfen\n\n\nEreignis\nObjekt + Partizip (Zustand)\nAntrag eingegangen\n\n\nExklusives Gateway\nFrage; ausgehende Kanten mit den Antworten beschriftet\nAntrag vollständig? ja / nein\n\n\nPool / Lane\nOrganisation bzw. Rolle, keine Person\nPrüfungsamt\n\n\n\n\nSequenzflüsse verbinden nur Elemente innerhalb eines Pools; zwischen Pools gibt es ausschließlich Nachrichtenflüsse.\nJeder Pfad endet in einem Endereignis; Verzweigungen werden mit einem Gateway desselben Typs wieder zusammengeführt.\nVon links nach rechts modellieren und sich kreuzende Kanten vermeiden, wo es möglich ist."
+  },
+  {
+    "objectID": "werkzeuge/bpmn-uebung.html#werkzeug-und-abgabe",
+    "href": "werkzeuge/bpmn-uebung.html#werkzeug-und-abgabe",
+    "title": "BPMN-Übung: Anerkennung von Studienleistungen",
+    "section": "Werkzeug und Abgabe",
+    "text": "Werkzeug und Abgabe\nWerkzeug: der kostenlose Camunda Modeler oder die Browser-Version demo.bpmn.io.\nAbgabe: je Gruppe die Modelldateien (.bpmn) aus Aufgabe 2 und 3, ein PDF mit den Diagrammen sowie die Antworten zu Aufgabe 4. Die Namen aller Gruppenmitglieder vermerken.\nWie Verwaltungen selbst BPMN-Modelle dokumentieren, zeigt der Attributkatalog für BPMN 2.0 des Bundesverwaltungsamts.\nZurück: Prozessmodellierung"
+  },
+  {
+    "objectID": "werkzeuge/einrichtung.html",
+    "href": "werkzeuge/einrichtung.html",
+    "title": "Coding-Agent einrichten",
+    "section": "",
+    "text": "Ein Coding-Agent schreibt Dateien: Prozessmodelle, Mock-Daten, Workflow-Exporte, kleine Web-Oberflächen. Wir geben Richtung und Kontext, prüfen jedes Ergebnis und entscheiden. Diese Seite beschreibt die Einrichtung von Antigravity und den Prompt-Standard für Aufträge."
+  },
+  {
+    "objectID": "werkzeuge/einrichtung.html#antigravity",
+    "href": "werkzeuge/einrichtung.html#antigravity",
+    "title": "Coding-Agent einrichten",
+    "section": "Google Antigravity",
+    "text": "Google Antigravity\nGoogle Antigravity ist eine Entwicklungsumgebung mit eingebautem Agenten. Der Agent liest die Dateien im Projektordner, schreibt neue Dateien und ändert bestehende. Alles, was er tut, ist im Ordner sichtbar und kann rückgängig gemacht werden.\nAntigravity ist nicht die einzige Wahl. Claude Code, OpenAI Codex, Cursor und ähnliche Werkzeuge arbeiten nach demselben Prinzip; die Aufträge und die AGENTS.md auf dieser Seite funktionieren dort ebenso. Wir nehmen Antigravity, weil es im Google-Jahresabo für Studierende enthalten ist und damit nichts kostet.\nVoraussetzungen: ein Google-Konto; der Zugang zu Antigravity ist im Studierendenangebot enthalten. Pro Gruppe reicht eine Installation.\n\nDie Antigravity IDE herunterladen und installieren.\nMit dem Google-Konto anmelden.\nEinen leeren Projektordner anlegen und in Antigravity öffnen („Open Folder“).\nPrüfen: Links erscheint der Ordner, rechts der Chat mit dem Agenten.\n\nWenn die Installation nicht klappt: Den Auftrag in den Gemini-Chat im Browser einfügen, zusammen mit dem Inhalt der betroffenen Dateien als Text. Die Ausgabe als Datei speichern. Das ist umständlicher, führt aber zum selben Ergebnis.\n\n\nDer Agent erzeugt, wir prüfen. Korrekturen formulieren wir als neuen Auftrag, nicht von Hand in der Datei."
+  },
+  {
+    "objectID": "werkzeuge/einrichtung.html#agents-md",
+    "href": "werkzeuge/einrichtung.html#agents-md",
+    "title": "Coding-Agent einrichten",
+    "section": "AGENTS.md: Kontext für den Agenten",
+    "text": "AGENTS.md: Kontext für den Agenten\nEine Datei AGENTS.md im Projektordner gibt dem Agenten den Kontext: worum es geht, wo was liegt, welche Regeln gelten. Der Agent liest sie zu Beginn jedes Auftrags. Nur Regeln eintragen, die wirklich gelten; die Datei wächst mit dem Projekt. Beispiele auf agents.md.\nVorlage zum Anpassen:\n# Projekt: KI in der Verwaltung, Gruppe N\n\n## Worum es geht\nWir untersuchen, ob ein KI-Agent die &lt;Rolle&gt; bei &lt;Tätigkeit&gt; unterstützen kann:\n&lt;unstrukturierte Eingaben&gt; in eine &lt;strukturierte Übersicht&gt; überführen und\neine Entscheidung vorbereiten. Die Entscheidung trifft ein Mensch.\n\n## Ordner\n- 01_Recherche: Quellen und Referenzprozess\n- 03_Prozessmodelle: BPMN-Dateien (Ist und Soll)\n- 04_Prototyp: n8n-Exporte, Prompts, Mock-Daten, Testfälle\n\n## Regeln\n- Deutsch. Keine langen Gedankenstriche.\n- Keine Realdaten. Alle Beispieldaten sind erfunden und als solche gekennzeichnet.\n- Freigabe, Versand und Entscheidungen bleiben beim Menschen.\n- Keine Zahlen erfinden. Unklares als offene Frage markieren, nicht raten.\n- Zugangsdaten nie in Dateien schreiben."
+  },
+  {
+    "objectID": "werkzeuge/einrichtung.html#prompt",
+    "href": "werkzeuge/einrichtung.html#prompt",
+    "title": "Coding-Agent einrichten",
+    "section": "Aufträge formulieren: der Prompt-Standard",
+    "text": "Aufträge formulieren: der Prompt-Standard\nEin guter Auftrag hat vier Teile, in dieser Reihenfolge: Kontext, Aufgabe, Format, Prüfung. Das Modell kennt das Handwerk. Was es nicht kennen kann, liegt nur bei uns, deshalb bewegen Kontext und Prüfung das Ergebnis am meisten.\n\n\n\n\n\n\n\n\nTeil\nWas hinein gehört\nBeispiel\n\n\n\n\nKontext\nDie Fakten, die nur wir kennen\nDie Prozessbeschreibung aus dem Interview, die beteiligten Rollen, die geltenden Regeln\n\n\nAufgabe\nDas eine konkrete Ergebnis\nErstelle aus der Beschreibung den Ist-Prozess als BPMN-Datei\n\n\nFormat\nDateiname, Struktur, Sprache, Länge\nDatei antrag-ist.bpmn, eine Bahn je Rolle, Namen deutsch, Verb am Ende\n\n\nPrüfung\nWas das Modell melden soll, statt Lücken zu füllen\nNenne am Ende, welche Schritte in der Beschreibung unklar waren, statt sie zu erfinden\n\n\n\nKontext: &lt;Prozessbeschreibung und Rollen einfügen. Alle Angaben stammen aus\ndem Interviewprotokoll vom &lt;Datum&gt;; Namen sind durch Rollen ersetzt.&gt;\n\nAufgabe: Erstelle aus dieser Beschreibung den heutigen Ablauf als\nBPMN-2.0-Datei. Jeder Satz der Beschreibung wird höchstens ein Schritt.\n\nFormat: Datei 03_Prozessmodelle/antrag-ist.bpmn. Eine Bahn je Rolle.\nSchrittnamen deutsch mit Verb am Ende, Entscheidungen als Frage.\n\nPrüfung: Erfinde keine Schritte. Liste am Ende auf, welche Stellen der\nBeschreibung unklar oder lückenhaft sind, als offene Fragen.\nDer Kontext steht oben, die Anweisungen danach. Bei langem Material antworten Modelle so besser, als wenn die Aufgabe vor dem Material steht. Derselbe Standard gilt für Aufträge im Gemini-Chat und in n8n.\n\n\nDie vier Teile eines Auftrags in fester Reihenfolge. Kontext und Prüfung bewegen das Ergebnis am meisten."
+  },
+  {
+    "objectID": "werkzeuge/einrichtung.html#eine-änderung-gezielt-prüfen",
+    "href": "werkzeuge/einrichtung.html#eine-änderung-gezielt-prüfen",
+    "title": "Coding-Agent einrichten",
+    "section": "Eine Änderung gezielt prüfen",
+    "text": "Eine Änderung gezielt prüfen\nZunächst eine konkrete Abweichung benennen: ein erfundener Schritt, eine falsche Bahn, eine fehlende Rückschleife. Dann eine Anweisung präzisieren und den Auftrag wiederholen. Mehrere Änderungen gleichzeitig erschweren die Erklärung des Ergebnisses.\nIm Modell liegt „Nachweise prüfen“ in der Bahn Sachbearbeitung. Laut\nProtokoll prüft die Vorsitzende des Ausschusses. Verschiebe den Schritt\nund nenne, welche weiteren Schritte von dieser Rolle abhängen."
+  },
+  {
+    "objectID": "werkzeuge/einrichtung.html#was-der-agent-nicht-entscheidet",
+    "href": "werkzeuge/einrichtung.html#was-der-agent-nicht-entscheidet",
+    "title": "Coding-Agent einrichten",
+    "section": "Was der Agent nicht entscheidet",
+    "text": "Was der Agent nicht entscheidet\nDer Agent erzeugt Entwürfe. Ob ein Modell den Ablauf richtig wiedergibt, weiß nur, wer das Interview geführt hat. Ob ein Workflow sinnvoll ist, zeigt der Test an Beispielfällen. Jede Datei, die der Agent schreibt, liest eine Person, bevor sie in die Ablage kommt. Was wir noch nicht verstehen, klären wir, bevor wir es übernehmen; der Agent erklärt auf Nachfrage gern, was er gemacht hat.\nWeiter: Prozessmodellierung"
+  },
+  {
+    "objectID": "wochen/woche-02.html",
+    "href": "wochen/woche-02.html",
+    "title": "Werkzeuge",
+    "section": "",
+    "text": "Montag, 19. Oktober 2026 · 11:45 bis 13:15 Uhr · Raum I110 · Notebook mitbringen, VPN eingerichtet"
+  },
+  {
+    "objectID": "wochen/woche-02.html#ziel-des-termins",
+    "href": "wochen/woche-02.html#ziel-des-termins",
+    "title": "Werkzeuge",
+    "section": "Ziel des Termins",
+    "text": "Ziel des Termins\nAm Ende hat jede Gruppe Antigravity mit einem Projektordner eingerichtet, sich in ihrer n8n-Instanz angemeldet, einen ersten Workflow ausgeführt und aus ihrer Prozessbeschreibung ein BPMN-Modell erzeugt und im Browser angesehen.\n\n\n\n\n\n\nHinweisBausteine des Termins\n\n\n\n\n\n\n\n\n\n\n\n\n\nBaustein\nDauer etwa\nArbeitsform\n\n\n\n\nProzesskandidaten vorstellen\n15 Minuten\nGruppen, je 2 Minuten\n\n\nAntigravity einrichten, AGENTS.md anlegen\n25 Minuten\nAngeleitet, in den Gruppen\n\n\nn8n: Login, erster Workflow, Modellverbindung\n25 Minuten\nAngeleitet, in den Gruppen\n\n\nProzessmodell mit dem Agenten erzeugen\n20 Minuten\nIn den Gruppen\n\n\nNächste Schritte: Interviews\n5 Minuten\nGemeinsam"
+  },
+  {
+    "objectID": "wochen/woche-02.html#vorstellen",
+    "href": "wochen/woche-02.html#vorstellen",
+    "title": "Werkzeuge",
+    "section": "Prozesskandidaten vorstellen",
+    "text": "Prozesskandidaten vorstellen\nJede Gruppe nennt in zwei Minuten: den gewählten Prozess, die beteiligten Rollen und die Stelle, an der unstrukturierte Information strukturiert werden muss. Folien sind nicht nötig. Der Kandidat ist ein Arbeitsstand für die heutigen Übungen; die Recherche läuft danach weiter."
+  },
+  {
+    "objectID": "wochen/woche-02.html#uebung-2-1",
+    "href": "wochen/woche-02.html#uebung-2-1",
+    "title": "Werkzeuge",
+    "section": "Übung 2.1: Coding-Agent einrichten",
+    "text": "Übung 2.1: Coding-Agent einrichten\n\nEtwa 20 Minuten · eine Person pro Gruppe am Rechner, die anderen prüfen\nMaterial: Coding-Agent einrichten.\n\nAntigravity installieren und mit dem Google-Konto anmelden.\nEinen leeren Projektordner anlegen, zum Beispiel ki-verwaltung-gruppe-3, und in Antigravity öffnen.\nEine Datei AGENTS.md anlegen: Projektziel in drei Sätzen, der gewählte Prozess, die Regeln (keine Realdaten, Freigabe beim Menschen, Deutsch). Vorlage im Werkzeugkasten.\nEinen ersten Auftrag im Chat stellen, zum Beispiel: „Lies AGENTS.md und fasse in fünf Sätzen zusammen, was dieses Projekt will.“\n\nPrüfung: Die Zusammenfassung des Agenten stimmt mit dem überein, was wir meinen. Wenn nicht, AGENTS.md präzisieren."
+  },
+  {
+    "objectID": "wochen/woche-02.html#uebung-2-2",
+    "href": "wochen/woche-02.html#uebung-2-2",
+    "title": "Werkzeuge",
+    "section": "Übung 2.2: n8n auf dem HdM-Server",
+    "text": "Übung 2.2: n8n auf dem HdM-Server\n\nEtwa 25 Minuten · in den Gruppen\nMaterial: n8n Schritt für Schritt (Beispiele 1 bis 3), n8n auf dem HdM-Server, Zugangsdaten der Gruppe.\n\nVPN verbinden, die n8n-Adresse der Gruppe öffnen, anmelden.\nUnter Credentials prüfen, dass die beiden Verbindungen der Gruppe vorhanden sind (Datenbank und Modell).\nEinen neuen Workflow anlegen: Manual Trigger, dann ein Edit-Fields-Knoten mit drei Feldern eines erfundenen Antrags (zum Beispiel antrag_id, art, nachweise). Ausführen und die Ausgabe ansehen.\nEine Basic LLM Chain anhängen, als Modell die vorbereitete Gemini-Verbindung wählen und einen Auftrag nach dem Prompt-Standard formulieren: Kontext, Aufgabe, Format, Prüfung. Ausführen.\nDen Workflow speichern und als JSON exportieren, Export in die Teamablage unter 04_Prototyp.\n\nPrüfung: Die Felder des Antrags kommen beim Modell an. Die Ausgabe nennt, was fehlt oder unsicher ist, statt es zu erfinden. Der Export enthält keine Zugangsdaten."
+  },
+  {
+    "objectID": "wochen/woche-02.html#uebung-2-3",
+    "href": "wochen/woche-02.html#uebung-2-3",
+    "title": "Werkzeuge",
+    "section": "Übung 2.3: Prozessmodell mit dem Agenten",
+    "text": "Übung 2.3: Prozessmodell mit dem Agenten\n\nEtwa 20 Minuten · in den Gruppen\nMaterial: Prozessmodellierung, Auftrag: Ist-Prozess aus einer Beschreibung, die eigene Prozessbeschreibung aus Etappe 1 der Recherche.\n\nDie Prozessbeschreibung als prozess-beschreibung.md in den Projektordner legen.\nDen Auftrag aus ist-aus-prosa.md in den Chat von Antigravity einfügen. Der Agent schreibt eine Datei referenzprozess-ist.bpmn.\nDie Datei in demo.bpmn.io öffnen und ansehen.\nPrüfen, bevor etwas übernommen wird: Hat jeder Schritt der Beschreibung genau einen Schritt im Modell? Liegt jeder Schritt in der richtigen Bahn? Sind Entscheidungen als Raute mit beschrifteten Ausgängen dargestellt? Hat der Agent Schritte erfunden?\nKorrekturen als Auftrag an den Agenten formulieren („Der Schritt X gehört in die Bahn Y“), nicht von Hand im Modell. Datei und Bild in die Ablage unter 03_Prozessmodelle.\n\nPrüfung: Eine Person aus einer anderen Gruppe versteht den Ablauf anhand des Bildes ohne Erklärung.\nErgebnis: Ein erstes BPMN-Modell des Referenzprozesses. Es ist eine Hypothese, die im Interview geprüft wird."
+  },
+  {
+    "objectID": "wochen/woche-02.html#naechste",
+    "href": "wochen/woche-02.html#naechste",
+    "title": "Werkzeuge",
+    "section": "Nächste Schritte",
+    "text": "Nächste Schritte\nAls Nächstes folgt Etappe 2 des Recherche-Auftrags: Quellen, Erkenntnisse, überarbeiteter Referenzprozess, Leitfragen. Den Termin dafür vereinbaren wir gemeinsam; die Ergebnisse besprechen wir im Coaching. Die Interviewtermine vereinbaren wir mit den Verwaltungsbereichen; sobald ein Termin steht, bereiten sich die beiden zugeordneten Gruppen gemeinsam nach Interviews führen vor.\nZurück zum Kick-off · Semesterplan"
+  },
+  {
+    "objectID": "semester.html",
+    "href": "semester.html",
+    "title": "Semesterplan",
+    "section": "",
+    "text": "Der Plan nennt Kick-off und Werkzeugtermin im Detail. Die weiteren Phasen sind als Rahmen beschrieben; ihre Termine vereinbaren wir im Semester, abhängig davon, wann die Interviews stattfinden."
+  },
+  {
+    "objectID": "semester.html#wöchentliches-coaching",
+    "href": "semester.html#wöchentliches-coaching",
+    "title": "Semesterplan",
+    "section": "Wöchentliches Coaching",
+    "text": "Wöchentliches Coaching\nMontags, 11:45 bis 13:15 Uhr, Raum I110. Nach Kick-off und Werkzeugtermin ist der Montag ein Coaching-Angebot: Fragen aus den Gruppen, Rückmeldung zu Zwischenständen, bei Bedarf ein kurzer Input, Abstimmung der nächsten Schritte. Die Projektarbeit selbst passiert zwischen den Terminen."
+  },
+  {
+    "objectID": "semester.html#die-ersten-termine",
+    "href": "semester.html#die-ersten-termine",
+    "title": "Semesterplan",
+    "section": "Die ersten Termine",
+    "text": "Die ersten Termine\n\n\n\nTermin\nDatum\nInhalt\n\n\n\n\nKick-off\nMontag, 12.10.2026\nKontext: Verwaltung und KI-Agenten · Grundlagen der Prozessmodellierung (BPMN) · Recherche-Auftrag · Umfrage und Gruppenbildung\n\n\nWerkzeuge\nMontag, 19.10.2026\nProzesskandidaten · Coding-Agent einrichten (Antigravity) · n8n-Einstieg auf dem HdM-Server · Prozessmodell mit dem Agenten erzeugen\n\n\nCoachings\nab 26.10.2026 wöchentlich\nStand der Recherche, Leitfragen, Interviews, Modellierung, Prototyp, Review"
+  },
+  {
+    "objectID": "semester.html#die-weiteren-phasen",
+    "href": "semester.html#die-weiteren-phasen",
+    "title": "Semesterplan",
+    "section": "Die weiteren Phasen",
+    "text": "Die weiteren Phasen\n\n\n\n\n\n\n\n\nPhase\nWas passiert\nErgebnis\n\n\n\n\nInterviews\nErstgespräche mit den Verwaltungsbereichen, je zwei Gruppen gemeinsam. Vorbereitung mit Leitfaden, Protokoll statt Aufnahme\nProtokoll und offene Fragen\n\n\nModellierung\nIst-Prozess aus dem Protokoll modellieren, Soll-Prozess mit KI-Agent entwerfen, zweites Gespräch zum Nachschärfen, Vorstellung beim Interviewpartner\nIst- und Soll-Modell, bestätigt\n\n\nPrototyp\nSoll-Prozess in n8n umsetzen: Mock-Daten und Mock-Schnittstellen, Modellschritte, Freigabe durch einen Menschen\nLauffähiger Workflow mit ersten Testfällen\n\n\nReview\nPrototypen gegenseitig prüfen, Testfälle ergänzen, Grenzen dokumentieren\nTestprotokoll, Liste der Grenzen\n\n\nBewertung und Abschluss\nBewertung, Empfehlungen, Abschlusspräsentation vor den beteiligten Bereichen\nPräsentation und Abgabe\n\n\n\nDie Reihenfolge der Interviews hängt von der Verfügbarkeit der Verwaltungsbereiche ab. Wer noch auf sein Interview wartet, arbeitet an Recherche, Referenzmodell und Mock-Daten weiter."
+  },
+  {
+    "objectID": "start.html",
+    "href": "start.html",
+    "title": "Vorbereitung und Zugänge",
+    "section": "",
+    "text": "Für den Einstieg genügen ein Notebook, der HdM-VPN-Zugang und ein Google-Konto. Programmierkenntnisse sind keine Voraussetzung. Der Zugang zur n8n-Umgebung wird pro Gruppe bereitgestellt."
+  },
+  {
+    "objectID": "start.html#vpn",
+    "href": "start.html#vpn",
+    "title": "Vorbereitung und Zugänge",
+    "section": "HdM-VPN",
+    "text": "HdM-VPN\nDie Projektumgebung (n8n und Datenbanken) läuft auf einem Server der HdM. Sie ist nur aus dem HdM-Netz und über das HdM-VPN erreichbar. Von zu Hause ist das VPN deshalb Voraussetzung für jede Arbeit in n8n.\n\nDen VPN-Client der HdM installieren (FortiClient, Zugang mit der HdM-Kennung).\nDie VPN-Verbindung aufbauen.\nPrüfen: Die Übersichtsseite der Projektumgebung lädt im Browser. Ohne VPN erscheint eine Zeitüberschreitung.\n\nIm Hochschulnetz vor Ort (WLAN eduroam oder Kabel) ist kein VPN nötig."
+  },
+  {
+    "objectID": "start.html#google",
+    "href": "start.html#google",
+    "title": "Vorbereitung und Zugänge",
+    "section": "Google-Konto und Coding-Agent",
+    "text": "Google-Konto und Coding-Agent\nWir arbeiten mit einem Coding-Agenten: Der Agent recherchiert, schreibt Prozessmodelle und Workflow-Dateien, wir prüfen und entscheiden. Welcher Anbieter das ist, spielt für das Vorgehen keine Rolle: Claude Code, OpenAI Codex, Cursor oder andere Werkzeuge funktionieren genauso. Wir verwenden Google Antigravity, eine Entwicklungsumgebung mit eingebautem Agenten, weil Studierende sie derzeit über das Google-Jahresabo kostenfrei bekommen. Wer bereits einen anderen Coding-Agenten nutzt, kann dabei bleiben. Die Einrichtung erfolgt gemeinsam beim Werkzeugtermin.\n\n\n\n\n\n\nTippGoogle AI Plus für Studierende\n\n\n\nGoogle stellt Studierenden ein Jahr lang Google AI Plus kostenlos bereit. Darin enthalten sind Gemini mit höheren Nutzungslimits und der Zugang zu Antigravity. Das Angebot gilt ab 18 Jahren und ist bis 31.12.2026 einlösbar.\nVor der Registrierung drei Punkte kennen:\n\nDie Berechtigung als Studierende oder Studierender wird nachgewiesen und jährlich erneuert.\nBei der Registrierung ist eine gültige Zahlungsmethode erforderlich.\nOhne rechtzeitige Kündigung verlängert sich das Abo nach Ablauf automatisch kostenpflichtig. Die aktuellen Bedingungen stehen auf der Angebotsseite.\n\nWer das Abo nicht möchte, arbeitet mit dem kostenlosen Google-Konto. Pro Gruppe reicht ein Zugang zu Antigravity; die Gruppe entscheidet, wer ihn einrichtet.\n\n\nFür die Modellaufrufe in n8n wird nicht das eigene Google-Konto verwendet. Dort ist pro Gruppe eine vorbereitete Verbindung hinterlegt, siehe n8n auf dem HdM-Server."
+  },
+  {
+    "objectID": "start.html#n8n",
+    "href": "start.html#n8n",
+    "title": "Vorbereitung und Zugänge",
+    "section": "n8n-Zugang der Gruppe",
+    "text": "n8n-Zugang der Gruppe\nJede Gruppe hat eine eigene n8n-Instanz mit eigener Datenbank auf dem HdM-Server. Die Gruppe teilt sich ein Konto. Login und Passwort werden nach der Gruppeneinteilung bereitgestellt. Das Passwort wird nicht per Mail, Chat oder in Dokumenten weitergegeben und nicht in Screenshots gezeigt.\n\n\n\n\n\n\n\nGruppe\nAdresse\n\n\n\n\nGruppe 1\nhttps://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-1/\n\n\nGruppe 2\nhttps://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-2/\n\n\nGruppe 3\nhttps://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-3/\n\n\nGruppe 4\nhttps://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-4/\n\n\nGruppe 5\nhttps://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-5/\n\n\nGruppe 6\nhttps://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-6/\n\n\nGruppe 7\nhttps://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-7/\n\n\n\nIm Konto liegen bereits zwei Verbindungen: eine zur Gruppen-Datenbank (Postgres mit pgvector) und eine zum Sprachmodell (Gemini). Beide werden in Workflows ausgewählt, nicht neu angelegt. Erste Schritte: n8n auf dem HdM-Server.\n\n\nDie Projektumgebung: sieben n8n-Instanzen und eine Datenbank je Gruppe auf einem Server der HdM, erreichbar nur aus dem HdM-Netz und über VPN."
+  },
+  {
+    "objectID": "start.html#ablage",
+    "href": "start.html#ablage",
+    "title": "Vorbereitung und Zugänge",
+    "section": "Teamablage",
+    "text": "Teamablage\nJede Gruppe arbeitet in einem gemeinsamen Ordner, zum Beispiel in Google Drive oder in einem privaten GitHub-Repository. Die Struktur gibt es fertig als Download: fünf Ordner mit je einer README, die sagt, was hineingehört und woran man prüft, dass es vollständig ist, dazu Vorlagen für Team, Stand, Entscheidungen und die AGENTS.md für den Coding-Agenten.\nTeamablage als ZIP herunterladen\n\n\n\n\n\n\n\nOrdner\nInhalt\n\n\n\n\n01_Recherche\nBest Practices, Referenzprozesse, Quellen\n\n\n02_Interviews\nLeitfaden, Protokolle, offene Fragen\n\n\n03_Prozessmodelle\nIst- und Soll-Modelle als .bpmn und als Bild\n\n\n04_Prototyp\nn8n-Exporte, Prompts im Wortlaut, Testfälle, Mock-Daten\n\n\n05_Bewertung\nTestbelege, Vergleich, Empfehlungen, Präsentation\n\n\n\nZugangsdaten, Passwörter und Schlüssel gehören nicht in die Ablage, auch nicht in n8n-Exporte oder Screenshots."
+  },
+  {
+    "objectID": "start.html#regeln",
+    "href": "start.html#regeln",
+    "title": "Vorbereitung und Zugänge",
+    "section": "Arbeitsregeln",
+    "text": "Arbeitsregeln\n\nKeine Realdaten. In n8n, Gemini und Antigravity verarbeiten wir ausschließlich synthetische oder anonymisierte Daten. Namen, Matrikelnummern, Bewerbungsunterlagen oder interne Dokumente der Verwaltung gehören nicht hinein. Die Gründe stehen unter Daten und Freigaben.\nInterviews werden protokolliert. Eine Tonaufnahme ist nur mit ausdrücklicher Zustimmung der Gesprächspartnerin oder des Gesprächspartners erlaubt und wird ausschließlich lokal transkribiert. Siehe Interviews führen.\nDer Mensch entscheidet. Jeder Prototyp endet mit einer Prüfung und Freigabe durch eine Person. Kein Workflow schreibt in ein Verwaltungssystem oder versendet etwas an Dritte.\n\nWeiter zum Projekt"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "KI in der Verwaltung",
+    "section": "",
+    "text": "HdM Stuttgart · WS 2026/27 · montags 11:45 bis 13:15 Uhr · Raum I110\n\n\nIn diesem Projekt untersuchen wir gemeinsam mit Bereichen der HdM-Verwaltung, wo KI-Agenten Verwaltungsarbeit unterstützen können: vom Interview über das Prozessmodell bis zum Prototyp in n8n. Jeder Prototyp bereitet Entscheidungen vor, die Entscheidung bleibt beim Menschen.\n\nZum Projekt Kick-off"
+  },
+  {
+    "objectID": "index.html#termine",
+    "href": "index.html#termine",
+    "title": "KI in der Verwaltung",
+    "section": "Termine",
+    "text": "Termine\n\n\n\nTermin\nWas\n\n\n\n\nKick-off\nKontext, Prozessmodellierung, Recherche-Auftrag, Gruppenbildung\n\n\nWerkzeuge\nCoding-Agent, n8n, Prozessmodell mit dem Agenten\n\n\nCoachings\nwöchentlich montags, 11:45 bis 13:15 Uhr: Fragen, Rückmeldung zu Interviews, Modellierung und Prototyp\n\n\nAbschlusspräsentation und Abgabe\nTermine werden noch vereinbart, Details unter Bewertung\n\n\n\nDer Wochentermin ist ein Coaching-Angebot. Interviews, Modellierung und Prototyp entstehen in der eigenständigen Projektarbeit zwischen den Terminen."
+  },
+  {
+    "objectID": "index.html#so-läuft-das-projekt",
+    "href": "index.html#so-läuft-das-projekt",
+    "title": "KI in der Verwaltung",
+    "section": "So läuft das Projekt",
+    "text": "So läuft das Projekt\n\n\nSo gehen wir vor: fünf Phasen, jede baut auf der vorherigen auf. Details auf der Seite Projekt."
+  },
+  {
+    "objectID": "index.html#nachschlagen",
+    "href": "index.html#nachschlagen",
+    "title": "KI in der Verwaltung",
+    "section": "Nachschlagen",
+    "text": "Nachschlagen\n\n\n\nSeite\nInhalt\n\n\n\n\nVorbereitung\nHdM-VPN, Google-Konto, n8n-Zugang der Gruppe\n\n\nProjekt\nAusgangslage, Vorgehen in fünf Phasen, Regeln für Daten und Freigaben\n\n\nSemesterplan\nKick-off und Werkzeuge im Detail, die weiteren Phasen als Rahmen\n\n\nWerkzeugkasten\nCoding-Agent, Prozessmodellierung, Interviews, n8n\n\n\nAbgaben\nWas in jeder Phase entsteht und wie es abgelegt wird\n\n\nBewertung\nVorprüfungsleistung, Gewichte, Kriterien, Noten\n\n\nMaterialien\nLiteratur, Beispielprozesse, Prompts, Dokumentation"
+  },
+  {
+    "objectID": "projekt.html",
+    "href": "projekt.html",
+    "title": "Das Projekt",
+    "section": "",
+    "text": "Wo kann KI Verwaltungsarbeit an der HdM sinnvoll unterstützen? Wir beantworten diese Frage in drei Schritten: im Gespräch mit Verwaltungsmitarbeitenden, mit einem Prozessmodell des Ablaufs und mit einem Prototyp, den wir an Beispielfällen prüfen."
+  },
+  {
+    "objectID": "projekt.html#rahmen",
+    "href": "projekt.html#rahmen",
+    "title": "Das Projekt",
+    "section": "Rahmen",
+    "text": "Rahmen\n\n\n\nMerkmal\nFestlegung\n\n\n\n\nProjektpartner\nBereiche der Hochschulverwaltung der HdM\n\n\nBetreuung\nProf. Dr. Stephan Wilczek und Prof. Dr. Jan Kirenz\n\n\nTermin\nmontags, 11:45 bis 13:15 Uhr, Raum I110, ab 12.10.2026\n\n\nGruppen\nDreiergruppen, Einteilung beim Kick-off über eine kurze Umfrage\n\n\nSprache\nDeutsch\n\n\nProgrammierung\nkeine Voraussetzung; Prototypen entstehen in n8n, Dateien schreibt der Coding-Agent\n\n\nPrüfung\nVorprüfungsleistung (zwei Online-Kurse) und Modulprüfung aus vier Teilen, siehe Bewertung\n\n\n\nNach Kick-off und Werkzeugtermin ist der Montag ein Coaching-Angebot: Fragen, Rückmeldung zu Zwischenständen, bei Bedarf Input. Recherche, Interviews, Modellierung und Prototyp entstehen in der eigenständigen Arbeit der Gruppen. Die öffentliche Projektbeschreibung fasst Idee und Themenfelder zusammen."
+  },
+  {
+    "objectID": "projekt.html#ausgangslage",
+    "href": "projekt.html#ausgangslage",
+    "title": "Das Projekt",
+    "section": "Ausgangslage",
+    "text": "Ausgangslage\nViele Abläufe in der Hochschulverwaltung sind formularbasiert: Ein Antrag wird eingereicht, formal vorgeprüft, inhaltlich geprüft, bei Fehlern zurückgegeben, am Ende unterschrieben. Die inhaltliche Prüfung bedeutet oft, Informationen aus mehreren Systemen zusammenzutragen und gegen Voraussetzungen abzugleichen. Dokumentiert wird das häufig in persönlichen Ordnern, nicht im System. Das kostet Zeit, und die Prüflogik steckt im Kopf der prüfenden Person.\nGenau an dieser Stelle setzen wir an. Wir suchen Tätigkeiten, bei denen Mitarbeitende\n\nunstrukturierte Informationen in strukturierte überführen: aus Formularen, Mails, Unterlagen und Systemauszügen eine Übersicht, Tabelle oder Zusammenfassung erstellen,\nVoraussetzungen prüfen: Angaben gegen Regeln und Nachweise abgleichen, Lücken finden, Rückfragen formulieren,\nEntscheidungen vorbereiten: das Ergebnis so aufbereiten, dass eine Person schnell und begründet entscheiden kann.\n\nIm Vordergrund steht nicht die vollautomatische Abwicklung eines Workflows. Realistisch ist, dass ein Agent in vielen Verwaltungssystemen nur eingeschränkte Rechte bekommt: oft lesend, selten schreibend, manchmal gar keine. Das berücksichtigen wir von Anfang an, bei der Auswahl der Tätigkeit, im Prozessmodell und im Prototyp. Der Agent liefert eine Vorlage, der Mensch entscheidet.\n\n\nDer Agent überführt verstreute Angaben in eine Übersicht mit Status je Voraussetzung. Die Entscheidung bleibt bei der zuständigen Person.\n\n\nMögliche Bereiche\nBeispiele für Prozesse, um die es gehen kann:\n\n\n\n\n\n\n\nBereich\nTätigkeit, um die es gehen könnte\n\n\n\n\nPrüfungsausschuss\nAnmeldung einer Abschlussarbeit: Prüfen, ob alle Voraussetzungen erfüllt sind (Leistungspunkte, Praxissemester, weitere Nachweise), Informationen aus mehreren Systemen, Dokumentation der Entscheidung\n\n\nBerufungskommissionen\nÜbersicht über eingegangene Bewerbungsunterlagen für einen Erstüberblick, ausschließlich als Hinweis, ohne Entscheidung, ausschließlich lokal verarbeitet\n\n\nDigitalisierung und Dokumentenmanagement\nHochschulweites Dokumentenmanagementsystem, Überlegungen zu Workflows; möglicher Adressat der Projektergebnisse\n\n\nFinanzen, Personal\nWiederkehrende Prüf- und Übersichtsaufgaben, Details im Interview\n\n\n\nInterviewpartnerinnen und Interviewpartner nennen wir auf dieser Website nicht namentlich. In Protokollen und Modellen verwenden wir Rollen, keine Namen."
+  },
+  {
+    "objectID": "projekt.html#vorgehen",
+    "href": "projekt.html#vorgehen",
+    "title": "Das Projekt",
+    "section": "Vorgehen in fünf Phasen",
+    "text": "Vorgehen in fünf Phasen\n\n\n\n\n\n\n\n\nPhase\nWas wir tun\nErgebnis\n\n\n\n\n1 · Recherche\nBest Practices für KI in der Verwaltung recherchieren, einen Referenzprozess mit dem Coding-Agenten skizzieren, Leitfragen für das Interview ableiten\nRecherche-Skizze, Referenzmodell, Interviewleitfaden\n\n\n2 · Interviews\nEin Erstgespräch mit Verwaltungsmitarbeitenden führen, jeweils zwei Gruppen gemeinsam, Protokoll statt Aufnahme\nProtokoll, Liste offener Fragen\n\n\n3 · Modellierung\nDen Ablauf heute als BPMN-Modell abbilden (Ist), dann den Ablauf mit KI-Agent entwerfen (Soll); ein zweites Gespräch zum Nachschärfen; das Ergebnis der interviewten Person vorstellen\nIst- und Soll-Modell, bestätigt oder mit Korrekturen\n\n\n4 · Prototyp\nDen Soll-Prozess als n8n-Workflow umsetzen: mit Mock-Daten, mit Freigabe durch einen Menschen, ohne Zugriff auf echte Systeme\nLauffähiger Prototyp mit Testfällen\n\n\n5 · Bewertung\nDen Prototyp an Testfällen prüfen, Grenzen dokumentieren, Empfehlungen formulieren\nBewertung, Empfehlungen, Abschlusspräsentation\n\n\n\nDie Phasen bauen aufeinander auf. Wochen 1 und 2 stehen im Semesterplan im Detail, die übrigen Phasen als Rahmen; ihre Termine vereinbaren wir im Semester.\n\n\nDie fünf Phasen des Projekts. Der Montagstermin ist das Coaching, die Arbeit passiert dazwischen.\n\n\nWarum zuerst recherchieren\nMit etwas Vorbereitung lassen sich im Interview deutlich bessere Fragen stellen. Die Recherche liefert Vokabular und Vergleichsfälle: Wie lösen andere Hochschulen und Behörden ähnliche Aufgaben, welche Muster wiederholen sich, was ging schief? Daraus entsteht ein Referenzprozess als Hypothese. Im Interview prüfen wir diese Hypothese, statt sie bestätigen zu lassen. Die wichtigsten Quellen stehen bei den Materialien, Praxisbeispiele aus Land, Bund und Kommunen unter Praxis und Rahmen.\n\n\nWarum ein Prozessmodell\nEin Modell macht sichtbar, wer welchen Schritt ausführt, wo entschieden wird, wo Informationen herkommen und wo heute Zeit verloren geht. Es trennt drei Arten von Schritten: feste Regeln (ohne KI prüfbar), Modellschritte (Sprachverständnis nötig) und menschliche Entscheidungen. Erst mit dieser Trennung lässt sich sagen, wo ein Agent hilft und wo nicht. Der Coding-Agent kann aus einem klaren Modell einen ersten Workflow erzeugen; wir prüfen ihn gegen das Modell. Grundlagen: Prozessmodellierung.\n\n\nWarum zwei Gespräche\nNach dem ersten Interview fehlen erfahrungsgemäß Rollen, Ausnahmen und Rückschleifen: Was passiert, wenn ein Nachweis fehlt? Wer wird informiert? Das fällt beim Modellieren auf. Das zweite Gespräch klärt diese Lücken. Danach stellen wir das Modell der interviewten Person vor: „So haben wir Ihren Ablauf verstanden. Stimmt das?“"
+  },
+  {
+    "objectID": "projekt.html#regeln",
+    "href": "projekt.html#regeln",
+    "title": "Das Projekt",
+    "section": "Daten und Freigaben",
+    "text": "Daten und Freigaben\n\n\n\n\n\n\nWichtigHuman in the Loop ist Pflicht\n\n\n\nJeder Prototyp endet mit einer Prüfung durch einen Menschen. Der Agent sammelt, prüft, fasst zusammen und schlägt vor. Die Freigabe erfolgt durch die zuständige Person, zum Beispiel per Antwort auf eine Nachricht, in einem Chat oder über eine einfache Web-Oberfläche. Erst danach geht der Prozess weiter. Kein Prototyp schreibt in ein Verwaltungssystem.\n\n\n\n\nDer Agent bereitet vor, die Person gibt frei oder gibt zurück. Schreibzugriffe auf Verwaltungssysteme gibt es im Projekt nicht.\n\nKeine Realdaten. Schnittstellen und Daten bauen wir nach (Mocks): eine synthetische Tabelle mit erfundenen Studierenden, eine kleine Web-Schnittstelle, die so antwortet, wie es das echte System täte, ein Ordner mit erfundenen Anträgen. Der Prototyp zeigt dann: „So würde der Agent auf das System zugreifen, und das würde er zurückbekommen.“ Welche Daten und Schnittstellen nicht real sind, steht in der Dokumentation.\n\n\nDer Prototyp spricht nur mit nachgebauten Systemen. Das Mock macht sichtbar, welche Daten und Rechte ein realer Einsatz bräuchte.\n\nSensible Inhalte bleiben lokal. Bewerbungsunterlagen, Personalakten und ähnliche Inhalte dürfen nicht in öffentliche Cloud-Dienste gelangen. Für solche Fälle kommen nur lokal oder in Europa betriebene Modelle in Frage. Die Gemini-Verbindung in n8n ist für synthetische Daten vorgesehen.\nInterviews werden protokolliert, Aufnahme nur mit Zustimmung. Zwei Gruppen führen ein Gespräch gemeinsam, eine Person protokolliert. Wenn die Gesprächspartnerin oder der Gesprächspartner ausdrücklich zustimmt, darf zusätzlich eine Tonaufnahme gemacht werden. Sie wird nur lokal auf einem Rechner der Gruppe transkribiert (zum Beispiel mit Whisper) und danach gelöscht; weder Aufnahme noch Transkript gehen in einen Cloud-Dienst. Das Transkript erleichtert das Protokoll und das Prozessmodell erheblich."
+  },
+  {
+    "objectID": "projekt.html#experiment",
+    "href": "projekt.html#experiment",
+    "title": "Das Projekt",
+    "section": "Experimenteller Charakter",
+    "text": "Experimenteller Charakter\nDas Projekt ist ausdrücklich ein Experiment. Am Ende muss nicht überall ein Prototyp stehen, der sofort einsetzbar wäre. Eine gut begründete Erkenntnis, dass ein Prozess sich mit den heutigen Mitteln nicht sinnvoll unterstützen lässt, ist ein vollwertiges Ergebnis. Die Grenzen der Systeme sind Teil unseres Auftrags: Was geht, was geht nicht, was fehlt dafür (Daten, Schnittstellen, Rechte, Modellqualität)?\nDie Ergebnisse stellen wir am Semesterende den beteiligten Verwaltungsbereichen vor. Was daraus wird, entscheidet die Hochschule.\nWeiter zum Semesterplan"
+  },
+  {
+    "objectID": "wochen/woche-01.html",
+    "href": "wochen/woche-01.html",
+    "title": "Kick-off",
+    "section": "",
+    "text": "Montag, 12. Oktober 2026 · 11:45 bis 13:15 Uhr · Raum I110"
+  },
+  {
+    "objectID": "wochen/woche-01.html#ziel-des-termins",
+    "href": "wochen/woche-01.html#ziel-des-termins",
+    "title": "Kick-off",
+    "section": "Ziel des Termins",
+    "text": "Ziel des Termins\nAm Ende des Termins kennen alle den Auftrag, das Vorgehen in fünf Phasen und die Grundform eines Prozessmodells. Die Umfrage zur Gruppeneinteilung ist ausgefüllt, der Recherche-Auftrag ist verteilt.\n\n\n\n\n\n\nHinweisBausteine des Termins\n\n\n\n\n\n\n\n\n\n\n\n\n\nBaustein\nDauer etwa\nArbeitsform\n\n\n\n\nProjektidee, Rollen, Vorgehen im Semester\n20 Minuten\nGemeinsam\n\n\nUmfrage zur Gruppeneinteilung\n10 Minuten\nEinzeln\n\n\nEinführung in BPMN 2.0\n25 Minuten\nInput mit Übung\n\n\nRecherche-Auftrag und Leitfragen für Interviews\n20 Minuten\nGemeinsam\n\n\nGruppen, Teamablage, offene Fragen\n15 Minuten\nGemeinsam"
+  },
+  {
+    "objectID": "wochen/woche-01.html#projektidee",
+    "href": "wochen/woche-01.html#projektidee",
+    "title": "Kick-off",
+    "section": "Projektidee und Vorgehen",
+    "text": "Projektidee und Vorgehen\nDie Hochschulverwaltung hat die Fakultät gebeten, versuchsweise KI in Bereichen der Verwaltung zu erproben. Wir tun das in fünf Phasen: Recherche, Interviews, Modellierung, Prototyp, Bewertung. Alles Wesentliche steht auf der Seite Projekt. Drei Punkte sind am ersten Tag wichtig:\n\nWir suchen Tätigkeiten, die unstrukturierte Informationen in strukturierte überführen und Entscheidungen vorbereiten, nicht die Automatisierung ganzer Workflows.\nDer Mensch entscheidet. Jeder Prototyp endet mit einer Freigabe durch eine Person.\nKeine Realdaten. Daten und Schnittstellen bauen wir nach."
+  },
+  {
+    "objectID": "wochen/woche-01.html#gruppen",
+    "href": "wochen/woche-01.html#gruppen",
+    "title": "Kick-off",
+    "section": "Umfrage zur Gruppeneinteilung",
+    "text": "Umfrage zur Gruppeneinteilung\nWir arbeiten in Dreiergruppen. Die Teilnehmenden kommen aus mehreren Studiengängen und kennen sich meist noch nicht. Deshalb erfolgt die Einteilung über eine kurze Umfrage: Erfahrungen, Lerninteressen, gemeinsame Arbeitszeiten und Präferenzen für die Zusammenarbeit. Vorkenntnisse werden nicht vorausgesetzt.\n\nAufgabe · etwa 6 bis 8 Minuten\nDie Umfrage zur Gruppeneinteilung ausfüllen. Sie fragt nach Studiengang, Stärken, Lernzielen, Erfahrungen mit Verwaltung, KI und Daten sowie nach gemeinsamen Arbeitszeiten. Angaben zu Programmierung sind freiwillig. Die Angaben dienen nur der Einteilung und werden danach gelöscht.\nUmfrage öffnen\n\nDie Einteilung wird nach dem Termin bekannt gegeben. Dann erhält jede Gruppe ihre Nummer und den Zugang zur n8n-Instanz."
+  },
+  {
+    "objectID": "wochen/woche-01.html#bpmn",
+    "href": "wochen/woche-01.html#bpmn",
+    "title": "Kick-off",
+    "section": "Einführung in BPMN 2.0",
+    "text": "Einführung in BPMN 2.0\nBPMN 2.0 ist die Standardnotation für Prozessmodelle, in Unternehmen wie in Verwaltungen. Die Einführung zeigt die wichtigsten Elemente an Beispielen aus der Hochschulverwaltung, vom Ersetzen eines Studierendenausweises bis zur Abgabe der Abschlussarbeit. Wer ereignisgesteuerte Prozessketten (EPK) kennt, findet sich schnell zurecht.\nFolien als PDF Folien als PowerPoint\nNach der Einführung können wir:\n\neine Prozessbeschreibung lesen und in BPMN-Elemente übersetzen,\nAktivitäten, Ereignisse und Gateways fachlich korrekt einsetzen,\nZuständigkeiten mit Pools und Lanes, Kommunikation mit Nachrichtenflüssen abbilden,\nein eigenes Kollaborationsdiagramm im Modellierungswerkzeug erstellen.\n\n\n\n\n\n\n\n\n\nTeil\nInhalt\nBeispiel aus der Verwaltung\n\n\n\n\nGrundelemente\nStart, Aufgaben, Ende; gute Namen\nStudierendenausweis ersetzen\n\n\nGateways\nExklusiv (XOR), parallel (AND), inklusiv (OR), kurzes Quiz\nPrüfungsanmeldung, Einschreibung, Bewerbung\n\n\nEreignisse\nZeitereignisse, ereignisbasiertes Gateway, Randereignisse\nZulassungsverfahren, Abgabe der Abschlussarbeit\n\n\nBeteiligte\nPools, Lanes, Nachrichtenflüsse; sechs typische Fehler\nRücktritt von einer Prüfung\n\n\nDaten und Details\nDatenobjekte, Aufgabentypen, Marker, Teilprozesse\nNoten verbuchen, Abschlussarbeit begutachten\n\n\n\n\nAufgabe · Übung für zuhause\nDie BPMN-Übung „Anerkennung von Studienleistungen“ in Gruppen von zwei bis drei Personen bearbeiten: Fallbeschreibung analysieren, Kollaborationsdiagramm modellieren, Teilprozess detaillieren, Modell begründen. Alle Elemente auf einen Blick stehen auf der letzten Folie der Einführung.\nÜbung öffnen\n\nWie die Verwaltung selbst modelliert: Das Bundesverwaltungsamt legt im Attributkatalog für BPMN 2.0 fest, wie Behörden des Bundes ihre Prozessmodelle benennen und dokumentieren. Zum Nachschlagen, nicht zum Durchlesen.\nBrücke zum Projekt: Im Projekt reicht ein kleiner Teil der Notation. Der Werkzeugkasten Prozessmodellierung zeigt ein Beispiel für denselben Ablauf heute und mit KI-Agent. Gemeinsam am Beispiel: Welche Schritte im Soll-Modell sind feste Regeln, welche brauchen Sprachverständnis, und wo bleibt der Mensch?"
+  },
+  {
+    "objectID": "wochen/woche-01.html#recherche",
+    "href": "wochen/woche-01.html#recherche",
+    "title": "Kick-off",
+    "section": "Recherche-Auftrag",
+    "text": "Recherche-Auftrag\nDie Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews. Sie hat zwei Etappen: Zuerst ein erster Prozesskandidat, damit die Werkzeuge beim zweiten Termin daran ausprobiert werden können. Danach die eigentliche Recherche mit Quellen, Referenzprozess und Leitfragen. Der Termin dafür wird noch vereinbart.\n\nEtappe 1: Prozesskandidat · in den Gruppen\nWorum es geht: Beim Werkzeugtermin lernen wir Antigravity und n8n kennen. Dafür braucht jede Gruppe einen Prozess, an dem sie den Coding-Agenten ausprobieren kann. Er muss noch nicht der endgültige sein.\n\nEinen Verwaltungsprozess auswählen, der zu den möglichen Bereichen passt, und ihn als ersten Entwurf in Prosa beschreiben: Rollen, Schritte, Entscheidungen, Rückschleifen. Zwei bis zehn Sätze genügen; was unklar ist, als Frage markieren.\n„Agentische KI im Hochschulsystem“ aus der Literaturliste zumindest überfliegen und die Seiten mit den Verwaltungsszenarien lesen.\nDie Teamablage als ZIP herunterladen, entpacken, in den gemeinsamen Ordner legen und die Prozessbeschreibung unter 01_Recherche ablegen.\n\nPrüfung: Die Beschreibung nennt mindestens zwei Rollen und eine Entscheidung.\nErgebnis: Eine Datei prozess-beschreibung.md. Beim Werkzeugtermin stellt jede Gruppe ihren Kandidaten in zwei Minuten vor; daraus entsteht in der Übung ein erstes BPMN-Modell.\n\n\nEtappe 2: Recherche · Termin wird noch vereinbart · in den Gruppen\nWorum es geht: Bevor wir mit Verwaltungsmitarbeitenden sprechen, brauchen wir Vokabular, Vergleichsfälle und eine erste Hypothese, wie ein unterstützter Ablauf aussehen könnte.\n\nZwei bis drei Quellen aus der Literaturliste lesen, mindestens „Agentische KI im Hochschulsystem“ und „Building Effective Agents“.\nRecherchieren: Wer setzt in Hochschulverwaltung oder Behörden bereits KI für Übersichten, Zusammenfassungen oder Prüfungen ein? Einstieg: Praxis und Rahmen, darunter F13 und KI4BW in Baden-Württemberg, LLMoin, MUCGPT und der Marktplatz der KI-Möglichkeiten des Bundes. Welche Muster wiederholen sich? Was ist gescheitert, und warum?\nDie Prozessbeschreibung aus Etappe 1 mit dem Gelernten überarbeiten, bei Bedarf den Prozess wechseln. Daraus wird der Referenzprozess, eine Hypothese für das Interview.\nFünf bis acht Leitfragen für das Interview entwerfen. Orientierung: Interviews führen.\nAlles unter 01_Recherche ablegen: Quellen mit Link, Erkenntnisse in Stichworten, Prozessbeschreibung, Leitfragen.\n\nPrüfung: Jede Erkenntnis hat eine Quelle. Die Prozessbeschreibung nennt mindestens zwei Rollen und eine Entscheidung. Die Leitfragen fragen nach Tätigkeiten und Informationen, nicht nach Wunsch-Automatisierungen.\nErgebnis: Ein Ordner 01_Recherche mit Quellen, Erkenntnissen, Referenzprozess und Leitfragen. Wir besprechen die Ergebnisse im Coaching und stimmen die Leitfragen ab. Die Recherche endet damit nicht: Sie läuft bis zum ersten Interview weiter und wird nach dem Gespräch gezielt vertieft.\n\nEin Hinweis zur Recherche mit KI: Gemini und andere Chat-Werkzeuge dürfen zur Recherche verwendet werden. Jede Aussage, die in die Ablage kommt, prüfen wir gegen die Originalquelle. Eine KI-Antwort ohne Quelle ist ein guter Hinweis, aber noch kein Beleg."
+  },
+  {
+    "objectID": "wochen/woche-01.html#vorbereitung",
+    "href": "wochen/woche-01.html#vorbereitung",
+    "title": "Kick-off",
+    "section": "Bis zum Werkzeugtermin vorbereiten",
+    "text": "Bis zum Werkzeugtermin vorbereiten\n\nHdM-VPN einrichten und die Verbindung zur Projektumgebung testen.\nGoogle-Konto bereithalten; wer möchte, das Studierendenangebot einlösen. Pro Gruppe reicht ein Zugang zu Antigravity.\nEtappe 1 des Recherche-Auftrags erledigen: Prozesskandidat beschreiben.\n\nWeiter: Werkzeuge"
+  },
+  {
+    "objectID": "werkzeuge/index.html",
+    "href": "werkzeuge/index.html",
+    "title": "Werkzeugkasten",
+    "section": "",
+    "text": "Kurze Anleitungen für die Aufgabe, die gerade ansteht. Die Wochenseiten verlinken direkt auf die passenden Abschnitte.\nDer Werkzeugkasten ist zum Nachschlagen da, nicht zum Durchlesen am Stück. In den Übungen steht jeweils, welcher Abschnitt gerade hilft.\n\n\n\nFrage\nEinstieg\n\n\n\n\nWie arbeite ich mit einem Coding-Agenten, und wie formuliere ich Aufträge?\nCoding-Agent einrichten\n\n\nWie bilde ich einen Ablauf so ab, dass klar wird, wo KI hilft?\nProzessmodellierung\n\n\nWie übe ich BPMN an einem vollständigen Verwaltungsprozess?\nBPMN-Übung\n\n\nWie bereite ich ein Interview vor, und wie protokolliere ich es?\nInterviews führen\n\n\nWie lerne ich n8n an kleinen Beispielen kennen?\nn8n Schritt für Schritt\n\n\nWie baue ich einen Workflow auf dem HdM-Server?\nn8n auf dem HdM-Server\n\n\n\nAlle Materialien und Downloads"
   },
   {
     "objectID": "werkzeuge/prozessmodell.html",
@@ -196,333 +546,67 @@
     "text": "Werkzeuge\n\ndemo.bpmn.io: öffnet, zeigt und bearbeitet .bpmn-Dateien direkt im Browser, exportiert als SVG\nCamunda Modeler: kostenloses Programm zum Herunterladen, für umfangreichere Modelle wie in der Übung\ndraw.io: kostenlos im Browser, Formenbibliothek „BPMN 2.0“ über „Weitere Formen“ aktivieren; für Skizzen von Hand\nDer Coding-Agent schreibt die .bpmn-Datei; wir sehen sie in demo.bpmn.io an und formulieren Korrekturen als neuen Auftrag\n\nFür die Teamablage die bearbeitbare Datei und einen Export als SVG oder PNG speichern, im Ordner 03_Prozessmodelle.\nWeiter: Interviews führen"
   },
   {
-    "objectID": "werkzeuge/index.html",
-    "href": "werkzeuge/index.html",
-    "title": "Werkzeugkasten",
+    "objectID": "werkzeuge/interviews.html",
+    "href": "werkzeuge/interviews.html",
+    "title": "Interviews führen",
     "section": "",
-    "text": "Kurze Anleitungen für die Aufgabe, die gerade ansteht. Die Wochenseiten verlinken direkt auf die passenden Abschnitte.\nDer Werkzeugkasten ist zum Nachschlagen da, nicht zum Durchlesen am Stück. In den Übungen steht jeweils, welcher Abschnitt gerade hilft.\n\n\n\nFrage\nEinstieg\n\n\n\n\nWie arbeite ich mit einem Coding-Agenten, und wie formuliere ich Aufträge?\nCoding-Agent einrichten\n\n\nWie bilde ich einen Ablauf so ab, dass klar wird, wo KI hilft?\nProzessmodellierung\n\n\nWie übe ich BPMN an einem vollständigen Verwaltungsprozess?\nBPMN-Übung\n\n\nWie bereite ich ein Interview vor, und wie protokolliere ich es?\nInterviews führen\n\n\nWie baue ich einen Workflow auf dem HdM-Server?\nn8n auf dem HdM-Server\n\n\n\nAlle Materialien und Downloads"
+    "text": "Das Interview soll zeigen, wie eine Tätigkeit heute wirklich abläuft: welche Informationen hereinkommen, was damit geschieht, welche Entscheidung am Ende steht. Es fragt nicht nach Wunsch-Automatisierungen. Zwei Gruppen führen ein Gespräch gemeinsam, eine Person protokolliert. Eine Tonaufnahme ist mit Zustimmung möglich und wird nur lokal transkribiert."
   },
   {
-    "objectID": "wochen/woche-01.html",
-    "href": "wochen/woche-01.html",
-    "title": "Kick-off",
-    "section": "",
-    "text": "Montag, 12. Oktober 2026 · 11:45 bis 13:15 Uhr · Raum I110"
+    "objectID": "werkzeuge/interviews.html#fokus",
+    "href": "werkzeuge/interviews.html#fokus",
+    "title": "Interviews führen",
+    "section": "Worauf das Interview zielt",
+    "text": "Worauf das Interview zielt\nWir suchen Tätigkeiten, bei denen Mitarbeitende unstrukturierte Informationen in strukturierte überführen und Entscheidungen vorbereiten: Übersichten erstellen, Unterlagen zusammenfassen, Angaben gegen Voraussetzungen prüfen, Rückfragen formulieren. Das sind die Stellen, an denen ein Agent eine Vorlage liefern kann, ohne in Systeme schreiben zu müssen.\nDie Frage „Welchen Workflow würden Sie gern automatisieren?“ ist für die meisten schwer zu beantworten. Leichter fällt es, von konkreten Vorgängen der letzten Wochen zu erzählen; danach fragen wir.\n\n\nZwei Gespräche, dazwischen das Modell. Was beim Modellieren unklar bleibt, wird im zweiten Gespräch geklärt."
   },
   {
-    "objectID": "wochen/woche-01.html#ziel-des-termins",
-    "href": "wochen/woche-01.html#ziel-des-termins",
-    "title": "Kick-off",
-    "section": "Ziel des Termins",
-    "text": "Ziel des Termins\nAm Ende des Termins kennen alle den Auftrag, das Vorgehen in fünf Phasen und die Grundform eines Prozessmodells. Die Umfrage zur Gruppeneinteilung ist ausgefüllt, der Recherche-Auftrag ist verteilt.\n\n\n\n\n\n\nHinweisBausteine des Termins\n\n\n\n\n\n\n\n\n\n\n\n\n\nBaustein\nDauer etwa\nArbeitsform\n\n\n\n\nProjektidee, Rollen, Vorgehen im Semester\n20 Minuten\nGemeinsam\n\n\nUmfrage zur Gruppeneinteilung\n10 Minuten\nEinzeln\n\n\nEinführung in BPMN 2.0\n25 Minuten\nInput mit Übung\n\n\nRecherche-Auftrag und Leitfragen für Interviews\n20 Minuten\nGemeinsam\n\n\nGruppen, Teamablage, offene Fragen\n15 Minuten\nGemeinsam"
+    "objectID": "werkzeuge/interviews.html#vorbereitung",
+    "href": "werkzeuge/interviews.html#vorbereitung",
+    "title": "Interviews führen",
+    "section": "Vorbereitung",
+    "text": "Vorbereitung\nVoraussetzungen: Recherche abgeschlossen, Referenzprozess als Hypothese vorhanden, Leitfragen abgestimmt, Rollen im Gespräch verteilt.\n\nDie beiden Gruppen legen ihre Leitfragen zusammen und einigen sich auf eine Reihenfolge: zuerst der Ablauf, dann die Informationen, dann die Entscheidungen, zuletzt die Schmerzpunkte.\nRollen verteilen: eine Person führt das Gespräch, eine protokolliert, eine achtet auf die Zeit und offene Punkte. Die zweite Gruppe ergänzt mit Nachfragen.\nDen Referenzprozess als Bild mitnehmen, aber erst am Ende zeigen. Vorher soll die interviewte Person den eigenen Ablauf frei beschreiben.\nDas Protokollraster vorbereiten (siehe unten).\n\nPrüfung: Jede Leitfrage lässt sich mit einer Beschreibung beantworten, nicht mit ja oder nein."
   },
   {
-    "objectID": "wochen/woche-01.html#projektidee",
-    "href": "wochen/woche-01.html#projektidee",
-    "title": "Kick-off",
-    "section": "Projektidee und Vorgehen",
-    "text": "Projektidee und Vorgehen\nDie Hochschulverwaltung hat die Fakultät gebeten, versuchsweise KI in Bereichen der Verwaltung zu erproben. Wir tun das in fünf Phasen: Recherche, Interviews, Modellierung, Prototyp, Bewertung. Alles Wesentliche steht auf der Seite Projekt. Drei Punkte sind am ersten Tag wichtig:\n\nWir suchen Tätigkeiten, die unstrukturierte Informationen in strukturierte überführen und Entscheidungen vorbereiten, nicht die Automatisierung ganzer Workflows.\nDer Mensch entscheidet. Jeder Prototyp endet mit einer Freigabe durch eine Person.\nKeine Realdaten. Daten und Schnittstellen bauen wir nach."
+    "objectID": "werkzeuge/interviews.html#leitfragen",
+    "href": "werkzeuge/interviews.html#leitfragen",
+    "title": "Interviews führen",
+    "section": "Leitfragen",
+    "text": "Leitfragen\nZum Ablauf:\n\nBeschreiben Sie bitte einen typischen Vorgang vom Eingang bis zum Abschluss. Was passiert zuerst, was danach?\nWer ist beteiligt, und an welcher Stelle? Wer gibt etwas weiter, wer prüft, wer entscheidet, wer unterschreibt?\nWas passiert, wenn etwas fehlt oder nicht stimmt? An wen geht der Vorgang zurück?\n\nZu den Informationen:\n\nWelche Unterlagen und Angaben kommen herein, und in welcher Form (Formular, PDF, Mail, Systemauszug)?\nIn welchen Systemen schauen Sie nach, und was suchen Sie dort?\nWo dokumentieren Sie Ihre Prüfung und Ihre Entscheidung?\n\nZu Prüfung und Entscheidung:\n\nWelche Voraussetzungen prüfen Sie, und woher stammen die Regeln dafür (Ordnung, Richtlinie, Erfahrung)?\nWelche Fälle sind eindeutig, welche brauchen Ermessen?\nWas müsste eine Übersicht enthalten, damit Sie schneller und sicherer entscheiden könnten?\n\nZum Aufwand:\n\nWie oft kommt der Vorgang vor, und wie lange dauert ein Fall ungefähr?\nWelcher Teil kostet am meisten Zeit? Welcher Teil ist am fehleranfälligsten?\nWelche Informationen sind vertraulich, und wer darf sie sehen?"
   },
   {
-    "objectID": "wochen/woche-01.html#gruppen",
-    "href": "wochen/woche-01.html#gruppen",
-    "title": "Kick-off",
-    "section": "Umfrage zur Gruppeneinteilung",
-    "text": "Umfrage zur Gruppeneinteilung\nWir arbeiten in Dreiergruppen. Die Teilnehmenden kommen aus mehreren Studiengängen und kennen sich meist noch nicht. Deshalb erfolgt die Einteilung über eine kurze Umfrage: Erfahrungen, Lerninteressen, gemeinsame Arbeitszeiten und Präferenzen für die Zusammenarbeit. Vorkenntnisse werden nicht vorausgesetzt.\n\nAufgabe · etwa 6 bis 8 Minuten\nDie Umfrage zur Gruppeneinteilung ausfüllen. Sie fragt nach Studiengang, Stärken, Lernzielen, Erfahrungen mit Verwaltung, KI und Daten sowie nach gemeinsamen Arbeitszeiten. Angaben zu Programmierung sind freiwillig. Die Angaben dienen nur der Einteilung und werden danach gelöscht.\nUmfrage öffnen\n\nDie Einteilung wird nach dem Termin bekannt gegeben. Dann erhält jede Gruppe ihre Nummer und den Zugang zur n8n-Instanz."
+    "objectID": "werkzeuge/interviews.html#protokoll",
+    "href": "werkzeuge/interviews.html#protokoll",
+    "title": "Interviews führen",
+    "section": "Protokoll",
+    "text": "Protokoll\nEine Person schreibt mit, direkt in ein Raster, auch dann, wenn aufgenommen wird:\n\n\n\n\n\n\n\nSpalte\nInhalt\n\n\n\n\nSchritt\nWas passiert, in der Reihenfolge des Gesprächs\n\n\nRolle\nWer den Schritt ausführt, als Rolle, nicht als Name\n\n\nEingang\nWelche Information oder Unterlage hereinkommt, in welcher Form\n\n\nSystem\nWelches System dabei genutzt wird, lesend oder schreibend\n\n\nRegel oder Ermessen\nFeste Regel mit Quelle, oder Ermessensentscheidung\n\n\nRückschleife\nWas bei Fehlern oder fehlenden Angaben passiert\n\n\nOffene Frage\nWas unklar geblieben ist\n\n\n\nDirekt nach dem Gespräch, am besten noch am selben Tag:\n\nDas Protokoll gemeinsam ergänzen, solange die Erinnerung frisch ist.\nZitate nur sinngemäß festhalten, keine Namen von Personen, keine Namen von Studierenden oder Bewerbenden aus Beispielen.\nOffene Fragen in eine eigene Liste für das zweite Gespräch übertragen.\nProtokoll unter 02_Interviews ablegen.\n\nPrüfung: Aus dem Protokoll lässt sich der Ablauf als Prozessmodell zeichnen, ohne nachzufragen. Wo das nicht geht, steht eine offene Frage.\n\n\n\n\n\n\nWarnungAchtung\n\n\n\nWenn im Gespräch Beispielfälle mit echten Personen genannt werden, bleiben diese Angaben im Raum. Ins Protokoll kommt der Fall ohne Namen und ohne Merkmale, die eine Person erkennbar machen."
   },
   {
-    "objectID": "wochen/woche-01.html#bpmn",
-    "href": "wochen/woche-01.html#bpmn",
-    "title": "Kick-off",
-    "section": "Einführung in BPMN 2.0",
-    "text": "Einführung in BPMN 2.0\nBPMN 2.0 ist die Standardnotation für Prozessmodelle, in Unternehmen wie in Verwaltungen. Die Einführung zeigt die wichtigsten Elemente an Beispielen aus der Hochschulverwaltung, vom Ersetzen eines Studierendenausweises bis zur Abgabe der Abschlussarbeit. Wer ereignisgesteuerte Prozessketten (EPK) kennt, findet sich schnell zurecht.\nFolien als PDF Folien als PowerPoint\nNach der Einführung können wir:\n\neine Prozessbeschreibung lesen und in BPMN-Elemente übersetzen,\nAktivitäten, Ereignisse und Gateways fachlich korrekt einsetzen,\nZuständigkeiten mit Pools und Lanes, Kommunikation mit Nachrichtenflüssen abbilden,\nein eigenes Kollaborationsdiagramm im Modellierungswerkzeug erstellen.\n\n\n\n\n\n\n\n\n\nTeil\nInhalt\nBeispiel aus der Verwaltung\n\n\n\n\nGrundelemente\nStart, Aufgaben, Ende; gute Namen\nStudierendenausweis ersetzen\n\n\nGateways\nExklusiv (XOR), parallel (AND), inklusiv (OR), kurzes Quiz\nPrüfungsanmeldung, Einschreibung, Bewerbung\n\n\nEreignisse\nZeitereignisse, ereignisbasiertes Gateway, Randereignisse\nZulassungsverfahren, Abgabe der Abschlussarbeit\n\n\nBeteiligte\nPools, Lanes, Nachrichtenflüsse; sechs typische Fehler\nRücktritt von einer Prüfung\n\n\nDaten und Details\nDatenobjekte, Aufgabentypen, Marker, Teilprozesse\nNoten verbuchen, Abschlussarbeit begutachten\n\n\n\n\nAufgabe · Übung für zuhause\nDie BPMN-Übung „Anerkennung von Studienleistungen“ in Gruppen von zwei bis drei Personen bearbeiten: Fallbeschreibung analysieren, Kollaborationsdiagramm modellieren, Teilprozess detaillieren, Modell begründen. Alle Elemente auf einen Blick stehen auf der letzten Folie der Einführung.\nÜbung öffnen\n\nWie die Verwaltung selbst modelliert: Das Bundesverwaltungsamt legt im Attributkatalog für BPMN 2.0 fest, wie Behörden des Bundes ihre Prozessmodelle benennen und dokumentieren. Zum Nachschlagen, nicht zum Durchlesen.\nBrücke zum Projekt: Im Projekt reicht ein kleiner Teil der Notation. Der Werkzeugkasten Prozessmodellierung zeigt ein Beispiel für denselben Ablauf heute und mit KI-Agent. Gemeinsam am Beispiel: Welche Schritte im Soll-Modell sind feste Regeln, welche brauchen Sprachverständnis, und wo bleibt der Mensch?"
+    "objectID": "werkzeuge/interviews.html#aufnahme",
+    "href": "werkzeuge/interviews.html#aufnahme",
+    "title": "Interviews führen",
+    "section": "Tonaufnahme mit Zustimmung",
+    "text": "Tonaufnahme mit Zustimmung\nEine Aufnahme macht das Protokoll vollständiger und das Prozessmodell genauer, weil nichts verloren geht, was im Gespräch nur nebenbei gesagt wurde. Sie ist erlaubt, wenn die Gesprächspartnerin oder der Gesprächspartner vorher ausdrücklich zustimmt. Ohne Zustimmung bleibt es beim Protokoll.\nVoraussetzungen: Zustimmung eingeholt und im Protokoll vermerkt (Datum, wer zugestimmt hat). Ein Rechner der Gruppe mit lokaler Transkription, zum Beispiel Whisper oder eine darauf aufbauende App; auf dem Mac etwa MacWhisper, unter Windows oder Linux etwa Buzz. Alle Varianten laufen ohne Internetverbindung.\n\nZu Beginn des Gesprächs fragen: „Dürfen wir das Gespräch aufnehmen? Wir schreiben es nur auf unserem eigenen Rechner ab, nichts davon geht in eine Cloud, und wir löschen die Aufnahme danach.“ Die Antwort abwarten.\nBei Zustimmung mit dem Telefon oder Notebook aufnehmen. Trotzdem protokollieren; die Aufnahme ersetzt das Raster nicht.\nNach dem Gespräch die Aufnahme lokal transkribieren. Keine Cloud-Transkription, auch nicht über Gemini, ChatGPT oder einen Online-Dienst.\nIm Transkript Namen von Personen durch Rollen ersetzen. Erst danach darf der Coding-Agent damit arbeiten, zum Beispiel für den Entwurf des Ist-Modells.\nAufnahme und Roh-Transkript löschen, sobald das bereinigte Transkript und das Protokoll stehen.\n\nPrüfung: Im Protokoll steht die Zustimmung. Das bereinigte Transkript enthält keine Namen. Die Aufnahme ist gelöscht.\n\n\n\n\n\n\nWarnungAchtung\n\n\n\nOhne Zustimmung bleibt es beim Protokoll. Aufnahmen und Transkripte gehören nicht in die Teamablage, wenn diese in einem Cloud-Dienst liegt; dort liegt nur das bereinigte Transkript ohne Namen."
   },
   {
-    "objectID": "wochen/woche-01.html#recherche",
-    "href": "wochen/woche-01.html#recherche",
-    "title": "Kick-off",
-    "section": "Recherche-Auftrag",
-    "text": "Recherche-Auftrag\nDie Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews. Sie hat zwei Etappen: Zuerst ein erster Prozesskandidat, damit die Werkzeuge beim zweiten Termin daran ausprobiert werden können. Danach die eigentliche Recherche mit Quellen, Referenzprozess und Leitfragen. Der Termin dafür wird noch vereinbart.\n\nEtappe 1: Prozesskandidat · in den Gruppen\nWorum es geht: Beim Werkzeugtermin lernen wir Antigravity und n8n kennen. Dafür braucht jede Gruppe einen Prozess, an dem sie den Coding-Agenten ausprobieren kann. Er muss noch nicht der endgültige sein.\n\nEinen Verwaltungsprozess auswählen, der zu den möglichen Bereichen passt, und ihn als ersten Entwurf in Prosa beschreiben: Rollen, Schritte, Entscheidungen, Rückschleifen. Zwei bis zehn Sätze genügen; was unklar ist, als Frage markieren.\n„Agentische KI im Hochschulsystem“ aus der Literaturliste zumindest überfliegen und die Seiten mit den Verwaltungsszenarien lesen.\nDie Teamablage als ZIP herunterladen, entpacken, in den gemeinsamen Ordner legen und die Prozessbeschreibung unter 01_Recherche ablegen.\n\nPrüfung: Die Beschreibung nennt mindestens zwei Rollen und eine Entscheidung.\nErgebnis: Eine Datei prozess-beschreibung.md. Beim Werkzeugtermin stellt jede Gruppe ihren Kandidaten in zwei Minuten vor; daraus entsteht in der Übung ein erstes BPMN-Modell.\n\n\nEtappe 2: Recherche · Termin wird noch vereinbart · in den Gruppen\nWorum es geht: Bevor wir mit Verwaltungsmitarbeitenden sprechen, brauchen wir Vokabular, Vergleichsfälle und eine erste Hypothese, wie ein unterstützter Ablauf aussehen könnte.\n\nZwei bis drei Quellen aus der Literaturliste lesen, mindestens „Agentische KI im Hochschulsystem“ und „Building Effective Agents“.\nRecherchieren: Wer setzt in Hochschulverwaltung oder Behörden bereits KI für Übersichten, Zusammenfassungen oder Prüfungen ein? Einstieg: Praxis und Rahmen, darunter F13 und KI4BW in Baden-Württemberg, LLMoin, MUCGPT und der Marktplatz der KI-Möglichkeiten des Bundes. Welche Muster wiederholen sich? Was ist gescheitert, und warum?\nDie Prozessbeschreibung aus Etappe 1 mit dem Gelernten überarbeiten, bei Bedarf den Prozess wechseln. Daraus wird der Referenzprozess, eine Hypothese für das Interview.\nFünf bis acht Leitfragen für das Interview entwerfen. Orientierung: Interviews führen.\nAlles unter 01_Recherche ablegen: Quellen mit Link, Erkenntnisse in Stichworten, Prozessbeschreibung, Leitfragen.\n\nPrüfung: Jede Erkenntnis hat eine Quelle. Die Prozessbeschreibung nennt mindestens zwei Rollen und eine Entscheidung. Die Leitfragen fragen nach Tätigkeiten und Informationen, nicht nach Wunsch-Automatisierungen.\nErgebnis: Ein Ordner 01_Recherche mit Quellen, Erkenntnissen, Referenzprozess und Leitfragen. Wir besprechen die Ergebnisse im Coaching und stimmen die Leitfragen ab. Die Recherche endet damit nicht: Sie läuft bis zum ersten Interview weiter und wird nach dem Gespräch gezielt vertieft.\n\nEin Hinweis zur Recherche mit KI: Gemini und andere Chat-Werkzeuge dürfen zur Recherche verwendet werden. Jede Aussage, die in die Ablage kommt, prüfen wir gegen die Originalquelle. Eine KI-Antwort ohne Quelle ist ein guter Hinweis, aber noch kein Beleg."
+    "objectID": "werkzeuge/interviews.html#zweites",
+    "href": "werkzeuge/interviews.html#zweites",
+    "title": "Interviews führen",
+    "section": "Das zweite Gespräch",
+    "text": "Das zweite Gespräch\nNach der Modellierung bleiben Lücken: Rollen, Ausnahmen, Rückschleifen. Das zweite Gespräch ist kürzer und arbeitet am Modell.\n\nDas Ist-Modell ausdrucken oder auf dem Bildschirm zeigen.\nSchritt für Schritt durchgehen: „Haben wir das richtig verstanden?“\nDie offenen Fragen aus der Liste stellen.\nAm Ende das Soll-Modell als Idee vorstellen und fragen, welche Schritte die Person einem Agenten überlassen würde und welche nicht.\n\nErgebnis: Ein bestätigtes Ist-Modell und eine erste Rückmeldung zum Soll-Modell."
   },
   {
-    "objectID": "wochen/woche-01.html#vorbereitung",
-    "href": "wochen/woche-01.html#vorbereitung",
-    "title": "Kick-off",
-    "section": "Bis zum Werkzeugtermin vorbereiten",
-    "text": "Bis zum Werkzeugtermin vorbereiten\n\nHdM-VPN einrichten und die Verbindung zur Projektumgebung testen.\nGoogle-Konto bereithalten; wer möchte, das Studierendenangebot einlösen. Pro Gruppe reicht ein Zugang zu Antigravity.\nEtappe 1 des Recherche-Auftrags erledigen: Prozesskandidat beschreiben.\n\nWeiter: Werkzeuge"
-  },
-  {
-    "objectID": "projekt.html",
-    "href": "projekt.html",
-    "title": "Das Projekt",
-    "section": "",
-    "text": "Wo kann KI Verwaltungsarbeit an der HdM sinnvoll unterstützen? Wir beantworten diese Frage in drei Schritten: im Gespräch mit Verwaltungsmitarbeitenden, mit einem Prozessmodell des Ablaufs und mit einem Prototyp, den wir an Beispielfällen prüfen."
-  },
-  {
-    "objectID": "projekt.html#rahmen",
-    "href": "projekt.html#rahmen",
-    "title": "Das Projekt",
-    "section": "Rahmen",
-    "text": "Rahmen\n\n\n\nMerkmal\nFestlegung\n\n\n\n\nProjektpartner\nBereiche der Hochschulverwaltung der HdM\n\n\nBetreuung\nProf. Dr. Stephan Wilczek und Prof. Dr. Jan Kirenz\n\n\nTermin\nmontags, 11:45 bis 13:15 Uhr, Raum I110, ab 12.10.2026\n\n\nGruppen\nDreiergruppen, Einteilung beim Kick-off über eine kurze Umfrage\n\n\nSprache\nDeutsch\n\n\nProgrammierung\nkeine Voraussetzung; Prototypen entstehen in n8n, Dateien schreibt der Coding-Agent\n\n\nPrüfung\nVorprüfungsleistung (zwei Online-Kurse) und Modulprüfung aus vier Teilen, siehe Bewertung\n\n\n\nNach Kick-off und Werkzeugtermin ist der Montag ein Coaching-Angebot: Fragen, Rückmeldung zu Zwischenständen, bei Bedarf Input. Recherche, Interviews, Modellierung und Prototyp entstehen in der eigenständigen Arbeit der Gruppen. Die öffentliche Projektbeschreibung fasst Idee und Themenfelder zusammen."
-  },
-  {
-    "objectID": "projekt.html#ausgangslage",
-    "href": "projekt.html#ausgangslage",
-    "title": "Das Projekt",
-    "section": "Ausgangslage",
-    "text": "Ausgangslage\nViele Abläufe in der Hochschulverwaltung sind formularbasiert: Ein Antrag wird eingereicht, formal vorgeprüft, inhaltlich geprüft, bei Fehlern zurückgegeben, am Ende unterschrieben. Die inhaltliche Prüfung bedeutet oft, Informationen aus mehreren Systemen zusammenzutragen und gegen Voraussetzungen abzugleichen. Dokumentiert wird das häufig in persönlichen Ordnern, nicht im System. Das kostet Zeit, und die Prüflogik steckt im Kopf der prüfenden Person.\nGenau an dieser Stelle setzen wir an. Wir suchen Tätigkeiten, bei denen Mitarbeitende\n\nunstrukturierte Informationen in strukturierte überführen: aus Formularen, Mails, Unterlagen und Systemauszügen eine Übersicht, Tabelle oder Zusammenfassung erstellen,\nVoraussetzungen prüfen: Angaben gegen Regeln und Nachweise abgleichen, Lücken finden, Rückfragen formulieren,\nEntscheidungen vorbereiten: das Ergebnis so aufbereiten, dass eine Person schnell und begründet entscheiden kann.\n\nIm Vordergrund steht nicht die vollautomatische Abwicklung eines Workflows. Realistisch ist, dass ein Agent in vielen Verwaltungssystemen nur eingeschränkte Rechte bekommt: oft lesend, selten schreibend, manchmal gar keine. Das berücksichtigen wir von Anfang an, bei der Auswahl der Tätigkeit, im Prozessmodell und im Prototyp. Der Agent liefert eine Vorlage, der Mensch entscheidet.\n\n\nDer Agent überführt verstreute Angaben in eine Übersicht mit Status je Voraussetzung. Die Entscheidung bleibt bei der zuständigen Person.\n\n\nMögliche Bereiche\nBeispiele für Prozesse, um die es gehen kann:\n\n\n\n\n\n\n\nBereich\nTätigkeit, um die es gehen könnte\n\n\n\n\nPrüfungsausschuss\nAnmeldung einer Abschlussarbeit: Prüfen, ob alle Voraussetzungen erfüllt sind (Leistungspunkte, Praxissemester, weitere Nachweise), Informationen aus mehreren Systemen, Dokumentation der Entscheidung\n\n\nBerufungskommissionen\nÜbersicht über eingegangene Bewerbungsunterlagen für einen Erstüberblick, ausschließlich als Hinweis, ohne Entscheidung, ausschließlich lokal verarbeitet\n\n\nDigitalisierung und Dokumentenmanagement\nHochschulweites Dokumentenmanagementsystem, Überlegungen zu Workflows; möglicher Adressat der Projektergebnisse\n\n\nFinanzen, Personal\nWiederkehrende Prüf- und Übersichtsaufgaben, Details im Interview\n\n\n\nInterviewpartnerinnen und Interviewpartner nennen wir auf dieser Website nicht namentlich. In Protokollen und Modellen verwenden wir Rollen, keine Namen."
-  },
-  {
-    "objectID": "projekt.html#vorgehen",
-    "href": "projekt.html#vorgehen",
-    "title": "Das Projekt",
-    "section": "Vorgehen in fünf Phasen",
-    "text": "Vorgehen in fünf Phasen\n\n\n\n\n\n\n\n\nPhase\nWas wir tun\nErgebnis\n\n\n\n\n1 · Recherche\nBest Practices für KI in der Verwaltung recherchieren, einen Referenzprozess mit dem Coding-Agenten skizzieren, Leitfragen für das Interview ableiten\nRecherche-Skizze, Referenzmodell, Interviewleitfaden\n\n\n2 · Interviews\nEin Erstgespräch mit Verwaltungsmitarbeitenden führen, jeweils zwei Gruppen gemeinsam, Protokoll statt Aufnahme\nProtokoll, Liste offener Fragen\n\n\n3 · Modellierung\nDen Ablauf heute als BPMN-Modell abbilden (Ist), dann den Ablauf mit KI-Agent entwerfen (Soll); ein zweites Gespräch zum Nachschärfen; das Ergebnis der interviewten Person vorstellen\nIst- und Soll-Modell, bestätigt oder mit Korrekturen\n\n\n4 · Prototyp\nDen Soll-Prozess als n8n-Workflow umsetzen: mit Mock-Daten, mit Freigabe durch einen Menschen, ohne Zugriff auf echte Systeme\nLauffähiger Prototyp mit Testfällen\n\n\n5 · Bewertung\nDen Prototyp an Testfällen prüfen, Grenzen dokumentieren, Empfehlungen formulieren\nBewertung, Empfehlungen, Abschlusspräsentation\n\n\n\nDie Phasen bauen aufeinander auf. Wochen 1 und 2 stehen im Semesterplan im Detail, die übrigen Phasen als Rahmen; ihre Termine vereinbaren wir im Semester.\n\n\nDie fünf Phasen des Projekts. Der Montagstermin ist das Coaching, die Arbeit passiert dazwischen.\n\n\nWarum zuerst recherchieren\nMit etwas Vorbereitung lassen sich im Interview deutlich bessere Fragen stellen. Die Recherche liefert Vokabular und Vergleichsfälle: Wie lösen andere Hochschulen und Behörden ähnliche Aufgaben, welche Muster wiederholen sich, was ging schief? Daraus entsteht ein Referenzprozess als Hypothese. Im Interview prüfen wir diese Hypothese, statt sie bestätigen zu lassen. Die wichtigsten Quellen stehen bei den Materialien, Praxisbeispiele aus Land, Bund und Kommunen unter Praxis und Rahmen.\n\n\nWarum ein Prozessmodell\nEin Modell macht sichtbar, wer welchen Schritt ausführt, wo entschieden wird, wo Informationen herkommen und wo heute Zeit verloren geht. Es trennt drei Arten von Schritten: feste Regeln (ohne KI prüfbar), Modellschritte (Sprachverständnis nötig) und menschliche Entscheidungen. Erst mit dieser Trennung lässt sich sagen, wo ein Agent hilft und wo nicht. Der Coding-Agent kann aus einem klaren Modell einen ersten Workflow erzeugen; wir prüfen ihn gegen das Modell. Grundlagen: Prozessmodellierung.\n\n\nWarum zwei Gespräche\nNach dem ersten Interview fehlen erfahrungsgemäß Rollen, Ausnahmen und Rückschleifen: Was passiert, wenn ein Nachweis fehlt? Wer wird informiert? Das fällt beim Modellieren auf. Das zweite Gespräch klärt diese Lücken. Danach stellen wir das Modell der interviewten Person vor: „So haben wir Ihren Ablauf verstanden. Stimmt das?“"
-  },
-  {
-    "objectID": "projekt.html#regeln",
-    "href": "projekt.html#regeln",
-    "title": "Das Projekt",
-    "section": "Daten und Freigaben",
-    "text": "Daten und Freigaben\n\n\n\n\n\n\nWichtigHuman in the Loop ist Pflicht\n\n\n\nJeder Prototyp endet mit einer Prüfung durch einen Menschen. Der Agent sammelt, prüft, fasst zusammen und schlägt vor. Die Freigabe erfolgt durch die zuständige Person, zum Beispiel per Antwort auf eine Nachricht, in einem Chat oder über eine einfache Web-Oberfläche. Erst danach geht der Prozess weiter. Kein Prototyp schreibt in ein Verwaltungssystem.\n\n\n\n\nDer Agent bereitet vor, die Person gibt frei oder gibt zurück. Schreibzugriffe auf Verwaltungssysteme gibt es im Projekt nicht.\n\nKeine Realdaten. Schnittstellen und Daten bauen wir nach (Mocks): eine synthetische Tabelle mit erfundenen Studierenden, eine kleine Web-Schnittstelle, die so antwortet, wie es das echte System täte, ein Ordner mit erfundenen Anträgen. Der Prototyp zeigt dann: „So würde der Agent auf das System zugreifen, und das würde er zurückbekommen.“ Welche Daten und Schnittstellen nicht real sind, steht in der Dokumentation.\n\n\nDer Prototyp spricht nur mit nachgebauten Systemen. Das Mock macht sichtbar, welche Daten und Rechte ein realer Einsatz bräuchte.\n\nSensible Inhalte bleiben lokal. Bewerbungsunterlagen, Personalakten und ähnliche Inhalte dürfen nicht in öffentliche Cloud-Dienste gelangen. Für solche Fälle kommen nur lokal oder in Europa betriebene Modelle in Frage. Die Gemini-Verbindung in n8n ist für synthetische Daten vorgesehen.\nInterviews werden protokolliert, Aufnahme nur mit Zustimmung. Zwei Gruppen führen ein Gespräch gemeinsam, eine Person protokolliert. Wenn die Gesprächspartnerin oder der Gesprächspartner ausdrücklich zustimmt, darf zusätzlich eine Tonaufnahme gemacht werden. Sie wird nur lokal auf einem Rechner der Gruppe transkribiert (zum Beispiel mit Whisper) und danach gelöscht; weder Aufnahme noch Transkript gehen in einen Cloud-Dienst. Das Transkript erleichtert das Protokoll und das Prozessmodell erheblich."
-  },
-  {
-    "objectID": "projekt.html#experiment",
-    "href": "projekt.html#experiment",
-    "title": "Das Projekt",
-    "section": "Experimenteller Charakter",
-    "text": "Experimenteller Charakter\nDas Projekt ist ausdrücklich ein Experiment. Am Ende muss nicht überall ein Prototyp stehen, der sofort einsetzbar wäre. Eine gut begründete Erkenntnis, dass ein Prozess sich mit den heutigen Mitteln nicht sinnvoll unterstützen lässt, ist ein vollwertiges Ergebnis. Die Grenzen der Systeme sind Teil unseres Auftrags: Was geht, was geht nicht, was fehlt dafür (Daten, Schnittstellen, Rechte, Modellqualität)?\nDie Ergebnisse stellen wir am Semesterende den beteiligten Verwaltungsbereichen vor. Was daraus wird, entscheidet die Hochschule.\nWeiter zum Semesterplan"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "KI in der Verwaltung",
-    "section": "",
-    "text": "HdM Stuttgart · WS 2026/27 · montags 11:45 bis 13:15 Uhr · Raum I110\n\n\nIn diesem Projekt untersuchen wir gemeinsam mit Bereichen der HdM-Verwaltung, wo KI-Agenten Verwaltungsarbeit unterstützen können: vom Interview über das Prozessmodell bis zum Prototyp in n8n. Jeder Prototyp bereitet Entscheidungen vor, die Entscheidung bleibt beim Menschen.\n\nZum Projekt Kick-off"
-  },
-  {
-    "objectID": "index.html#termine",
-    "href": "index.html#termine",
-    "title": "KI in der Verwaltung",
-    "section": "Termine",
-    "text": "Termine\n\n\n\nTermin\nWas\n\n\n\n\nKick-off\nKontext, Prozessmodellierung, Recherche-Auftrag, Gruppenbildung\n\n\nWerkzeuge\nCoding-Agent, n8n, Prozessmodell mit dem Agenten\n\n\nCoachings\nwöchentlich montags, 11:45 bis 13:15 Uhr: Fragen, Rückmeldung zu Interviews, Modellierung und Prototyp\n\n\nAbschlusspräsentation und Abgabe\nTermine werden noch vereinbart, Details unter Bewertung\n\n\n\nDer Wochentermin ist ein Coaching-Angebot. Interviews, Modellierung und Prototyp entstehen in der eigenständigen Projektarbeit zwischen den Terminen."
-  },
-  {
-    "objectID": "index.html#so-läuft-das-projekt",
-    "href": "index.html#so-läuft-das-projekt",
-    "title": "KI in der Verwaltung",
-    "section": "So läuft das Projekt",
-    "text": "So läuft das Projekt\n\n\nSo gehen wir vor: fünf Phasen, jede baut auf der vorherigen auf. Details auf der Seite Projekt."
-  },
-  {
-    "objectID": "index.html#nachschlagen",
-    "href": "index.html#nachschlagen",
-    "title": "KI in der Verwaltung",
-    "section": "Nachschlagen",
-    "text": "Nachschlagen\n\n\n\nSeite\nInhalt\n\n\n\n\nVorbereitung\nHdM-VPN, Google-Konto, n8n-Zugang der Gruppe, Zertifikatswarnung\n\n\nProjekt\nAusgangslage, Vorgehen in fünf Phasen, Regeln für Daten und Freigaben\n\n\nSemesterplan\nKick-off und Werkzeuge im Detail, die weiteren Phasen als Rahmen\n\n\nWerkzeugkasten\nCoding-Agent, Prozessmodellierung, Interviews, n8n\n\n\nAbgaben\nWas in jeder Phase entsteht und wie es abgelegt wird\n\n\nBewertung\nVorprüfungsleistung, Gewichte, Kriterien, Noten\n\n\nMaterialien\nLiteratur, Beispielprozesse, Prompts, Dokumentation"
-  },
-  {
-    "objectID": "start.html",
-    "href": "start.html",
-    "title": "Vorbereitung und Zugänge",
-    "section": "",
-    "text": "Für den Einstieg genügen ein Notebook, der HdM-VPN-Zugang und ein Google-Konto. Programmierkenntnisse sind keine Voraussetzung. Der Zugang zur n8n-Umgebung wird pro Gruppe bereitgestellt."
-  },
-  {
-    "objectID": "start.html#vpn",
-    "href": "start.html#vpn",
-    "title": "Vorbereitung und Zugänge",
-    "section": "HdM-VPN",
-    "text": "HdM-VPN\nDie Projektumgebung (n8n und Datenbanken) läuft auf einem Server der HdM. Sie ist nur aus dem HdM-Netz und über das HdM-VPN erreichbar. Von zu Hause ist das VPN deshalb Voraussetzung für jede Arbeit in n8n.\n\nDen VPN-Client der HdM installieren (FortiClient, Zugang mit der HdM-Kennung).\nDie VPN-Verbindung aufbauen.\nPrüfen: Die Übersichtsseite der Projektumgebung lädt im Browser. Ohne VPN erscheint eine Zeitüberschreitung.\n\nIm Hochschulnetz vor Ort (WLAN eduroam oder Kabel) ist kein VPN nötig."
-  },
-  {
-    "objectID": "start.html#zertifikat",
-    "href": "start.html#zertifikat",
-    "title": "Vorbereitung und Zugänge",
-    "section": "Zertifikatswarnung",
-    "text": "Zertifikatswarnung\nDie Projektumgebung ist über die Adresse 141.62.116.2 erreichbar. Der Browser warnt beim ersten Aufruf vor einer unsicheren Verbindung, weil er den Aussteller des Zertifikats nicht kennt.\n\nIn der Warnung auf „Erweitert“ oder „Details“ klicken.\nDie Ausnahme für diese Adresse bestätigen („Weiter zu 141.62.116.2“ oder „Risiko akzeptieren“).\nPrüfen: Die Übersichtsseite mit den Links zu den n8n-Instanzen erscheint.\n\nDie Ausnahme gilt pro Browser und muss nach einem Browserwechsel erneut bestätigt werden. Die Verbindung ist verschlüsselt.\n\n\n\n\n\n\nWarnungAchtung\n\n\n\nDiese Ausnahme gilt nur für die Projektumgebung an der HdM. Auf anderen Websites bleibt eine Zertifikatswarnung ein Warnsignal."
-  },
-  {
-    "objectID": "start.html#google",
-    "href": "start.html#google",
-    "title": "Vorbereitung und Zugänge",
-    "section": "Google-Konto und Coding-Agent",
-    "text": "Google-Konto und Coding-Agent\nWir arbeiten mit einem Coding-Agenten: Der Agent recherchiert, schreibt Prozessmodelle und Workflow-Dateien, wir prüfen und entscheiden. Welcher Anbieter das ist, spielt für das Vorgehen keine Rolle: Claude Code, OpenAI Codex, Cursor oder andere Werkzeuge funktionieren genauso. Wir verwenden Google Antigravity, eine Entwicklungsumgebung mit eingebautem Agenten, weil Studierende sie derzeit über das Google-Jahresabo kostenfrei bekommen. Wer bereits einen anderen Coding-Agenten nutzt, kann dabei bleiben. Die Einrichtung erfolgt gemeinsam beim Werkzeugtermin.\n\n\n\n\n\n\nTippGoogle AI Plus für Studierende\n\n\n\nGoogle stellt Studierenden ein Jahr lang Google AI Plus kostenlos bereit. Darin enthalten sind Gemini mit höheren Nutzungslimits und der Zugang zu Antigravity. Das Angebot gilt ab 18 Jahren und ist bis 31.12.2026 einlösbar.\nVor der Registrierung drei Punkte kennen:\n\nDie Berechtigung als Studierende oder Studierender wird nachgewiesen und jährlich erneuert.\nBei der Registrierung ist eine gültige Zahlungsmethode erforderlich.\nOhne rechtzeitige Kündigung verlängert sich das Abo nach Ablauf automatisch kostenpflichtig. Die aktuellen Bedingungen stehen auf der Angebotsseite.\n\nWer das Abo nicht möchte, arbeitet mit dem kostenlosen Google-Konto. Pro Gruppe reicht ein Zugang zu Antigravity; die Gruppe entscheidet, wer ihn einrichtet.\n\n\nFür die Modellaufrufe in n8n wird nicht das eigene Google-Konto verwendet. Dort ist pro Gruppe eine vorbereitete Verbindung hinterlegt, siehe n8n auf dem HdM-Server."
-  },
-  {
-    "objectID": "start.html#n8n",
-    "href": "start.html#n8n",
-    "title": "Vorbereitung und Zugänge",
-    "section": "n8n-Zugang der Gruppe",
-    "text": "n8n-Zugang der Gruppe\nJede Gruppe hat eine eigene n8n-Instanz mit eigener Datenbank auf dem HdM-Server. Die Gruppe teilt sich ein Konto. Login und Passwort werden nach der Gruppeneinteilung bereitgestellt. Das Passwort wird nicht per Mail, Chat oder in Dokumenten weitergegeben und nicht in Screenshots gezeigt.\n\n\n\nGruppe\nAdresse\n\n\n\n\nGruppe 1\nhttps://141.62.116.2/n8n-1/\n\n\nGruppe 2\nhttps://141.62.116.2/n8n-2/\n\n\nGruppe 3\nhttps://141.62.116.2/n8n-3/\n\n\nGruppe 4\nhttps://141.62.116.2/n8n-4/\n\n\nGruppe 5\nhttps://141.62.116.2/n8n-5/\n\n\nGruppe 6\nhttps://141.62.116.2/n8n-6/\n\n\nGruppe 7\nhttps://141.62.116.2/n8n-7/\n\n\n\nIm Konto liegen bereits zwei Verbindungen: eine zur Gruppen-Datenbank (Postgres mit pgvector) und eine zum Sprachmodell (Gemini). Beide werden in Workflows ausgewählt, nicht neu angelegt. Erste Schritte: n8n auf dem HdM-Server.\n\n\nDie Projektumgebung: sieben n8n-Instanzen und eine Datenbank je Gruppe auf einem Server der HdM, erreichbar nur aus dem HdM-Netz und über VPN."
-  },
-  {
-    "objectID": "start.html#ablage",
-    "href": "start.html#ablage",
-    "title": "Vorbereitung und Zugänge",
-    "section": "Teamablage",
-    "text": "Teamablage\nJede Gruppe arbeitet in einem gemeinsamen Ordner, zum Beispiel in Google Drive oder in einem privaten GitHub-Repository. Die Struktur gibt es fertig als Download: fünf Ordner mit je einer README, die sagt, was hineingehört und woran man prüft, dass es vollständig ist, dazu Vorlagen für Team, Stand, Entscheidungen und die AGENTS.md für den Coding-Agenten.\nTeamablage als ZIP herunterladen\n\n\n\n\n\n\n\nOrdner\nInhalt\n\n\n\n\n01_Recherche\nBest Practices, Referenzprozesse, Quellen\n\n\n02_Interviews\nLeitfaden, Protokolle, offene Fragen\n\n\n03_Prozessmodelle\nIst- und Soll-Modelle als .bpmn und als Bild\n\n\n04_Prototyp\nn8n-Exporte, Prompts im Wortlaut, Testfälle, Mock-Daten\n\n\n05_Bewertung\nTestbelege, Vergleich, Empfehlungen, Präsentation\n\n\n\nZugangsdaten, Passwörter und Schlüssel gehören nicht in die Ablage, auch nicht in n8n-Exporte oder Screenshots."
-  },
-  {
-    "objectID": "start.html#regeln",
-    "href": "start.html#regeln",
-    "title": "Vorbereitung und Zugänge",
-    "section": "Arbeitsregeln",
-    "text": "Arbeitsregeln\n\nKeine Realdaten. In n8n, Gemini und Antigravity verarbeiten wir ausschließlich synthetische oder anonymisierte Daten. Namen, Matrikelnummern, Bewerbungsunterlagen oder interne Dokumente der Verwaltung gehören nicht hinein. Die Gründe stehen unter Daten und Freigaben.\nInterviews werden protokolliert. Eine Tonaufnahme ist nur mit ausdrücklicher Zustimmung der Gesprächspartnerin oder des Gesprächspartners erlaubt und wird ausschließlich lokal transkribiert. Siehe Interviews führen.\nDer Mensch entscheidet. Jeder Prototyp endet mit einer Prüfung und Freigabe durch eine Person. Kein Workflow schreibt in ein Verwaltungssystem oder versendet etwas an Dritte.\n\nWeiter zum Projekt"
-  },
-  {
-    "objectID": "semester.html",
-    "href": "semester.html",
-    "title": "Semesterplan",
-    "section": "",
-    "text": "Der Plan nennt Kick-off und Werkzeugtermin im Detail. Die weiteren Phasen sind als Rahmen beschrieben; ihre Termine vereinbaren wir im Semester, abhängig davon, wann die Interviews stattfinden."
-  },
-  {
-    "objectID": "semester.html#wöchentliches-coaching",
-    "href": "semester.html#wöchentliches-coaching",
-    "title": "Semesterplan",
-    "section": "Wöchentliches Coaching",
-    "text": "Wöchentliches Coaching\nMontags, 11:45 bis 13:15 Uhr, Raum I110. Nach Kick-off und Werkzeugtermin ist der Montag ein Coaching-Angebot: Fragen aus den Gruppen, Rückmeldung zu Zwischenständen, bei Bedarf ein kurzer Input, Abstimmung der nächsten Schritte. Die Projektarbeit selbst passiert zwischen den Terminen."
-  },
-  {
-    "objectID": "semester.html#die-ersten-termine",
-    "href": "semester.html#die-ersten-termine",
-    "title": "Semesterplan",
-    "section": "Die ersten Termine",
-    "text": "Die ersten Termine\n\n\n\nTermin\nDatum\nInhalt\n\n\n\n\nKick-off\nMontag, 12.10.2026\nKontext: Verwaltung und KI-Agenten · Grundlagen der Prozessmodellierung (BPMN) · Recherche-Auftrag · Umfrage und Gruppenbildung\n\n\nWerkzeuge\nMontag, 19.10.2026\nProzesskandidaten · Coding-Agent einrichten (Antigravity) · n8n-Einstieg auf dem HdM-Server · Prozessmodell mit dem Agenten erzeugen\n\n\nCoachings\nab 26.10.2026 wöchentlich\nStand der Recherche, Leitfragen, Interviews, Modellierung, Prototyp, Review"
-  },
-  {
-    "objectID": "semester.html#die-weiteren-phasen",
-    "href": "semester.html#die-weiteren-phasen",
-    "title": "Semesterplan",
-    "section": "Die weiteren Phasen",
-    "text": "Die weiteren Phasen\n\n\n\n\n\n\n\n\nPhase\nWas passiert\nErgebnis\n\n\n\n\nInterviews\nErstgespräche mit den Verwaltungsbereichen, je zwei Gruppen gemeinsam. Vorbereitung mit Leitfaden, Protokoll statt Aufnahme\nProtokoll und offene Fragen\n\n\nModellierung\nIst-Prozess aus dem Protokoll modellieren, Soll-Prozess mit KI-Agent entwerfen, zweites Gespräch zum Nachschärfen, Vorstellung beim Interviewpartner\nIst- und Soll-Modell, bestätigt\n\n\nPrototyp\nSoll-Prozess in n8n umsetzen: Mock-Daten und Mock-Schnittstellen, Modellschritte, Freigabe durch einen Menschen\nLauffähiger Workflow mit ersten Testfällen\n\n\nReview\nPrototypen gegenseitig prüfen, Testfälle ergänzen, Grenzen dokumentieren\nTestprotokoll, Liste der Grenzen\n\n\nBewertung und Abschluss\nBewertung, Empfehlungen, Abschlusspräsentation vor den beteiligten Bereichen\nPräsentation und Abgabe\n\n\n\nDie Reihenfolge der Interviews hängt von der Verfügbarkeit der Verwaltungsbereiche ab. Wer noch auf sein Interview wartet, arbeitet an Recherche, Referenzmodell und Mock-Daten weiter."
-  },
-  {
-    "objectID": "wochen/woche-02.html",
-    "href": "wochen/woche-02.html",
-    "title": "Werkzeuge",
-    "section": "",
-    "text": "Montag, 19. Oktober 2026 · 11:45 bis 13:15 Uhr · Raum I110 · Notebook mitbringen, VPN eingerichtet"
-  },
-  {
-    "objectID": "wochen/woche-02.html#ziel-des-termins",
-    "href": "wochen/woche-02.html#ziel-des-termins",
-    "title": "Werkzeuge",
-    "section": "Ziel des Termins",
-    "text": "Ziel des Termins\nAm Ende hat jede Gruppe Antigravity mit einem Projektordner eingerichtet, sich in ihrer n8n-Instanz angemeldet, einen ersten Workflow ausgeführt und aus ihrer Prozessbeschreibung ein BPMN-Modell erzeugt und im Browser angesehen.\n\n\n\n\n\n\nHinweisBausteine des Termins\n\n\n\n\n\n\n\n\n\n\n\n\n\nBaustein\nDauer etwa\nArbeitsform\n\n\n\n\nProzesskandidaten vorstellen\n15 Minuten\nGruppen, je 2 Minuten\n\n\nAntigravity einrichten, AGENTS.md anlegen\n25 Minuten\nAngeleitet, in den Gruppen\n\n\nn8n: Login, erster Workflow, Modellverbindung\n25 Minuten\nAngeleitet, in den Gruppen\n\n\nProzessmodell mit dem Agenten erzeugen\n20 Minuten\nIn den Gruppen\n\n\nNächste Schritte: Interviews\n5 Minuten\nGemeinsam"
-  },
-  {
-    "objectID": "wochen/woche-02.html#vorstellen",
-    "href": "wochen/woche-02.html#vorstellen",
-    "title": "Werkzeuge",
-    "section": "Prozesskandidaten vorstellen",
-    "text": "Prozesskandidaten vorstellen\nJede Gruppe nennt in zwei Minuten: den gewählten Prozess, die beteiligten Rollen und die Stelle, an der unstrukturierte Information strukturiert werden muss. Folien sind nicht nötig. Der Kandidat ist ein Arbeitsstand für die heutigen Übungen; die Recherche läuft danach weiter."
-  },
-  {
-    "objectID": "wochen/woche-02.html#uebung-2-1",
-    "href": "wochen/woche-02.html#uebung-2-1",
-    "title": "Werkzeuge",
-    "section": "Übung 2.1: Coding-Agent einrichten",
-    "text": "Übung 2.1: Coding-Agent einrichten\n\nEtwa 20 Minuten · eine Person pro Gruppe am Rechner, die anderen prüfen\nMaterial: Coding-Agent einrichten.\n\nAntigravity installieren und mit dem Google-Konto anmelden.\nEinen leeren Projektordner anlegen, zum Beispiel ki-verwaltung-gruppe-3, und in Antigravity öffnen.\nEine Datei AGENTS.md anlegen: Projektziel in drei Sätzen, der gewählte Prozess, die Regeln (keine Realdaten, Freigabe beim Menschen, Deutsch). Vorlage im Werkzeugkasten.\nEinen ersten Auftrag im Chat stellen, zum Beispiel: „Lies AGENTS.md und fasse in fünf Sätzen zusammen, was dieses Projekt will.“\n\nPrüfung: Die Zusammenfassung des Agenten stimmt mit dem überein, was wir meinen. Wenn nicht, AGENTS.md präzisieren."
-  },
-  {
-    "objectID": "wochen/woche-02.html#uebung-2-2",
-    "href": "wochen/woche-02.html#uebung-2-2",
-    "title": "Werkzeuge",
-    "section": "Übung 2.2: n8n auf dem HdM-Server",
-    "text": "Übung 2.2: n8n auf dem HdM-Server\n\nEtwa 25 Minuten · in den Gruppen\nMaterial: n8n auf dem HdM-Server, Zugangsdaten der Gruppe.\n\nVPN verbinden, die n8n-Adresse der Gruppe öffnen, Zertifikatswarnung bestätigen, anmelden.\nUnter Credentials prüfen, dass die beiden Verbindungen der Gruppe vorhanden sind (Datenbank und Modell).\nEinen neuen Workflow anlegen: Manual Trigger, dann ein Edit-Fields-Knoten mit drei Feldern eines erfundenen Antrags (zum Beispiel antrag_id, art, nachweise). Ausführen und die Ausgabe ansehen.\nEine Basic LLM Chain anhängen, als Modell die vorbereitete Gemini-Verbindung wählen und einen Auftrag nach dem Prompt-Standard formulieren: Kontext, Aufgabe, Format, Prüfung. Ausführen.\nDen Workflow speichern und als JSON exportieren, Export in die Teamablage unter 04_Prototyp.\n\nPrüfung: Die Felder des Antrags kommen beim Modell an. Die Ausgabe nennt, was fehlt oder unsicher ist, statt es zu erfinden. Der Export enthält keine Zugangsdaten."
-  },
-  {
-    "objectID": "wochen/woche-02.html#uebung-2-3",
-    "href": "wochen/woche-02.html#uebung-2-3",
-    "title": "Werkzeuge",
-    "section": "Übung 2.3: Prozessmodell mit dem Agenten",
-    "text": "Übung 2.3: Prozessmodell mit dem Agenten\n\nEtwa 20 Minuten · in den Gruppen\nMaterial: Prozessmodellierung, Auftrag: Ist-Prozess aus einer Beschreibung, die eigene Prozessbeschreibung aus Etappe 1 der Recherche.\n\nDie Prozessbeschreibung als prozess-beschreibung.md in den Projektordner legen.\nDen Auftrag aus ist-aus-prosa.md in den Chat von Antigravity einfügen. Der Agent schreibt eine Datei referenzprozess-ist.bpmn.\nDie Datei in demo.bpmn.io öffnen und ansehen.\nPrüfen, bevor etwas übernommen wird: Hat jeder Schritt der Beschreibung genau einen Schritt im Modell? Liegt jeder Schritt in der richtigen Bahn? Sind Entscheidungen als Raute mit beschrifteten Ausgängen dargestellt? Hat der Agent Schritte erfunden?\nKorrekturen als Auftrag an den Agenten formulieren („Der Schritt X gehört in die Bahn Y“), nicht von Hand im Modell. Datei und Bild in die Ablage unter 03_Prozessmodelle.\n\nPrüfung: Eine Person aus einer anderen Gruppe versteht den Ablauf anhand des Bildes ohne Erklärung.\nErgebnis: Ein erstes BPMN-Modell des Referenzprozesses. Es ist eine Hypothese, die im Interview geprüft wird."
-  },
-  {
-    "objectID": "wochen/woche-02.html#naechste",
-    "href": "wochen/woche-02.html#naechste",
-    "title": "Werkzeuge",
-    "section": "Nächste Schritte",
-    "text": "Nächste Schritte\nAls Nächstes folgt Etappe 2 des Recherche-Auftrags: Quellen, Erkenntnisse, überarbeiteter Referenzprozess, Leitfragen. Den Termin dafür vereinbaren wir gemeinsam; die Ergebnisse besprechen wir im Coaching. Die Interviewtermine vereinbaren wir mit den Verwaltungsbereichen; sobald ein Termin steht, bereiten sich die beiden zugeordneten Gruppen gemeinsam nach Interviews führen vor.\nZurück zum Kick-off · Semesterplan"
-  },
-  {
-    "objectID": "werkzeuge/einrichtung.html",
-    "href": "werkzeuge/einrichtung.html",
-    "title": "Coding-Agent einrichten",
-    "section": "",
-    "text": "Ein Coding-Agent schreibt Dateien: Prozessmodelle, Mock-Daten, Workflow-Exporte, kleine Web-Oberflächen. Wir geben Richtung und Kontext, prüfen jedes Ergebnis und entscheiden. Diese Seite beschreibt die Einrichtung von Antigravity und den Prompt-Standard für Aufträge."
-  },
-  {
-    "objectID": "werkzeuge/einrichtung.html#antigravity",
-    "href": "werkzeuge/einrichtung.html#antigravity",
-    "title": "Coding-Agent einrichten",
-    "section": "Google Antigravity",
-    "text": "Google Antigravity\nGoogle Antigravity ist eine Entwicklungsumgebung mit eingebautem Agenten. Der Agent liest die Dateien im Projektordner, schreibt neue Dateien und ändert bestehende. Alles, was er tut, ist im Ordner sichtbar und kann rückgängig gemacht werden.\nAntigravity ist nicht die einzige Wahl. Claude Code, OpenAI Codex, Cursor und ähnliche Werkzeuge arbeiten nach demselben Prinzip; die Aufträge und die AGENTS.md auf dieser Seite funktionieren dort ebenso. Wir nehmen Antigravity, weil es im Google-Jahresabo für Studierende enthalten ist und damit nichts kostet.\nVoraussetzungen: ein Google-Konto; der Zugang zu Antigravity ist im Studierendenangebot enthalten. Pro Gruppe reicht eine Installation.\n\nDie Antigravity IDE herunterladen und installieren.\nMit dem Google-Konto anmelden.\nEinen leeren Projektordner anlegen und in Antigravity öffnen („Open Folder“).\nPrüfen: Links erscheint der Ordner, rechts der Chat mit dem Agenten.\n\nWenn die Installation nicht klappt: Den Auftrag in den Gemini-Chat im Browser einfügen, zusammen mit dem Inhalt der betroffenen Dateien als Text. Die Ausgabe als Datei speichern. Das ist umständlicher, führt aber zum selben Ergebnis.\n\n\nDer Agent erzeugt, wir prüfen. Korrekturen formulieren wir als neuen Auftrag, nicht von Hand in der Datei."
-  },
-  {
-    "objectID": "werkzeuge/einrichtung.html#agents-md",
-    "href": "werkzeuge/einrichtung.html#agents-md",
-    "title": "Coding-Agent einrichten",
-    "section": "AGENTS.md: Kontext für den Agenten",
-    "text": "AGENTS.md: Kontext für den Agenten\nEine Datei AGENTS.md im Projektordner gibt dem Agenten den Kontext: worum es geht, wo was liegt, welche Regeln gelten. Der Agent liest sie zu Beginn jedes Auftrags. Nur Regeln eintragen, die wirklich gelten; die Datei wächst mit dem Projekt. Beispiele auf agents.md.\nVorlage zum Anpassen:\n# Projekt: KI in der Verwaltung, Gruppe N\n\n## Worum es geht\nWir untersuchen, ob ein KI-Agent die &lt;Rolle&gt; bei &lt;Tätigkeit&gt; unterstützen kann:\n&lt;unstrukturierte Eingaben&gt; in eine &lt;strukturierte Übersicht&gt; überführen und\neine Entscheidung vorbereiten. Die Entscheidung trifft ein Mensch.\n\n## Ordner\n- 01_Recherche: Quellen und Referenzprozess\n- 03_Prozessmodelle: BPMN-Dateien (Ist und Soll)\n- 04_Prototyp: n8n-Exporte, Prompts, Mock-Daten, Testfälle\n\n## Regeln\n- Deutsch. Keine langen Gedankenstriche.\n- Keine Realdaten. Alle Beispieldaten sind erfunden und als solche gekennzeichnet.\n- Freigabe, Versand und Entscheidungen bleiben beim Menschen.\n- Keine Zahlen erfinden. Unklares als offene Frage markieren, nicht raten.\n- Zugangsdaten nie in Dateien schreiben."
-  },
-  {
-    "objectID": "werkzeuge/einrichtung.html#prompt",
-    "href": "werkzeuge/einrichtung.html#prompt",
-    "title": "Coding-Agent einrichten",
-    "section": "Aufträge formulieren: der Prompt-Standard",
-    "text": "Aufträge formulieren: der Prompt-Standard\nEin guter Auftrag hat vier Teile, in dieser Reihenfolge: Kontext, Aufgabe, Format, Prüfung. Das Modell kennt das Handwerk. Was es nicht kennen kann, liegt nur bei uns, deshalb bewegen Kontext und Prüfung das Ergebnis am meisten.\n\n\n\n\n\n\n\n\nTeil\nWas hinein gehört\nBeispiel\n\n\n\n\nKontext\nDie Fakten, die nur wir kennen\nDie Prozessbeschreibung aus dem Interview, die beteiligten Rollen, die geltenden Regeln\n\n\nAufgabe\nDas eine konkrete Ergebnis\nErstelle aus der Beschreibung den Ist-Prozess als BPMN-Datei\n\n\nFormat\nDateiname, Struktur, Sprache, Länge\nDatei antrag-ist.bpmn, eine Bahn je Rolle, Namen deutsch, Verb am Ende\n\n\nPrüfung\nWas das Modell melden soll, statt Lücken zu füllen\nNenne am Ende, welche Schritte in der Beschreibung unklar waren, statt sie zu erfinden\n\n\n\nKontext: &lt;Prozessbeschreibung und Rollen einfügen. Alle Angaben stammen aus\ndem Interviewprotokoll vom &lt;Datum&gt;; Namen sind durch Rollen ersetzt.&gt;\n\nAufgabe: Erstelle aus dieser Beschreibung den heutigen Ablauf als\nBPMN-2.0-Datei. Jeder Satz der Beschreibung wird höchstens ein Schritt.\n\nFormat: Datei 03_Prozessmodelle/antrag-ist.bpmn. Eine Bahn je Rolle.\nSchrittnamen deutsch mit Verb am Ende, Entscheidungen als Frage.\n\nPrüfung: Erfinde keine Schritte. Liste am Ende auf, welche Stellen der\nBeschreibung unklar oder lückenhaft sind, als offene Fragen.\nDer Kontext steht oben, die Anweisungen danach. Bei langem Material antworten Modelle so besser, als wenn die Aufgabe vor dem Material steht. Derselbe Standard gilt für Aufträge im Gemini-Chat und in n8n.\n\n\nDie vier Teile eines Auftrags in fester Reihenfolge. Kontext und Prüfung bewegen das Ergebnis am meisten."
-  },
-  {
-    "objectID": "werkzeuge/einrichtung.html#eine-änderung-gezielt-prüfen",
-    "href": "werkzeuge/einrichtung.html#eine-änderung-gezielt-prüfen",
-    "title": "Coding-Agent einrichten",
-    "section": "Eine Änderung gezielt prüfen",
-    "text": "Eine Änderung gezielt prüfen\nZunächst eine konkrete Abweichung benennen: ein erfundener Schritt, eine falsche Bahn, eine fehlende Rückschleife. Dann eine Anweisung präzisieren und den Auftrag wiederholen. Mehrere Änderungen gleichzeitig erschweren die Erklärung des Ergebnisses.\nIm Modell liegt „Nachweise prüfen“ in der Bahn Sachbearbeitung. Laut\nProtokoll prüft die Vorsitzende des Ausschusses. Verschiebe den Schritt\nund nenne, welche weiteren Schritte von dieser Rolle abhängen."
-  },
-  {
-    "objectID": "werkzeuge/einrichtung.html#was-der-agent-nicht-entscheidet",
-    "href": "werkzeuge/einrichtung.html#was-der-agent-nicht-entscheidet",
-    "title": "Coding-Agent einrichten",
-    "section": "Was der Agent nicht entscheidet",
-    "text": "Was der Agent nicht entscheidet\nDer Agent erzeugt Entwürfe. Ob ein Modell den Ablauf richtig wiedergibt, weiß nur, wer das Interview geführt hat. Ob ein Workflow sinnvoll ist, zeigt der Test an Beispielfällen. Jede Datei, die der Agent schreibt, liest eine Person, bevor sie in die Ablage kommt. Was wir noch nicht verstehen, klären wir, bevor wir es übernehmen; der Agent erklärt auf Nachfrage gern, was er gemacht hat.\nWeiter: Prozessmodellierung"
-  },
-  {
-    "objectID": "werkzeuge/bpmn-uebung.html",
-    "href": "werkzeuge/bpmn-uebung.html",
-    "title": "BPMN-Übung: Anerkennung von Studienleistungen",
-    "section": "",
-    "text": "Eine Übung für zuhause zur Einführung in BPMN 2.0. In Gruppen von zwei bis drei Personen wird das Verfahren modelliert, mit dem eine Hochschule an anderen Hochschulen erbrachte Studienleistungen anerkennt. Das Modell soll die zentralen BPMN-Elemente aus der Einführung korrekt einsetzen.\nDie Aufgabenstellung gibt es auch als Word-Datei, etwa um die Tabelle in Aufgabe 1 direkt auszufüllen."
-  },
-  {
-    "objectID": "werkzeuge/bpmn-uebung.html#ausgangssituation",
-    "href": "werkzeuge/bpmn-uebung.html#ausgangssituation",
-    "title": "BPMN-Übung: Anerkennung von Studienleistungen",
-    "section": "Ausgangssituation",
-    "text": "Ausgangssituation\nStudierende, die an einer anderen Hochschule Leistungen erbracht haben (etwa im Auslandssemester oder vor einem Hochschulwechsel), können deren Anerkennung beantragen. Beteiligt sind die Studierenden, das Prüfungsamt, die für das jeweilige Modul verantwortlichen Fachprüferinnen und Fachprüfer sowie die bzw. der Vorsitzende des Prüfungsausschusses. Das Verfahren läuft wie folgt ab:\n\nDer Prozess beginnt, sobald im Prüfungsamt ein Antrag auf Anerkennung eingeht. Die Studierenden reichen den Antrag über das Campus-Management-System ein und fügen ein Transcript of Records sowie die Modulbeschreibungen der anderen Hochschule bei.\nDas Prüfungsamt prüft den Antrag auf Vollständigkeit. Fehlen Unterlagen, fordert es diese bei den Studierenden nach.\nNach der Nachforderung wartet das Prüfungsamt. Gehen die Unterlagen ein, wird die Vollständigkeit erneut geprüft. Gehen sie innerhalb von vier Wochen nicht ein, gilt der Antrag als zurückgezogen: Das Prüfungsamt informiert die Studierenden, und der Prozess endet.\nIst der Antrag vollständig, leitet das Prüfungsamt ihn an die zuständige Fachprüferin bzw. den zuständigen Fachprüfer weiter. Diese führen die fachliche Prüfung durch und geben für jedes beantragte Modul eine Empfehlung ab (anerkennen oder nicht anerkennen).\nLiegt die Empfehlung zwei Wochen nach der Weiterleitung noch nicht vor, erinnert das Prüfungsamt die Fachprüferin bzw. den Fachprüfer. Die fachliche Prüfung läuft dabei weiter; sie wird durch die Erinnerung nicht abgebrochen.\nAuf Grundlage der Empfehlungen entscheidet die bzw. der Vorsitzende des Prüfungsausschusses über den Antrag.\nAnschließend bereitet das Prüfungsamt den Bescheid vor: Wurde mindestens ein Modul anerkannt, verbucht es die anerkannten Leistungen im Campus-Management-System. Wurde mindestens ein Modul abgelehnt, formuliert es eine schriftliche Begründung mit Rechtsbehelfsbelehrung. Bei einer teilweisen Anerkennung geschieht beides.\nDanach erstellt das Prüfungsamt den Bescheid. Es versendet ihn an die Studierenden und archiviert gleichzeitig Antrag und Bescheid in der digitalen Studierendenakte. Sind beide Schritte erledigt, ist der Antrag abschließend bearbeitet.\n\n\nAufgabe 1: Fallbeschreibung analysieren\nDie Fallbeschreibung lesen und die gefundenen Begriffe in die mittlere Spalte eintragen. In der rechten Spalte angeben, mit welchem BPMN-Element der Begriff dargestellt wird.\n\n\n\n\n\n\n\n\nKategorie\nFundstellen im Text (Nr.) und Begriffe\nGeplantes BPMN-Element\n\n\n\n\nBeteiligte Organisationen\n\n\n\n\nRollen innerhalb der Hochschule\n\n\n\n\nAuslösendes Ereignis\n\n\n\n\nMögliche Ergebnisse des Prozesses\n\n\n\n\nEntscheidungen\n\n\n\n\nWartesituationen und Fristen\n\n\n\n\nNachrichten zwischen den Beteiligten\n\n\n\n\nDokumente und IT-Systeme\n\n\n\n\n\nLeitfragen: Wer arbeitet in eigener Verantwortung und kommuniziert nur über Nachrichten? Welche Schritte laufen gleichzeitig ab, welche schließen sich gegenseitig aus, und wo können mehrere Pfade zugleich aktiv sein?\n\n\nAufgabe 2: Kollaborationsdiagramm modellieren\nDas Anerkennungsverfahren aus Sicht der Hochschule als BPMN-Kollaborationsdiagramm modellieren. Die Studierenden als zugeklappten Pool (Black Box) darstellen, die Hochschule als Pool mit einer Lane je Rolle. Die fachliche Prüfung aus Schritt 4 hier als zugeklappten Teilprozess modellieren.\nDas Modell verwendet jedes der folgenden Elemente mindestens einmal fachlich korrekt:\n\nPool mit Lanes sowie ein zugeklappter Pool\nNachrichtenfluss zwischen den Pools (eingehend und ausgehend)\nNachrichten-Startereignis\nmindestens zwei unterschiedlich benannte Endereignisse\nAufgaben, davon mindestens eine Sende- und eine Benutzeraufgabe\nexklusives Gateway (XOR) mit einer Schleife\nereignisbasiertes Gateway mit Nachrichten- und Zeit-Zwischenereignis\nnicht unterbrechendes Zeit-Randereignis (Boundary Event)\ninklusives Gateway (OR) mit passendem Zusammenführungs-Gateway\nparalleles Gateway (AND) mit passendem Zusammenführungs-Gateway\nzugeklappter Teilprozess\nmindestens zwei Datenobjekte und ein Datenspeicher, jeweils mit Assoziation\neine Textanmerkung, die eine fachliche Regel aus dem Text festhält\n\n\n\nAufgabe 3: Teilprozess „Fachliche Prüfung“ detaillieren\nDen Teilprozess aus Aufgabe 2 in einem eigenen Diagramm modellieren. Er läuft vollständig bei der Fachprüferin bzw. dem Fachprüfer ab und besteht aus folgenden Schritten:\n\nDie Fachprüferin sichtet die eingereichten Modulbeschreibungen.\nDanach vergleicht sie die Lernergebnisse und den Arbeitsaufwand in ECTS-Punkten mit dem entsprechenden Modul des eigenen Studiengangs. Beide Vergleiche sind voneinander unabhängig und können in beliebiger Reihenfolge erfolgen.\nBestehen keine wesentlichen Unterschiede, empfiehlt sie die Anerkennung. Andernfalls hält sie die wesentlichen Unterschiede fest und empfiehlt die Ablehnung.\nAbschließend trägt sie ihre Empfehlung in das Anerkennungsformular ein.\n\nIm Diagramm aus Aufgabe 2 zusätzlich kennzeichnen, dass der Teilprozess für jedes beantragte Modul einmal durchlaufen wird. Welcher Marker ist dafür vorgesehen, und finden die Durchläufe parallel oder nacheinander statt?\n\n\nAufgabe 4: Modell begründen\nDie folgenden Fragen jeweils in zwei bis drei Sätzen beantworten:\n\nWarum eignet sich nach der Nachforderung ein ereignisbasiertes Gateway besser als ein exklusives Gateway?\nWas würde sich am Prozessablauf ändern, wenn das Zeit-Randereignis aus Schritt 5 unterbrechend wäre?\nWarum wird in Schritt 7 ein inklusives Gateway verwendet und kein exklusives oder paralleles Gateway?\nWarum werden Prüfungsamt, Fachprüfer und Prüfungsausschuss als Lanes eines Pools modelliert, die Studierenden dagegen als eigener Pool?\nEine Stelle im Prozess nennen, an der die Durchlaufzeit gefährdet ist, und eine Verbesserung vorschlagen.\n\n\n\nZusatzaufgabe: Rücknahme des Antrags · optional\nStudierende können ihren Antrag zurücknehmen, solange der Prüfungsausschuss noch nicht entschieden hat. Geht eine Rücknahme ein, wird die laufende Bearbeitung sofort abgebrochen. Das Prüfungsamt bestätigt den Studierenden die Rücknahme, und der Prozess endet.\nDas Modell entsprechend erweitern. Dazu die betroffenen Schritte so zusammenfassen, dass ein einziges Ereignis die Bearbeitung an jeder Stelle beenden kann. Begründen, ob ein unterbrechendes oder ein nicht unterbrechendes Ereignis passt."
-  },
-  {
-    "objectID": "werkzeuge/bpmn-uebung.html#modellierungsregeln",
-    "href": "werkzeuge/bpmn-uebung.html#modellierungsregeln",
-    "title": "BPMN-Übung: Anerkennung von Studienleistungen",
-    "section": "Modellierungsregeln",
-    "text": "Modellierungsregeln\nEs gelten die Konventionen aus der Einführung:\n\n\n\n\n\n\n\n\nElement\nBenennungsregel\nBeispiel\n\n\n\n\nAufgabe\nObjekt + Verb im Infinitiv\nAntrag prüfen\n\n\nEreignis\nObjekt + Partizip (Zustand)\nAntrag eingegangen\n\n\nExklusives Gateway\nFrage; ausgehende Kanten mit den Antworten beschriftet\nAntrag vollständig? ja / nein\n\n\nPool / Lane\nOrganisation bzw. Rolle, keine Person\nPrüfungsamt\n\n\n\n\nSequenzflüsse verbinden nur Elemente innerhalb eines Pools; zwischen Pools gibt es ausschließlich Nachrichtenflüsse.\nJeder Pfad endet in einem Endereignis; Verzweigungen werden mit einem Gateway desselben Typs wieder zusammengeführt.\nVon links nach rechts modellieren und sich kreuzende Kanten vermeiden, wo es möglich ist."
-  },
-  {
-    "objectID": "werkzeuge/bpmn-uebung.html#werkzeug-und-abgabe",
-    "href": "werkzeuge/bpmn-uebung.html#werkzeug-und-abgabe",
-    "title": "BPMN-Übung: Anerkennung von Studienleistungen",
-    "section": "Werkzeug und Abgabe",
-    "text": "Werkzeug und Abgabe\nWerkzeug: der kostenlose Camunda Modeler oder die Browser-Version demo.bpmn.io.\nAbgabe: je Gruppe die Modelldateien (.bpmn) aus Aufgabe 2 und 3, ein PDF mit den Diagrammen sowie die Antworten zu Aufgabe 4. Die Namen aller Gruppenmitglieder vermerken.\nWie Verwaltungen selbst BPMN-Modelle dokumentieren, zeigt der Attributkatalog für BPMN 2.0 des Bundesverwaltungsamts.\nZurück: Prozessmodellierung"
+    "objectID": "werkzeuge/interviews.html#haltung",
+    "href": "werkzeuge/interviews.html#haltung",
+    "title": "Interviews führen",
+    "section": "Umgang mit den Gesprächspartnerinnen und Gesprächspartnern",
+    "text": "Umgang mit den Gesprächspartnerinnen und Gesprächspartnern\nDie Verwaltungsmitarbeitenden nehmen sich Zeit für das Projekt. Dafür lohnt es sich, pünktlich und vorbereitet zu kommen, gut zuzuhören und nichts zu versprechen, was das Projekt nicht halten kann. Wir liefern Vorschläge und Prototypen mit erfundenen Daten. Ob etwas eingeführt wird, entscheidet die Hochschule. Diese Grenze benennen wir im Gespräch.\nWeiter: n8n auf dem HdM-Server"
   },
   {
     "objectID": "werkzeuge/n8n.html",
     "href": "werkzeuge/n8n.html",
     "title": "n8n auf dem HdM-Server",
     "section": "",
-    "text": "Jede Gruppe hat eine eigene n8n-Instanz mit eigener Datenbank auf einem Server der HdM. Diese Seite beschreibt Login, den ersten Workflow, die vorbereiteten Verbindungen zu Modell und Datenbank, Webhooks und die häufigsten Fehler."
+    "text": "Jede Gruppe hat eine eigene n8n-Instanz mit eigener Datenbank auf einem Server der HdM. Diese Seite beschreibt Login, den ersten Workflow, die vorbereiteten Verbindungen zu Modell und Datenbank, Webhooks und die häufigsten Fehler.\nNeu in n8n? Zuerst die sieben kleinen Beispiele unter n8n Schritt für Schritt durcharbeiten. Sie zeigen jeden Baustein einzeln, der hier im Zusammenhang vorkommt."
   },
   {
     "objectID": "werkzeuge/n8n.html#rolle",
@@ -536,7 +620,7 @@
     "href": "werkzeuge/n8n.html#login",
     "title": "n8n auf dem HdM-Server",
     "section": "Login",
-    "text": "Login\nVoraussetzungen: HdM-Netz oder VPN, Zugangsdaten der Gruppe.\n\nDie Adresse der Gruppe öffnen: https://141.62.116.2/n8n-&lt;n&gt;/, mit der Gruppennummer statt &lt;n&gt;. Alle Adressen stehen in der Vorbereitung.\nDie Zertifikatswarnung einmal bestätigen.\nMit dem Gruppenkonto anmelden (verwaltung-g&lt;n&gt;@hdm-stuttgart.de und das Passwort der Gruppe).\nPrüfen: Die Workflow-Übersicht erscheint. Unter „Credentials“ stehen „Postgres g“ und „Gemini g“.\n\nDas Konto wird von der Gruppe gemeinsam genutzt. Die Adresse ist nur der Login-Name, es werden keine Mails dorthin verschickt."
+    "text": "Login\nVoraussetzungen: HdM-Netz oder VPN, Zugangsdaten der Gruppe.\n\nDie Adresse der Gruppe öffnen: https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-&lt;n&gt;/, mit der Gruppennummer statt &lt;n&gt;. Alle Adressen stehen in der Vorbereitung.\nMit dem Gruppenkonto anmelden (verwaltung-g&lt;n&gt;@hdm-stuttgart.de und das Passwort der Gruppe).\nPrüfen: Die Workflow-Übersicht erscheint. Unter „Credentials“ stehen „Postgres g“ und „Gemini g“.\n\nDas Konto wird von der Gruppe gemeinsam genutzt. Die Adresse ist nur der Login-Name, es werden keine Mails dorthin verschickt."
   },
   {
     "objectID": "werkzeuge/n8n.html#erster-workflow",
@@ -564,7 +648,7 @@
     "href": "werkzeuge/n8n.html#webhook",
     "title": "n8n auf dem HdM-Server",
     "section": "Mock-Schnittstellen mit Webhooks",
-    "text": "Mock-Schnittstellen mit Webhooks\nEin Webhook-Knoten macht einen Workflow über eine Adresse aufrufbar. So lässt sich ein echtes System nachbauen: Ein kleiner Workflow „Mock Campus-System“ nimmt eine Antrags-ID entgegen und antwortet mit erfundenen Daten, so wie das echte System antworten würde. Der Prototyp ruft diesen Mock auf, statt auf ein echtes System zuzugreifen.\nDie Adresse lautet https://141.62.116.2/n8n-&lt;n&gt;/webhook/&lt;pfad&gt;. Der Pfad wird im Webhook-Knoten festgelegt. Damit sich die Gruppen nicht in die Quere kommen, beginnt jeder Pfad mit der Gruppennummer, zum Beispiel g3-campus-mock. Webhooks sind wie alles andere nur aus dem HdM-Netz und über VPN erreichbar; externe Dienste erreichen sie nicht.\nZum Testen in n8n „Listen for test event“ wählen und die Adresse im Browser aufrufen. Für den Dauerbetrieb den Workflow aktivieren; dann gilt die Produktionsadresse ohne -test."
+    "text": "Mock-Schnittstellen mit Webhooks\nEin Webhook-Knoten macht einen Workflow über eine Adresse aufrufbar. So lässt sich ein echtes System nachbauen: Ein kleiner Workflow „Mock Campus-System“ nimmt eine Antrags-ID entgegen und antwortet mit erfundenen Daten, so wie das echte System antworten würde. Der Prototyp ruft diesen Mock auf, statt auf ein echtes System zuzugreifen.\nDie Adresse lautet https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/n8n-&lt;n&gt;/webhook/&lt;pfad&gt;. Der Pfad wird im Webhook-Knoten festgelegt. Damit sich die Gruppen nicht in die Quere kommen, beginnt jeder Pfad mit der Gruppennummer, zum Beispiel g3-campus-mock. Webhooks sind wie alles andere nur aus dem HdM-Netz und über VPN erreichbar; externe Dienste erreichen sie nicht.\nZum Testen in n8n „Listen for test event“ wählen und die Adresse im Browser aufrufen. Für den Dauerbetrieb den Workflow oben rechts mit „Publish“ veröffentlichen; dann gilt die Produktionsadresse ohne -test."
   },
   {
     "objectID": "werkzeuge/n8n.html#postgres",
@@ -578,7 +662,7 @@
     "href": "werkzeuge/n8n.html#fehler",
     "title": "n8n auf dem HdM-Server",
     "section": "Wenn ein Lauf nicht funktioniert",
-    "text": "Wenn ein Lauf nicht funktioniert\n\n\n\n\n\n\n\nBeobachtung\nNächster Prüfschritt\n\n\n\n\nSeite lädt nicht, Zeitüberschreitung\nVPN verbunden? Adresse mit /n8n-&lt;n&gt;/ am Ende?\n\n\nZertifikatswarnung erneut\nAnderer Browser oder Ausnahme gelöscht; einmal neu bestätigen\n\n\nVerbindung im Modellknoten fehlt\n„Gemini g“ aus der Liste wählen; keinen eigenen Schlüssel eintragen\n\n\nModell antwortet mit Fehler oder Kontingent\nFehlermeldung ohne Zugangsdaten notieren und im Coaching melden\n\n\nLeeres Feld im Prompt\nSchreibweise des Feldes und Zuordnung im Antrag-Knoten prüfen\n\n\nWebhook antwortet nicht\nPfad mit Gruppenpräfix prüfen; Test-Adresse nur, solange „Listen for test event“ aktiv ist\n\n\nPostgres-Fehler „permission denied“\nDie Gruppe sieht nur die eigene Datenbank; Tabellenname und Schema prüfen\n\n\nFormal korrekt, fachlich falsch\nRegel, Prompt und Testfall vergleichen; der Fehler liegt meist im Kontext"
+    "text": "Wenn ein Lauf nicht funktioniert\n\n\n\n\n\n\n\nBeobachtung\nNächster Prüfschritt\n\n\n\n\nSeite lädt nicht, Zeitüberschreitung\nVPN verbunden? Adresse mit /n8n-&lt;n&gt;/ am Ende?\n\n\nVerbindung im Modellknoten fehlt\n„Gemini g“ aus der Liste wählen; keinen eigenen Schlüssel eintragen\n\n\nModell antwortet mit Fehler oder Kontingent\nFehlermeldung ohne Zugangsdaten notieren und im Coaching melden\n\n\nLeeres Feld im Prompt\nSchreibweise des Feldes und Zuordnung im Antrag-Knoten prüfen\n\n\nWebhook antwortet nicht\nPfad mit Gruppenpräfix prüfen; Test-Adresse nur, solange „Listen for test event“ aktiv ist\n\n\nPostgres-Fehler „permission denied“\nDie Gruppe sieht nur die eigene Datenbank; Tabellenname und Schema prüfen\n\n\nFormal korrekt, fachlich falsch\nRegel, Prompt und Testfall vergleichen; der Fehler liegt meist im Kontext"
   },
   {
     "objectID": "werkzeuge/n8n.html#vom-modell",

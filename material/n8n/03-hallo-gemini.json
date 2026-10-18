@@ -1,0 +1,109 @@
+{
+  "name": "03 Hallo Gemini",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "6675633a-b496-5f09-9a6a-1fd8661811cb",
+      "name": "Start",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "801817d6-a1d8-53ee-bafe-2d8802f74a8a",
+              "name": "mail",
+              "value": "Sehr geehrte Damen und Herren, ich möchte meine Bachelorarbeit anmelden. Mein Praxissemester habe ich im Sommer abgeschlossen, das Zeugnis reiche ich nach. Als Erstprüferin ist Frau Muster einverstanden. Ich würde gern am 1. Dezember beginnen. Viele Grüße, Alex Beispiel (erfundene Testmail)",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3b5fb7db-ddb4-54e9-b8f3-c56e021447bd",
+      "name": "Mail",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Fasse die folgende Mail in einem Satz zusammen. Nenne nur, was in der Mail steht.\n\nMail:\n{{ $json.mail }}"
+      },
+      "id": "4195f18a-9ebd-5935-a12d-4d311187740d",
+      "name": "Zusammenfassen",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        440,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-3.1-flash-lite",
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "id": "b9123996-8df4-568d-b74d-1086d1c4e7a8",
+      "name": "Gemini",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        440,
+        220
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Mail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mail": {
+      "main": [
+        [
+          {
+            "node": "Zusammenfassen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Zusammenfassen",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false
+}

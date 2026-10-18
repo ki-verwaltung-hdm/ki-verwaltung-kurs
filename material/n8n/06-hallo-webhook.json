@@ -1,0 +1,54 @@
+{
+  "name": "06 Hallo Webhook",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "gX-hallo",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "e613d71e-5dc2-5910-a6a3-b8b5d90fa26a",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "ab04911a-8059-5ea8-b6f6-94b57c53865a"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { \"antrag_id\": $json.query.id ?? \"unbekannt\", \"status\": \"in Prüfung\", \"leistungspunkte\": 195, \"hinweis\": \"Mock, erfundene Daten\" } }}",
+        "options": {}
+      },
+      "id": "bb583fac-b10a-54da-88f7-49c599516124",
+      "name": "Antwort",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        220,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Antwort",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false
+}
