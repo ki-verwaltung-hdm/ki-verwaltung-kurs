@@ -166,4 +166,58 @@ write("07-hallo-datenbank.json", "07 Hallo Datenbank", [
           "options": {}}, executeOnce=True),
 ], {"Start": {"main": [[main(w, "Tabelle anlegen")]]},
     "Tabelle anlegen": {"main": [[main(w, "Antraege lesen")]]}})
+
+# 8 Datentabelle: Pruefliste fuellen (a) und Entscheidungen auswerten (b)
+TABELLE = {"__rl": True, "mode": "name", "value": "pruefliste"}
+FAELLE = ('={{ ['
+          '{ "antrag_id": "A-001", "art": "Anmeldung Abschlussarbeit", "empfehlung": "Unterlagen vollständig, freigeben" }, '
+          '{ "antrag_id": "A-002", "art": "Anmeldung Abschlussarbeit", "empfehlung": "Zweitprüfer fehlt, Rückfrage" }, '
+          '{ "antrag_id": "A-003", "art": "Anerkennung", "empfehlung": "Modulbeschreibung fehlt, Rückfrage" }'
+          '] }}')
+w = "datentabelle-a"
+write("08a-pruefliste-fuellen.json", "08a Pruefliste fuellen", [
+    manual(w),
+    node(w, "Tabelle anlegen", "n8n-nodes-base.dataTable", 1.1, [220, 0], {
+        "resource": "table", "operation": "create", "tableName": "pruefliste",
+        "columns": {"column": [{"name": c, "type": "string"} for c in
+                               ("antrag_id", "art", "empfehlung", "entscheidung")]},
+        "options": {"createIfNotExists": True}}),
+    setnode(w, "Faelle", (440, 0), [("faelle", FAELLE, "array")]),
+    node(w, "Einzeln", "n8n-nodes-base.splitOut", 1, [660, 0], {"fieldToSplitOut": "faelle", "options": {}}),
+    node(w, "Zeilen eintragen", "n8n-nodes-base.dataTable", 1.1, [880, 0], {
+        "resource": "row", "operation": "upsert", "dataTableId": TABELLE,
+        "filters": {"conditions": [{"keyName": "antrag_id", "condition": "eq", "keyValue": "={{ $json.antrag_id }}"}]},
+        "columns": {"mappingMode": "autoMapInputData", "value": {}, "matchingColumns": [], "schema": [],
+                    "attemptToConvertTypes": False, "convertFieldsToString": False},
+        "options": {}}),
+], {"Start": {"main": [[main(w, "Tabelle anlegen")]]},
+    "Tabelle anlegen": {"main": [[main(w, "Faelle")]]},
+    "Faelle": {"main": [[main(w, "Einzeln")]]},
+    "Einzeln": {"main": [[main(w, "Zeilen eintragen")]]}})
+
+w = "datentabelle-b"
+write("08b-entscheidungen-auswerten.json", "08b Entscheidungen auswerten", [
+    manual(w),
+    node(w, "Entschiedene Faelle", "n8n-nodes-base.dataTable", 1.1, [220, 0], {
+        "resource": "row", "operation": "get", "dataTableId": TABELLE, "matchType": "allConditions",
+        "filters": {"conditions": [{"keyName": "entscheidung", "condition": "isNotEmpty"}]},
+        "returnAll": True}),
+    node(w, "Freigegeben?", "n8n-nodes-base.if", 2.2, [440, -100], {
+        "conditions": {
+            "options": {"caseSensitive": False, "leftValue": "", "typeValidation": "loose", "version": 2},
+            "conditions": [{"id": uid(w, "cond"), "leftValue": "={{ $json.entscheidung }}",
+                            "rightValue": "freigeben", "operator": {"type": "string", "operation": "equals"}}],
+            "combinator": "and"},
+        "options": {}}),
+    setnode(w, "Bescheid vorbereiten", (680, -200), [
+        ("antrag_id", "={{ $json.antrag_id }}", "string"),
+        ("naechster_schritt", "Bescheid entwerfen, die zuständige Person unterschreibt", "string")]),
+    setnode(w, "Rueckfrage vorbereiten", (680, 100), [
+        ("antrag_id", "={{ $json.antrag_id }}", "string"),
+        ("naechster_schritt", "=Rückfrage an Antragstellende: {{ $json.empfehlung }}", "string")]),
+    node(w, "Als CSV", "n8n-nodes-base.convertToFile", 1.1, [440, 160], {
+        "operation": "csv", "options": {"fileName": "pruefliste.csv"}}),
+], {"Start": {"main": [[main(w, "Entschiedene Faelle")]]},
+    "Entschiedene Faelle": {"main": [[main(w, "Freigegeben?"), main(w, "Als CSV")]]},
+    "Freigegeben?": {"main": [[main(w, "Bescheid vorbereiten")], [main(w, "Rueckfrage vorbereiten")]]}})
 print("ok", sorted(p.name for p in OUT.iterdir()))

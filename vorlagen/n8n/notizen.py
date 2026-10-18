@@ -149,6 +149,58 @@ Liest alle Zeilen. Jedes Item läuft einzeln durch die nächsten Knoten, z. B. d
 
 **BPMN:** Aufgabe, die aus dem Datenspeicher liest.""",
 },
+"08a-pruefliste-fuellen.json": {
+ "_": """## Beispiel 8a: Prüfliste füllen
+Der Workflow schreibt Fälle mit einer Empfehlung in eine **Datentabelle**. Die Tabelle liegt in n8n auf dem HdM-Server, nicht in einer fremden Cloud.
+
+**Ausprobieren:** ausführen. Dann links im Menü *Overview* → *Data tables* → `pruefliste` öffnen. In der Spalte `entscheidung` bei zwei Fällen `freigeben` oder `zurückgeben` eintragen. Weiter mit 08b.
+
+**BPMN 2.0:** Die Tabelle ist ein **Datenspeicher**. Das Eintragen der Entscheidung ist ein **Rechteck mit Person** in der Bahn Sachbearbeitung.""",
+ "Tabelle anlegen": """### Tabelle anlegen (Data Table)
+Legt `pruefliste` mit vier Spalten an. *Reuse Existing Tables* ist an: Gibt es die Tabelle schon, nimmt der Knoten sie.
+
+**BPMN:** Datenspeicher „Prüfliste“.""",
+ "Faelle": """### Faelle (Edit Fields)
+Drei erfundene Fälle als Liste. Im Prototyp stammen Empfehlungen aus einem Modellschritt wie in Beispiel 4.
+
+**BPMN:** Datenobjekt „Fälle“.""",
+ "Einzeln": """### Einzeln (Split Out)
+Macht aus der Liste drei Items, eines pro Fall. Jedes Item läuft einzeln weiter.
+
+**BPMN:** kein eigenes Element, technischer Schritt.""",
+ "Zeilen eintragen": """### Zeilen eintragen (Data Table, Upsert)
+Schreibt jeden Fall als Zeile. Upsert nach `antrag_id`: Ein zweiter Lauf legt nichts doppelt an und lässt `entscheidung` stehen.
+
+**BPMN:** Aufgabe, die in den Datenspeicher schreibt.""",
+},
+"08b-entscheidungen-auswerten.json": {
+ "_": """## Beispiel 8b: Entscheidungen auswerten
+Liest die Fälle, bei denen eine Person entschieden hat, und bereitet den nächsten Schritt vor. Das ist **Human in the Loop**: Der Mensch entscheidet in der Tabelle, der Workflow arbeitet danach weiter.
+
+**Ausprobieren:** erst 08a ausführen und in der Tabelle entscheiden, dann hier ausführen. Fälle ohne Entscheidung bleiben liegen.
+
+**BPMN 2.0:** Datenspeicher lesen, dann **Raute mit X** mit den Ausgängen freigeben und zurückgeben. Der Bescheid selbst bleibt beim Menschen.""",
+ "Entschiedene Faelle": """### Entschiedene Faelle (Data Table, Get)
+Holt alle Zeilen, in denen `entscheidung` nicht leer ist.
+
+**BPMN:** Aufgabe, die aus dem Datenspeicher liest.""",
+ "Freigegeben?": """### Freigegeben? (If)
+Prüft, ob in `entscheidung` freigeben steht. Groß- und Kleinschreibung spielt keine Rolle.
+
+**BPMN:** Raute mit X (exklusives Gateway).""",
+ "Bescheid vorbereiten": """### Bescheid vorbereiten
+Ausgang `true`. Bereitet den nächsten Schritt vor, schreibt aber nichts in ein Verwaltungssystem.
+
+**BPMN:** Pfeil „freigeben“, danach Rechteck mit Person „Bescheid unterschreiben“.""",
+ "Rueckfrage vorbereiten": """### Rueckfrage vorbereiten
+Ausgang `false`. Übernimmt die Empfehlung als Grund der Rückfrage.
+
+**BPMN:** Pfeil „zurückgeben“, danach Nachricht an die Bahn Antragstellende.""",
+ "Als CSV": """### Als CSV (Convert to File)
+Macht aus den entschiedenen Fällen die Datei `pruefliste.csv`. In der Ausgabe unter *Binary* herunterladen.
+
+**BPMN:** Datenobjekt „Prüfliste (Datei)“.""",
+},
 }
 
 

@@ -3,9 +3,9 @@ title: "n8n Schritt für Schritt"
 toc: true
 ---
 
-[Sieben kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle und Datenbank.]{.lead}
+[Acht kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle, Datenbank und eine Tabelle, in der ein Mensch entscheidet.]{.lead}
 
-Die Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Alle sieben liegen schon fertig in der Instanz jeder Gruppe, als „DEMO 01“ bis „DEMO 07“, mit den Verbindungen und Pfaden der Gruppe. Damit klicken wir sie im Termin gemeinsam durch. Zum Üben baut man sie danach selbst nach und vergleicht mit der DEMO-Fassung. Zusätzlich gibt es jede Datei zum Importieren. Danach folgt der [erste vollständige Workflow](n8n.qmd#erster-workflow) „Antrag prüfen“.
+Die Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Alle liegen schon fertig in der Instanz jeder Gruppe, als „DEMO 01“ bis „DEMO 08b“, mit den Verbindungen und Pfaden der Gruppe. Damit klicken wir sie im Termin gemeinsam durch. Zum Üben baut man sie danach selbst nach und vergleicht mit der DEMO-Fassung. Zusätzlich gibt es jede Datei zum Importieren. Danach folgt der [erste vollständige Workflow](n8n.qmd#erster-workflow) „Antrag prüfen“.
 
 ## Voraussetzungen {#voraussetzungen}
 
@@ -38,9 +38,9 @@ Das Soll-Modell in BPMN 2.0 ist der Bauplan, der Workflow in n8n die Umsetzung. 
 | Rechteck mit Tabelle (feste Regel) und Raute mit X | If-Knoten mit den Ausgängen `true` und `false` | 2 |
 | Rechteck mit Zahnrädern in der Bahn KI-Agent | Basic LLM Chain mit Chat Model | 3, 4 |
 | Datenobjekt mit festen Attributen | Structured Output Parser | 4 |
-| Rechteck mit Person, eigene Bahn | n8n Form (Eingabe, Freigabe, Bestätigung) | 5 |
+| Rechteck mit Person, eigene Bahn | n8n Form (Eingabe, Bestätigung), Eintrag in einer Datentabelle (Freigabe) | 5, 8 |
 | Eigener Pool mit Nachrichtenflüssen | Webhook und Respond to Webhook als Mock | 6 |
-| Datenspeicher (Zylinder) | Postgres-Knoten auf der Gruppen-Datenbank | 7 |
+| Datenspeicher (Zylinder) | Postgres-Knoten auf der Gruppen-Datenbank, Datentabelle in n8n | 7, 8 |
 | Endereignis (dicker Kreis) | Letzter Knoten ohne Nachfolger, Form Ending | 1, 5 |
 
 Jede Datei enthält Notizen auf der Arbeitsfläche: eine gelbe mit Ziel, Ausprobieren und BPMN-Bezug, dazu eine blaue an jedem Knoten. Beim eigenen Nachbauen lohnt es sich, dieselbe Zuordnung als Notiz festzuhalten. So bleibt sichtbar, welcher Knoten welchen Schritt des Soll-Modells umsetzt.
@@ -227,6 +227,50 @@ Jedes Item läuft einzeln durch die folgenden Knoten. Ein If-Knoten mit der Rege
 
 [Datei: 07-hallo-datenbank.json](../material/n8n/07-hallo-datenbank.json){download="07-hallo-datenbank.json"}
 
+## Beispiel 8: Ein Mensch entscheidet in der Tabelle {#datentabelle}
+
+**Ziel:** Fälle in eine Tabelle schreiben, eine Person entscheiden lassen und danach mit der Entscheidung weiterarbeiten. Das ist das Muster Human in the Loop aus dem Projekt.
+
+Eine **Datentabelle** (Data Table) ist eine einfache Tabelle in n8n selbst. Sie liegt auf dem HdM-Server, braucht keine Verbindung und lässt sich in der Oberfläche wie eine Tabellenkalkulation bearbeiten. Für Mock-Daten und kleine Prüflisten ist sie bequemer als die Postgres-Datenbank. Das Beispiel besteht aus zwei Workflows, weil zwischen ihnen ein Mensch arbeitet.
+
+### 8a: Prüfliste füllen
+
+1. Einen neuen Workflow „08a Pruefliste fuellen“ mit **Trigger manually** anlegen.
+2. Einen Knoten **Data table** mit der Aktion „Create a data table“ einfügen und „Tabelle anlegen“ nennen.
+3. Als Namen `pruefliste` eintragen und vier Spalten vom Typ String anlegen: `antrag_id`, `art`, `empfehlung`, `entscheidung`.
+4. Unter „Options“ die Einstellung „Reuse Existing Tables“ einschalten.
+5. Einen Knoten **Edit Fields** „Faelle“ anhängen, Feld `faelle` vom Typ Array mit drei erfundenen Fällen (siehe Datei).
+6. Einen Knoten **Split Out** „Einzeln“ anhängen, „Field To Split Out“ auf `faelle` setzen.
+7. Einen Knoten **Data table** mit der Aktion „Upsert row(s)“ anhängen und „Zeilen eintragen“ nennen.
+8. Als Tabelle „By Name“ `pruefliste` wählen und als Bedingung `antrag_id` gleich `{{ $json.antrag_id }}` setzen.
+9. Unter „Mapping Column Mode“ die Option „Map Automatically“ wählen.
+10. Den Workflow ausführen.
+
+**Prüfung:** Links im Menü „Overview“, dann den Reiter „Data tables“ öffnen. Die Tabelle `pruefliste` hat drei Zeilen, die Spalte `entscheidung` ist leer.
+
+### Die Person entscheidet
+
+1. Die Tabelle `pruefliste` öffnen.
+2. Bei `A-001` in der Spalte `entscheidung` den Wert `freigeben` eintragen.
+3. Bei `A-003` den Wert `zurückgeben` eintragen.
+4. `A-002` leer lassen. Dieser Fall ist noch nicht entschieden.
+
+### 8b: Entscheidungen auswerten
+
+1. Einen neuen Workflow „08b Entscheidungen auswerten“ mit **Trigger manually** anlegen.
+2. Einen Knoten **Data table** mit der Aktion „Get row(s)“ einfügen und „Entschiedene Faelle“ nennen.
+3. Als Tabelle `pruefliste` wählen und als Bedingung `entscheidung` „Is Not Empty“ setzen. „Return All“ einschalten.
+4. Einen Knoten **If** „Freigegeben?“ anhängen: `{{ $json.entscheidung }}` ist gleich `freigeben`, unter „Options“ „Ignore Case“ einschalten.
+5. An `true` einen Knoten **Edit Fields** „Bescheid vorbereiten“ hängen, an `false` einen Knoten „Rueckfrage vorbereiten“.
+6. Zusätzlich an „Entschiedene Faelle“ einen Knoten **Convert to File** mit „Convert to CSV“ hängen, Dateiname `pruefliste.csv`.
+7. Den Workflow ausführen.
+
+**Prüfung:** Nur `A-001` und `A-003` kommen an. `A-001` landet bei „Bescheid vorbereiten“, `A-003` bei „Rueckfrage vorbereiten“. Der Knoten „Als CSV“ zeigt unter „Binary“ eine Datei zum Herunterladen.
+
+Ein zweiter Lauf von 8a überschreibt keine Entscheidung, weil Upsert nur die Spalten aus den Fällen schreibt. Kein Schritt schreibt in ein Verwaltungssystem: „Bescheid vorbereiten“ zeigt nur, was als Nächstes geschähe. Im Prototyp ersetzt diese Tabelle die Freigabe per Formular aus [n8n auf dem HdM-Server](n8n.qmd#freigabe), wenn mehrere Fälle gesammelt entschieden werden.
+
+[Datei: 08a-pruefliste-fuellen.json](../material/n8n/08a-pruefliste-fuellen.json){download="08a-pruefliste-fuellen.json"} · [Datei: 08b-entscheidungen-auswerten.json](../material/n8n/08b-entscheidungen-auswerten.json){download="08b-entscheidungen-auswerten.json"}
+
 ## Wenn etwas nicht klappt {#fehler}
 
 | Beobachtung | Nächster Prüfschritt |
@@ -237,6 +281,7 @@ Jedes Item läuft einzeln durch die folgenden Knoten. Ein If-Knoten mit der Rege
 | Structured Output Parser meldet „could not parse“ | Prompt um „Antworte nur im vorgegebenen Format“ ergänzen und erneut ausführen |
 | Formular oder Webhook antwortet nicht | Test-Adresse gilt nur während „Listen for test event“. Sonst „Publish“ und Adresse ohne `-test` |
 | Postgres meldet „relation does not exist“ | Zuerst den Knoten „Tabelle anlegen“ ausführen |
+| Data table findet `pruefliste` nicht | Zuerst 8a ausführen. Die Tabelle gehört zum Projekt, in dem 8a lief |
 
 Weitere Fälle stehen unter [Wenn ein Lauf nicht funktioniert](n8n.qmd#fehler).
 
@@ -251,6 +296,8 @@ Weitere Fälle stehen unter [Wenn ein Lauf nicht funktioniert](n8n.qmd#fehler).
 | [05-hallo-formular.json](../material/n8n/05-hallo-formular.json){download="05-hallo-formular.json"} | n8n Form Trigger und Form Ending |
 | [06-hallo-webhook.json](../material/n8n/06-hallo-webhook.json){download="06-hallo-webhook.json"} | Webhook und Respond to Webhook (Mock) |
 | [07-hallo-datenbank.json](../material/n8n/07-hallo-datenbank.json){download="07-hallo-datenbank.json"} | Postgres in der Gruppen-Datenbank |
+| [08a-pruefliste-fuellen.json](../material/n8n/08a-pruefliste-fuellen.json){download="08a-pruefliste-fuellen.json"} | Datentabelle anlegen und per Upsert füllen |
+| [08b-entscheidungen-auswerten.json](../material/n8n/08b-entscheidungen-auswerten.json){download="08b-entscheidungen-auswerten.json"} | Entscheidungen lesen, verzweigen, als CSV ausgeben |
 
 In den Dateien 05 und 06 steht der Pfad `gX-...`. Nach dem Import das `X` durch die Gruppennummer ersetzen.
 
