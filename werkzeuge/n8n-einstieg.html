@@ -317,6 +317,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#datenbank" id="toc-datenbank" class="nav-link" data-scroll-target="#datenbank">Beispiel 7: Hallo Datenbank</a></li>
   <li><a href="#datentabelle" id="toc-datentabelle" class="nav-link" data-scroll-target="#datentabelle">Beispiel 8: Ein Mensch entscheidet in der Tabelle</a></li>
   <li><a href="#wissenssuche" id="toc-wissenssuche" class="nav-link" data-scroll-target="#wissenssuche">Beispiel 9: Wissenssuche in einer Ordnung</a></li>
+  <li><a href="#agent" id="toc-agent" class="nav-link" data-scroll-target="#agent">Beispiel 10: Ein Agent prüft einen Antrag</a></li>
   <li><a href="#fehler" id="toc-fehler" class="nav-link" data-scroll-target="#fehler">Wenn etwas nicht klappt</a></li>
   <li><a href="#dateien" id="toc-dateien" class="nav-link" data-scroll-target="#dateien">Alle Dateien</a></li>
   </ul>
@@ -344,8 +345,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><span class="lead">Neun kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle, Datenbank, eine Tabelle, in der ein Mensch entscheidet, und eine Wissenssuche über eine Ordnung.</span></p>
-<p>Die Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Alle liegen schon fertig in der Instanz jeder Gruppe, als „DEMO 01“ bis „DEMO 09b“, mit den Verbindungen und Pfaden der Gruppe. Damit klicken wir sie im Termin gemeinsam durch. Zum Üben baut man sie danach selbst nach und vergleicht mit der DEMO-Fassung. Zusätzlich gibt es jede Datei zum Importieren. Danach folgt der <a href="../werkzeuge/n8n.html#erster-workflow">erste vollständige Workflow</a> „Antrag prüfen“.</p>
+<p><span class="lead">Zehn kleine Beispiele, jedes in wenigen Minuten gebaut. Jedes zeigt genau einen Baustein, den wir später im Prototyp brauchen: Daten, Regeln, Modell, strukturierte Ausgabe, Formular, Mock-Schnittstelle, Datenbank, eine Tabelle, in der ein Mensch entscheidet, eine Wissenssuche über eine Ordnung und zum Schluss ein Agent, der selbst Werkzeuge wählt.</span></p>
+<p>Die Beispiele bauen aufeinander auf. Wer neu in n8n ist, arbeitet sie der Reihe nach durch. Alle liegen schon fertig in der Instanz jeder Gruppe, als „DEMO 01“ bis „DEMO 10“, mit den Verbindungen und Pfaden der Gruppe. Damit klicken wir sie im Termin gemeinsam durch. Zum Üben baut man sie danach selbst nach und vergleicht mit der DEMO-Fassung. Zusätzlich gibt es jede Datei zum Importieren. Danach folgt der <a href="../werkzeuge/n8n.html#erster-workflow">erste vollständige Workflow</a> „Antrag prüfen“.</p>
 <section id="voraussetzungen" class="level2">
 <h2 class="anchored" data-anchor-id="voraussetzungen">Voraussetzungen</h2>
 <ul>
@@ -460,6 +461,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>9</td>
 </tr>
 <tr class="even">
+<td>Rechteck mit Zahnrädern, innen ohne feste Reihenfolge</td>
+<td>AI Agent mit Werkzeugen</td>
+<td>10</td>
+</tr>
+<tr class="odd">
 <td>Endereignis (dicker Kreis)</td>
 <td>Letzter Knoten ohne Nachfolger, Form Ending</td>
 <td>1, 5</td>
@@ -711,6 +717,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><a href="../material/n8n/09a-ordnung-ablegen.json" download="09a-ordnung-ablegen.json">Datei: 09a-ordnung-ablegen.json</a> · <a href="../material/n8n/09b-ordnung-fragen.json" download="09b-ordnung-fragen.json">Datei: 09b-ordnung-fragen.json</a></p>
 </section>
 </section>
+<section id="agent" class="level2">
+<h2 class="anchored" data-anchor-id="agent">Beispiel 10: Ein Agent prüft einen Antrag</h2>
+<p><strong>Ziel:</strong> Einen Agenten bauen, der für einen Prüfauftrag selbst entscheidet, welche Werkzeuge er nutzt.</p>
+<p>In den Beispielen 1 bis 9 legt der Workflow die Reihenfolge fest. Ein <strong>Agent</strong> bekommt dagegen einen Auftrag und Werkzeuge und plant die Schritte selbst. Das ist flexibler, aber schwerer zu prüfen. Deshalb gilt aus <a href="../werkzeuge/n8n.html#rolle">n8n auf dem HdM-Server</a>: Ein Agent ist nur dann die bessere Wahl, wenn er einen belegbaren Vorteil bringt. Der Agent hier verbindet zwei Bausteine, die schon da sind: die Tabelle <code>antraege</code> aus Beispiel 7 und die Ordnung aus Beispiel 9.</p>
+<p><strong>Voraussetzungen:</strong> Beispiel 7 und Beispiel 9a sind einmal ausgeführt.</p>
+<ol type="1">
+<li>Einen neuen Workflow „10 Agent“ mit <strong>Trigger manually</strong> anlegen.</li>
+<li>Einen Knoten <strong>Edit Fields</strong> „Auftrag“ mit dem Feld <code>auftrag</code> einfügen: Prüfe, ob Antrag A-001 zur Bachelorarbeit zugelassen werden kann.</li>
+<li>Einen Knoten <strong>AI Agent</strong> anhängen und „Pruef-Agent“ nennen. „Source for Prompt“ auf „Define below“, als Prompt <code>{ $json.auftrag }</code>.</li>
+<li>Unter „Options“ eine „System Message“ eintragen: Rolle, Vorgehen in drei Schritten, Antwortformat, Grenzen (siehe Datei).</li>
+<li>Unter „Options“ zusätzlich „Max Iterations“ auf 6 setzen und „Return Intermediate Steps“ einschalten.</li>
+<li>Am Anschluss „Chat Model“ den Knoten <strong>Google Gemini Chat Model</strong> mit <strong>Gemini g<n></n></strong> einfügen.</li>
+<li>Am Anschluss „Tool“ den Knoten <strong>Postgres Tool</strong> einfügen und <code>antrag_nachschlagen</code> nennen, Credential <strong>Postgres g<n></n></strong>.</li>
+<li>Im Postgres Tool eine Beschreibung eintragen: Liest einen Antrag aus der Tabelle antraege. Eingabe: Antragsnummer wie A-001.</li>
+<li>Als Query <code>SELECT antrag_id, art, leistungspunkte FROM antraege WHERE antrag_id = $1;</code> eintragen.</li>
+<li>Unter „Options“ bei „Query Parameters“ den Wert <code>{ $fromAI('antrag_id', 'Antragsnummer, zum Beispiel A-001', 'string') }</code> eintragen.</li>
+<li>Am Anschluss „Tool“ einen zweiten Knoten <strong>Postgres PGVector Store</strong> einfügen, Operation Mode „Retrieve Documents (As Tool for AI Agent)“, Name <code>ordnung_durchsuchen</code>, Tabelle <code>ordnung_vektoren</code>, Limit 3.</li>
+<li>Daran den Knoten <strong>Embeddings Google Gemini</strong> mit <strong>Gemini g<n></n></strong> einfügen.</li>
+<li>Den Workflow ausführen.</li>
+</ol>
+<p><strong>Prüfung:</strong> Unter „Logs“ zeigt der Agent zwei Werkzeugaufrufe: zuerst <code>antrag_nachschlagen</code> mit A-001, dann <code>ordnung_durchsuchen</code>. Das Ergebnis lautet „nicht zulässig“, weil A-001 195 statt 210 Leistungspunkte hat (§ 2). Das Praxissemester steht nicht in der Tabelle und erscheint als offene Prüfung, nicht als Mangel. Die Antwort endet mit „Die Entscheidung trifft die zuständige Person.“</p>
+<p>Dann den Auftrag auf A-002 ändern. A-002 hat genug Leistungspunkte, das Praxissemester bleibt aber unbekannt. Das Ergebnis sollte deshalb „unklar“ lauten, nicht „zulässig“.</p>
+<p>Genau diese Stellen prüfen wir bei jedem Agenten: Ruft er die Werkzeuge auf, statt zu raten? Behauptet er etwas, das kein Werkzeug geliefert hat? Hält er die Grenzen aus dem Systemprompt ein? Den Systemprompt haben wir nach dem ersten Test nachgeschärft. Ohne den Satz „Was die Werkzeuge nicht liefern, ist unklar und nicht fehlend“ behauptete der Agent, das Praxissemester sei nicht nachgewiesen.</p>
+<p><a href="../material/n8n/10-agent.json" download="10-agent.json">Datei: 10-agent.json</a></p>
+</section>
 <section id="fehler" class="level2">
 <h2 class="anchored" data-anchor-id="fehler">Wenn etwas nicht klappt</h2>
 <table class="caption-top table">
@@ -759,7 +790,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td>9b antwortet „Dazu steht nichts in der Ordnung“, obwohl es dort steht</td>
-<td>Frage näher am Wortlaut der Ordnung stellen oder im Retriever Top K erhöhen</td>
+<td>Frage näher am Wortlaut der Ordnung stellen oder im Retriever das Limit erhöhen</td>
+</tr>
+<tr class="even">
+<td>Agent ruft kein Werkzeug auf oder rät</td>
+<td>Werkzeugbeschreibung präzisieren. Im Systemprompt das Vorgehen als Schritte vorgeben</td>
+</tr>
+<tr class="odd">
+<td>Agent bricht mit „max iterations“ ab</td>
+<td>Auftrag enger fassen oder Max Iterations erhöhen</td>
 </tr>
 </tbody>
 </table>
@@ -818,6 +857,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><a href="../material/n8n/09b-ordnung-fragen.json" download="09b-ordnung-fragen.json">09b-ordnung-fragen.json</a></td>
 <td>Frage an die Ordnung mit Q&amp;A Chain, Antwort mit Paragraf</td>
+</tr>
+<tr class="even">
+<td><a href="../material/n8n/10-agent.json" download="10-agent.json">10-agent.json</a></td>
+<td>AI Agent mit Postgres-Werkzeug und Ordnungssuche</td>
 </tr>
 </tbody>
 </table>
