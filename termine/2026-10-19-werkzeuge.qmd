@@ -1,6 +1,8 @@
 ---
-title: "Werkzeuge"
+title: "19.10. · Werkzeuge"
 toc: true
+aliases:
+  - ../wochen/woche-02.html
 ---
 
 [Montag, 19. Oktober 2026 · 11:45 bis 13:15 Uhr · Raum I110 · Notebook mitbringen, VPN eingerichtet]{.kicker}
@@ -9,6 +11,13 @@ toc: true
 - Einführung in KI-Agenten: was ein Agent ist und wann ein Workflow besser passt
 - n8n auf dem HdM-Server: die DEMO-Workflows gemeinsam durchklicken, vom ersten Knoten bis zum Agenten
 - Antigravity: den Coding-Agenten einrichten und aus dem Prozesskandidaten ein BPMN-Modell erzeugen
+:::
+
+::: {.callout-note title="Ausgegeben am 19.10."}
+- Folien: Einführung in KI-Agenten ([PDF](../material/folien/2026-10-19-einfuehrung-ki-agenten.pdf))
+- Anleitung: [n8n Schritt für Schritt](../werkzeuge/n8n-einstieg.qmd) mit den DEMO-Workflows 01 bis 10
+- Anleitung: [Coding-Agent einrichten](../werkzeuge/einrichtung.qmd) mit AGENTS.md-Vorlage und Prompt-Standard
+- Auftrag für den Agenten: [Ist-Prozess aus einer Beschreibung](../material/prompts/ist-aus-prosa.md)
 :::
 
 ## Ziel des Termins
@@ -120,6 +129,6 @@ In jeder Gruppeninstanz liegen die Beispiele schon fertig als „DEMO 01“ bis 
 
 ## Nächste Schritte {#naechste}
 
-Als Nächstes folgt Etappe 2 des [Recherche-Auftrags](woche-01.qmd#recherche): Quellen, Erkenntnisse, überarbeiteter Referenzprozess, Leitfragen. Den Termin dafür vereinbaren wir gemeinsam; die Ergebnisse besprechen wir im Coaching. Parallel arbeiten die Gruppen die n8n-Beispiele 5 bis 10 durch. Die Interviewtermine vereinbaren wir mit den Verwaltungsbereichen; sobald ein Termin steht, bereiten sich die beiden zugeordneten Gruppen gemeinsam nach [Interviews führen](../werkzeuge/interviews.qmd) vor.
+Als Nächstes folgt Etappe 2 des [Recherche-Auftrags](2026-10-12-kick-off.qmd#recherche): Quellen, Erkenntnisse, überarbeiteter Referenzprozess, Leitfragen. Den Termin dafür vereinbaren wir gemeinsam; die Ergebnisse besprechen wir im Coaching. Parallel arbeiten die Gruppen die n8n-Beispiele 5 bis 10 durch. Die Interviewtermine vereinbaren wir mit den Verwaltungsbereichen; sobald ein Termin steht, bereiten sich die beiden zugeordneten Gruppen gemeinsam nach [Interviews führen](../werkzeuge/interviews.qmd) vor.
 
-[**Zurück zum Kick-off**](woche-01.qmd) · [**Semesterplan**](../semester.qmd)
+[**Alle Termine**](index.qmd) · [**Zurück: 12.10. Kick-off**](2026-10-12-kick-off.qmd) · [**Weiter: 26.10. n8n, Prompts, Antigravity**](2026-10-26-n8n-prompts.qmd)

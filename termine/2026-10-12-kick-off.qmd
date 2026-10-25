@@ -1,6 +1,8 @@
 ---
-title: "Kick-off"
+title: "12.10. · Kick-off"
 toc: true
+aliases:
+  - ../wochen/woche-01.html
 ---
 
 [Montag, 12. Oktober 2026 · 11:45 bis 13:15 Uhr · Raum I110]{.kicker}
@@ -10,6 +12,13 @@ toc: true
 - Einführung in BPMN 2.0 mit Beispielen aus der Hochschulverwaltung
 - Der Recherche-Auftrag in zwei Etappen
 - Umfrage und Gruppenbildung
+:::
+
+::: {.callout-note title="Ausgegeben am 12.10."}
+- Folien: Einführung in BPMN 2.0 von Prof. Dr. Wilczek ([PDF](../material/bpmn/einfuehrung-bpmn.pdf), [PowerPoint](../material/bpmn/einfuehrung-bpmn.pptx))
+- Übung: [BPMN-Übung „Anerkennung von Studienleistungen“](../werkzeuge/bpmn-uebung.qmd)
+- Auftrag: [Recherche in zwei Etappen](#recherche)
+- Vorlage: [Teamablage](../start.qmd#ablage)
 :::
 
 ## Ziel des Termins
@@ -125,4 +134,4 @@ Ein Hinweis zur Recherche mit KI: Gemini und andere Chat-Werkzeuge dürfen zur R
 2. Google-Konto bereithalten; wer möchte, das [Studierendenangebot](../start.qmd#google) einlösen. Pro Gruppe reicht ein Zugang zu Antigravity.
 3. Etappe 1 des Recherche-Auftrags erledigen: Prozesskandidat beschreiben.
 
-[**Weiter: Werkzeuge**](woche-02.qmd)
+[**Alle Termine**](index.qmd) · [**Weiter: 19.10. Werkzeuge**](2026-10-19-werkzeuge.qmd)

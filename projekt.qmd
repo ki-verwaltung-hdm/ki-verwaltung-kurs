@@ -60,7 +60,7 @@ Interviewpartnerinnen und Interviewpartner nennen wir auf dieser Website nicht n
 | 4 · Prototyp | Den Soll-Prozess als n8n-Workflow umsetzen: mit Mock-Daten, mit Freigabe durch einen Menschen, ohne Zugriff auf echte Systeme | Lauffähiger Prototyp mit Testfällen |
 | 5 · Bewertung | Den Prototyp an Testfällen prüfen, Grenzen dokumentieren, Empfehlungen formulieren | Bewertung, Empfehlungen, Abschlusspräsentation |
 
-Die Phasen bauen aufeinander auf. Wochen 1 und 2 stehen im [Semesterplan](semester.qmd) im Detail, die übrigen Phasen als Rahmen; ihre Termine vereinbaren wir im Semester.
+Die Phasen bauen aufeinander auf. Was an jedem Termin ausgegeben wurde, steht unter [Termine](termine/index.qmd), dort auch die weiteren Phasen als Rahmen.
 
 ![](images/projekt-phasen.svg){.abbildung fig-alt="Fünf Phasen als Kette: Recherche, Interviews, Modellierung, Prototyp, Bewertung."}
 
@@ -110,4 +110,4 @@ Das Projekt ist ausdrücklich ein Experiment. Am Ende muss nicht überall ein Pr
 
 Die Ergebnisse stellen wir am Semesterende den beteiligten Verwaltungsbereichen vor. Was daraus wird, entscheidet die Hochschule.
 
-[**Weiter zum Semesterplan**](semester.qmd)
+[**Weiter zu den Terminen**](termine/index.qmd)

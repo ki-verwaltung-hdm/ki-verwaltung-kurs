@@ -73,7 +73,7 @@ write("02-wenn-dann.json", "02 Wenn dann", [
 MAIL = ("Sehr geehrte Damen und Herren, ich möchte meine Bachelorarbeit anmelden. "
         "Mein Praxissemester habe ich im Sommer abgeschlossen, das Zeugnis reiche ich nach. "
         "Als Erstprüferin ist Frau Muster einverstanden. Ich würde gern am 1. Dezember beginnen. "
-        "Viele Grüße, Alex Beispiel (erfundene Testmail)")
+        "Viele Grüße, Alex Beispiel")
 
 # 3 Hallo Gemini
 w = "hallo-gemini"
@@ -100,7 +100,7 @@ write("04-strukturierte-antwort.json", "04 Strukturierte Antwort", [
         "promptType": "define",
         "text": ("=Kontext: Mail einer Studentin oder eines Studenten an das Prüfungsamt. "
                  "Für die Anmeldung der Bachelorarbeit braucht es: abgeschlossenes Praxissemester mit Zeugnis, "
-                 "Erstprüfer, Zweitprüfer, Wunschtermin. Alle Angaben sind erfundene Testdaten.\n\n"
+                 "Erstprüfer, Zweitprüfer, Wunschtermin.\n\n"
                  "Aufgabe: Übertrage die Mail in die Felder des Formats.\n\n"
                  "Prüfung: Trage nur ein, was in der Mail steht. Was fehlt oder nur angekündigt ist, "
                  "kommt in fehlende_angaben.\n\nMail:\n{{ $json.mail }}"),
@@ -289,7 +289,7 @@ write("09b-ordnung-fragen.json", "09b Ordnung fragen", [
     "Embeddings": {"ai_embedding": [[{"node": "Ordnung (Vektorspeicher)", "type": "ai_embedding", "index": 0}]]}})
 
 # 10 Agent mit zwei Werkzeugen (braucht die Tabellen aus 07 und 09a)
-SYSTEM_AGENT = ("Du unterstützt das Prüfungsamt bei der Vorprüfung von Anträgen. Alle Daten sind erfunden.\n"
+SYSTEM_AGENT = ("Du unterstützt das Prüfungsamt bei der Vorprüfung von Anträgen.\n"
                 "Arbeite so:\n"
                 "1. Schlage den Antrag mit dem Werkzeug antrag_nachschlagen nach.\n"
                 "2. Suche die passende Regel mit dem Werkzeug ordnung_durchsuchen.\n"

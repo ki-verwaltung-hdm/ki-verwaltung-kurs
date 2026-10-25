@@ -98,6 +98,7 @@ Seit Oktober 2026 gibt es eine neue Klasse von Modellen, die keinen Text erzeuge
 |---|---|
 | [Ist-Prozess aus einer Beschreibung](material/prompts/ist-aus-prosa.md) | Aus Prosa oder Protokoll ein BPMN-Modell des heutigen Ablaufs erzeugen |
 | [Prozess mit KI neu denken](material/prompts/redesign-mit-ki.md) | Aus dem Ist-Modell ein Soll-Modell mit KI-Agent und eine Begründung erzeugen |
+| [Workflow aus dem Soll-Modell](material/prompts/workflow-aus-soll.md) | Aus dem Soll-Modell einen importierbaren n8n-Workflow erzeugen |
 | [Vorlage AGENTS.md](werkzeuge/einrichtung.qmd#agents-md) | Kontext und Regeln für den Agenten im Projektordner |
 | [Prompt-Standard](werkzeuge/einrichtung.qmd#prompt) | Kontext, Aufgabe, Format, Prüfung |
 

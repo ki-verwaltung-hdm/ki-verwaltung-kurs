@@ -1,0 +1,36 @@
+---
+title: "Termine"
+toc: true
+aliases:
+  - ../semester.html
+---
+
+[Jeder Termin hat eine eigene Seite mit allem, was wir an diesem Tag ausgegeben haben: Folien, Übungen, Aufträge und Dateien. Der neueste Termin steht oben.]{.lead}
+
+## Bisherige Termine
+
+| Datum | Thema | Ausgegeben |
+|---|---|---|
+| [26.10.](2026-10-26-n8n-prompts.qmd) | n8n vertiefen, Prompts im Agenten, Workflows mit Antigravity bauen | DEMO 08 und 10, Prompt-Übung, [Auftrag „Workflow aus dem Soll-Modell“](../material/prompts/workflow-aus-soll.md) |
+| [19.10.](2026-10-19-werkzeuge.qmd) | Einführung in KI-Agenten, n8n auf dem HdM-Server, Antigravity einrichten | [Folien als PDF](../material/folien/2026-10-19-einfuehrung-ki-agenten.pdf), DEMO-Workflows 01 bis 10, [Auftrag „Ist-Prozess aus einer Beschreibung“](../material/prompts/ist-aus-prosa.md) |
+| [12.10.](2026-10-12-kick-off.qmd) | Kick-off: Auftrag, Vorgehen, BPMN 2.0, Recherche, Gruppen | [BPMN-Folien als PDF](../material/bpmn/einfuehrung-bpmn.pdf), [BPMN-Übung](../werkzeuge/bpmn-uebung.qmd), Recherche-Auftrag, Teamablage |
+
+Montags, 11:45 bis 13:15 Uhr, Raum I110. Der Montag ist ein Coaching-Angebot: Fragen aus den Gruppen, Rückmeldung zu Zwischenständen, bei Bedarf ein Input mit Übung. Neue Termine kommen oben in die Tabelle.
+
+## Die weiteren Phasen
+
+![](../images/semester-ablauf.svg){.abbildung fig-alt="Zeitstrahl: Kick-off und Werkzeuge als feste Punkte, danach Coachings zu Interviews, Modellierung, Prototyp und Review sowie der Abschluss, ohne Termine."}
+
+::: {.abb-cap}
+Zwei feste Termine zu Beginn, danach Coachings im Takt der Interviews. Leere Punkte werden im Semester vereinbart.
+:::
+
+| Phase | Was passiert | Ergebnis |
+|---|---|---|
+| Interviews | Erstgespräche mit den Verwaltungsbereichen, je zwei Gruppen gemeinsam. Vorbereitung mit Leitfaden, Protokoll statt Aufnahme | Protokoll und offene Fragen |
+| Modellierung | Ist-Prozess aus dem Protokoll modellieren, Soll-Prozess mit KI-Agent entwerfen, zweites Gespräch zum Nachschärfen, Vorstellung beim Interviewpartner | Ist- und Soll-Modell, bestätigt |
+| Prototyp | Soll-Prozess in n8n umsetzen: Mock-Daten und Mock-Schnittstellen, Modellschritte, Freigabe durch einen Menschen | Lauffähiger Workflow mit ersten Testfällen |
+| Review | Prototypen gegenseitig prüfen, Testfälle ergänzen, Grenzen dokumentieren | Testprotokoll, Liste der Grenzen |
+| Bewertung und Abschluss | Bewertung, Empfehlungen, Abschlusspräsentation vor den beteiligten Bereichen | Präsentation und Abgabe |
+
+Die Reihenfolge der Interviews hängt von der Verfügbarkeit der Verwaltungsbereiche ab. Wer noch auf sein Interview wartet, arbeitet an Recherche, Referenzmodell und Mock-Daten weiter. Feste Fristen stehen unter [Bewertung](../bewertung.qmd).

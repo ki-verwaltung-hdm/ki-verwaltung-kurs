@@ -14,20 +14,19 @@ anchor-sections: false
 
 ::: {.hero-actions}
 <a href="projekt.html" class="btn btn-primary">Zum Projekt</a>
-<a href="wochen/woche-01.html" class="btn btn-outline">Kick-off</a>
+<a href="termine/index.html" class="btn btn-outline">Termine</a>
 :::
 :::
 
 ## Termine
 
-| Termin | Was |
+| Datum | Was |
 |---|---|
-| [Kick-off](wochen/woche-01.qmd) | Kontext, Prozessmodellierung, Recherche-Auftrag, Gruppenbildung |
-| [Werkzeuge](wochen/woche-02.qmd) | KI-Agenten, n8n, Antigravity und Prozessmodell mit dem Agenten |
-| Coachings | wöchentlich montags, 11:45 bis 13:15 Uhr: Fragen, Rückmeldung zu Interviews, Modellierung und Prototyp |
-| Abschlusspräsentation und Abgabe | Termine werden noch vereinbart, Details unter [Bewertung](bewertung.qmd) |
+| [26.10.](termine/2026-10-26-n8n-prompts.qmd) | n8n vertiefen, Prompts im Agenten, Workflows mit Antigravity bauen |
+| [19.10.](termine/2026-10-19-werkzeuge.qmd) | KI-Agenten, n8n, Antigravity und Prozessmodell mit dem Agenten |
+| [12.10.](termine/2026-10-12-kick-off.qmd) | Kick-off: Kontext, Prozessmodellierung, Recherche-Auftrag, Gruppenbildung |
 
-Der Wochentermin ist ein Coaching-Angebot. Interviews, Modellierung und Prototyp entstehen in der eigenständigen Projektarbeit zwischen den Terminen.
+Alle Termine mit dem ausgegebenen Material stehen unter [Termine](termine/index.qmd). Der Wochentermin ist ein Coaching-Angebot. Interviews, Modellierung und Prototyp entstehen in der eigenständigen Projektarbeit zwischen den Terminen.
 
 ## So läuft das Projekt
 
@@ -43,7 +42,7 @@ So gehen wir vor: fünf Phasen, jede baut auf der vorherigen auf. Details auf de
 |---|---|
 | [Vorbereitung](start.qmd) | HdM-VPN, Google-Konto, n8n-Zugang der Gruppe |
 | [Projekt](projekt.qmd) | Ausgangslage, Vorgehen in fünf Phasen, Regeln für Daten und Freigaben |
-| [Semesterplan](semester.qmd) | Kick-off und Werkzeuge im Detail, die weiteren Phasen als Rahmen |
+| [Termine](termine/index.qmd) | Jeder Termin mit Folien, Übungen und Dateien, dazu die weiteren Phasen |
 | [Werkzeugkasten](werkzeuge/index.qmd) | Coding-Agent, Prozessmodellierung, Interviews, n8n |
 | [Abgaben](abgaben.qmd) | Was in jeder Phase entsteht und wie es abgelegt wird |
 | [Bewertung](bewertung.qmd) | Vorprüfungsleistung, Gewichte, Kriterien, Noten |

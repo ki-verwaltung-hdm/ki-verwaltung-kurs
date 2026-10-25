@@ -24,9 +24,10 @@ Das Skript rendert und ruft `quarto publish gh-pages --no-prompt --no-render` au
 | `index.qmd` | Startseite: Projektidee, Termine, Nachschlagen |
 | `start.qmd` | Vorbereitung: HdM-VPN, Google-Konto und Antigravity, n8n-Zugang je Gruppe, Teamablage, Arbeitsregeln |
 | `projekt.qmd` | Rahmen, Ausgangslage, mögliche Bereiche (nur Rollen), fünf Phasen, Daten und Freigaben, experimenteller Charakter |
-| `semester.qmd` | Semesterplan: Woche 1 und 2, weitere Phasen als Rahmen ohne Termine |
-| `wochen/woche-01.qmd` | Montag, 12.10.: Kontext, Umfrage, BPMN-Grundlagen, Recherche-Auftrag |
-| `wochen/woche-02.qmd` | Montag, 19.10.: Einführung KI-Agenten (Übung Agent oder Workflow), n8n mit den DEMO-Workflows (01 bis 04 gemeinsam, 10 als Ausblick), Antigravity einrichten, BPMN mit dem Agenten. Reihenfolge nach Jan, 18.10. |
+| `termine/index.qmd` | Reiter „Termine“ (seit 25.10.2026, ersetzt Semesterplan und `wochen/`): Tabelle aller Termine, neuester oben, mit dem ausgegebenen Material; weitere Phasen als Rahmen. Alte Adressen `semester.html` und `wochen/woche-0N.html` leiten per `aliases` weiter |
+| `termine/2026-10-12-kick-off.qmd` | Montag, 12.10.: Kontext, Umfrage, BPMN-Grundlagen, Recherche-Auftrag |
+| `termine/2026-10-26-n8n-prompts.qmd` | Montag, 26.10.: DEMO 08 und 10, Aufbau der System Message, Übung Prompt-Teile streichen, Antigravity erzeugt einen n8n-Workflow aus dem Modell (Auftrag `material/prompts/workflow-aus-soll.md`, noch nicht gegen n8n 2.42.6 getestet) |
+| `termine/2026-10-19-werkzeuge.qmd` | Montag, 19.10.: Folien als PDF, Einführung KI-Agenten (Übung Agent oder Workflow), n8n mit den DEMO-Workflows (01 bis 04 gemeinsam, 10 als Ausblick), Antigravity einrichten, BPMN mit dem Agenten. Reihenfolge nach Jan, 18.10. |
 | `werkzeuge/index.qmd` | Werkzeugkasten-Übersicht |
 | `werkzeuge/einrichtung.qmd` | Antigravity, AGENTS.md-Vorlage, Prompt-Standard (Kontext, Aufgabe, Format, Prüfung) |
 | `werkzeuge/prozessmodell.qmd` | BPMN-Symbole, Aurenta-Beispiel, Übertragung auf einen Verwaltungsprozess, Ist zu Soll |
@@ -40,6 +41,7 @@ Das Skript rendert und ruft `quarto publish gh-pages --no-prompt --no-render` au
 | `material/prozess/` | Aurenta-Beispiel (BPMN und SVG) aus `~/code/process-lab`, Kopie wie im Mercedes-Repo |
 | `material/bpmn/` | Von Stephan (12.10.2026): Einführung in BPMN 2.0 als PDF und PPTX, Übung als DOCX. Den BVA-Attributkatalog nur verlinken, nicht ablegen: Das PDF untersagt Veröffentlichungen ohne Genehmigung, das Repo ist öffentlich |
 | `material/n8n/` | Workflow-Dateien zu den Hello-World-Beispielen (n8n 2.42.6), ohne Credentials, mit Sticky Notes (Erklärung und BPMN-Bezug). Pfade `gX-...` ersetzen die Gruppen selbst. Erzeugt mit `python3 vorlagen/n8n/erzeugen.py material/n8n && python3 vorlagen/n8n/notizen.py material/n8n`; Texte dort ändern, nicht in den JSON-Dateien |
+| `material/folien/` | Folien der Termine als PDF. 19.10.: Export von `~/code/presentation/agentic-grundlagen/ki-verwaltung.qmd` (Stand 18.10.2026, 84 Seiten) |
 | `material/prompts/` | Aufträge für den Coding-Agenten, aus `~/code/process-lab/prompts` für Antigravity ohne Pipeline umgeschrieben |
 | `vorlagen/teamablage/` | Quelle der Teamablage-Vorlage (fünf Ordner mit README, TEAM.md, STAND.md, ENTSCHEIDUNGEN.md, AGENTS.md). `./paket-bauen.sh` baut daraus `material/vorlagen/teamablage-vorlage.zip`; danach rendern |
 | `images/` | Elf SVG-Abbildungen im dunklen Stil der Growth-Grafiken (Phasen, Ausgangslage, Human in the Loop, Mocks, Projektumgebung, Schritttypen, Interviewzyklus, erster Workflow, Prompt-Standard, Agentenschleife, Semesterplan). Erzeugt von `images/erzeugen.py`; Texte dort ändern und neu laufen lassen, nicht die SVGs von Hand bearbeiten |
@@ -73,6 +75,11 @@ Keine internen Betriebs- und Abstimmungsnotizen auf den Seiten (offene IT-Anfrag
 
 Keine Namen von Verwaltungsmitarbeitenden, Interviewpartnerinnen oder Studierenden auf der Website; Bereiche nur als Rollen. Keine Passwörter oder Schlüssel; die Gruppen bekommen Logins separat (Übersicht lokal in `~/code/hdm/hdm-orga/projekte/WS2627/exporte/verwaltung-zugaenge.md`, gitignored). Interne Notizen bleiben in `~/code/notes/02_Areas/HdM_Projekte/ws2627-ki-verwaltung-notizen.md`.
 
-## Neue Wochen
+## Neue Termine
 
-Wochenseite unter `wochen/` anlegen, in `_quarto.yml` bei `render` und in der Navigation ergänzen, Tabellen auf `index.qmd` und `semester.qmd` aktualisieren.
+1. Seite `termine/JJJJ-MM-TT-thema.qmd` anlegen, oben ein Kasten „Ausgegeben am …“ mit allen Folien, Übungen und Dateien.
+2. Folien als PDF nach `material/folien/JJJJ-MM-TT-thema.pdf`.
+3. Seite in `_quarto.yml` bei `render` und im Menü „Termine“ oben eintragen.
+4. Zeile oben in den Tabellen von `termine/index.qmd` und `index.qmd` ergänzen.
+
+Prompts in Workflows und Aufträgen enthalten keinen Hinweis „Daten sind erfunden“ (Jan, 25.10.2026). Die Kennzeichnung gehört in Notizen, Mock-Dokumentation und Präsentation.

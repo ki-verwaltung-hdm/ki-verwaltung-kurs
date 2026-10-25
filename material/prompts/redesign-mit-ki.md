@@ -1,6 +1,6 @@
 # Auftrag: Diesen Prozess mit KI neu denken
 
-Kontext: Die Datei `03_Prozessmodelle/<name>-ist.bpmn` beschreibt einen heutigen Ablauf in der Hochschulverwaltung mit `documentation` je Schritt. Dazu liegen, falls vorhanden, die geltenden Regeln (Ordnung, Merkblatt) als Text vor. Alle Daten sind erfunden oder ausdrücklich freigegeben. Leitfrage: Wenn dieser Ablauf heute neu gestaltet würde und ein KI-Agent als Mitarbeiter verfügbar wäre, wie sähe er aus?
+Kontext: Die Datei `03_Prozessmodelle/<name>-ist.bpmn` beschreibt einen heutigen Ablauf in der Hochschulverwaltung mit `documentation` je Schritt. Dazu liegen, falls vorhanden, die geltenden Regeln (Ordnung, Merkblatt) als Text vor. Leitfrage: Wenn dieser Ablauf heute neu gestaltet würde und ein KI-Agent als Mitarbeiter verfügbar wäre, wie sähe er aus?
 
 Aufgabe: Erstelle zwei Dateien.
 

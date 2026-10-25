@@ -7,9 +7,10 @@ project:
     - index.qmd
     - start.qmd
     - projekt.qmd
-    - semester.qmd
-    - wochen/woche-01.qmd
-    - wochen/woche-02.qmd
+    - termine/index.qmd
+    - termine/2026-10-12-kick-off.qmd
+    - termine/2026-10-19-werkzeuge.qmd
+    - termine/2026-10-26-n8n-prompts.qmd
     - werkzeuge/index.qmd
     - werkzeuge/einrichtung.qmd
     - werkzeuge/prozessmodell.qmd
@@ -41,18 +42,26 @@ website:
     left:
       - href: index.qmd
         text: Start
-      - href: start.qmd
-        text: Vorbereitung
-      - href: projekt.qmd
-        text: Projekt
-      - text: Semester
+      - text: Termine
         menu:
-          - href: semester.qmd
-            text: Semesterplan
-          - href: wochen/woche-01.qmd
-            text: "Kick-off"
-          - href: wochen/woche-02.qmd
-            text: "Werkzeuge"
+          - href: termine/index.qmd
+            text: Übersicht
+          - href: termine/2026-10-26-n8n-prompts.qmd
+            text: "26.10. · n8n, Prompts, Antigravity"
+          - href: termine/2026-10-19-werkzeuge.qmd
+            text: "19.10. · Werkzeuge"
+          - href: termine/2026-10-12-kick-off.qmd
+            text: "12.10. · Kick-off"
+      - text: Projekt
+        menu:
+          - href: projekt.qmd
+            text: Das Projekt
+          - href: start.qmd
+            text: Vorbereitung und Zugänge
+          - href: abgaben.qmd
+            text: Abgaben
+          - href: bewertung.qmd
+            text: Bewertung
       - text: Werkzeugkasten
         menu:
           - href: werkzeuge/index.qmd
@@ -69,10 +78,6 @@ website:
             text: n8n Schritt für Schritt
           - href: werkzeuge/n8n.qmd
             text: n8n auf dem HdM-Server
-      - href: abgaben.qmd
-        text: Abgaben
-      - href: bewertung.qmd
-        text: Bewertung
       - href: materialien.qmd
         text: Materialien
   page-footer:

@@ -29,7 +29,7 @@ Die Teamablage ist der gemeinsame Arbeitsstand. Dateien, die der Coding-Agent er
 
 [Gruppe · Prozesskandidat zum Werkzeugtermin, Recherche-Ergebnisse: Termin wird noch vereinbart · Teamablage]{.uebung-meta}
 
-Die Aufgabe steht beim [Kick-off](wochen/woche-01.qmd#recherche).
+Die Aufgabe steht beim [Kick-off](termine/2026-10-12-kick-off.qmd#recherche).
 
 1. Zum Werkzeugtermin: ein Prozesskandidat als Prosa (zwei bis zehn Sätze).
 2. Danach: Quellen mit Link und je zwei Sätzen Erkenntnis, der überarbeitete Referenzprozess als Prosa und als BPMN-Datei.

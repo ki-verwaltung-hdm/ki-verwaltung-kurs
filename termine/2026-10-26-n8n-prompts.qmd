@@ -1,0 +1,140 @@
+---
+title: "26.10. · n8n, Prompts, Antigravity"
+toc: true
+---
+
+[Montag, 26. Oktober 2026 · 11:45 bis 13:15 Uhr · Raum I110 · Notebook mitbringen, VPN eingerichtet]{.kicker}
+
+::: {.lead}
+- n8n vertiefen: Eine Person entscheidet in der Tabelle, ein Agent prüft einen Antrag
+- Prompts im Agenten: Welche Teile eines Systemprompts das Ergebnis tragen
+- Antigravity baut den Workflow: vom Prozessmodell zum importierbaren n8n-Workflow
+:::
+
+::: {.callout-note title="Ausgegeben am 26.10."}
+- Anleitung: [n8n Schritt für Schritt](../werkzeuge/n8n-einstieg.qmd), Beispiele 8 und 10
+- Übung: [Prompt-Teile streichen und vergleichen](#uebung-3)
+- Auftrag für den Agenten: [Workflow aus dem Soll-Modell](../material/prompts/workflow-aus-soll.md)
+- Nachschlagen: [Prompt-Standard](../werkzeuge/einrichtung.qmd#prompt), [Vom Soll-Modell zum Workflow](../werkzeuge/n8n.qmd#vom-modell)
+:::
+
+## Ziel des Termins
+
+Am Ende hat jede Gruppe in ihrer n8n-Instanz eine Entscheidung durch eine Person und einen Agenten mit zwei Werkzeugen selbst ausgeführt. Sie kann sagen, welche Teile eines Systemprompts das Ergebnis tragen. Sie hat mit Antigravity einen ersten Workflow aus ihrem Prozessmodell erzeugt und in n8n importiert.
+
+::: {#bausteine .callout-note collapse="true" title="Bausteine des Termins"}
+
+| Baustein | Dauer etwa | Arbeitsform |
+|---|---|---|
+| Stand je Gruppe: Prozess, Modell, offene Fragen | 10 Minuten | Gemeinsam |
+| n8n: DEMO 08 und DEMO 10 | 25 Minuten | Angeleitet, in den Gruppen |
+| Prompts im Agenten, Übung | 20 Minuten | Input, dann in den Gruppen |
+| Antigravity baut den Workflow | 25 Minuten | Vorführung, dann in den Gruppen |
+| Nächste Schritte | 10 Minuten | Gemeinsam |
+
+:::
+
+## Stand je Gruppe {#stand}
+
+Jede Gruppe sagt in einer Minute: Welchen Prozess haben wir gewählt? Gibt es das BPMN-Modell aus Antigravity? Was ist offen? Wer beim letzten Termin nicht fertig geworden ist, holt die fehlenden Schritte in den Übungen heute nach.
+
+## Übung 1: Eine Person entscheidet {#uebung-1}
+
+::: {.uebung}
+### Etwa 10 Minuten · in den Gruppen, vorne läuft dieselbe Instanz am Beamer
+
+**Material:** [Beispiel 8](../werkzeuge/n8n-einstieg.qmd#datentabelle), Zugang der Gruppe.
+
+1. VPN verbinden, die n8n-Instanz der Gruppe öffnen, anmelden.
+2. DEMO 08a ausführen.
+3. Unter „Overview“ den Reiter „Data tables“ öffnen und die Tabelle `pruefliste` öffnen.
+4. Bei `A-001` in der Spalte `entscheidung` den Wert `freigeben` eintragen, bei `A-003` den Wert `zurückgeben`. `A-002` leer lassen.
+5. DEMO 08b ausführen.
+
+**Prüfung:** Nur `A-001` und `A-003` kommen an. `A-001` landet bei „Bescheid vorbereiten“, `A-003` bei „Rueckfrage vorbereiten“.
+
+**Bezug zum Projekt:** So sieht der Freigabe-Schritt aus, den jeder Prototyp braucht. Der Workflow bereitet vor, eine Person entscheidet, erst dann geht es weiter.
+:::
+
+## Übung 2: Ein Agent prüft einen Antrag {#uebung-2}
+
+::: {.uebung}
+### Etwa 15 Minuten · in den Gruppen
+
+**Material:** [Beispiel 10](../werkzeuge/n8n-einstieg.qmd#agent).
+
+1. DEMO 07 und DEMO 09a je einmal ausführen. Sie legen die Tabelle `antraege` und die Ordnung in der Gruppen-Datenbank an.
+2. DEMO 10 ausführen.
+3. Unter „Logs“ die Werkzeugaufrufe des Agenten ansehen: Welches Werkzeug ruft er zuerst auf, mit welcher Eingabe?
+4. Im Knoten „Auftrag“ die Antragsnummer auf A-002 ändern und erneut ausführen.
+
+**Prüfung:** Bei A-001 lautet das Ergebnis „nicht zulässig“ mit § 2. Bei A-002 lautet es „unklar“, weil das Praxissemester in keinem Werkzeug steht. Beide Antworten enden mit „Die Entscheidung trifft die zuständige Person.“
+:::
+
+## Was im Prompt eines Agenten zählt {#prompts}
+
+Der Agent in DEMO 10 bekommt eine **System Message**. Sie gilt für jeden Lauf, der Auftrag im Knoten „Auftrag“ wechselt. Die System Message hat fünf Teile:
+
+| Teil | In DEMO 10 | Wozu |
+|---|---|---|
+| Rolle | Du unterstützt das Prüfungsamt bei der Vorprüfung von Anträgen. | Legt fest, für wen und wofür der Agent arbeitet |
+| Vorgehen | 1. Antrag nachschlagen, 2. passende Regel suchen, 3. vergleichen | Das Soll-Modell im Kleinen. Der Agent soll nachschlagen, nicht raten |
+| Antwortformat | Ergebnis (zulässig, nicht zulässig oder unklar), Begründung mit Paragraf, genutzte Werkzeuge | Nur ein festes Format kann eine Person oder ein nächster Knoten sicher lesen |
+| Umgang mit Lücken | Erfinde keine Daten. Was die Werkzeuge nicht liefern, ist unklar und nicht fehlend. | Der wichtigste Teil für die Verwaltung |
+| Grenze | Die Entscheidung trifft die zuständige Person. | Der Agent schlägt vor, er entscheidet nicht |
+
+Zwei Dinge werden oft übersehen:
+
+- **Die Beschreibung eines Werkzeugs ist auch ein Prompt.** Der Agent wählt ein Werkzeug nur nach seinem Namen und seiner Beschreibung aus. Ist die Beschreibung unklar, nimmt er das falsche Werkzeug oder gar keins.
+- **Ein Satz kann das Ergebnis kippen.** Die erste Fassung von DEMO 10 hatte den Satz zum Umgang mit Lücken nicht. Der Agent behauptete dann, das Praxissemester sei nicht nachgewiesen, obwohl die Werkzeuge dazu gar nichts lieferten.
+
+Für alle Prompts im Projekt gilt der [Prompt-Standard](../werkzeuge/einrichtung.qmd#prompt): Kontext, Aufgabe, Format, Prüfung. Eine System Message ist derselbe Standard, nur dauerhaft für alle Läufe.
+
+## Übung 3: Prompt-Teile streichen und vergleichen {#uebung-3}
+
+::: {.uebung}
+### Etwa 10 Minuten · in den Gruppen
+
+1. DEMO 10 duplizieren: im Workflow oben rechts über das Menü „Duplicate“. Den Namen mit „Test“ ergänzen. Die DEMO-Fassung bleibt unverändert.
+2. Jede Gruppe wählt einen Teil aus der Tabelle oben. Den Satz in der System Message des Agenten streichen.
+3. Den Auftrag auf A-002 stellen und dreimal ausführen.
+4. Die drei Ergebnisse mit dem Ergebnis aus Übung 2 vergleichen.
+5. In einem Satz festhalten: Was ändert sich ohne diesen Teil?
+
+**Prüfung:** Die Gruppe kann ein Ergebnis zeigen, das sich durch das Streichen geändert hat, oder begründen, warum sich nichts geändert hat.
+
+**Bezug zur Bewertung:** Mehrere Läufe mit demselben Testfall und der Vergleich mit dem erwarteten Ergebnis sind genau das, was die Testfälle im Prototyp leisten sollen (Kriterium 2.4).
+:::
+
+## Antigravity baut den Workflow {#antigravity}
+
+Den Workflow müssen wir nicht Knoten für Knoten in n8n zusammenklicken. Antigravity kann aus einem Prozessmodell eine Workflow-Datei schreiben, die n8n importiert. Die Zuordnung steht unter [Vom Soll-Modell zum Workflow](../werkzeuge/n8n.qmd#vom-modell): Startereignis zu Trigger, feste Regel zu If-Knoten, Modellschritt zu LLM-Knoten oder Agent, Systemabfrage zu Postgres oder Webhook gegen einen Mock, menschliche Entscheidung zu einem sichtbaren Freigabe-Schritt.
+
+Dabei gilt dasselbe wie bei jedem Agenten: Antigravity schreibt einen Entwurf, wir prüfen ihn. Am häufigsten passt der Export nicht zur installierten n8n-Version: falsche Knotenversionen oder Parameternamen. Deshalb bekommt Antigravity einen funktionierenden Export als Muster mit.
+
+::: {.uebung}
+### Übung 4 · etwa 20 Minuten · eine Person pro Gruppe am Rechner, die anderen prüfen
+
+**Material:** [Auftrag: Workflow aus dem Soll-Modell](../material/prompts/workflow-aus-soll.md), [10-agent.json](../material/n8n/10-agent.json){download="10-agent.json"}, das BPMN-Modell der Gruppe vom 19.10.
+
+1. Die Datei `10-agent.json` herunterladen und im Projektordner unter `04_Prototyp/vorlagen/` ablegen.
+2. Das BPMN-Modell der Gruppe unter `03_Prozessmodelle/` bereitlegen. Ein Soll-Modell gibt es meist noch nicht; dann das Modell vom 19.10. nehmen und im Auftrag `-soll` durch `-ist` ersetzen.
+3. Den Auftrag in den Chat von Antigravity einfügen und die Platzhalter ersetzen.
+4. Die Tabelle lesen, die Antigravity am Ende ausgibt: Hat jeder Schritt im Modell einen Knoten? Welche Stellen sind unsicher?
+5. In n8n über „Import from File“ die Datei importieren.
+6. In jedem Knoten mit Modell oder Datenbank die Verbindung „Gemini g<n>“ oder „Postgres g<n>“ auswählen.
+7. Den Workflow ausführen.
+8. Jeden Fehler als Auftrag an Antigravity zurückgeben, mit der Fehlermeldung aus n8n im Wortlaut. Nicht von Hand im JSON korrigieren.
+
+**Prüfung:** Der Workflow lässt sich importieren und läuft mindestens bis zum ersten Modellschritt. Jeder Knoten entspricht einem Schritt im Modell, und Antigravity hat keinen Schritt erfunden.
+
+**Ergebnis:** Ein erster Workflow-Entwurf unter `04_Prototyp/`. Er ist der Ausgangspunkt für den Prototyp, nicht der Prototyp selbst.
+:::
+
+## Nächste Schritte {#naechste}
+
+- **Fallstudien:** Nächste Woche bekommen die Gruppen kleine Fallstudien zu n8n, die wir im Coaching danach besprechen.
+- **Online-Kurse:** Den n8n-Kurs QS101 in der Instanz der Gruppe bearbeiten, Workflow-Namen mit dem eigenen Nachnamen beginnen. Nachweise bis 30.11.2026, siehe [Bewertung](../bewertung.qmd#vorpruefung).
+- **Recherche und Interviews:** Etappe 2 des [Recherche-Auftrags](2026-10-12-kick-off.qmd#recherche) und Stand der Interviewtermine besprechen wir im Coaching.
+
+[**Alle Termine**](index.qmd) · [**Zurück: 19.10. Werkzeuge**](2026-10-19-werkzeuge.qmd)
