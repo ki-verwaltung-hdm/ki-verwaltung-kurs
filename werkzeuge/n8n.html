@@ -214,30 +214,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Start</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../start.html"> 
-<span class="menu-text">Vorbereitung</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../projekt.html"> 
-<span class="menu-text">Projekt</span></a>
-  </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-semester" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Semester</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-termine" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Termine</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-semester">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-termine">    
         <li>
-    <a class="dropdown-item" href="../semester.html">
- <span class="dropdown-text">Semesterplan</span></a>
+    <a class="dropdown-item" href="../termine/index.html">
+ <span class="dropdown-text">Übersicht</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../wochen/woche-01.html">
- <span class="dropdown-text">Kick-off</span></a>
+    <a class="dropdown-item" href="../termine/2026-10-26-n8n-prompts.html">
+ <span class="dropdown-text">26.10. · n8n, Prompts, Antigravity</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../wochen/woche-02.html">
- <span class="dropdown-text">Werkzeuge</span></a>
+    <a class="dropdown-item" href="../termine/2026-10-19-werkzeuge.html">
+ <span class="dropdown-text">19.10. · Werkzeuge</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../termine/2026-10-12-kick-off.html">
+ <span class="dropdown-text">12.10. · Kick-off</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projekt" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projekt</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projekt">    
+        <li>
+    <a class="dropdown-item" href="../projekt.html">
+ <span class="dropdown-text">Das Projekt</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../start.html">
+ <span class="dropdown-text">Vorbereitung und Zugänge</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../abgaben.html">
+ <span class="dropdown-text">Abgaben</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../bewertung.html">
+ <span class="dropdown-text">Bewertung</span></a>
   </li>  
     </ul>
   </li>
@@ -276,14 +295,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../abgaben.html"> 
-<span class="menu-text">Abgaben</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../bewertung.html"> 
-<span class="menu-text">Bewertung</span></a>
-  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../materialien.html"> 
 <span class="menu-text">Materialien</span></a>
@@ -436,15 +447,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Nachweise laut Akte: {{ $json.nachweise }}.</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Voraussetzungen laut Ordnung: mindestens 210 Leistungspunkte, Praxissemester</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>abgeschlossen, Anmeldeformular unterschrieben, Erst- und Zweitgutachter benannt.</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Alle Angaben sind erfundene Testdaten.</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Aufgabe: Erstelle eine Prüfübersicht für die zuständige Person.</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Format: Tabelle mit den Spalten Voraussetzung, Status (erfüllt, nicht erfüllt,</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>unklar), Grundlage. Danach ein Satz mit der Empfehlung. Deutsch, Sie-Form.</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Prüfung: Nenne am Ende, welche Angaben fehlen oder unklar sind, statt sie zu</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>ergänzen. Triff keine Entscheidung; die Entscheidung trifft die zuständige Person.</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Aufgabe: Erstelle eine Prüfübersicht für die zuständige Person.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Format: Tabelle mit den Spalten Voraussetzung, Status (erfüllt, nicht erfüllt,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>unklar), Grundlage. Danach ein Satz mit der Empfehlung. Deutsch, Sie-Form.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Prüfung: Nenne am Ende, welche Angaben fehlen oder unklar sind, statt sie zu</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>ergänzen. Triff keine Entscheidung; die Entscheidung trifft die zuständige Person.</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Unter Chat Model den Knoten <strong>Google Gemini Chat Model</strong> verbinden und die Verbindung <strong>Gemini g<n></n></strong> der Gruppe auswählen. Als Modell ein Flash-Modell einstellen; welches, wird in der Vorlesung genannt. Das eigene Google-Konto wird hier nicht eingetragen: Die Gemini-App und die Gemini-API sind getrennte Zugänge, die vorbereitete Verbindung läuft über ein Kontingent des Projekts.</p>
 <p>Ausführen und die Ausgabe lesen. Die Platzhalter <code>{ $json.feld }</code> sind Feldzuordnungen aus dem vorherigen Knoten, keine Programmierung. In der Vorschau müssen die tatsächlichen Werte erscheinen.</p>
 </section>

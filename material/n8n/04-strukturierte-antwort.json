@@ -99,7 +99,7 @@
             {
               "id": "b11f98ed-6a32-5b0f-9d74-64056fc22b49",
               "name": "mail",
-              "value": "Sehr geehrte Damen und Herren, ich möchte meine Bachelorarbeit anmelden. Mein Praxissemester habe ich im Sommer abgeschlossen, das Zeugnis reiche ich nach. Als Erstprüferin ist Frau Muster einverstanden. Ich würde gern am 1. Dezember beginnen. Viele Grüße, Alex Beispiel (erfundene Testmail)",
+              "value": "Sehr geehrte Damen und Herren, ich möchte meine Bachelorarbeit anmelden. Mein Praxissemester habe ich im Sommer abgeschlossen, das Zeugnis reiche ich nach. Als Erstprüferin ist Frau Muster einverstanden. Ich würde gern am 1. Dezember beginnen. Viele Grüße, Alex Beispiel",
               "type": "string"
             }
           ]
@@ -118,7 +118,7 @@
     {
       "parameters": {
         "promptType": "define",
-        "text": "=Kontext: Mail einer Studentin oder eines Studenten an das Prüfungsamt. Für die Anmeldung der Bachelorarbeit braucht es: abgeschlossenes Praxissemester mit Zeugnis, Erstprüfer, Zweitprüfer, Wunschtermin. Alle Angaben sind erfundene Testdaten.\n\nAufgabe: Übertrage die Mail in die Felder des Formats.\n\nPrüfung: Trage nur ein, was in der Mail steht. Was fehlt oder nur angekündigt ist, kommt in fehlende_angaben.\n\nMail:\n{{ $json.mail }}",
+        "text": "=Kontext: Mail einer Studentin oder eines Studenten an das Prüfungsamt. Für die Anmeldung der Bachelorarbeit braucht es: abgeschlossenes Praxissemester mit Zeugnis, Erstprüfer, Zweitprüfer, Wunschtermin.\n\nAufgabe: Übertrage die Mail in die Felder des Formats.\n\nPrüfung: Trage nur ein, was in der Mail steht. Was fehlt oder nur angekündigt ist, kommt in fehlende_angaben.\n\nMail:\n{{ $json.mail }}",
         "hasOutputParser": true
       },
       "id": "bdaeec95-ed82-5b52-b64a-177c16467cc3",

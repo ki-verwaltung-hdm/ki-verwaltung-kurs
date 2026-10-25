@@ -1,6 +1,6 @@
 # Auftrag: Ist-Prozess aus einer Beschreibung modellieren
 
-Kontext: Die Datei `prozess-beschreibung.md` beschreibt einen heutigen Ablauf in der Hochschulverwaltung in Prosa (2 bis 10 Sätze) und nennt die beteiligten Rollen. Die Beschreibung stammt aus einer Recherche oder einem Interviewprotokoll. Personen sind durch Rollen ersetzt. Falls Zahlen (Durchlaufzeit, Mengen) genannt sind, gehören sie in die `documentation` des betroffenen Schritts. Alle Angaben sind Beispiele für ein Studienprojekt.
+Kontext: Die Datei `prozess-beschreibung.md` beschreibt einen heutigen Ablauf in der Hochschulverwaltung in Prosa (2 bis 10 Sätze) und nennt die beteiligten Rollen. Die Beschreibung stammt aus einer Recherche oder einem Interviewprotokoll. Personen sind durch Rollen ersetzt. Falls Zahlen (Durchlaufzeit, Mengen) genannt sind, gehören sie in die `documentation` des betroffenen Schritts.
 
 Aufgabe: Erstelle den heutigen Ablauf als BPMN-2.0-Datei `03_Prozessmodelle/<name>-ist.bpmn`.
 
