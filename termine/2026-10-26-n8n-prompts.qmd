@@ -132,7 +132,7 @@ Dabei gilt dasselbe wie bei jedem Agenten: Antigravity schreibt einen Entwurf, w
 **Ergebnis:** Ein erster Workflow-Entwurf unter `04_Prototyp/`. Er ist der Ausgangspunkt für den Prototyp, nicht der Prototyp selbst.
 :::
 
-**So kann das Ergebnis aussehen:** Für den Ablauf „Anmeldung der Bachelorarbeit“ ist aus einer [Beschreibung](../material/prompts/beispiel/anmeldung-ba-beschreibung.md) zuerst das [Ist-Modell](../material/prompts/beispiel/anmeldung-ba-ist.bpmn){download="anmeldung-ba-ist.bpmn"} entstanden, daraus mit diesem Auftrag der [Workflow](../material/prompts/beispiel/anmeldung-ba-workflow.json){download="anmeldung-ba-workflow.json"}. Er legt eine Mock-Tabelle mit drei Fällen an, prüft das Formular mit einem Modellschritt, die Leistungspunkte mit einer festen Regel und legt jeden Fall einer Person zur Freigabe vor.
+**So kann das Ergebnis aussehen:** Für den Ablauf „Anmeldung der Bachelorarbeit“ ist aus einer [Beschreibung](../material/prompts/beispiel/anmeldung-ba-beschreibung.md) zuerst das [Ist-Modell](../material/prompts/beispiel/anmeldung-ba-ist.bpmn){download="anmeldung-ba-ist.bpmn"} entstanden, daraus mit diesem Auftrag der [Workflow](../material/prompts/beispiel/anmeldung-ba-workflow.json){download="anmeldung-ba-workflow.json"}. Er liegt fertig in der n8n-Instanz jeder Gruppe als „BEISPIEL Anmeldung Bachelorarbeit (aus Antigravity-Auftrag)“, mit den Verbindungen der Gruppe, und lässt sich sofort ausführen. Er legt eine Mock-Tabelle mit drei Fällen an, prüft das Formular mit einem Modellschritt, die Leistungspunkte mit einer festen Regel und legt jeden Fall einer Person zur Freigabe vor.
 
 ## Nächste Schritte {#naechste}
 
