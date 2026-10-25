@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" 
+                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" 
+                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" 
+                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI" 
+                  id="Definitions_1" 
+                  targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:collaboration id="Collaboration_Anmeldung">
+    <bpmn:participant id="Participant_Pruefungsamt" name="Prüfungsamt (heute)" processRef="Process_Anmeldung_BA_Ist" />
+  </bpmn:collaboration>
+  
+  <bpmn:process id="Process_Anmeldung_BA_Ist" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_1">
+      <bpmn:lane id="Lane_Sachbearbeitung" name="Sachbearbeitung">
+        <bpmn:flowNodeRef>Start_Antrag</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Pruefen_Formal</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>G_Vollstaendig</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Rueckfrage</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_Rueckfrage</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Pruefen_Campus</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Vorlegen</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>T_Abschliessen</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_Abgeschlossen</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_Vorsitz" name="Vorsitz Prüfungsausschuss">
+        <bpmn:flowNodeRef>T_Entscheiden</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+
+    <bpmn:startEvent id="Start_Antrag" name="Antrag eingegangen">
+      <bpmn:documentation>Eine Studentin reicht das Anmeldeformular für die Bachelorarbeit per Mail beim Prüfungsamt ein.</bpmn:documentation>
+      <bpmn:outgoing>Flow_Start_Formal</bpmn:outgoing>
+    </bpmn:startEvent>
+
+    <bpmn:userTask id="T_Pruefen_Formal" name="Formular formal prüfen">
+      <bpmn:documentation>Die Sachbearbeitung im Prüfungsamt prüft formal, ob das Formular vollständig ausgefüllt und unterschrieben ist.</bpmn:documentation>
+      <bpmn:incoming>Flow_Start_Formal</bpmn:incoming>
+      <bpmn:outgoing>Flow_Formal_Gateway</bpmn:outgoing>
+    </bpmn:userTask>
+
+    <bpmn:exclusiveGateway id="G_Vollstaendig" name="Formular vollständig?">
+      <bpmn:documentation>Entscheidung über die formale Vollständigkeit des Antrags.</bpmn:documentation>
+      <bpmn:incoming>Flow_Formal_Gateway</bpmn:incoming>
+      <bpmn:outgoing>Flow_Gateway_Nein</bpmn:outgoing>
+      <bpmn:outgoing>Flow_Gateway_Ja</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+
+    <bpmn:sendTask id="T_Rueckfrage" name="Rückfrage an Studentin senden">
+      <bpmn:documentation>Fehlt etwas, schickt sie das Formular mit einer Rückfrage an die Studentin zurück.</bpmn:documentation>
+      <bpmn:incoming>Flow_Gateway_Nein</bpmn:incoming>
+      <bpmn:outgoing>Flow_Rueckfrage_End</bpmn:outgoing>
+    </bpmn:sendTask>
+
+    <bpmn:endEvent id="End_Rueckfrage" name="Vorgang unterbrochen">
+      <bpmn:documentation>Der Vorgang ist vorerst beendet, bis die Studentin eine Korrektur einreicht.</bpmn:documentation>
+      <bpmn:incoming>Flow_Rueckfrage_End</bpmn:incoming>
+    </bpmn:endEvent>
+
+    <bpmn:userTask id="T_Pruefen_Campus" name="Voraussetzungen im Campus-System prüfen">
+      <bpmn:documentation>Ist es vollständig, schaut sie im Campus-System nach, ob mindestens 210 Leistungspunkte erreicht sind und ob das Praxissemester anerkannt ist.</bpmn:documentation>
+      <bpmn:incoming>Flow_Gateway_Ja</bpmn:incoming>
+      <bpmn:outgoing>Flow_Campus_Vorlegen</bpmn:outgoing>
+    </bpmn:userTask>
+
+    <bpmn:userTask id="T_Vorlegen" name="Vorgang vorlegen">
+      <bpmn:documentation>Danach legt sie den Vorgang der oder dem Vorsitzenden des Prüfungsausschusses vor.</bpmn:documentation>
+      <bpmn:incoming>Flow_Campus_Vorlegen</bpmn:incoming>
+      <bpmn:outgoing>Flow_Vorlegen_Entscheiden</bpmn:outgoing>
+    </bpmn:userTask>
+
+    <bpmn:userTask id="T_Entscheiden" name="Über Zulassung entscheiden">
+      <bpmn:documentation>Die oder der Vorsitzende entscheidet über die Zulassung und unterschreibt. Offene Frage: Wer prüft, ob Erst- und Zweitprüfer einverstanden sind?</bpmn:documentation>
+      <bpmn:incoming>Flow_Vorlegen_Entscheiden</bpmn:incoming>
+      <bpmn:outgoing>Flow_Entscheiden_Abschliessen</bpmn:outgoing>
+    </bpmn:userTask>
+
+    <bpmn:userTask id="T_Abschliessen" name="Ergebnis mitteilen und Vorgang ablegen">
+      <bpmn:documentation>Die Sachbearbeitung informiert die Studentin über das Ergebnis und legt den Vorgang im eigenen Ordner ab.</bpmn:documentation>
+      <bpmn:incoming>Flow_Entscheiden_Abschliessen</bpmn:incoming>
+      <bpmn:outgoing>Flow_Abschliessen_End</bpmn:outgoing>
+    </bpmn:userTask>
+
+    <bpmn:endEvent id="End_Abgeschlossen" name="Vorgang abgeschlossen">
+      <bpmn:documentation>Die Anmeldung ist vollständig bearbeitet und abgelegt.</bpmn:documentation>
+      <bpmn:incoming>Flow_Abschliessen_End</bpmn:incoming>
+    </bpmn:endEvent>
+
+    <bpmn:sequenceFlow id="Flow_Start_Formal" sourceRef="Start_Antrag" targetRef="T_Pruefen_Formal" />
+    <bpmn:sequenceFlow id="Flow_Formal_Gateway" sourceRef="T_Pruefen_Formal" targetRef="G_Vollstaendig" />
+    <bpmn:sequenceFlow id="Flow_Gateway_Nein" name="nein" sourceRef="G_Vollstaendig" targetRef="T_Rueckfrage" />
+    <bpmn:sequenceFlow id="Flow_Gateway_Ja" name="ja" sourceRef="G_Vollstaendig" targetRef="T_Pruefen_Campus" />
+    <bpmn:sequenceFlow id="Flow_Rueckfrage_End" sourceRef="T_Rueckfrage" targetRef="End_Rueckfrage" />
+    <bpmn:sequenceFlow id="Flow_Campus_Vorlegen" sourceRef="T_Pruefen_Campus" targetRef="T_Vorlegen" />
+    <bpmn:sequenceFlow id="Flow_Vorlegen_Entscheiden" sourceRef="T_Vorlegen" targetRef="T_Entscheiden" />
+    <bpmn:sequenceFlow id="Flow_Entscheiden_Abschliessen" sourceRef="T_Entscheiden" targetRef="T_Abschliessen" />
+    <bpmn:sequenceFlow id="Flow_Abschliessen_End" sourceRef="T_Abschliessen" targetRef="End_Abgeschlossen" />
+  </bpmn:process>
+
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_Anmeldung">
+      <bpmndi:BPMNShape id="Participant_Pruefungsamt_di" bpmnElement="Participant_Pruefungsamt" isHorizontal="true">
+        <dc:Bounds x="150" y="80" width="1100" height="420" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Sachbearbeitung_di" bpmnElement="Lane_Sachbearbeitung" isHorizontal="true">
+        <dc:Bounds x="180" y="80" width="1070" height="260" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Vorsitz_di" bpmnElement="Lane_Vorsitz" isHorizontal="true">
+        <dc:Bounds x="180" y="340" width="1070" height="160" />
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="Start_Antrag_di" bpmnElement="Start_Antrag">
+        <dc:Bounds x="230" y="210" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="214" y="253" width="68" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="T_Pruefen_Formal_di" bpmnElement="T_Pruefen_Formal">
+        <dc:Bounds x="310" y="188" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="G_Vollstaendig_di" bpmnElement="G_Vollstaendig" isMarkerVisible="true">
+        <dc:Bounds x="450" y="203" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="444" y="260" width="62" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="T_Rueckfrage_di" bpmnElement="T_Rueckfrage">
+        <dc:Bounds x="550" y="100" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="End_Rueckfrage_di" bpmnElement="End_Rueckfrage">
+        <dc:Bounds x="700" y="122" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="684" y="165" width="69" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="T_Pruefen_Campus_di" bpmnElement="T_Pruefen_Campus">
+        <dc:Bounds x="550" y="188" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="T_Vorlegen_di" bpmnElement="T_Vorlegen">
+        <dc:Bounds x="690" y="188" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="T_Entscheiden_di" bpmnElement="T_Entscheiden">
+        <dc:Bounds x="830" y="380" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="T_Abschliessen_di" bpmnElement="T_Abschliessen">
+        <dc:Bounds x="980" y="188" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNShape id="End_Abgeschlossen_di" bpmnElement="End_Abgeschlossen">
+        <dc:Bounds x="1120" y="210" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1102" y="253" width="73" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      
+      <bpmndi:BPMNEdge id="Flow_Start_Formal_di" bpmnElement="Flow_Start_Formal">
+        <di:waypoint x="266" y="228" />
+        <di:waypoint x="310" y="228" />
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_Formal_Gateway_di" bpmnElement="Flow_Formal_Gateway">
+        <di:waypoint x="410" y="228" />
+        <di:waypoint x="450" y="228" />
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_Gateway_Nein_di" bpmnElement="Flow_Gateway_Nein">
+        <di:waypoint x="475" y="203" />
+        <di:waypoint x="475" y="140" />
+        <di:waypoint x="550" y="140" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="480" y="169" width="21" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_Gateway_Ja_di" bpmnElement="Flow_Gateway_Ja">
+        <di:waypoint x="500" y="228" />
+        <di:waypoint x="550" y="228" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="521" y="210" width="8" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_Rueckfrage_End_di" bpmnElement="Flow_Rueckfrage_End">
+        <di:waypoint x="650" y="140" />
+        <di:waypoint x="700" y="140" />
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_Campus_Vorlegen_di" bpmnElement="Flow_Campus_Vorlegen">
+        <di:waypoint x="650" y="228" />
+        <di:waypoint x="690" y="228" />
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_Vorlegen_Entscheiden_di" bpmnElement="Flow_Vorlegen_Entscheiden">
+        <di:waypoint x="790" y="228" />
+        <di:waypoint x="810" y="228" />
+        <di:waypoint x="810" y="420" />
+        <di:waypoint x="830" y="420" />
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_Entscheiden_Abschliessen_di" bpmnElement="Flow_Entscheiden_Abschliessen">
+        <di:waypoint x="930" y="420" />
+        <di:waypoint x="955" y="420" />
+        <di:waypoint x="955" y="228" />
+        <di:waypoint x="980" y="228" />
+      </bpmndi:BPMNEdge>
+      
+      <bpmndi:BPMNEdge id="Flow_Abschliessen_End_di" bpmnElement="Flow_Abschliessen_End">
+        <di:waypoint x="1080" y="228" />
+        <di:waypoint x="1120" y="228" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

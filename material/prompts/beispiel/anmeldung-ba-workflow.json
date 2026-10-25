@@ -1,0 +1,685 @@
+{
+ "name": "Anmeldung BA Soll-Prozess",
+ "nodes": [
+  {
+   "parameters": {
+    "content": "### Start_Antrag\nEine erfundene Mail geht ein.",
+    "height": 150,
+    "width": 200,
+    "color": 5
+   },
+   "id": "notiz-start",
+   "name": "Notiz Start",
+   "type": "n8n-nodes-base.stickyNote",
+   "typeVersion": 1,
+   "position": [
+    0,
+    -180
+   ]
+  },
+  {
+   "parameters": {
+    "content": "### Mock-Daten anlegen\nLegt die Tabelle anmeldung_ba_campus an und füllt sie mit drei Testfällen.",
+    "height": 150,
+    "width": 200,
+    "color": 5
+   },
+   "id": "notiz-mock",
+   "name": "Notiz Mock",
+   "type": "n8n-nodes-base.stickyNote",
+   "typeVersion": 1,
+   "position": [
+    250,
+    -180
+   ]
+  },
+  {
+   "parameters": {
+    "content": "### Testfall wählen\nSimuliert den Posteingang. Die Mail enthält erfundene Daten.",
+    "height": 150,
+    "width": 200,
+    "color": 5
+   },
+   "id": "notiz-testfall",
+   "name": "Notiz Testfall",
+   "type": "n8n-nodes-base.stickyNote",
+   "typeVersion": 1,
+   "position": [
+    500,
+    -180
+   ]
+  },
+  {
+   "parameters": {
+    "content": "### T_Pruefen_Formal\nKI-Modell liest die Felder aus der Mail aus. Fester Ablauf ohne Agent, da der Weg klar ist.",
+    "height": 150,
+    "width": 200,
+    "color": 5
+   },
+   "id": "notiz-formal",
+   "name": "Notiz Formal",
+   "type": "n8n-nodes-base.stickyNote",
+   "typeVersion": 1,
+   "position": [
+    750,
+    -180
+   ]
+  },
+  {
+   "parameters": {
+    "content": "### G_Vollstaendig\nFeste Regel prüft, ob das Modell alle nötigen Felder gefunden hat.",
+    "height": 150,
+    "width": 200,
+    "color": 5
+   },
+   "id": "notiz-g-voll",
+   "name": "Notiz Gateway Vollstaendig",
+   "type": "n8n-nodes-base.stickyNote",
+   "typeVersion": 1,
+   "position": [
+    1050,
+    -180
+   ]
+  },
+  {
+   "parameters": {
+    "content": "### T_Rueckfrage\nEntwurf der Rückfrage für die Sachbearbeitung, falls unvollständig.",
+    "height": 150,
+    "width": 200,
+    "color": 5
+   },
+   "id": "notiz-rueckfrage",
+   "name": "Notiz Rueckfrage",
+   "type": "n8n-nodes-base.stickyNote",
+   "typeVersion": 1,
+   "position": [
+    1050,
+    320
+   ]
+  },
+  {
+   "parameters": {
+    "content": "### T_Pruefen_Campus\nSystemabfrage gegen die Mock-Datenbank anhand der erkannten Matrikelnummer.",
+    "height": 150,
+    "width": 200,
+    "color": 5
+   },
+   "id": "notiz-campus-db",
+   "name": "Notiz Campus DB",
+   "type": "n8n-nodes-base.stickyNote",
+   "typeVersion": 1,
+   "position": [
+    1350,
+    -180
+   ]
+  },
+  {
+   "parameters": {
+    "content": "### Regelprüfung Campus\nPrüft ob 210 LP erreicht und das Praxissemester anerkannt sind.",
+    "height": 150,
+    "width": 200,
+    "color": 5
+   },
+   "id": "notiz-campus-regel",
+   "name": "Notiz Campus Regel",
+   "type": "n8n-nodes-base.stickyNote",
+   "typeVersion": 1,
+   "position": [
+    1650,
+    -180
+   ]
+  },
+  {
+   "parameters": {
+    "content": "### Ablehnung entwerfen\nBereitet eine Ablehnung vor, wenn die Campus-Werte nicht genügen.",
+    "height": 150,
+    "width": 200,
+    "color": 5
+   },
+   "id": "notiz-ablehnung",
+   "name": "Notiz Ablehnung",
+   "type": "n8n-nodes-base.stickyNote",
+   "typeVersion": 1,
+   "position": [
+    1650,
+    320
+   ]
+  },
+  {
+   "parameters": {
+    "content": "### T_Vorlegen\nBereitet die Freigabe der Zulassung für den Prüfungsausschuss vor.",
+    "height": 150,
+    "width": 200,
+    "color": 5
+   },
+   "id": "notiz-vorlegen",
+   "name": "Notiz Vorlegen",
+   "type": "n8n-nodes-base.stickyNote",
+   "typeVersion": 1,
+   "position": [
+    1950,
+    -320
+   ]
+  },
+  {
+   "parameters": {
+    "content": "### T_Entscheiden\nMensch trifft die Entscheidung per Web-Formular anhand der Textvorlage.",
+    "height": 150,
+    "width": 200,
+    "color": 5
+   },
+   "id": "notiz-entscheiden",
+   "name": "Notiz Entscheiden",
+   "type": "n8n-nodes-base.stickyNote",
+   "typeVersion": 1,
+   "position": [
+    2250,
+    -180
+   ]
+  },
+  {
+   "parameters": {
+    "content": "### T_Abschliessen\nAuswertung der Entscheidung. Nichts geht automatisch an Systeme.",
+    "height": 150,
+    "width": 200,
+    "color": 5
+   },
+   "id": "notiz-abschliessen",
+   "name": "Notiz Abschliessen",
+   "type": "n8n-nodes-base.stickyNote",
+   "typeVersion": 1,
+   "position": [
+    2550,
+    -180
+   ]
+  },
+  {
+   "parameters": {},
+   "id": "b3e945c2-f19b-4e1b-bb3b-9e42e56cf7b0",
+   "name": "Start",
+   "type": "n8n-nodes-base.manualTrigger",
+   "typeVersion": 1,
+   "position": [
+    0,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "operation": "executeQuery",
+    "query": "CREATE TABLE IF NOT EXISTS anmeldung_ba_campus (\n  matrikelnummer text PRIMARY KEY,\n  leistungspunkte integer NOT NULL,\n  praxissemester_anerkannt boolean NOT NULL\n);\nINSERT INTO anmeldung_ba_campus VALUES\n  ('11111', 215, true),\n  ('22222', 210, true),\n  ('33333', 190, false)\nON CONFLICT (matrikelnummer) DO NOTHING;",
+    "options": {}
+   },
+   "id": "f5f543e8-5df0-4b92-ba9a-8c7694f31c2d",
+   "name": "Mock anlegen",
+   "type": "n8n-nodes-base.postgres",
+   "typeVersion": 2.6,
+   "position": [
+    250,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "assignments": {
+     "assignments": [
+      {
+       "id": "a9d7c3d2-d81b-4f9e-b9b5-6f81e289c8a0",
+       "name": "mail",
+       "value": "Guten Tag, hiermit melde ich meine Bachelorarbeit an. Meine Matrikelnummer ist 11111. Als Erstprüferin fungiert Prof. Testrolle. Das Formular liegt unterschrieben bei. Viele Grüße, Alex Beispiel",
+       "type": "string"
+      }
+     ]
+    },
+    "options": {}
+   },
+   "id": "c1f7a8b9-4a92-41f2-9c3f-9d95c4d0e1b2",
+   "name": "Testfall",
+   "type": "n8n-nodes-base.set",
+   "typeVersion": 3.4,
+   "position": [
+    500,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "promptType": "define",
+    "text": "=Kontext: Sachbearbeitung im Prüfungsamt. Eine Studentin oder ein Student meldet die Bachelorarbeit per E-Mail an.\n\nAufgabe: Übertrage die Daten aus der E-Mail in die strukturierten Felder.\n\nPrüfung: Erfinde keine Daten. Setze ist_vollstaendig nur auf true, wenn eine Matrikelnummer, ein Erstprüfer und ein Hinweis auf eine Unterschrift vorhanden sind. Trage fehlende Angaben in die Liste fehlende_angaben ein.\n\nE-Mail:\n{{ $json.mail }}",
+    "hasOutputParser": true
+   },
+   "id": "d2a3c4b5-5c6d-4e7f-8b8b-7c91d2a3e4f5",
+   "name": "Formular formal pruefen",
+   "type": "@n8n/n8n-nodes-langchain.chainLlm",
+   "typeVersion": 1.7,
+   "position": [
+    750,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "modelName": "models/gemini-3.1-flash-lite",
+    "options": {
+     "temperature": 0.2
+    }
+   },
+   "id": "e4f5g6h7-1234-5678-abcd-9876543210ab",
+   "name": "Gemini",
+   "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+   "typeVersion": 1,
+   "position": [
+    680,
+    250
+   ]
+  },
+  {
+   "parameters": {
+    "jsonSchemaExample": "{\n  \"ist_vollstaendig\": true,\n  \"matrikelnummer\": \"11111\",\n  \"erstpruefer\": \"Prof. Testrolle\",\n  \"fehlende_angaben\": [\n    \"Zweitprüfer\"\n  ]\n}"
+   },
+   "id": "h7g6f5e4-4321-8765-dcba-0123456789cd",
+   "name": "Format",
+   "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+   "typeVersion": 1.2,
+   "position": [
+    820,
+    250
+   ]
+  },
+  {
+   "parameters": {
+    "conditions": {
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "strict",
+      "version": 2
+     },
+     "conditions": [
+      {
+       "id": "9f8e7d6c-5b4a-3c2d-1e0f-1a2b3c4d5e6f",
+       "leftValue": "={{ $json.output.ist_vollstaendig }}",
+       "rightValue": true,
+       "operator": {
+        "type": "boolean",
+        "operation": "true"
+       }
+      }
+     ],
+     "combinator": "and"
+    },
+    "options": {}
+   },
+   "id": "f1e2d3c4-b5a6-7c8d-9e0f-1a2b3c4d5e6f",
+   "name": "Formular vollstaendig?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    1050,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "assignments": {
+     "assignments": [
+      {
+       "id": "b1c2d3e4-f5a6-7b8c-9d0e-1f2a3b4c5d6e",
+       "name": "empfehlung",
+       "value": "=Das Formular ist unvollständig. Es fehlen: {{ $json.output.fehlende_angaben.join(', ') }}. Rückfrage an Matrikelnummer {{ $json.output.matrikelnummer }} wird empfohlen.",
+       "type": "string"
+      }
+     ]
+    },
+    "options": {}
+   },
+   "id": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+   "name": "Rueckfrage entwerfen",
+   "type": "n8n-nodes-base.set",
+   "typeVersion": 3.4,
+   "position": [
+    1050,
+    180
+   ]
+  },
+  {
+   "parameters": {
+    "operation": "executeQuery",
+    "query": "SELECT matrikelnummer, leistungspunkte, praxissemester_anerkannt FROM anmeldung_ba_campus WHERE matrikelnummer = '{{ $json.output.matrikelnummer }}';",
+    "options": {}
+   },
+   "id": "c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f",
+   "name": "Campus abfragen",
+   "type": "n8n-nodes-base.postgres",
+   "typeVersion": 2.6,
+   "position": [
+    1350,
+    -100
+   ]
+  },
+  {
+   "parameters": {
+    "conditions": {
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "strict",
+      "version": 2
+     },
+     "conditions": [
+      {
+       "id": "d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a",
+       "leftValue": "={{ $json.leistungspunkte }}",
+       "rightValue": 210,
+       "operator": {
+        "type": "number",
+        "operation": "gte"
+       }
+      },
+      {
+       "id": "e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b",
+       "leftValue": "={{ $json.praxissemester_anerkannt }}",
+       "rightValue": true,
+       "operator": {
+        "type": "boolean",
+        "operation": "true"
+       }
+      }
+     ],
+     "combinator": "and"
+    },
+    "options": {}
+   },
+   "id": "f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c",
+   "name": "Voraussetzungen erfuellt?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    1650,
+    -100
+   ]
+  },
+  {
+   "parameters": {
+    "assignments": {
+     "assignments": [
+      {
+       "id": "a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d",
+       "name": "empfehlung",
+       "value": "=Matrikelnummer {{ $json.matrikelnummer }} hat {{ $json.leistungspunkte }} LP und das Praxissemester ist anerkannt ({{ $json.praxissemester_anerkannt }}). Zulassung wird empfohlen.",
+       "type": "string"
+      }
+     ]
+    },
+    "options": {}
+   },
+   "id": "b8c9d0e1-f2a3-4b5c-6d7e-8f9a0b1c2d3e",
+   "name": "Vorgang vorlegen",
+   "type": "n8n-nodes-base.set",
+   "typeVersion": 3.4,
+   "position": [
+    1950,
+    -200
+   ]
+  },
+  {
+   "parameters": {
+    "assignments": {
+     "assignments": [
+      {
+       "id": "c9d0e1f2-a3b4-5c6d-7e8f-9a0b1c2d3e4f",
+       "name": "empfehlung",
+       "value": "=Matrikelnummer {{ $json.matrikelnummer }} erfüllt die Voraussetzungen nicht. Leistungspunkte: {{ $json.leistungspunkte }}, Praxissemester anerkannt: {{ $json.praxissemester_anerkannt }}. Ablehnung empfohlen.",
+       "type": "string"
+      }
+     ]
+    },
+    "options": {}
+   },
+   "id": "d0e1f2a3-b4c5-6d7e-8f9a-0b1c2d3e4f5a",
+   "name": "Ablehnung entwerfen",
+   "type": "n8n-nodes-base.set",
+   "typeVersion": 3.4,
+   "position": [
+    1950,
+    50
+   ]
+  },
+  {
+   "parameters": {
+    "resume": "form",
+    "formTitle": "Freigabe: Anmeldung BA",
+    "formDescription": "={{ $json.empfehlung }}",
+    "formFields": {
+     "values": [
+      {
+       "fieldLabel": "Entscheidung",
+       "fieldType": "dropdown",
+       "requiredField": true,
+       "fieldOptions": {
+        "values": [
+         {
+          "option": "freigeben"
+         },
+         {
+          "option": "zurueckgeben"
+         }
+        ]
+       }
+      },
+      {
+       "fieldLabel": "Begruendung",
+       "fieldType": "textarea"
+      }
+     ]
+    },
+    "options": {}
+   },
+   "id": "e1f2a3b4-c5d6-7e8f-9a0b-1c2d3e4f5a6b",
+   "name": "Ueber Zulassung entscheiden",
+   "type": "n8n-nodes-base.wait",
+   "typeVersion": 1.1,
+   "position": [
+    2250,
+    0
+   ]
+  },
+  {
+   "parameters": {
+    "conditions": {
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "strict",
+      "version": 2
+     },
+     "conditions": [
+      {
+       "id": "f2a3b4c5-d6e7-8f9a-0b1c-2d3e4f5a6b7c",
+       "leftValue": "={{ $json.Entscheidung }}",
+       "rightValue": "freigeben",
+       "operator": {
+        "type": "string",
+        "operation": "equals"
+       }
+      }
+     ],
+     "combinator": "and"
+    },
+    "options": {}
+   },
+   "id": "a3b4c5d6-e7f8-9a0b-1c2d-3e4f5a6b7c8d",
+   "name": "Entscheidung auswerten",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    2550,
+    0
+   ]
+  }
+ ],
+ "connections": {
+  "Start": {
+   "main": [
+    [
+     {
+      "node": "Mock anlegen",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Mock anlegen": {
+   "main": [
+    [
+     {
+      "node": "Testfall",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Testfall": {
+   "main": [
+    [
+     {
+      "node": "Formular formal pruefen",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Gemini": {
+   "ai_languageModel": [
+    [
+     {
+      "node": "Formular formal pruefen",
+      "type": "ai_languageModel",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Format": {
+   "ai_outputParser": [
+    [
+     {
+      "node": "Formular formal pruefen",
+      "type": "ai_outputParser",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Formular formal pruefen": {
+   "main": [
+    [
+     {
+      "node": "Formular vollstaendig?",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Formular vollstaendig?": {
+   "main": [
+    [
+     {
+      "node": "Campus abfragen",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Rueckfrage entwerfen",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Campus abfragen": {
+   "main": [
+    [
+     {
+      "node": "Voraussetzungen erfuellt?",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Voraussetzungen erfuellt?": {
+   "main": [
+    [
+     {
+      "node": "Vorgang vorlegen",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Ablehnung entwerfen",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Rueckfrage entwerfen": {
+   "main": [
+    [
+     {
+      "node": "Ueber Zulassung entscheiden",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Vorgang vorlegen": {
+   "main": [
+    [
+     {
+      "node": "Ueber Zulassung entscheiden",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Ablehnung entwerfen": {
+   "main": [
+    [
+     {
+      "node": "Ueber Zulassung entscheiden",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Ueber Zulassung entscheiden": {
+   "main": [
+    [
+     {
+      "node": "Entscheidung auswerten",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ },
+ "pinData": {},
+ "settings": {
+  "executionOrder": "v1"
+ },
+ "active": false
+}

@@ -14,7 +14,7 @@ toc: true
 ::: {.callout-note title="Ausgegeben am 26.10."}
 - Anleitung: [n8n Schritt für Schritt](../werkzeuge/n8n-einstieg.qmd), Beispiele 8 und 10
 - Übung: [Prompt-Teile streichen und vergleichen](#uebung-3)
-- Auftrag für den Agenten: [Workflow aus dem Soll-Modell](../material/prompts/workflow-aus-soll.md)
+- Auftrag für den Agenten: [Workflow aus dem Soll-Modell](../material/prompts/workflow-aus-soll.md) mit [Vorlagen als ZIP](../material/n8n/vorlagen-workflow.zip) und einem [Beispielergebnis](#antigravity)
 - Nachschlagen: [Prompt-Standard](../werkzeuge/einrichtung.qmd#prompt), [Vom Soll-Modell zum Workflow](../werkzeuge/n8n.qmd#vom-modell)
 :::
 
@@ -110,26 +110,29 @@ Für alle Prompts im Projekt gilt der [Prompt-Standard](../werkzeuge/einrichtung
 
 Den Workflow müssen wir nicht Knoten für Knoten in n8n zusammenklicken. Antigravity kann aus einem Prozessmodell eine Workflow-Datei schreiben, die n8n importiert. Die Zuordnung steht unter [Vom Soll-Modell zum Workflow](../werkzeuge/n8n.qmd#vom-modell): Startereignis zu Trigger, feste Regel zu If-Knoten, Modellschritt zu LLM-Knoten oder Agent, Systemabfrage zu Postgres oder Webhook gegen einen Mock, menschliche Entscheidung zu einem sichtbaren Freigabe-Schritt.
 
-Dabei gilt dasselbe wie bei jedem Agenten: Antigravity schreibt einen Entwurf, wir prüfen ihn. Am häufigsten passt der Export nicht zur installierten n8n-Version: falsche Knotenversionen oder Parameternamen. Deshalb bekommt Antigravity einen funktionierenden Export als Muster mit.
+Dabei gilt dasselbe wie bei jedem Agenten: Antigravity schreibt einen Entwurf, wir prüfen ihn. Ohne Hilfe passt der Export oft nicht zu unserer n8n-Version, oder Ausdrücke zeigen auf falsche Felder. Deshalb bekommt Antigravity vier funktionierende DEMO-Exporte als Muster mit, und der Auftrag nennt die typischen Stolpersteine ausdrücklich.
 
 ::: {.uebung}
 ### Übung 4 · etwa 20 Minuten · eine Person pro Gruppe am Rechner, die anderen prüfen
 
-**Material:** [Auftrag: Workflow aus dem Soll-Modell](../material/prompts/workflow-aus-soll.md), [10-agent.json](../material/n8n/10-agent.json){download="10-agent.json"}, das BPMN-Modell der Gruppe vom 19.10.
+**Material:** [Auftrag: Workflow aus dem Soll-Modell](../material/prompts/workflow-aus-soll.md), [Vorlagen als ZIP](../material/n8n/vorlagen-workflow.zip){download="vorlagen-workflow.zip"} (DEMO 02, 04, 07 und 10), das BPMN-Modell der Gruppe vom 19.10.
 
-1. Die Datei `10-agent.json` herunterladen und im Projektordner unter `04_Prototyp/vorlagen/` ablegen.
-2. Das BPMN-Modell der Gruppe unter `03_Prozessmodelle/` bereitlegen. Ein Soll-Modell gibt es meist noch nicht; dann das Modell vom 19.10. nehmen und im Auftrag `-soll` durch `-ist` ersetzen.
-3. Den Auftrag in den Chat von Antigravity einfügen und die Platzhalter ersetzen.
+1. Das ZIP herunterladen und die vier Dateien im Projektordner unter `04_Prototyp/vorlagen/` ablegen.
+2. Das BPMN-Modell der Gruppe unter `03_Prozessmodelle/` bereitlegen. Ein Soll-Modell gibt es meist noch nicht; dann das Modell vom 19.10. nehmen und im Auftrag `<name>-soll.bpmn` durch den Dateinamen dieses Modells ersetzen.
+3. Den Auftrag in den Chat von Antigravity einfügen und die Platzhalter ersetzen: `<name>` durch einen kurzen Namen des Prozesses, `<n>` durch die Gruppennummer.
 4. Die Tabelle lesen, die Antigravity am Ende ausgibt: Hat jeder Schritt im Modell einen Knoten? Welche Stellen sind unsicher?
 5. In n8n über „Import from File“ die Datei importieren.
 6. In jedem Knoten mit Modell oder Datenbank die Verbindung „Gemini g<n>“ oder „Postgres g<n>“ auswählen.
-7. Den Workflow ausführen.
+7. Den Workflow ausführen. Am Freigabe-Schritt öffnet sich ein Formular: entscheiden und absenden.
 8. Jeden Fehler als Auftrag an Antigravity zurückgeben, mit der Fehlermeldung aus n8n im Wortlaut. Nicht von Hand im JSON korrigieren.
+9. Im Knoten „Testfall“ einen anderen Fall wählen und erneut ausführen.
 
-**Prüfung:** Der Workflow lässt sich importieren und läuft mindestens bis zum ersten Modellschritt. Jeder Knoten entspricht einem Schritt im Modell, und Antigravity hat keinen Schritt erfunden.
+**Prüfung:** Der Workflow läuft ohne Änderung im JSON bis zum Freigabe-Formular. Jeder Knoten entspricht einem Schritt im Modell, Antigravity hat keinen Schritt erfunden, und jeder Zweig endet bei der Freigabe durch eine Person.
 
 **Ergebnis:** Ein erster Workflow-Entwurf unter `04_Prototyp/`. Er ist der Ausgangspunkt für den Prototyp, nicht der Prototyp selbst.
 :::
+
+**So kann das Ergebnis aussehen:** Für den Ablauf „Anmeldung der Bachelorarbeit“ ist aus einer [Beschreibung](../material/prompts/beispiel/anmeldung-ba-beschreibung.md) zuerst das [Ist-Modell](../material/prompts/beispiel/anmeldung-ba-ist.bpmn){download="anmeldung-ba-ist.bpmn"} entstanden, daraus mit diesem Auftrag der [Workflow](../material/prompts/beispiel/anmeldung-ba-workflow.json){download="anmeldung-ba-workflow.json"}. Er legt eine Mock-Tabelle mit drei Fällen an, prüft das Formular mit einem Modellschritt, die Leistungspunkte mit einer festen Regel und legt jeden Fall einer Person zur Freigabe vor.
 
 ## Nächste Schritte {#naechste}
 
