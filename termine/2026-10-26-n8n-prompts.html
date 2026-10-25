@@ -334,7 +334,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Anleitung: <a href="../werkzeuge/n8n-einstieg.html">n8n Schritt für Schritt</a>, Beispiele 8 und 10</li>
 <li>Übung: <a href="#uebung-3">Prompt-Teile streichen und vergleichen</a></li>
-<li>Auftrag für den Agenten: <a href="../material/prompts/workflow-aus-soll.md">Workflow aus dem Soll-Modell</a></li>
+<li>Auftrag für den Agenten: <a href="../material/prompts/workflow-aus-soll.md">Workflow aus dem Soll-Modell</a> mit <a href="../material/n8n/vorlagen-workflow.zip">Vorlagen als ZIP</a> und einem <a href="#antigravity">Beispielergebnis</a></li>
 <li>Nachschlagen: <a href="../werkzeuge/einrichtung.html#prompt">Prompt-Standard</a>, <a href="../werkzeuge/n8n.html#vom-modell">Vom Soll-Modell zum Workflow</a></li>
 </ul>
 </div>
@@ -502,23 +502,25 @@ ul.task-list li input[type="checkbox"] {
 <section id="antigravity" class="level2">
 <h2 class="anchored" data-anchor-id="antigravity">Antigravity baut den Workflow</h2>
 <p>Den Workflow müssen wir nicht Knoten für Knoten in n8n zusammenklicken. Antigravity kann aus einem Prozessmodell eine Workflow-Datei schreiben, die n8n importiert. Die Zuordnung steht unter <a href="../werkzeuge/n8n.html#vom-modell">Vom Soll-Modell zum Workflow</a>: Startereignis zu Trigger, feste Regel zu If-Knoten, Modellschritt zu LLM-Knoten oder Agent, Systemabfrage zu Postgres oder Webhook gegen einen Mock, menschliche Entscheidung zu einem sichtbaren Freigabe-Schritt.</p>
-<p>Dabei gilt dasselbe wie bei jedem Agenten: Antigravity schreibt einen Entwurf, wir prüfen ihn. Am häufigsten passt der Export nicht zur installierten n8n-Version: falsche Knotenversionen oder Parameternamen. Deshalb bekommt Antigravity einen funktionierenden Export als Muster mit.</p>
+<p>Dabei gilt dasselbe wie bei jedem Agenten: Antigravity schreibt einen Entwurf, wir prüfen ihn. Ohne Hilfe passt der Export oft nicht zu unserer n8n-Version, oder Ausdrücke zeigen auf falsche Felder. Deshalb bekommt Antigravity vier funktionierende DEMO-Exporte als Muster mit, und der Auftrag nennt die typischen Stolpersteine ausdrücklich.</p>
 <section id="übung-4-etwa-20-minuten-eine-person-pro-gruppe-am-rechner-die-anderen-prüfen" class="level3 uebung">
 <h3 class="anchored" data-anchor-id="übung-4-etwa-20-minuten-eine-person-pro-gruppe-am-rechner-die-anderen-prüfen">Übung 4 · etwa 20 Minuten · eine Person pro Gruppe am Rechner, die anderen prüfen</h3>
-<p><strong>Material:</strong> <a href="../material/prompts/workflow-aus-soll.md">Auftrag: Workflow aus dem Soll-Modell</a>, <a href="../material/n8n/10-agent.json" download="10-agent.json">10-agent.json</a>, das BPMN-Modell der Gruppe vom 19.10.</p>
+<p><strong>Material:</strong> <a href="../material/prompts/workflow-aus-soll.md">Auftrag: Workflow aus dem Soll-Modell</a>, <a href="../material/n8n/vorlagen-workflow.zip" download="vorlagen-workflow.zip">Vorlagen als ZIP</a> (DEMO 02, 04, 07 und 10), das BPMN-Modell der Gruppe vom 19.10.</p>
 <ol type="1">
-<li>Die Datei <code>10-agent.json</code> herunterladen und im Projektordner unter <code>04_Prototyp/vorlagen/</code> ablegen.</li>
-<li>Das BPMN-Modell der Gruppe unter <code>03_Prozessmodelle/</code> bereitlegen. Ein Soll-Modell gibt es meist noch nicht; dann das Modell vom 19.10. nehmen und im Auftrag <code>-soll</code> durch <code>-ist</code> ersetzen.</li>
-<li>Den Auftrag in den Chat von Antigravity einfügen und die Platzhalter ersetzen.</li>
+<li>Das ZIP herunterladen und die vier Dateien im Projektordner unter <code>04_Prototyp/vorlagen/</code> ablegen.</li>
+<li>Das BPMN-Modell der Gruppe unter <code>03_Prozessmodelle/</code> bereitlegen. Ein Soll-Modell gibt es meist noch nicht; dann das Modell vom 19.10. nehmen und im Auftrag <code>&lt;name&gt;-soll.bpmn</code> durch den Dateinamen dieses Modells ersetzen.</li>
+<li>Den Auftrag in den Chat von Antigravity einfügen und die Platzhalter ersetzen: <code>&lt;name&gt;</code> durch einen kurzen Namen des Prozesses, <code>&lt;n&gt;</code> durch die Gruppennummer.</li>
 <li>Die Tabelle lesen, die Antigravity am Ende ausgibt: Hat jeder Schritt im Modell einen Knoten? Welche Stellen sind unsicher?</li>
 <li>In n8n über „Import from File“ die Datei importieren.</li>
 <li>In jedem Knoten mit Modell oder Datenbank die Verbindung „Gemini g<n>“ oder „Postgres g<n>“ auswählen.</n></n></li>
-<li>Den Workflow ausführen.</li>
+<li>Den Workflow ausführen. Am Freigabe-Schritt öffnet sich ein Formular: entscheiden und absenden.</li>
 <li>Jeden Fehler als Auftrag an Antigravity zurückgeben, mit der Fehlermeldung aus n8n im Wortlaut. Nicht von Hand im JSON korrigieren.</li>
+<li>Im Knoten „Testfall“ einen anderen Fall wählen und erneut ausführen.</li>
 </ol>
-<p><strong>Prüfung:</strong> Der Workflow lässt sich importieren und läuft mindestens bis zum ersten Modellschritt. Jeder Knoten entspricht einem Schritt im Modell, und Antigravity hat keinen Schritt erfunden.</p>
+<p><strong>Prüfung:</strong> Der Workflow läuft ohne Änderung im JSON bis zum Freigabe-Formular. Jeder Knoten entspricht einem Schritt im Modell, Antigravity hat keinen Schritt erfunden, und jeder Zweig endet bei der Freigabe durch eine Person.</p>
 <p><strong>Ergebnis:</strong> Ein erster Workflow-Entwurf unter <code>04_Prototyp/</code>. Er ist der Ausgangspunkt für den Prototyp, nicht der Prototyp selbst.</p>
 </section>
+<p><strong>So kann das Ergebnis aussehen:</strong> Für den Ablauf „Anmeldung der Bachelorarbeit“ ist aus einer <a href="../material/prompts/beispiel/anmeldung-ba-beschreibung.md">Beschreibung</a> zuerst das <a href="../material/prompts/beispiel/anmeldung-ba-ist.bpmn" download="anmeldung-ba-ist.bpmn">Ist-Modell</a> entstanden, daraus mit diesem Auftrag der <a href="../material/prompts/beispiel/anmeldung-ba-workflow.json" download="anmeldung-ba-workflow.json">Workflow</a>. Er legt eine Mock-Tabelle mit drei Fällen an, prüft das Formular mit einem Modellschritt, die Leistungspunkte mit einer festen Regel und legt jeden Fall einer Person zur Freigabe vor.</p>
 </section>
 <section id="naechste" class="level2">
 <h2 class="anchored" data-anchor-id="naechste">Nächste Schritte</h2>
