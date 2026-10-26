@@ -6,12 +6,14 @@ toc: true
 [Montag, 26. Oktober 2026 · 11:45 bis 13:15 Uhr · Raum I110 · Notebook mitbringen, VPN eingerichtet]{.kicker}
 
 ::: {.lead}
+- Folien vom 19.10. ab Teil 7: Workflows, Kontext und Werkzeuge, Mensch im Ablauf, Prüfen, Use Cases
 - n8n vertiefen: Eine Person entscheidet in der Tabelle, ein Agent prüft einen Antrag
 - Prompts im Agenten: Welche Teile eines Systemprompts das Ergebnis tragen
 - Antigravity baut den Workflow: vom Prozessmodell zum importierbaren n8n-Workflow
 :::
 
 ::: {.callout-note title="Ausgegeben am 26.10."}
+- Folien: Einführung in KI-Agenten ab Teil 7 „Workflows“ ([PDF ab Seite 44](../material/folien/2026-10-19-einfuehrung-ki-agenten.pdf#page=44))
 - Anleitung: [n8n Schritt für Schritt](../werkzeuge/n8n-einstieg.qmd), Beispiele 8 und 10
 - Übung: [Prompt-Teile streichen und vergleichen](#uebung-3)
 - Auftrag für den Agenten: [Workflow aus dem Soll-Modell](../material/prompts/workflow-aus-soll.md) mit [Vorlagen als ZIP](../material/n8n/vorlagen-workflow.zip) und einem [Beispielergebnis](#antigravity)
@@ -26,11 +28,13 @@ Am Ende hat jede Gruppe in ihrer n8n-Instanz eine Entscheidung durch eine Person
 
 | Baustein | Dauer etwa | Arbeitsform |
 |---|---|---|
-| Stand je Gruppe: Prozess, Modell, offene Fragen | 10 Minuten | Gemeinsam |
-| n8n: DEMO 08 und DEMO 10 | 25 Minuten | Angeleitet, in den Gruppen |
-| Prompts im Agenten, Übung | 20 Minuten | Input, dann in den Gruppen |
+| Stand je Gruppe: Prozess, Modell, offene Fragen | 5 Minuten | Gemeinsam |
+| Folien ab Teil 7: Workflows bis Fazit | 35 Minuten | Input mit Fragen an den Raum |
+| n8n: DEMO 10 und Prompt-Übung | 20 Minuten | In den Gruppen |
 | Antigravity baut den Workflow | 25 Minuten | Vorführung, dann in den Gruppen |
-| Nächste Schritte | 10 Minuten | Gemeinsam |
+| Nächste Schritte | 5 Minuten | Gemeinsam |
+
+DEMO 08 (Übung 1) ist zum Nacharbeiten gedacht und läuft heute nur, wenn Zeit bleibt.
 
 :::
 
@@ -38,10 +42,22 @@ Am Ende hat jede Gruppe in ihrer n8n-Instanz eine Entscheidung durch eine Person
 
 Jede Gruppe sagt in einer Minute: Welchen Prozess haben wir gewählt? Gibt es das BPMN-Modell aus Antigravity? Was ist offen? Wer beim letzten Termin nicht fertig geworden ist, holt die fehlenden Schritte in den Übungen heute nach.
 
+## Folien: Workflows bis Fazit {#folien}
+
+Beim letzten Termin sind wir durch die zweite Hälfte der Folien nur schnell gegangen. Heute nehmen wir sie ab Teil 7 noch einmal in Ruhe durch: [Folien als PDF, ab Seite 44](../material/folien/2026-10-19-einfuehrung-ki-agenten.pdf#page=44).
+
+| Teil | Worum es geht | Wo es heute weitergeht |
+|---|---|---|
+| Workflows | Wer bestimmt den nächsten Schritt, fünf Grundmuster, Regel, KI oder Mensch je Schritt | Übung 4: feste Regeln als If-Knoten |
+| Kontext und Werkzeuge | Werkzeugbeschreibung als Arbeitsanweisung, MCP, langer Kontext, Skills | Prompts im Agenten |
+| Mensch im Ablauf | Vorbereiten ja, wirken nur mit Freigabe; Rechte; Prompt Injection | Freigabe-Schritt im Workflow |
+| Prüfen | Ein Lauf beweist nichts, Testfälle mit Erwartung | Übung 3: mehrere Läufe vergleichen |
+| Use Cases, Halluzinationen, Fazit | Ausschlussfragen, drei Achsen, plausible Antworten ohne Beleg | Auswahl und Bewertung des eigenen Prozesses |
+
 ## Übung 1: Eine Person entscheidet {#uebung-1}
 
 ::: {.uebung}
-### Etwa 10 Minuten · in den Gruppen, vorne läuft dieselbe Instanz am Beamer
+### Zum Nacharbeiten · etwa 10 Minuten · in den Gruppen
 
 **Material:** [Beispiel 8](../werkzeuge/n8n-einstieg.qmd#datentabelle), Zugang der Gruppe.
 
