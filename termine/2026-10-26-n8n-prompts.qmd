@@ -15,6 +15,7 @@ toc: true
 ::: {.callout-note title="Ausgegeben am 26.10."}
 - Folien: Einführung in KI-Agenten ab Teil 7 „Workflows“ ([PDF ab Seite 44](../material/folien/2026-10-19-einfuehrung-ki-agenten.pdf#page=44))
 - Anleitung: [n8n Schritt für Schritt](../werkzeuge/n8n-einstieg.qmd), Beispiele 8 und 10
+- Anleitung: [HdM-VPN einrichten](../start.qmd#vpn) (OpenVPN für Windows, Tunnelblick für macOS)
 - Übung: [Prompt-Teile streichen und vergleichen](#uebung-3)
 - Auftrag für den Agenten: [Workflow aus dem Soll-Modell](../material/prompts/workflow-aus-soll.md) mit [Vorlagen als ZIP](../material/n8n/vorlagen-workflow.zip) und einem [Beispielergebnis](#antigravity)
 - Nachschlagen: [Prompt-Standard](../werkzeuge/einrichtung.qmd#prompt), [Vom Soll-Modell zum Workflow](../werkzeuge/n8n.qmd#vom-modell)
@@ -61,7 +62,7 @@ Beim letzten Termin sind wir durch die zweite Hälfte der Folien nur schnell geg
 
 **Material:** [Beispiel 8](../werkzeuge/n8n-einstieg.qmd#datentabelle), Zugang der Gruppe.
 
-1. VPN verbinden, die n8n-Instanz der Gruppe öffnen, anmelden.
+1. [VPN](../start.qmd#vpn) verbinden, die n8n-Instanz der Gruppe öffnen, anmelden.
 2. DEMO 08a ausführen.
 3. Unter „Overview“ den Reiter „Data tables“ öffnen und die Tabelle `pruefliste` öffnen.
 4. Bei `A-001` in der Spalte `entscheidung` den Wert `freigeben` eintragen, bei `A-003` den Wert `zurückgeben`. `A-002` leer lassen.
