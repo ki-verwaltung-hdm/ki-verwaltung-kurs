@@ -282,6 +282,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#ziel-des-termins" id="toc-ziel-des-termins" class="nav-link active" data-scroll-target="#ziel-des-termins">Ziel des Termins</a></li>
   <li><a href="#stand" id="toc-stand" class="nav-link" data-scroll-target="#stand">Stand je Gruppe</a></li>
+  <li><a href="#folien" id="toc-folien" class="nav-link" data-scroll-target="#folien">Folien: Workflows bis Fazit</a></li>
   <li><a href="#uebung-1" id="toc-uebung-1" class="nav-link" data-scroll-target="#uebung-1">Übung 1: Eine Person entscheidet</a></li>
   <li><a href="#uebung-2" id="toc-uebung-2" class="nav-link" data-scroll-target="#uebung-2">Übung 2: Ein Agent prüft einen Antrag</a></li>
   <li><a href="#prompts" id="toc-prompts" class="nav-link" data-scroll-target="#prompts">Was im Prompt eines Agenten zählt</a></li>
@@ -316,6 +317,7 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="kicker">Montag, 26. Oktober 2026 · 11:45 bis 13:15 Uhr · Raum I110 · Notebook mitbringen, VPN eingerichtet</span></p>
 <div class="lead">
 <ul>
+<li>Folien vom 19.10. ab Teil 7: Workflows, Kontext und Werkzeuge, Mensch im Ablauf, Prüfen, Use Cases</li>
 <li>n8n vertiefen: Eine Person entscheidet in der Tabelle, ein Agent prüft einen Antrag</li>
 <li>Prompts im Agenten: Welche Teile eines Systemprompts das Ergebnis tragen</li>
 <li>Antigravity baut den Workflow: vom Prozessmodell zum importierbaren n8n-Workflow</li>
@@ -332,6 +334,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
+<li>Folien: Einführung in KI-Agenten ab Teil 7 „Workflows“ (<a href="../material/folien/2026-10-19-einfuehrung-ki-agenten.pdf#page=44">PDF ab Seite 44</a>)</li>
 <li>Anleitung: <a href="../werkzeuge/n8n-einstieg.html">n8n Schritt für Schritt</a>, Beispiele 8 und 10</li>
 <li>Übung: <a href="#uebung-3">Prompt-Teile streichen und vergleichen</a></li>
 <li>Auftrag für den Agenten: <a href="../material/prompts/workflow-aus-soll.md">Workflow aus dem Soll-Modell</a> mit <a href="../material/n8n/vorlagen-workflow.zip">Vorlagen als ZIP</a> und einem <a href="#antigravity">Beispielergebnis</a></li>
@@ -370,18 +373,18 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Stand je Gruppe: Prozess, Modell, offene Fragen</td>
-<td>10 Minuten</td>
+<td>5 Minuten</td>
 <td>Gemeinsam</td>
 </tr>
 <tr class="even">
-<td>n8n: DEMO 08 und DEMO 10</td>
-<td>25 Minuten</td>
-<td>Angeleitet, in den Gruppen</td>
+<td>Folien ab Teil 7: Workflows bis Fazit</td>
+<td>35 Minuten</td>
+<td>Input mit Fragen an den Raum</td>
 </tr>
 <tr class="odd">
-<td>Prompts im Agenten, Übung</td>
+<td>n8n: DEMO 10 und Prompt-Übung</td>
 <td>20 Minuten</td>
-<td>Input, dann in den Gruppen</td>
+<td>In den Gruppen</td>
 </tr>
 <tr class="even">
 <td>Antigravity baut den Workflow</td>
@@ -390,11 +393,12 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Nächste Schritte</td>
-<td>10 Minuten</td>
+<td>5 Minuten</td>
 <td>Gemeinsam</td>
 </tr>
 </tbody>
 </table>
+<p>DEMO 08 (Übung 1) ist zum Nacharbeiten gedacht und läuft heute nur, wenn Zeit bleibt.</p>
 </div>
 </div>
 </div>
@@ -403,10 +407,55 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="stand">Stand je Gruppe</h2>
 <p>Jede Gruppe sagt in einer Minute: Welchen Prozess haben wir gewählt? Gibt es das BPMN-Modell aus Antigravity? Was ist offen? Wer beim letzten Termin nicht fertig geworden ist, holt die fehlenden Schritte in den Übungen heute nach.</p>
 </section>
+<section id="folien" class="level2">
+<h2 class="anchored" data-anchor-id="folien">Folien: Workflows bis Fazit</h2>
+<p>Beim letzten Termin sind wir durch die zweite Hälfte der Folien nur schnell gegangen. Heute nehmen wir sie ab Teil 7 noch einmal in Ruhe durch: <a href="../material/folien/2026-10-19-einfuehrung-ki-agenten.pdf#page=44">Folien als PDF, ab Seite 44</a>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Teil</th>
+<th>Worum es geht</th>
+<th>Wo es heute weitergeht</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Workflows</td>
+<td>Wer bestimmt den nächsten Schritt, fünf Grundmuster, Regel, KI oder Mensch je Schritt</td>
+<td>Übung 4: feste Regeln als If-Knoten</td>
+</tr>
+<tr class="even">
+<td>Kontext und Werkzeuge</td>
+<td>Werkzeugbeschreibung als Arbeitsanweisung, MCP, langer Kontext, Skills</td>
+<td>Prompts im Agenten</td>
+</tr>
+<tr class="odd">
+<td>Mensch im Ablauf</td>
+<td>Vorbereiten ja, wirken nur mit Freigabe; Rechte; Prompt Injection</td>
+<td>Freigabe-Schritt im Workflow</td>
+</tr>
+<tr class="even">
+<td>Prüfen</td>
+<td>Ein Lauf beweist nichts, Testfälle mit Erwartung</td>
+<td>Übung 3: mehrere Läufe vergleichen</td>
+</tr>
+<tr class="odd">
+<td>Use Cases, Halluzinationen, Fazit</td>
+<td>Ausschlussfragen, drei Achsen, plausible Antworten ohne Beleg</td>
+<td>Auswahl und Bewertung des eigenen Prozesses</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="uebung-1" class="level2">
 <h2 class="anchored" data-anchor-id="uebung-1">Übung 1: Eine Person entscheidet</h2>
-<section id="etwa-10-minuten-in-den-gruppen-vorne-läuft-dieselbe-instanz-am-beamer" class="level3 uebung">
-<h3 class="anchored" data-anchor-id="etwa-10-minuten-in-den-gruppen-vorne-läuft-dieselbe-instanz-am-beamer">Etwa 10 Minuten · in den Gruppen, vorne läuft dieselbe Instanz am Beamer</h3>
+<section id="zum-nacharbeiten-etwa-10-minuten-in-den-gruppen" class="level3 uebung">
+<h3 class="anchored" data-anchor-id="zum-nacharbeiten-etwa-10-minuten-in-den-gruppen">Zum Nacharbeiten · etwa 10 Minuten · in den Gruppen</h3>
 <p><strong>Material:</strong> <a href="../werkzeuge/n8n-einstieg.html#datentabelle">Beispiel 8</a>, Zugang der Gruppe.</p>
 <ol type="1">
 <li>VPN verbinden, die n8n-Instanz der Gruppe öffnen, anmelden.</li>

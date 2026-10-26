@@ -284,7 +284,7 @@
     "href": "termine/2026-10-26-n8n-prompts.html#ziel-des-termins",
     "title": "26.10. · n8n, Prompts, Antigravity",
     "section": "Ziel des Termins",
-    "text": "Ziel des Termins\nAm Ende hat jede Gruppe in ihrer n8n-Instanz eine Entscheidung durch eine Person und einen Agenten mit zwei Werkzeugen selbst ausgeführt. Sie kann sagen, welche Teile eines Systemprompts das Ergebnis tragen. Sie hat mit Antigravity einen ersten Workflow aus ihrem Prozessmodell erzeugt und in n8n importiert.\n\n\n\n\n\n\nHinweisBausteine des Termins\n\n\n\n\n\n\n\n\n\n\n\n\n\nBaustein\nDauer etwa\nArbeitsform\n\n\n\n\nStand je Gruppe: Prozess, Modell, offene Fragen\n10 Minuten\nGemeinsam\n\n\nn8n: DEMO 08 und DEMO 10\n25 Minuten\nAngeleitet, in den Gruppen\n\n\nPrompts im Agenten, Übung\n20 Minuten\nInput, dann in den Gruppen\n\n\nAntigravity baut den Workflow\n25 Minuten\nVorführung, dann in den Gruppen\n\n\nNächste Schritte\n10 Minuten\nGemeinsam"
+    "text": "Ziel des Termins\nAm Ende hat jede Gruppe in ihrer n8n-Instanz eine Entscheidung durch eine Person und einen Agenten mit zwei Werkzeugen selbst ausgeführt. Sie kann sagen, welche Teile eines Systemprompts das Ergebnis tragen. Sie hat mit Antigravity einen ersten Workflow aus ihrem Prozessmodell erzeugt und in n8n importiert.\n\n\n\n\n\n\nHinweisBausteine des Termins\n\n\n\n\n\n\n\n\n\n\n\n\n\nBaustein\nDauer etwa\nArbeitsform\n\n\n\n\nStand je Gruppe: Prozess, Modell, offene Fragen\n5 Minuten\nGemeinsam\n\n\nFolien ab Teil 7: Workflows bis Fazit\n35 Minuten\nInput mit Fragen an den Raum\n\n\nn8n: DEMO 10 und Prompt-Übung\n20 Minuten\nIn den Gruppen\n\n\nAntigravity baut den Workflow\n25 Minuten\nVorführung, dann in den Gruppen\n\n\nNächste Schritte\n5 Minuten\nGemeinsam\n\n\n\nDEMO 08 (Übung 1) ist zum Nacharbeiten gedacht und läuft heute nur, wenn Zeit bleibt."
   },
   {
     "objectID": "termine/2026-10-26-n8n-prompts.html#stand",
@@ -294,11 +294,18 @@
     "text": "Stand je Gruppe\nJede Gruppe sagt in einer Minute: Welchen Prozess haben wir gewählt? Gibt es das BPMN-Modell aus Antigravity? Was ist offen? Wer beim letzten Termin nicht fertig geworden ist, holt die fehlenden Schritte in den Übungen heute nach."
   },
   {
+    "objectID": "termine/2026-10-26-n8n-prompts.html#folien",
+    "href": "termine/2026-10-26-n8n-prompts.html#folien",
+    "title": "26.10. · n8n, Prompts, Antigravity",
+    "section": "Folien: Workflows bis Fazit",
+    "text": "Folien: Workflows bis Fazit\nBeim letzten Termin sind wir durch die zweite Hälfte der Folien nur schnell gegangen. Heute nehmen wir sie ab Teil 7 noch einmal in Ruhe durch: Folien als PDF, ab Seite 44.\n\n\n\n\n\n\n\n\nTeil\nWorum es geht\nWo es heute weitergeht\n\n\n\n\nWorkflows\nWer bestimmt den nächsten Schritt, fünf Grundmuster, Regel, KI oder Mensch je Schritt\nÜbung 4: feste Regeln als If-Knoten\n\n\nKontext und Werkzeuge\nWerkzeugbeschreibung als Arbeitsanweisung, MCP, langer Kontext, Skills\nPrompts im Agenten\n\n\nMensch im Ablauf\nVorbereiten ja, wirken nur mit Freigabe; Rechte; Prompt Injection\nFreigabe-Schritt im Workflow\n\n\nPrüfen\nEin Lauf beweist nichts, Testfälle mit Erwartung\nÜbung 3: mehrere Läufe vergleichen\n\n\nUse Cases, Halluzinationen, Fazit\nAusschlussfragen, drei Achsen, plausible Antworten ohne Beleg\nAuswahl und Bewertung des eigenen Prozesses"
+  },
+  {
     "objectID": "termine/2026-10-26-n8n-prompts.html#uebung-1",
     "href": "termine/2026-10-26-n8n-prompts.html#uebung-1",
     "title": "26.10. · n8n, Prompts, Antigravity",
     "section": "Übung 1: Eine Person entscheidet",
-    "text": "Übung 1: Eine Person entscheidet\n\nEtwa 10 Minuten · in den Gruppen, vorne läuft dieselbe Instanz am Beamer\nMaterial: Beispiel 8, Zugang der Gruppe.\n\nVPN verbinden, die n8n-Instanz der Gruppe öffnen, anmelden.\nDEMO 08a ausführen.\nUnter „Overview“ den Reiter „Data tables“ öffnen und die Tabelle pruefliste öffnen.\nBei A-001 in der Spalte entscheidung den Wert freigeben eintragen, bei A-003 den Wert zurückgeben. A-002 leer lassen.\nDEMO 08b ausführen.\n\nPrüfung: Nur A-001 und A-003 kommen an. A-001 landet bei „Bescheid vorbereiten“, A-003 bei „Rueckfrage vorbereiten“.\nBezug zum Projekt: So sieht der Freigabe-Schritt aus, den jeder Prototyp braucht. Der Workflow bereitet vor, eine Person entscheidet, erst dann geht es weiter."
+    "text": "Übung 1: Eine Person entscheidet\n\nZum Nacharbeiten · etwa 10 Minuten · in den Gruppen\nMaterial: Beispiel 8, Zugang der Gruppe.\n\nVPN verbinden, die n8n-Instanz der Gruppe öffnen, anmelden.\nDEMO 08a ausführen.\nUnter „Overview“ den Reiter „Data tables“ öffnen und die Tabelle pruefliste öffnen.\nBei A-001 in der Spalte entscheidung den Wert freigeben eintragen, bei A-003 den Wert zurückgeben. A-002 leer lassen.\nDEMO 08b ausführen.\n\nPrüfung: Nur A-001 und A-003 kommen an. A-001 landet bei „Bescheid vorbereiten“, A-003 bei „Rueckfrage vorbereiten“.\nBezug zum Projekt: So sieht der Freigabe-Schritt aus, den jeder Prototyp braucht. Der Workflow bereitet vor, eine Person entscheidet, erst dann geht es weiter."
   },
   {
     "objectID": "termine/2026-10-26-n8n-prompts.html#uebung-2",
@@ -508,7 +515,7 @@
     "href": "termine/index.html#bisherige-termine",
     "title": "Termine",
     "section": "Bisherige Termine",
-    "text": "Bisherige Termine\n\n\n\nDatum\nThema\nAusgegeben\n\n\n\n\n26.10.\nn8n vertiefen, Prompts im Agenten, Workflows mit Antigravity bauen\nDEMO 08 und 10, Prompt-Übung, Auftrag „Workflow aus dem Soll-Modell“\n\n\n19.10.\nEinführung in KI-Agenten, n8n auf dem HdM-Server, Antigravity einrichten\nFolien als PDF, DEMO-Workflows 01 bis 10, Auftrag „Ist-Prozess aus einer Beschreibung“\n\n\n12.10.\nKick-off: Auftrag, Vorgehen, BPMN 2.0, Recherche, Gruppen\nBPMN-Folien als PDF, BPMN-Übung, Recherche-Auftrag, Teamablage\n\n\n\nMontags, 11:45 bis 13:15 Uhr, Raum I110. Der Montag ist ein Coaching-Angebot: Fragen aus den Gruppen, Rückmeldung zu Zwischenständen, bei Bedarf ein Input mit Übung. Neue Termine kommen oben in die Tabelle."
+    "text": "Bisherige Termine\n\n\n\nDatum\nThema\nAusgegeben\n\n\n\n\n26.10.\nFolien ab Teil 7, n8n vertiefen, Prompts im Agenten, Workflows mit Antigravity bauen\nFolien ab Seite 44, DEMO 08 und 10, Prompt-Übung, Auftrag „Workflow aus dem Soll-Modell“\n\n\n19.10.\nEinführung in KI-Agenten, n8n auf dem HdM-Server, Antigravity einrichten\nFolien als PDF, DEMO-Workflows 01 bis 10, Auftrag „Ist-Prozess aus einer Beschreibung“\n\n\n12.10.\nKick-off: Auftrag, Vorgehen, BPMN 2.0, Recherche, Gruppen\nBPMN-Folien als PDF, BPMN-Übung, Recherche-Auftrag, Teamablage\n\n\n\nMontags, 11:45 bis 13:15 Uhr, Raum I110. Der Montag ist ein Coaching-Angebot: Fragen aus den Gruppen, Rückmeldung zu Zwischenständen, bei Bedarf ein Input mit Übung. Neue Termine kommen oben in die Tabelle."
   },
   {
     "objectID": "termine/index.html#die-weiteren-phasen",
