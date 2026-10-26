@@ -22,7 +22,8 @@ anchor-sections: false
 
 | Datum | Was |
 |---|---|
-| [26.10.](termine/2026-10-26-n8n-prompts.qmd) | n8n vertiefen, Prompts im Agenten, Workflows mit Antigravity bauen · neu: [Anleitung HdM-VPN](start.qmd#vpn) |
+| [02.11.](termine/2026-11-02-n8n-prompts.qmd) | n8n vertiefen, Prompts im Agenten, Workflows mit Antigravity bauen |
+| [26.10.](termine/2026-10-26-einrichtung.qmd) | VPN, Antigravity-Projekt mit AGENTS.md, Recherche mit Deep Research · [Anleitung HdM-VPN](start.qmd#vpn) |
 | [19.10.](termine/2026-10-19-werkzeuge.qmd) | KI-Agenten, n8n, Antigravity und Prozessmodell mit dem Agenten |
 | [12.10.](termine/2026-10-12-kick-off.qmd) | Kick-off: Kontext, Prozessmodellierung, Recherche-Auftrag, Gruppenbildung |
 

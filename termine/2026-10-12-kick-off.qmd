@@ -126,7 +126,7 @@ Die Recherche ist die erste Phase des Projekts und läuft bis zu den Interviews.
 **Ergebnis:** Ein Ordner `01_Recherche` mit Quellen, Erkenntnissen, Referenzprozess und Leitfragen. Wir besprechen die Ergebnisse im Coaching und stimmen die Leitfragen ab. Die Recherche endet damit nicht: Sie läuft bis zum ersten Interview weiter und wird nach dem Gespräch gezielt vertieft.
 :::
 
-Ein Hinweis zur Recherche mit KI: Gemini und andere Chat-Werkzeuge dürfen zur Recherche verwendet werden. Jede Aussage, die in die Ablage kommt, prüfen wir gegen die Originalquelle. Eine KI-Antwort ohne Quelle ist ein guter Hinweis, aber noch kein Beleg.
+Ein Hinweis zur Recherche mit KI: Gemini und andere Chat-Werkzeuge dürfen zur Recherche verwendet werden. Für Etappe 2 eignet sich [Deep Research in Gemini](2026-10-26-einrichtung.qmd#deep-research). Jede Aussage, die in die Ablage kommt, prüfen wir gegen die Originalquelle. Eine KI-Antwort ohne Quelle ist ein guter Hinweis, aber noch kein Beleg.
 
 ## Bis zum Werkzeugtermin vorbereiten {#vorbereitung}
 

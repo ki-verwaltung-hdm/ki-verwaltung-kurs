@@ -11,7 +11,8 @@ aliases:
 
 | Datum | Thema | Ausgegeben |
 |---|---|---|
-| [26.10.](2026-10-26-n8n-prompts.qmd) | Folien ab Teil 7, n8n vertiefen, Prompts im Agenten, Workflows mit Antigravity bauen | [Folien ab Seite 44](../material/folien/2026-10-19-einfuehrung-ki-agenten.pdf#page=44), DEMO 08 und 10, Prompt-Übung, [Auftrag „Workflow aus dem Soll-Modell“](../material/prompts/workflow-aus-soll.md) |
+| [02.11.](2026-11-02-n8n-prompts.qmd) | Folien ab Teil 7, n8n vertiefen, Prompts im Agenten, Workflows mit Antigravity bauen | [Folien ab Seite 44](../material/folien/2026-10-19-einfuehrung-ki-agenten.pdf#page=44), DEMO 08 und 10, Prompt-Übung, [Auftrag „Workflow aus dem Soll-Modell“](../material/prompts/workflow-aus-soll.md) |
+| [26.10.](2026-10-26-einrichtung.qmd) | VPN, Antigravity mit Projekt und AGENTS.md, Recherche mit Deep Research | [Anleitung HdM-VPN](../start.qmd#vpn), [Antigravity-Projekt](2026-10-26-einrichtung.qmd#antigravity), [Deep Research](2026-10-26-einrichtung.qmd#deep-research) |
 | [19.10.](2026-10-19-werkzeuge.qmd) | Einführung in KI-Agenten, n8n auf dem HdM-Server, Antigravity einrichten | [Folien als PDF](../material/folien/2026-10-19-einfuehrung-ki-agenten.pdf), DEMO-Workflows 01 bis 10, [Auftrag „Ist-Prozess aus einer Beschreibung“](../material/prompts/ist-aus-prosa.md) |
 | [12.10.](2026-10-12-kick-off.qmd) | Kick-off: Auftrag, Vorgehen, BPMN 2.0, Recherche, Gruppen | [BPMN-Folien als PDF](../material/bpmn/einfuehrung-bpmn.pdf), [BPMN-Übung](../werkzeuge/bpmn-uebung.qmd), Recherche-Auftrag, Teamablage |
 

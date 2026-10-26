@@ -1,9 +1,11 @@
 ---
-title: "26.10. · n8n, Prompts, Antigravity"
+title: "02.11. · n8n, Prompts, Antigravity"
 toc: true
+aliases:
+  - 2026-10-26-n8n-prompts.html
 ---
 
-[Montag, 26. Oktober 2026 · 11:45 bis 13:15 Uhr · Raum I110 · Notebook mitbringen, VPN eingerichtet]{.kicker}
+[Montag, 2. November 2026 · 11:45 bis 13:15 Uhr · Raum I110 · Notebook mitbringen, VPN eingerichtet]{.kicker}
 
 ::: {.lead}
 - Folien vom 19.10. ab Teil 7: Workflows, Kontext und Werkzeuge, Mensch im Ablauf, Prüfen, Use Cases
@@ -12,14 +14,15 @@ toc: true
 - Antigravity baut den Workflow: vom Prozessmodell zum importierbaren n8n-Workflow
 :::
 
-::: {.callout-note title="Ausgegeben am 26.10."}
+::: {.callout-note title="Material für den 02.11."}
 - Folien: Einführung in KI-Agenten ab Teil 7 „Workflows“ ([PDF ab Seite 44](../material/folien/2026-10-19-einfuehrung-ki-agenten.pdf#page=44))
 - Anleitung: [n8n Schritt für Schritt](../werkzeuge/n8n-einstieg.qmd), Beispiele 8 und 10
-- Anleitung: [HdM-VPN einrichten](../start.qmd#vpn) (OpenVPN für Windows, Tunnelblick für macOS)
 - Übung: [Prompt-Teile streichen und vergleichen](#uebung-3)
 - Auftrag für den Agenten: [Workflow aus dem Soll-Modell](../material/prompts/workflow-aus-soll.md) mit [Vorlagen als ZIP](../material/n8n/vorlagen-workflow.zip) und einem [Beispielergebnis](#antigravity)
 - Nachschlagen: [Prompt-Standard](../werkzeuge/einrichtung.qmd#prompt), [Vom Soll-Modell zum Workflow](../werkzeuge/n8n.qmd#vom-modell)
 :::
+
+Diese Teile waren ursprünglich für den 26.10. geplant. Am 26.10. haben wir stattdessen VPN und Antigravity eingerichtet und mit Deep Research recherchiert, siehe [26.10. · Einrichtung](2026-10-26-einrichtung.qmd).
 
 ## Ziel des Termins
 
@@ -45,7 +48,7 @@ Jede Gruppe sagt in einer Minute: Welchen Prozess haben wir gewählt? Gibt es da
 
 ## Folien: Workflows bis Fazit {#folien}
 
-Beim letzten Termin sind wir durch die zweite Hälfte der Folien nur schnell gegangen. Heute nehmen wir sie ab Teil 7 noch einmal in Ruhe durch: [Folien als PDF, ab Seite 44](../material/folien/2026-10-19-einfuehrung-ki-agenten.pdf#page=44).
+Am 19.10. sind wir durch die zweite Hälfte der Folien nur schnell gegangen. Heute nehmen wir sie ab Teil 7 noch einmal in Ruhe durch: [Folien als PDF, ab Seite 44](../material/folien/2026-10-19-einfuehrung-ki-agenten.pdf#page=44).
 
 | Teil | Worum es geht | Wo es heute weitergeht |
 |---|---|---|
@@ -135,7 +138,7 @@ Dabei gilt dasselbe wie bei jedem Agenten: Antigravity schreibt einen Entwurf, w
 **Material:** [Auftrag: Workflow aus dem Soll-Modell](../material/prompts/workflow-aus-soll.md), [Vorlagen als ZIP](../material/n8n/vorlagen-workflow.zip){download="vorlagen-workflow.zip"} (DEMO 02, 04, 07 und 10), das BPMN-Modell der Gruppe vom 19.10.
 
 1. Das ZIP herunterladen und die vier Dateien im Projektordner unter `04_Prototyp/vorlagen/` ablegen.
-2. Das BPMN-Modell der Gruppe unter `03_Prozessmodelle/` bereitlegen. Ein Soll-Modell gibt es meist noch nicht; dann das Modell vom 19.10. nehmen und im Auftrag `<name>-soll.bpmn` durch den Dateinamen dieses Modells ersetzen.
+2. Das BPMN-Modell der Gruppe unter `03_Prozessmodelle/` bereitlegen. Ein Soll-Modell gibt es meist noch nicht. Dann das Modell vom 19.10. nehmen und im Auftrag `<name>-soll.bpmn` durch den Dateinamen dieses Modells ersetzen.
 3. Den Auftrag in den Chat von Antigravity einfügen und die Platzhalter ersetzen: `<name>` durch einen kurzen Namen des Prozesses, `<n>` durch die Gruppennummer.
 4. Die Tabelle lesen, die Antigravity am Ende ausgibt: Hat jeder Schritt im Modell einen Knoten? Welche Stellen sind unsicher?
 5. In n8n über „Import from File“ die Datei importieren.
@@ -157,4 +160,4 @@ Dabei gilt dasselbe wie bei jedem Agenten: Antigravity schreibt einen Entwurf, w
 - **Online-Kurse:** Den n8n-Kurs QS101 in der Instanz der Gruppe bearbeiten, Workflow-Namen mit dem eigenen Nachnamen beginnen. Nachweise bis 30.11.2026, siehe [Bewertung](../bewertung.qmd#vorpruefung).
 - **Recherche und Interviews:** Etappe 2 des [Recherche-Auftrags](2026-10-12-kick-off.qmd#recherche) und Stand der Interviewtermine besprechen wir im Coaching.
 
-[**Alle Termine**](index.qmd) · [**Zurück: 19.10. Werkzeuge**](2026-10-19-werkzeuge.qmd)
+[**Alle Termine**](index.qmd) · [**Zurück: 26.10. Einrichtung**](2026-10-26-einrichtung.qmd)

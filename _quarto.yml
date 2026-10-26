@@ -10,7 +10,8 @@ project:
     - termine/index.qmd
     - termine/2026-10-12-kick-off.qmd
     - termine/2026-10-19-werkzeuge.qmd
-    - termine/2026-10-26-n8n-prompts.qmd
+    - termine/2026-10-26-einrichtung.qmd
+    - termine/2026-11-02-n8n-prompts.qmd
     - werkzeuge/index.qmd
     - werkzeuge/einrichtung.qmd
     - werkzeuge/prozessmodell.qmd
@@ -46,8 +47,10 @@ website:
         menu:
           - href: termine/index.qmd
             text: Übersicht
-          - href: termine/2026-10-26-n8n-prompts.qmd
-            text: "26.10. · n8n, Prompts, Antigravity"
+          - href: termine/2026-11-02-n8n-prompts.qmd
+            text: "02.11. · n8n, Prompts, Antigravity"
+          - href: termine/2026-10-26-einrichtung.qmd
+            text: "26.10. · Einrichtung"
           - href: termine/2026-10-19-werkzeuge.qmd
             text: "19.10. · Werkzeuge"
           - href: termine/2026-10-12-kick-off.qmd

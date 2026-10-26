@@ -1,0 +1,71 @@
+---
+title: "26.10. · Einrichtung"
+toc: true
+---
+
+[Montag, 26. Oktober 2026 · 11:45 bis 13:15 Uhr · Raum I110]{.kicker}
+
+::: {.lead}
+- HdM-VPN auf den Notebooks einrichten
+- Antigravity und die Antigravity IDE einrichten, ein Projekt anlegen, den Agenten eine AGENTS.md schreiben lassen
+- Recherche mit Gemini Deep Research
+:::
+
+::: {.callout-note title="Ausgegeben am 26.10."}
+- Anleitung: [HdM-VPN einrichten](../start.qmd#vpn) (OpenVPN für Windows, Tunnelblick für macOS)
+- Anleitung: [Coding-Agent einrichten](../werkzeuge/einrichtung.qmd) mit AGENTS.md-Vorlage
+- Anleitung: [Recherche mit Deep Research](#deep-research)
+:::
+
+Die geplanten Teile zu n8n, Prompts und dem Workflow aus dem Soll-Modell folgen am [02.11.](2026-11-02-n8n-prompts.qmd).
+
+## Ziel des Termins
+
+Am Ende kann jede Gruppe die n8n-Instanz über VPN erreichen. Sie hat in Antigravity ein Projekt mit einer AGENTS.md. Sie hat eine erste Recherche mit Deep Research gestartet.
+
+## VPN {#vpn}
+
+Ohne VPN ist die n8n-Instanz der Gruppe von außerhalb des Hochschulnetzes nicht erreichbar. Die Schritte für Windows und macOS stehen unter [HdM-VPN einrichten](../start.qmd#vpn).
+
+**Prüfung:** Mit verbundenem VPN öffnet sich die Anmeldeseite der n8n-Instanz der Gruppe.
+
+## Antigravity: Projekt und AGENTS.md {#antigravity}
+
+::: {.uebung}
+### In den Gruppen
+
+**Voraussetzungen:** Antigravity und die Antigravity IDE sind installiert, siehe [Coding-Agent einrichten](../werkzeuge/einrichtung.qmd#antigravity).
+
+1. Einen Ordner `KI-Verwaltung` erstellen.
+2. Antigravity öffnen.
+3. Links im Menü bei „Project“ auf „Create new Project“ klicken.
+4. Den Ordner `KI-Verwaltung` auswählen.
+5. Den Agenten eine `AGENTS.md` erstellen lassen. Als Muster dient die [Vorlage](../werkzeuge/einrichtung.qmd#agents-md).
+
+**Prüfung:** Die `AGENTS.md` liegt im Ordner `KI-Verwaltung`. Sie nennt das Projektziel, die Ordner und die Regeln (keine Realdaten, Entscheidung beim Menschen). Was nicht stimmt, geben wir dem Agenten als neuen Auftrag zurück.
+:::
+
+## Recherche mit Deep Research {#deep-research}
+
+Deep Research in Gemini plant eine Recherche in mehreren Schritten, durchsucht dafür viele Quellen und schreibt einen Bericht mit Quellenangaben. Das passt zu Etappe 2 des [Recherche-Auftrags](2026-10-12-kick-off.qmd#recherche): Vergleichsfälle aus Hochschulverwaltung und Behörden finden.
+
+::: {.uebung}
+### In den Gruppen
+
+1. [Gemini](https://gemini.google.com/) öffnen und mit dem Google-Konto anmelden.
+2. Unter den Werkzeugen „Deep Research“ wählen.
+3. Die Frage der Gruppe eingeben, zum Beispiel: „Wer setzt in Hochschulverwaltungen oder Behörden in Deutschland KI für Übersichten, Zusammenfassungen oder Prüfungen ein? Welche Muster wiederholen sich, was ist gescheitert und warum?“
+4. Den Rechercheplan lesen, bei Bedarf anpassen und die Recherche starten.
+5. Den Bericht unter `01_Recherche` ablegen.
+
+**Prüfung:** Jede Aussage, die wir aus dem Bericht übernehmen, haben wir in der Originalquelle nachgelesen. Ein Bericht mit Quellenangaben ist ein guter Einstieg, aber noch kein Beleg.
+:::
+
+Keine Realdaten und keine internen Dokumente der Verwaltung in die Frage schreiben. Die Regeln stehen unter [Daten und Freigaben](../projekt.qmd#regeln).
+
+## Nächste Schritte {#naechste}
+
+- **Recherche:** Etappe 2 des [Recherche-Auftrags](2026-10-12-kick-off.qmd#recherche) mit Deep Research fortsetzen.
+- **02.11.:** [n8n vertiefen, Prompts im Agenten, Workflow aus dem Soll-Modell](2026-11-02-n8n-prompts.qmd). VPN verbunden und Antigravity-Projekt geöffnet mitbringen.
+
+[**Alle Termine**](index.qmd) · [**Zurück: 19.10. Werkzeuge**](2026-10-19-werkzeuge.qmd) · [**Weiter: 02.11. n8n, Prompts, Antigravity**](2026-11-02-n8n-prompts.qmd)

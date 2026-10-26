@@ -13,10 +13,11 @@ Antigravity ist nicht die einzige Wahl. Claude Code, OpenAI Codex, Cursor und ä
 
 **Voraussetzungen:** ein Google-Konto; der Zugang zu Antigravity ist im [Studierendenangebot](../start.qmd#google) enthalten. Pro Gruppe reicht eine Installation.
 
-1. Die [Antigravity IDE](https://antigravity.google/product/antigravity-ide/) herunterladen und installieren.
+1. Antigravity und die [Antigravity IDE](https://antigravity.google/product/antigravity-ide/) herunterladen und installieren.
 2. Mit dem Google-Konto anmelden.
-3. Einen leeren Projektordner anlegen und in Antigravity öffnen („Open Folder“).
-4. Prüfen: Links erscheint der Ordner, rechts der Chat mit dem Agenten.
+3. Einen leeren Projektordner anlegen, zum Beispiel `KI-Verwaltung`.
+4. Links im Menü bei „Project“ auf „Create new Project“ klicken und den Ordner auswählen.
+5. Prüfen: Links erscheint der Ordner, rechts der Chat mit dem Agenten.
 
 **Wenn die Installation nicht klappt:** Den Auftrag in den Gemini-Chat im Browser einfügen, zusammen mit dem Inhalt der betroffenen Dateien als Text. Die Ausgabe als Datei speichern. Das ist umständlicher, führt aber zum selben Ergebnis.
 
