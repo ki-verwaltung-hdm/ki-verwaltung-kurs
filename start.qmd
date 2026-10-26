@@ -9,9 +9,55 @@ toc: true
 
 Die Projektumgebung (n8n und Datenbanken) läuft auf einem Server der HdM. Sie ist nur aus dem HdM-Netz und über das HdM-VPN erreichbar. Von zu Hause ist das VPN deshalb Voraussetzung für jede Arbeit in n8n.
 
-1. Den VPN-Client der HdM installieren (FortiClient, Zugang mit der HdM-Kennung).
-2. Die VPN-Verbindung aufbauen.
-3. Prüfen: Die [Übersichtsseite der Projektumgebung](https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/) lädt im Browser. Ohne VPN erscheint eine Zeitüberschreitung.
+Für Studierende läuft das HdM-VPN über **OpenVPN** (nicht FortiClient, das ist für Beschäftigte). Software, Konfigurationsdateien und die Anleitungen der Core IT liegen im Intranet, Anmeldung mit der HdM-Kennung: [IT-Hilfestellung, Abschnitt VPN](https://intranet.hdm-stuttgart.de/services/it/hilfestellung_fuer_endanwender/#VPN).
+
+**Voraussetzungen:** HdM-Kennung (Benutzername und Passwort wie für die HdM-Mail). Verbindung von **außerhalb** der Hochschule, denn im WLAN eduroam lässt sich kein VPN-Tunnel aufbauen.
+
+::: {.panel-tabset}
+
+## Windows 10/11
+
+1. Das [Installationspaket OpenVPN 2.6.7 mit HdM-Konfiguration](https://intranet.hdm-stuttgart.de/services/it/hilfestellung_fuer_endanwender/VPN-DOCS/openvpn-HdM-VPN-UDP4-1194-install-2.6.7-I001-amd64.exe) herunterladen.
+2. Die Datei starten und dem Installationsassistenten folgen.
+3. Das Programm „OpenVPN GUI“ starten.
+4. In der Taskleiste unten rechts den Pfeil nach oben öffnen.
+5. Mit der rechten Maustaste auf das OpenVPN-Symbol klicken und „Verbinden“ wählen.
+6. HdM-Benutzername und HdM-Passwort eingeben, dann „OK“ klicken.
+
+Prüfen: Das Verbindungsfenster schließt sich, das OpenVPN-Symbol leuchtet grün.
+
+Bebilderte Fassung: [Anleitung der Core IT für Windows (PDF)](https://intranet.hdm-stuttgart.de/services/it/hilfestellung_fuer_endanwender/pdf/VPN_verbindenWin11.pdf).
+
+## macOS
+
+1. [Tunnelblick](https://tunnelblick.net/downloads.html) herunterladen und installieren. Die Software ist kostenlos.
+2. Die [Konfigurationsdateien für Tunnelblick](https://intranet.hdm-stuttgart.de/services/it/hilfestellung_fuer_endanwender/VPN-DOCS/HdM-VPN-UDP4-1194-Viscosity.visc.zip) herunterladen und die ZIP-Datei entpacken.
+3. Oben in der Menüleiste auf das Tunnelblick-Symbol klicken und „VPN-Details“ wählen.
+4. Die Datei `HdM-VPN-UDP4-1194-viscosity-config.ovpn` in das linke Fenster „Konfigurationen“ ziehen.
+5. Auf das Tunnelblick-Symbol klicken und die HdM-Verbindung wählen.
+6. HdM-Benutzername und HdM-Passwort eingeben.
+
+Prüfen: Tunnelblick zeigt die Verbindung als verbunden.
+
+Bebilderte Fassung: [Anleitung der Core IT für macOS (PDF)](https://intranet.hdm-stuttgart.de/services/it/hilfestellung_fuer_endanwender/VPN-DOCS/VPN_MacOS-20260402.pdf).
+
+:::
+
+::: {.callout-warning title="Passwort nicht speichern"}
+Das Passwort nicht in Tunnelblick oder OpenVPN speichern. Laut Core IT führt das zu Verbindungsproblemen und ist ein Sicherheitsrisiko.
+:::
+
+Danach für alle: Die [Übersichtsseite der Projektumgebung](https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/) lädt im Browser. Ohne VPN erscheint eine Zeitüberschreitung.
+
+| Problem | Lösung |
+|---|---|
+| macOS meldet, die öffentliche IP-Adresse habe sich nicht geändert | Warnung ignorieren. Das VPN leitet nur den Verkehr zu HdM-Diensten über die Hochschule. |
+| OpenVPN-Symbol gelb oder rot (Windows) | Trennen, Internetverbindung prüfen, neu verbinden. Sonst den Rechner neu starten. |
+| Verbindung bricht ab, wenn ein zweites Gerät verbindet | Pro Kennung ist nur eine Verbindung gleichzeitig möglich. |
+| Ältere Konfiguration funktioniert nicht mehr | Das Zertifikat wurde im Dezember 2025 getauscht. Konfiguration neu aus dem Intranet laden. |
+| Smartphone oder Tablet | Im Intranet gibt es eine Konfiguration für die App „OpenVPN Connect“. Für die Projektarbeit genügt das Notebook. |
+
+Bei weiteren Problemen helfen die IT-Verantwortlichen des Studiengangs (nicht direkt die Core IT).
 
 Im Hochschulnetz vor Ort (WLAN eduroam oder Kabel) ist kein VPN nötig.
 
