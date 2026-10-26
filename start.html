@@ -314,11 +314,86 @@ ul.task-list li input[type="checkbox"] {
 <section id="vpn" class="level2">
 <h2 class="anchored" data-anchor-id="vpn">HdM-VPN</h2>
 <p>Die Projektumgebung (n8n und Datenbanken) läuft auf einem Server der HdM. Sie ist nur aus dem HdM-Netz und über das HdM-VPN erreichbar. Von zu Hause ist das VPN deshalb Voraussetzung für jede Arbeit in n8n.</p>
+<p>Für Studierende läuft das HdM-VPN über <strong>OpenVPN</strong> (nicht FortiClient, das ist für Beschäftigte). Software, Konfigurationsdateien und die Anleitungen der Core IT liegen im Intranet, Anmeldung mit der HdM-Kennung: <a href="https://intranet.hdm-stuttgart.de/services/it/hilfestellung_fuer_endanwender/#VPN">IT-Hilfestellung, Abschnitt VPN</a>.</p>
+<p><strong>Voraussetzungen:</strong> HdM-Kennung (Benutzername und Passwort wie für die HdM-Mail). Verbindung von <strong>außerhalb</strong> der Hochschule, denn im WLAN eduroam lässt sich kein VPN-Tunnel aufbauen.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Windows 10/11</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">macOS</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <ol type="1">
-<li>Den VPN-Client der HdM installieren (FortiClient, Zugang mit der HdM-Kennung).</li>
-<li>Die VPN-Verbindung aufbauen.</li>
-<li>Prüfen: Die <a href="https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/">Übersichtsseite der Projektumgebung</a> lädt im Browser. Ohne VPN erscheint eine Zeitüberschreitung.</li>
+<li>Das <a href="https://intranet.hdm-stuttgart.de/services/it/hilfestellung_fuer_endanwender/VPN-DOCS/openvpn-HdM-VPN-UDP4-1194-install-2.6.7-I001-amd64.exe">Installationspaket OpenVPN 2.6.7 mit HdM-Konfiguration</a> herunterladen.</li>
+<li>Die Datei starten und dem Installationsassistenten folgen.</li>
+<li>Das Programm „OpenVPN GUI“ starten.</li>
+<li>In der Taskleiste unten rechts den Pfeil nach oben öffnen.</li>
+<li>Mit der rechten Maustaste auf das OpenVPN-Symbol klicken und „Verbinden“ wählen.</li>
+<li>HdM-Benutzername und HdM-Passwort eingeben, dann „OK“ klicken.</li>
 </ol>
+<p>Prüfen: Das Verbindungsfenster schließt sich, das OpenVPN-Symbol leuchtet grün.</p>
+<p>Bebilderte Fassung: <a href="https://intranet.hdm-stuttgart.de/services/it/hilfestellung_fuer_endanwender/pdf/VPN_verbindenWin11.pdf">Anleitung der Core IT für Windows (PDF)</a>.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<ol type="1">
+<li><a href="https://tunnelblick.net/downloads.html">Tunnelblick</a> herunterladen und installieren. Die Software ist kostenlos.</li>
+<li>Die <a href="https://intranet.hdm-stuttgart.de/services/it/hilfestellung_fuer_endanwender/VPN-DOCS/HdM-VPN-UDP4-1194-Viscosity.visc.zip">Konfigurationsdateien für Tunnelblick</a> herunterladen und die ZIP-Datei entpacken.</li>
+<li>Oben in der Menüleiste auf das Tunnelblick-Symbol klicken und „VPN-Details“ wählen.</li>
+<li>Die Datei <code>HdM-VPN-UDP4-1194-viscosity-config.ovpn</code> in das linke Fenster „Konfigurationen“ ziehen.</li>
+<li>Auf das Tunnelblick-Symbol klicken und die HdM-Verbindung wählen.</li>
+<li>HdM-Benutzername und HdM-Passwort eingeben.</li>
+</ol>
+<p>Prüfen: Tunnelblick zeigt die Verbindung als verbunden.</p>
+<p>Bebilderte Fassung: <a href="https://intranet.hdm-stuttgart.de/services/it/hilfestellung_fuer_endanwender/VPN-DOCS/VPN_MacOS-20260402.pdf">Anleitung der Core IT für macOS (PDF)</a>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-warning callout-titled" title="Passwort nicht speichern">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warnung</span>Passwort nicht speichern
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Das Passwort nicht in Tunnelblick oder OpenVPN speichern. Laut Core IT führt das zu Verbindungsproblemen und ist ein Sicherheitsrisiko.</p>
+</div>
+</div>
+<p>Danach für alle: Die <a href="https://ki-in-der-verwaltung.iuk.hdm-stuttgart.de/">Übersichtsseite der Projektumgebung</a> lädt im Browser. Ohne VPN erscheint eine Zeitüberschreitung.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problem</th>
+<th>Lösung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>macOS meldet, die öffentliche IP-Adresse habe sich nicht geändert</td>
+<td>Warnung ignorieren. Das VPN leitet nur den Verkehr zu HdM-Diensten über die Hochschule.</td>
+</tr>
+<tr class="even">
+<td>OpenVPN-Symbol gelb oder rot (Windows)</td>
+<td>Trennen, Internetverbindung prüfen, neu verbinden. Sonst den Rechner neu starten.</td>
+</tr>
+<tr class="odd">
+<td>Verbindung bricht ab, wenn ein zweites Gerät verbindet</td>
+<td>Pro Kennung ist nur eine Verbindung gleichzeitig möglich.</td>
+</tr>
+<tr class="even">
+<td>Ältere Konfiguration funktioniert nicht mehr</td>
+<td>Das Zertifikat wurde im Dezember 2025 getauscht. Konfiguration neu aus dem Intranet laden.</td>
+</tr>
+<tr class="odd">
+<td>Smartphone oder Tablet</td>
+<td>Im Intranet gibt es eine Konfiguration für die App „OpenVPN Connect“. Für die Projektarbeit genügt das Notebook.</td>
+</tr>
+</tbody>
+</table>
+<p>Bei weiteren Problemen helfen die IT-Verantwortlichen des Studiengangs (nicht direkt die Core IT).</p>
 <p>Im Hochschulnetz vor Ort (WLAN eduroam oder Kabel) ist kein VPN nötig.</p>
 </section>
 <section id="google" class="level2">
